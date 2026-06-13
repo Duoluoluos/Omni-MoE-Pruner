@@ -1,0 +1,765 @@
+{
+  "snapshot_at": "2026-06-12T20:08:48",
+  "samples_profiled": 411,
+  "predictions_loaded": 411,
+  "profiles_loaded": 411,
+  "skipped_prediction_lines": 0,
+  "skipped_profile_lines": 0,
+  "accuracy_so_far": 0.40632603406326034,
+  "correct_so_far": 167,
+  "prefill_latency_ms": {
+    "mean": 21643.862238157693,
+    "p50": 28139.669921875,
+    "p95": 28661.5849609375,
+    "max": 29476.6796875
+  },
+  "input_seq_len": {
+    "mean": 43787.9902676399,
+    "p50": 55799.0,
+    "p95": 55840.0,
+    "max": 55990.0
+  },
+  "attention_flops_estimate": {
+    "mean": 926545060587684.5,
+    "p50": 1302947882336256.0,
+    "p95": 1304805507072000.0
+  },
+  "moe_ffn_flops_estimate": {
+    "mean": 158682363320035.97,
+    "p50": 202208805126144.0,
+    "p95": 202357384151040.0
+  },
+  "kv_cache_write_bytes_estimate": {
+    "mean": 4304534595.270073,
+    "p50": 5485264896.0,
+    "p95": 5489295360.0
+  },
+  "flash_attention_requested_samples": 411,
+  "chunked_prefill_observed_samples": 0,
+  "task_stats": {
+    "reference reasoning": {
+      "count": 37,
+      "prefill_mean_ms": 22017.830025337837,
+      "prefill_p50_ms": 28185.755859375,
+      "prefill_p95_ms": 28661.9453125,
+      "input_seq_len_mean": 44454.10810810811,
+      "video_tokens_mean": 43936.18918918919,
+      "audio_tokens_mean": 390.0,
+      "accuracy": 0.32432432432432434,
+      "correct": 12,
+      "total": 37
+    },
+    "spatial understanding": {
+      "count": 35,
+      "prefill_mean_ms": 21177.02562779018,
+      "prefill_p50_ms": 21021.228515625,
+      "prefill_p95_ms": 28429.699609375,
+      "input_seq_len_mean": 44245.514285714286,
+      "video_tokens_mean": 43726.62857142857,
+      "audio_tokens_mean": 390.0,
+      "accuracy": 0.2571428571428571,
+      "correct": 9,
+      "total": 35
+    },
+    "counting": {
+      "count": 60,
+      "prefill_mean_ms": 18943.46561279297,
+      "prefill_p50_ms": 24086.578125,
+      "prefill_p95_ms": 28665.12626953125,
+      "input_seq_len_mean": 38372.21666666667,
+      "video_tokens_mean": 37866.4,
+      "audio_tokens_mean": 382.6333333333333,
+      "accuracy": 0.35,
+      "correct": 21,
+      "total": 60
+    },
+    "relationship reasoning": {
+      "count": 9,
+      "prefill_mean_ms": 22000.76207139757,
+      "prefill_p50_ms": 28358.599609375,
+      "prefill_p95_ms": 28524.05625,
+      "input_seq_len_mean": 44062.88888888889,
+      "video_tokens_mean": 43520.0,
+      "audio_tokens_mean": 390.0,
+      "accuracy": 0.7777777777777778,
+      "correct": 7,
+      "total": 9
+    },
+    "temporal understanding": {
+      "count": 61,
+      "prefill_mean_ms": 23299.3598272605,
+      "prefill_p50_ms": 28315.642578125,
+      "prefill_p95_ms": 28613.314453125,
+      "input_seq_len_mean": 47222.65573770492,
+      "video_tokens_mean": 46692.737704918036,
+      "audio_tokens_mean": 390.0,
+      "accuracy": 0.2786885245901639,
+      "correct": 17,
+      "total": 61
+    },
+    "sentiment analysis": {
+      "count": 50,
+      "prefill_mean_ms": 22043.0106640625,
+      "prefill_p50_ms": 28126.4345703125,
+      "prefill_p95_ms": 28610.42646484375,
+      "input_seq_len_mean": 44409.58,
+      "video_tokens_mean": 43908.48,
+      "audio_tokens_mean": 372.94,
+      "accuracy": 0.54,
+      "correct": 27,
+      "total": 50
+    },
+    "hypothetical reasoning": {
+      "count": 13,
+      "prefill_mean_ms": 22171.702016977164,
+      "prefill_p50_ms": 28169.796875,
+      "prefill_p95_ms": 28879.8203125,
+      "input_seq_len_mean": 44004.61538461538,
+      "video_tokens_mean": 43488.0,
+      "audio_tokens_mean": 371.7692307692308,
+      "accuracy": 0.6153846153846154,
+      "correct": 8,
+      "total": 13
+    },
+    "causal reasoning": {
+      "count": 29,
+      "prefill_mean_ms": 22987.301656788793,
+      "prefill_p50_ms": 25522.439453125,
+      "prefill_p95_ms": 28524.68671875,
+      "input_seq_len_mean": 46646.55172413793,
+      "video_tokens_mean": 46123.03448275862,
+      "audio_tokens_mean": 382.9655172413793,
+      "accuracy": 0.41379310344827586,
+      "correct": 12,
+      "total": 29
+    },
+    "fine-grained perception": {
+      "count": 38,
+      "prefill_mean_ms": 21944.543971011513,
+      "prefill_p50_ms": 28190.9619140625,
+      "prefill_p95_ms": 28781.05615234375,
+      "input_seq_len_mean": 43913.84210526316,
+      "video_tokens_mean": 43408.42105263158,
+      "audio_tokens_mean": 378.2631578947368,
+      "accuracy": 0.42105263157894735,
+      "correct": 16,
+      "total": 38
+    },
+    "attribute comparison": {
+      "count": 15,
+      "prefill_mean_ms": 22824.872884114582,
+      "prefill_p50_ms": 28296.50390625,
+      "prefill_p95_ms": 28769.1576171875,
+      "input_seq_len_mean": 44793.86666666667,
+      "video_tokens_mean": 44275.2,
+      "audio_tokens_mean": 378.2,
+      "accuracy": 0.4,
+      "correct": 6,
+      "total": 15
+    },
+    "ego reasoning": {
+      "count": 48,
+      "prefill_mean_ms": 21003.908772786457,
+      "prefill_p50_ms": 27266.349609375,
+      "prefill_p95_ms": 28732.97490234375,
+      "input_seq_len_mean": 42674.958333333336,
+      "video_tokens_mean": 42162.833333333336,
+      "audio_tokens_mean": 389.8333333333333,
+      "accuracy": 0.5208333333333334,
+      "correct": 25,
+      "total": 48
+    },
+    "summarization": {
+      "count": 10,
+      "prefill_mean_ms": 22657.202880859375,
+      "prefill_p50_ms": 28364.2294921875,
+      "prefill_p95_ms": 28498.78994140625,
+      "input_seq_len_mean": 45672.3,
+      "video_tokens_mean": 45144.0,
+      "audio_tokens_mean": 390.0,
+      "accuracy": 0.4,
+      "correct": 4,
+      "total": 10
+    },
+    "background&music understanding": {
+      "count": 6,
+      "prefill_mean_ms": 19309.367594401043,
+      "prefill_p50_ms": 21627.43212890625,
+      "prefill_p95_ms": 28826.1015625,
+      "input_seq_len_mean": 38824.0,
+      "video_tokens_mean": 38342.666666666664,
+      "audio_tokens_mean": 335.6666666666667,
+      "accuracy": 0.5,
+      "correct": 3,
+      "total": 6
+    }
+  },
+  "question_type_stats": {
+    "reference reasoning": {
+      "count": 37,
+      "prefill_mean_ms": 22017.830025337837,
+      "prefill_p95_ms": 28661.9453125,
+      "input_seq_len_mean": 44454.10810810811,
+      "duration_sec_mean": 615.2432432432432,
+      "accuracy": 0.32432432432432434,
+      "correct": 12,
+      "total": 37
+    },
+    "spatial understanding": {
+      "count": 35,
+      "prefill_mean_ms": 21177.02562779018,
+      "prefill_p95_ms": 28429.699609375,
+      "input_seq_len_mean": 44245.514285714286,
+      "duration_sec_mean": 460.74285714285713,
+      "accuracy": 0.2571428571428571,
+      "correct": 9,
+      "total": 35
+    },
+    "counting": {
+      "count": 60,
+      "prefill_mean_ms": 18943.46561279297,
+      "prefill_p95_ms": 28665.12626953125,
+      "input_seq_len_mean": 38372.21666666667,
+      "duration_sec_mean": 412.75,
+      "accuracy": 0.35,
+      "correct": 21,
+      "total": 60
+    },
+    "relationship reasoning": {
+      "count": 9,
+      "prefill_mean_ms": 22000.76207139757,
+      "prefill_p95_ms": 28524.05625,
+      "input_seq_len_mean": 44062.88888888889,
+      "duration_sec_mean": 392.55555555555554,
+      "accuracy": 0.7777777777777778,
+      "correct": 7,
+      "total": 9
+    },
+    "temporal understanding": {
+      "count": 61,
+      "prefill_mean_ms": 23299.3598272605,
+      "prefill_p95_ms": 28613.314453125,
+      "input_seq_len_mean": 47222.65573770492,
+      "duration_sec_mean": 591.9508196721312,
+      "accuracy": 0.2786885245901639,
+      "correct": 17,
+      "total": 61
+    },
+    "sentiment analysis": {
+      "count": 50,
+      "prefill_mean_ms": 22043.0106640625,
+      "prefill_p95_ms": 28610.42646484375,
+      "input_seq_len_mean": 44409.58,
+      "duration_sec_mean": 505.64,
+      "accuracy": 0.54,
+      "correct": 27,
+      "total": 50
+    },
+    "hypothetical reasoning": {
+      "count": 13,
+      "prefill_mean_ms": 22171.702016977164,
+      "prefill_p95_ms": 28879.8203125,
+      "input_seq_len_mean": 44004.61538461538,
+      "duration_sec_mean": 465.9230769230769,
+      "accuracy": 0.6153846153846154,
+      "correct": 8,
+      "total": 13
+    },
+    "causal reasoning": {
+      "count": 29,
+      "prefill_mean_ms": 22987.301656788793,
+      "prefill_p95_ms": 28524.68671875,
+      "input_seq_len_mean": 46646.55172413793,
+      "duration_sec_mean": 455.0689655172414,
+      "accuracy": 0.41379310344827586,
+      "correct": 12,
+      "total": 29
+    },
+    "fine-grained perception": {
+      "count": 38,
+      "prefill_mean_ms": 21944.543971011513,
+      "prefill_p95_ms": 28781.05615234375,
+      "input_seq_len_mean": 43913.84210526316,
+      "duration_sec_mean": 628.6052631578947,
+      "accuracy": 0.42105263157894735,
+      "correct": 16,
+      "total": 38
+    },
+    "attribute comparison": {
+      "count": 15,
+      "prefill_mean_ms": 22824.872884114582,
+      "prefill_p95_ms": 28769.1576171875,
+      "input_seq_len_mean": 44793.86666666667,
+      "duration_sec_mean": 563.2666666666667,
+      "accuracy": 0.4,
+      "correct": 6,
+      "total": 15
+    },
+    "ego reasoning": {
+      "count": 48,
+      "prefill_mean_ms": 21003.908772786457,
+      "prefill_p95_ms": 28732.97490234375,
+      "input_seq_len_mean": 42674.958333333336,
+      "duration_sec_mean": 451.875,
+      "accuracy": 0.5208333333333334,
+      "correct": 25,
+      "total": 48
+    },
+    "summarization": {
+      "count": 10,
+      "prefill_mean_ms": 22657.202880859375,
+      "prefill_p95_ms": 28498.78994140625,
+      "input_seq_len_mean": 45672.3,
+      "duration_sec_mean": 708.3,
+      "accuracy": 0.4,
+      "correct": 4,
+      "total": 10
+    },
+    "background&music understanding": {
+      "count": 6,
+      "prefill_mean_ms": 19309.367594401043,
+      "prefill_p95_ms": 28826.1015625,
+      "input_seq_len_mean": 38824.0,
+      "duration_sec_mean": 471.1666666666667,
+      "accuracy": 0.5,
+      "correct": 3,
+      "total": 6
+    }
+  },
+  "audio_type_stats": {
+    "Speech": {
+      "count": 326,
+      "prefill_mean_ms": 22315.48704032664,
+      "prefill_p95_ms": 28650.62646484375,
+      "input_seq_len_mean": 45123.315950920245,
+      "duration_sec_mean": 544.5030674846626,
+      "accuracy": 0.4171779141104294,
+      "correct": 136,
+      "total": 326
+    },
+    "Sound": {
+      "count": 64,
+      "prefill_mean_ms": 19527.906707763672,
+      "prefill_p95_ms": 28661.04443359375,
+      "input_seq_len_mean": 39552.296875,
+      "duration_sec_mean": 411.78125,
+      "accuracy": 0.34375,
+      "correct": 22,
+      "total": 64
+    },
+    "Music": {
+      "count": 21,
+      "prefill_mean_ms": 17666.313116164434,
+      "prefill_p95_ms": 28693.794921875,
+      "input_seq_len_mean": 35967.42857142857,
+      "duration_sec_mean": 376.5238095238095,
+      "accuracy": 0.42857142857142855,
+      "correct": 9,
+      "total": 21
+    }
+  },
+  "video_type_stats": {
+    "Vlog": {
+      "count": 66,
+      "prefill_mean_ms": 21843.624759558475,
+      "prefill_p95_ms": 28798.6064453125,
+      "input_seq_len_mean": 43204.69696969697,
+      "duration_sec_mean": 677.1363636363636,
+      "accuracy": 0.4090909090909091,
+      "correct": 27,
+      "total": 66
+    },
+    "Documentary": {
+      "count": 8,
+      "prefill_mean_ms": 27122.46435546875,
+      "prefill_p95_ms": 28660.9935546875,
+      "input_seq_len_mean": 54050.25,
+      "duration_sec_mean": 582.125,
+      "accuracy": 0.5,
+      "correct": 4,
+      "total": 8
+    },
+    "Arts&TV Show": {
+      "count": 142,
+      "prefill_mean_ms": 22917.185588138203,
+      "prefill_p95_ms": 28652.921875,
+      "input_seq_len_mean": 46959.75352112676,
+      "duration_sec_mean": 550.3098591549295,
+      "accuracy": 0.39436619718309857,
+      "correct": 56,
+      "total": 142
+    },
+    "Cartoon": {
+      "count": 56,
+      "prefill_mean_ms": 21264.249755859375,
+      "prefill_p95_ms": 28729.39111328125,
+      "input_seq_len_mean": 43526.267857142855,
+      "duration_sec_mean": 382.35714285714283,
+      "accuracy": 0.375,
+      "correct": 21,
+      "total": 56
+    },
+    "Sports": {
+      "count": 24,
+      "prefill_mean_ms": 18374.40705362956,
+      "prefill_p95_ms": 28645.0623046875,
+      "input_seq_len_mean": 36990.583333333336,
+      "duration_sec_mean": 390.75,
+      "accuracy": 0.20833333333333334,
+      "correct": 5,
+      "total": 24
+    },
+    "Ego": {
+      "count": 77,
+      "prefill_mean_ms": 19478.044715782264,
+      "prefill_p95_ms": 28601.8390625,
+      "input_seq_len_mean": 39492.506493506495,
+      "duration_sec_mean": 456.2077922077922,
+      "accuracy": 0.45454545454545453,
+      "correct": 35,
+      "total": 77
+    },
+    "Others": {
+      "count": 36,
+      "prefill_mean_ms": 23430.520819769965,
+      "prefill_p95_ms": 28592.7216796875,
+      "input_seq_len_mean": 46290.916666666664,
+      "duration_sec_mean": 507.80555555555554,
+      "accuracy": 0.5277777777777778,
+      "correct": 19,
+      "total": 36
+    },
+    "News": {
+      "count": 2,
+      "prefill_mean_ms": 3818.0645751953125,
+      "prefill_p95_ms": 3845.3933959960937,
+      "input_seq_len_mean": 6013.0,
+      "duration_sec_mean": 39.0,
+      "accuracy": 0.0,
+      "correct": 0,
+      "total": 2
+    }
+  },
+  "global_top_experts": [
+    {
+      "expert_id": 94,
+      "count": 73642230,
+      "frequency": 0.01065611434442134
+    },
+    {
+      "expert_id": 7,
+      "count": 73162655,
+      "frequency": 0.010586719297086055
+    },
+    {
+      "expert_id": 46,
+      "count": 72605560,
+      "frequency": 0.010506107017681895
+    },
+    {
+      "expert_id": 41,
+      "count": 69173764,
+      "frequency": 0.010009522237689115
+    },
+    {
+      "expert_id": 121,
+      "count": 67925328,
+      "frequency": 0.009828872130166678
+    },
+    {
+      "expert_id": 80,
+      "count": 67853906,
+      "frequency": 0.009818537285625614
+    },
+    {
+      "expert_id": 14,
+      "count": 64869086,
+      "frequency": 0.009386630440633065
+    },
+    {
+      "expert_id": 36,
+      "count": 64477798,
+      "frequency": 0.009330010622498823
+    },
+    {
+      "expert_id": 97,
+      "count": 63799575,
+      "frequency": 0.009231870983883637
+    },
+    {
+      "expert_id": 29,
+      "count": 63561268,
+      "frequency": 0.00919738769024796
+    },
+    {
+      "expert_id": 69,
+      "count": 63550192,
+      "frequency": 0.009195784980464744
+    },
+    {
+      "expert_id": 12,
+      "count": 63088169,
+      "frequency": 0.009128929727469927
+    },
+    {
+      "expert_id": 73,
+      "count": 62131506,
+      "frequency": 0.008990499504524789
+    },
+    {
+      "expert_id": 27,
+      "count": 61686883,
+      "frequency": 0.008926162051297752
+    },
+    {
+      "expert_id": 108,
+      "count": 61378351,
+      "frequency": 0.008881517120380898
+    },
+    {
+      "expert_id": 44,
+      "count": 61062184,
+      "frequency": 0.00883576739629008
+    }
+  ],
+  "modality_top_expert_ids": [
+    94,
+    7,
+    46,
+    41,
+    121,
+    80,
+    14,
+    36,
+    97,
+    29,
+    69,
+    12,
+    73,
+    27,
+    108,
+    44,
+    62,
+    105,
+    79,
+    37,
+    15,
+    109,
+    11,
+    20,
+    65,
+    111,
+    67,
+    2,
+    63,
+    124,
+    48,
+    18
+  ],
+  "token_trajectory": {
+    "video": {
+      "top_route_signatures": [
+        {
+          "signature": "27-58-46-44-67-32-33-7",
+          "count": 35
+        },
+        {
+          "signature": "27-58-46-67-44-32-33-7",
+          "count": 26
+        },
+        {
+          "signature": "27-58-46-67-32-44-33-7",
+          "count": 20
+        },
+        {
+          "signature": "0-62-33-109-84-13-14-11",
+          "count": 16
+        },
+        {
+          "signature": "25-55-71-4-99-102-27-106",
+          "count": 14
+        },
+        {
+          "signature": "94-73-75-80-103-55-63-4",
+          "count": 14
+        },
+        {
+          "signature": "108-101-79-104-44-117-20-32",
+          "count": 14
+        },
+        {
+          "signature": "47-37-41-55-43-86-48-35",
+          "count": 14
+        },
+        {
+          "signature": "27-58-46-32-67-44-33-7",
+          "count": 12
+        },
+        {
+          "signature": "126-14-108-78-101-84-79-40",
+          "count": 12
+        },
+        {
+          "signature": "6-25-55-36-18-99-4-27",
+          "count": 12
+        },
+        {
+          "signature": "27-58-46-44-67-33-32-7",
+          "count": 11
+        }
+      ],
+      "top_dominant_experts": [
+        {
+          "expert_id": 94,
+          "count": 13334
+        },
+        {
+          "expert_id": 41,
+          "count": 9749
+        },
+        {
+          "expert_id": 36,
+          "count": 9156
+        },
+        {
+          "expert_id": 62,
+          "count": 8923
+        },
+        {
+          "expert_id": 47,
+          "count": 7595
+        },
+        {
+          "expert_id": 7,
+          "count": 7568
+        },
+        {
+          "expert_id": 124,
+          "count": 7538
+        },
+        {
+          "expert_id": 46,
+          "count": 6797
+        },
+        {
+          "expert_id": 122,
+          "count": 6780
+        },
+        {
+          "expert_id": 73,
+          "count": 6402
+        },
+        {
+          "expert_id": 9,
+          "count": 6238
+        },
+        {
+          "expert_id": 108,
+          "count": 6210
+        }
+      ]
+    },
+    "audio": {
+      "top_route_signatures": [
+        {
+          "signature": "40-34-25-66-113-79-60-105",
+          "count": 8
+        },
+        {
+          "signature": "40-105-72-25-87-111-94-101",
+          "count": 8
+        },
+        {
+          "signature": "105-40-87-72-31-86-12-101",
+          "count": 8
+        },
+        {
+          "signature": "73-87-40-105-69-94-12-51",
+          "count": 8
+        },
+        {
+          "signature": "69-51-33-42-127-94-47-111",
+          "count": 8
+        },
+        {
+          "signature": "127-69-33-42-88-78-51-94",
+          "count": 8
+        },
+        {
+          "signature": "40-86-109-105-69-33-72-51",
+          "count": 8
+        },
+        {
+          "signature": "105-109-72-40-51-69-8-33",
+          "count": 8
+        },
+        {
+          "signature": "33-51-82-69-42-35-106-4",
+          "count": 8
+        },
+        {
+          "signature": "33-51-69-127-42-104-85-40",
+          "count": 8
+        },
+        {
+          "signature": "107-94-8-40-109-87-86-115",
+          "count": 8
+        },
+        {
+          "signature": "127-51-42-69-33-115-48-81",
+          "count": 8
+        }
+      ],
+      "top_dominant_experts": [
+        {
+          "expert_id": 75,
+          "count": 7998
+        },
+        {
+          "expert_id": 99,
+          "count": 7740
+        },
+        {
+          "expert_id": 76,
+          "count": 7098
+        },
+        {
+          "expert_id": 69,
+          "count": 6292
+        },
+        {
+          "expert_id": 18,
+          "count": 5937
+        },
+        {
+          "expert_id": 82,
+          "count": 5845
+        },
+        {
+          "expert_id": 73,
+          "count": 5827
+        },
+        {
+          "expert_id": 112,
+          "count": 5768
+        },
+        {
+          "expert_id": 8,
+          "count": 5638
+        },
+        {
+          "expert_id": 105,
+          "count": 5015
+        },
+        {
+          "expert_id": 79,
+          "count": 5009
+        },
+        {
+          "expert_id": 80,
+          "count": 4991
+        }
+      ]
+    }
+  }
+}

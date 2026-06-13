@@ -1,0 +1,229 @@
+{
+  "snapshot_at": "2026-06-11T21:44:48",
+  "samples_profiled": 690,
+  "predictions_loaded": 689,
+  "profiles_loaded": 690,
+  "skipped_prediction_lines": 0,
+  "skipped_profile_lines": 0,
+  "accuracy_so_far": 0.7028985507246377,
+  "correct_so_far": 485,
+  "prefill_latency_ms": {
+    "mean": 5468.414558034703,
+    "p50": 5564.025390625,
+    "p95": 8391.229785156249,
+    "max": 10056.302734375
+  },
+  "input_seq_len": {
+    "mean": 9609.70724637681,
+    "p50": 9006.0,
+    "p95": 16582.099999999995,
+    "max": 18073.0
+  },
+  "attention_flops_estimate": {
+    "mean": 55291368761219.336,
+    "p50": 44588549799936.0,
+    "p95": 131497503188582.33
+  },
+  "moe_ffn_flops_estimate": {
+    "mean": 34824412980553.46,
+    "p50": 32636651175936.0,
+    "p95": 60091518261657.586
+  },
+  "kv_cache_write_bytes_estimate": {
+    "mean": 944672661.1478261,
+    "p50": 885325824.0,
+    "p95": 1630086758.3999996
+  },
+  "flash_attention_requested_samples": 690,
+  "chunked_prefill_observed_samples": 0,
+  "task_stats": {
+    "Audio Event Location": {
+      "count": 70,
+      "prefill_mean_ms": 5115.671180943081,
+      "prefill_p50_ms": 5543.867431640625,
+      "prefill_p95_ms": 7888.166821289061,
+      "input_seq_len_mean": 9233.3,
+      "video_tokens_mean": 8703.771428571428,
+      "audio_tokens_mean": 388.2,
+      "accuracy": 0.6714285714285714,
+      "correct": 47,
+      "total": 70
+    },
+    "Audio OCR Matching": {
+      "count": 92,
+      "prefill_mean_ms": 4816.6405029296875,
+      "prefill_p50_ms": 4832.2353515625,
+      "prefill_p95_ms": 8432.728955078124,
+      "input_seq_len_mean": 9557.619565217392,
+      "video_tokens_mean": 9042.260869565218,
+      "audio_tokens_mean": 380.2173913043478,
+      "accuracy": 0.6847826086956522,
+      "correct": 63,
+      "total": 92
+    },
+    "Audio Object Matching": {
+      "count": 194,
+      "prefill_mean_ms": 5283.732769838313,
+      "prefill_p50_ms": 5539.625,
+      "prefill_p95_ms": 8224.675244140624,
+      "input_seq_len_mean": 9403.79381443299,
+      "video_tokens_mean": 8893.927835051547,
+      "audio_tokens_mean": 381.12371134020617,
+      "accuracy": 0.6649484536082474,
+      "correct": 129,
+      "total": 194
+    },
+    "Audio Information Extraction": {
+      "count": 145,
+      "prefill_mean_ms": 5793.386634563578,
+      "prefill_p50_ms": 5604.41796875,
+      "prefill_p95_ms": 8768.6173828125,
+      "input_seq_len_mean": 10216.83448275862,
+      "video_tokens_mean": 9714.537931034483,
+      "audio_tokens_mean": 382.84137931034485,
+      "accuracy": 0.7655172413793103,
+      "correct": 111,
+      "total": 145
+    },
+    "Audio Content Counting": {
+      "count": 33,
+      "prefill_mean_ms": 5622.420794862689,
+      "prefill_p50_ms": 5542.99267578125,
+      "prefill_p95_ms": 8473.948046875,
+      "input_seq_len_mean": 9145.939393939394,
+      "video_tokens_mean": 8658.787878787878,
+      "audio_tokens_mean": 369.42424242424244,
+      "accuracy": 0.5151515151515151,
+      "correct": 17,
+      "total": 33
+    },
+    "Audio Character Matching": {
+      "count": 156,
+      "prefill_mean_ms": 5906.109169984476,
+      "prefill_p50_ms": 5622.199951171875,
+      "prefill_p95_ms": 8209.12109375,
+      "input_seq_len_mean": 9599.185897435897,
+      "video_tokens_mean": 9093.320512820514,
+      "audio_tokens_mean": 379.60897435897436,
+      "accuracy": 0.7612903225806451,
+      "correct": 118,
+      "total": 155
+    }
+  },
+  "global_top_experts": [
+    {
+      "expert_id": 46,
+      "count": 27116320,
+      "frequency": 0.010649771210612618
+    },
+    {
+      "expert_id": 94,
+      "count": 25922105,
+      "frequency": 0.01018075046862839
+    },
+    {
+      "expert_id": 80,
+      "count": 25553400,
+      "frequency": 0.010035943802598158
+    },
+    {
+      "expert_id": 7,
+      "count": 25001844,
+      "frequency": 0.00981932350862609
+    },
+    {
+      "expert_id": 41,
+      "count": 24755437,
+      "frequency": 0.009722548644828443
+    },
+    {
+      "expert_id": 97,
+      "count": 24121335,
+      "frequency": 0.009473508906980834
+    },
+    {
+      "expert_id": 2,
+      "count": 23981893,
+      "frequency": 0.0094187439021
+    },
+    {
+      "expert_id": 36,
+      "count": 23563256,
+      "frequency": 0.009254326744082348
+    },
+    {
+      "expert_id": 73,
+      "count": 23344870,
+      "frequency": 0.009168556959111495
+    },
+    {
+      "expert_id": 63,
+      "count": 23267544,
+      "frequency": 0.009138187638767442
+    },
+    {
+      "expert_id": 69,
+      "count": 23266537,
+      "frequency": 0.00913779214558809
+    },
+    {
+      "expert_id": 11,
+      "count": 23097533,
+      "frequency": 0.009071416843420306
+    },
+    {
+      "expert_id": 121,
+      "count": 22744100,
+      "frequency": 0.00893260816332358
+    },
+    {
+      "expert_id": 30,
+      "count": 22604101,
+      "frequency": 0.008877624400050592
+    },
+    {
+      "expert_id": 27,
+      "count": 22457815,
+      "frequency": 0.008820171455428473
+    },
+    {
+      "expert_id": 88,
+      "count": 22418162,
+      "frequency": 0.008804597978724613
+    }
+  ],
+  "modality_top_expert_ids": [
+    46,
+    94,
+    80,
+    7,
+    41,
+    97,
+    2,
+    36,
+    73,
+    63,
+    69,
+    11,
+    121,
+    30,
+    27,
+    88,
+    118,
+    72,
+    79,
+    127,
+    15,
+    44,
+    111,
+    14,
+    108,
+    112,
+    65,
+    35,
+    13,
+    37,
+    92,
+    91
+  ]
+}
