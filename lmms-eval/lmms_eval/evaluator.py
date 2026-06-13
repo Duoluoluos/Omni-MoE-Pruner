@@ -399,7 +399,11 @@ def evaluate(
     local_rank = int(os.environ.get("LOCAL_RANK", 0))
     global_rank = int(os.environ.get("RANK", 0))
     world_size = int(os.environ.get("WORLD_SIZE", 1))
+    shard_rank = int(os.environ.get("LMMS_EVAL_SHARD_RANK", global_rank))
+    shard_world_size = int(os.environ.get("LMMS_EVAL_SHARD_WORLD", world_size))
     eval_logger.info(f"Running on rank {global_rank} (local rank {local_rank})")
+    if (shard_rank, shard_world_size) != (global_rank, world_size):
+        eval_logger.info(f"Using standalone eval shard {shard_rank}/{shard_world_size}")
 
     # get lists of group hierarchy and each type of request
     eval_tasks = get_task_list(task_dict)
@@ -447,8 +451,8 @@ def evaluate(
         limit = get_sample_size(task, limit)
         task.build_all_requests(
             limit=limit,
-            rank=global_rank,
-            world_size=world_size,
+            rank=shard_rank,
+            world_size=shard_world_size,
             cache_requests=cache_requests,  # later we will add them
             rewrite_requests_cache=rewrite_requests_cache,
             system_instruction=system_instruction,
@@ -521,6 +525,8 @@ def evaluate(
     lm.clean()
     RANK = global_rank
     WORLD_SIZE = world_size
+    DATA_RANK = shard_rank
+    DATA_WORLD_SIZE = shard_world_size
     if eval_server_launcher is not None and RANK == 0:
         eval_server_launcher.launch()
 
@@ -549,10 +555,10 @@ def evaluate(
         # iterate over different filters used
         for filter_key in task.instances[0].filtered_resps.keys():
             if cli_args is not None and not cli_args.process_with_media:
-                doc_iterator = create_iterator(enumerate(task.eval_docs_no_media), rank=RANK, limit=int(limit) if limit else None, world_size=WORLD_SIZE)
+                doc_iterator = create_iterator(enumerate(task.eval_docs_no_media), rank=DATA_RANK, limit=int(limit) if limit else None, world_size=DATA_WORLD_SIZE)
             else:
-                doc_iterator = task.doc_iterator(rank=RANK, limit=limit, world_size=WORLD_SIZE)
-            doc_iterator_for_counting = itertools.islice(range(len(task.test_docs())), RANK, limit, WORLD_SIZE) if task.has_test_docs() else itertools.islice(range(len(task.validation_docs())), RANK, limit, WORLD_SIZE)
+                doc_iterator = task.doc_iterator(rank=DATA_RANK, limit=limit, world_size=DATA_WORLD_SIZE)
+            doc_iterator_for_counting = itertools.islice(range(len(task.test_docs())), DATA_RANK, limit, DATA_WORLD_SIZE) if task.has_test_docs() else itertools.islice(range(len(task.validation_docs())), DATA_RANK, limit, DATA_WORLD_SIZE)
             total_docs = sum(1 for _ in doc_iterator_for_counting)
             pbar = tqdm(total=total_docs, desc=f"Postprocessing", disable=(RANK != 0))
             for doc_id, doc in doc_iterator:

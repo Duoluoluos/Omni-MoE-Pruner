@@ -5,6 +5,7 @@ import sys
 import argparse
 
 parser = argparse.ArgumentParser(description="Qwen2.5-Omni Demo Parameters")
+parser.add_argument('--model_path', type=str, default="models/Qwen2.5-Omni-7B", help='HuggingFace model id or local path to Qwen2.5-Omni weights')
 parser.add_argument('--video', type=str, default="assets/example.mp4", help='Path to input video file')
 parser.add_argument('--describe', type=str, default="Describe this video.", help='Instruction text for the model')
 parser.add_argument('--omnizip', action='store_true', help='Whether to enable omnizip')
@@ -26,9 +27,8 @@ if args.omnizip:
 else:
     from transformers import Qwen2_5OmniForConditionalGeneration
 
-model_path = "Qwen/Qwen2.5-Omni-7B"
 model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
-    model_path,
+    args.model_path,
     torch_dtype="auto",
     device_map="cuda:0",
     attn_implementation="flash_attention_2",
@@ -37,7 +37,7 @@ model = Qwen2_5OmniForConditionalGeneration.from_pretrained(
 model.omnizip_config = None
 if args.omnizip:
     model.thinker.omnizip_config = omnizip_config
-processor = Qwen2_5OmniProcessor.from_pretrained(model_path)
+processor = Qwen2_5OmniProcessor.from_pretrained(args.model_path)
 
 conversation = [
     {
@@ -73,7 +73,6 @@ print('Generating...')
 from transformers import TextStreamer
 streamer = TextStreamer(processor.tokenizer, skip_prompt=True, skip_special_tokens=True)
 text_ids = model.generate(**inputs, use_audio_in_video=USE_AUDIO_IN_VIDEO, return_audio=False, temperature=1, streamer=streamer)
-
 
 
 

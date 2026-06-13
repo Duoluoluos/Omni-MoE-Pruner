@@ -1,0 +1,28 @@
+# Local environments and caches
+.venv/
+.env
+.env.*
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.ipynb_checkpoints/
+.DS_Store
+
+# Project-local generated artifacts
+/.coco/
+/.pip-cache/
+/.tmp/
+/logs/
+nohup.out
+/profile_*/
+/OmniZip.pdf
+/run_qwen3_omni_bg.sh
+/scripts/
+/ltx_infer_merged_bf16_*.sh
+
+# Large local datasets and model weights
+/eval_data/
+/models/

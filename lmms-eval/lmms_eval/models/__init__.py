@@ -54,6 +54,7 @@ AVAILABLE_SIMPLE_MODELS = {
     "phi3v": "Phi3v",
     "phi4_multimodal": "Phi4",
     "qwen3_vl": "Qwen3_VL",
+    "qwen3_omni": "Qwen3_Omni",
     "qwen2_5_omni": "Qwen2_5_Omni",
     "qwen2_5_vl": "Qwen2_5_VL",
     "qwen2_5_vl_interleave": "Qwen2_5_VL_Interleave",
