@@ -21,11 +21,13 @@ for task_name in videomme videomme_long videomme_w_subtitle videomme_long_w_subt
 done
 
 # Or export WRAPPER=None
-export WRAPPER=OmniZip
-OMNIZIP_RHO_AUDIO=0.3
-OMNIZIP_RHO_VIDEO=0.6
-OMNIZIP_G=3
-OMNIZIP_CONTEXTUAL_RATIO=0.05
+export WRAPPER="${WRAPPER:-OmniZip}"
+OMNIZIP_RHO_AUDIO="${OMNIZIP_RHO_AUDIO:-0.3}"
+OMNIZIP_RHO_VIDEO="${OMNIZIP_RHO_VIDEO:-0.6}"
+OMNIZIP_G="${OMNIZIP_G:-3}"
+OMNIZIP_CONTEXTUAL_RATIO="${OMNIZIP_CONTEXTUAL_RATIO:-0.05}"
+MAX_NUM_FRAMES="${MAX_NUM_FRAMES:-768}"
+TASKS="${TASKS:-videomme}"
 
 LIMIT_ARG=""
 if [ -n "${EVAL_LIMIT:-}" ]; then
@@ -35,11 +37,12 @@ fi
 PRETRAINED="${PRETRAINED:-${PROJECT_ROOT}/models/Qwen3-Omni-30B-A3B-Instruct}"
 MAIN_PROCESS_PORT="${MAIN_PROCESS_PORT:-12347}"
 EVAL_OUTPUT_PATH="${EVAL_OUTPUT_PATH:-./logs/}"
+CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES:-0}"
 
-CUDA_VISIBLE_DEVICES=0 "${PROJECT_ROOT}/.venv/bin/accelerate" launch --num_processes=1 --main_process_port="${MAIN_PROCESS_PORT}" -m lmms_eval \
+CUDA_VISIBLE_DEVICES="${CUDA_VISIBLE_DEVICES}" "${PROJECT_ROOT}/.venv/bin/accelerate" launch --num_processes=1 --main_process_port="${MAIN_PROCESS_PORT}" -m lmms_eval \
     --model qwen3_omni \
-    --model_args "pretrained=${PRETRAINED},attn_implementation=flash_attention_2,max_num_frames=768,OMNIZIP_RHO_AUDIO=${OMNIZIP_RHO_AUDIO},OMNIZIP_RHO_VIDEO=${OMNIZIP_RHO_VIDEO},OMNIZIP_G=${OMNIZIP_G},OMNIZIP_CONTEXTUAL_RATIO=${OMNIZIP_CONTEXTUAL_RATIO}" \
-    --tasks videomme \
+    --model_args "pretrained=${PRETRAINED},attn_implementation=flash_attention_2,max_num_frames=${MAX_NUM_FRAMES},OMNIZIP_RHO_AUDIO=${OMNIZIP_RHO_AUDIO},OMNIZIP_RHO_VIDEO=${OMNIZIP_RHO_VIDEO},OMNIZIP_G=${OMNIZIP_G},OMNIZIP_CONTEXTUAL_RATIO=${OMNIZIP_CONTEXTUAL_RATIO}" \
+    --tasks "${TASKS}" \
     --batch_size 1 \
     ${LIMIT_ARG} \
     --output_path "${EVAL_OUTPUT_PATH}"

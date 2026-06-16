@@ -41,14 +41,18 @@ The visualizer streams `profile_samples.jsonl` and writes compact PNG/CSV/JSON/M
 
 ## Two-pass evidence retrieval prototype
 
-`run_omnivideobench_twopass.py` implements a first-pass skim followed by a high-token pass over selected temporal windows. The current v0 scorer uses:
+`run_omnivideobench_twopass.py` implements a first-pass skim followed by a high-token pass over selected temporal windows.
 
-- oracle time cues parsed from `reasoning_steps` evidence/inference text, enabled by default for an upper-bound diagnostic;
-- explicit time cues in the question text;
-- low-cost audio RMS energy from PyAV, with librosa fallback;
-- non-overlap selection so adjacent windows around the same cue do not consume all slots.
+The default path is GT-free MoE route-signature retrieval:
 
-The unimplemented skim signals from the analysis are left explicit in the retrieval metadata as `not_enabled_v0`: low-res frame features, MoE route signature, and cheap partial Qwen3-Omni forward.
+- fixed short windows, default `SEGMENT_SECONDS=6`;
+- low-cost skim pass per window, default `SKIM_VIDEO_FPS=0.5` and `SKIM_SEGMENT_MAX_FRAMES=12`;
+- middle-layer MoE route signatures for text/video/audio tokens;
+- route similarity between question-text signature and segment video/audio signatures;
+- route novelty, neighboring route change, route margin/confidence, audio RMS saliency, and sparse visual scene-change score;
+- diverse evidence-chain selection rather than plain top-K.
+
+`reasoning_steps` timestamps are no longer used by default. The old time-cue path remains available only as an oracle upper-bound diagnostic via `--retrieval-mode oracle_time_audio --oracle-reasoning-times`; do not report it as real inference acceleration.
 
 Run retrieval-only sanity check:
 
@@ -67,8 +71,9 @@ profile_omnivideobench_qwen3/run_twopass_on_worker_3898754.sh
 
 Useful knobs:
 
-- `TOP_SEGMENTS=2` selects two skim windows by default.
-- `SEGMENT_SECONDS=30` and `SEGMENT_CONTEXT_SECONDS=8` control each candidate window and padding.
+- `TOP_SEGMENTS=4` selects a route-diverse evidence chain by default.
+- `SEGMENT_SECONDS=6` and `SEGMENT_CONTEXT_SECONDS=2` control each candidate window and padding.
 - `SEGMENT_MAX_FRAMES=128` caps frames per selected segment.
-- `NO_ORACLE_REASONING_TIMES=1` disables annotation-derived time cues for a non-oracle retrieval run.
+- `SKIM_VIDEO_FPS=0.5` and `SKIM_SEGMENT_MAX_FRAMES=12` control the low-cost route-signature skim.
+- `RETRIEVAL_MODE=oracle_time_audio ORACLE_REASONING_TIMES=1` runs the old annotation-time upper bound.
 - `NO_AUDIO_ENERGY=1` disables audio RMS scoring.

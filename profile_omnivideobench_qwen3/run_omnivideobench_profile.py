@@ -44,6 +44,11 @@ def parse_args():
     parser.add_argument("--video-fps", type=float, default=None)
     parser.add_argument("--video-max-frames", type=int, default=None)
     parser.add_argument("--seed", type=int, default=1)
+    parser.add_argument("--use-omnizip", action="store_true")
+    parser.add_argument("--omnizip-rho-audio", type=float, default=0.3)
+    parser.add_argument("--omnizip-rho-video", type=float, default=0.6)
+    parser.add_argument("--omnizip-g", type=int, default=3)
+    parser.add_argument("--omnizip-contextual-ratio", type=float, default=0.05)
     return parser.parse_args()
 
 
@@ -688,6 +693,15 @@ def move_inputs_to_model(inputs, model, device_map):
     return inputs.to(model.device).to(model.dtype)
 
 
+def omnizip_config_from_args(args) -> dict[str, Any]:
+    return {
+        "rho_audio": float(args.omnizip_rho_audio),
+        "rho_video": float(args.omnizip_rho_video),
+        "g": int(args.omnizip_g),
+        "contextual_ratio": float(args.omnizip_contextual_ratio),
+    }
+
+
 def maybe_torch_profile(sample_index, enabled_count, output_dir):
     if sample_index >= enabled_count:
         return None
@@ -746,6 +760,8 @@ def evaluate_one(sample_index, sample, model, processor, collector, args, output
             model.thinker.nframes = videos[0].shape[0]
         except Exception:
             pass
+    if args.use_omnizip and hasattr(model, "thinker"):
+        model.thinker.omnizip_config = omnizip_config_from_args(args)
     inputs = processor(
         text=text,
         audio=audios,
@@ -1077,9 +1093,13 @@ def main():
         f"torch_profile_samples={args.torch_profile_samples}",
         flush=True,
     )
-    print("[setup] loading Qwen3-Omni without OmniZip/token-pruning wrapper", flush=True)
-
-    from transformers import Qwen3OmniMoeForConditionalGeneration, Qwen3OmniMoeProcessor
+    if args.use_omnizip:
+        print(f"[setup] loading Qwen3-Omni with OmniZip token pruning: {omnizip_config_from_args(args)}", flush=True)
+        from omnizip.qwen3_omni.modeling_qwen3_omni_moe import Qwen3OmniMoeForConditionalGeneration
+        from transformers import Qwen3OmniMoeProcessor
+    else:
+        print("[setup] loading Qwen3-Omni without OmniZip/token-pruning wrapper", flush=True)
+        from transformers import Qwen3OmniMoeForConditionalGeneration, Qwen3OmniMoeProcessor
 
     Qwen3OmniMoeForConditionalGeneration._tp_plan = (
         [] if Qwen3OmniMoeForConditionalGeneration._tp_plan is None else Qwen3OmniMoeForConditionalGeneration._tp_plan
@@ -1092,6 +1112,8 @@ def main():
     ).eval()
     if hasattr(model, "disable_talker"):
         model.disable_talker()
+    if args.use_omnizip and hasattr(model, "thinker"):
+        model.thinker.omnizip_config = omnizip_config_from_args(args)
     processor = Qwen3OmniMoeProcessor.from_pretrained(args.model_path)
     collector = Qwen3ProfileCollector(
         model,

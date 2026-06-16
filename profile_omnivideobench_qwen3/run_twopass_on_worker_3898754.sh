@@ -2,7 +2,7 @@
 set -euo pipefail
 
 PROJECT_ROOT="${PROJECT_ROOT:-/mnt/bn/isp-traindata-lf-1/wq/OmniZip}"
-WORKER_ID="${WORKER_ID:-3898754}"
+WORKER_ID="${WORKER_ID:-3904626}"
 TS="${TS:-$(date +%Y%m%d_%H%M%S)}"
 OUT_DIR="${OUT_DIR:-${PROJECT_ROOT}/logs/omnivideobench_qwen3_twopass/${TS}}"
 BACKGROUND="${BACKGROUND:-1}"
@@ -13,11 +13,15 @@ VIDEO_DIR="${VIDEO_DIR:-${PROJECT_ROOT}/eval_data/OmniVideoBench}"
 MAX_NEW_TOKENS="${MAX_NEW_TOKENS:-100}"
 ATTN_IMPLEMENTATION="${ATTN_IMPLEMENTATION:-flash_attention_2}"
 DEVICE_MAP="${DEVICE_MAP:-cuda:0}"
-SEGMENT_SECONDS="${SEGMENT_SECONDS:-30}"
-SEGMENT_CONTEXT_SECONDS="${SEGMENT_CONTEXT_SECONDS:-8}"
-TOP_SEGMENTS="${TOP_SEGMENTS:-2}"
+RETRIEVAL_MODE="${RETRIEVAL_MODE:-route_signature}"
+SEGMENT_SECONDS="${SEGMENT_SECONDS:-6}"
+SEGMENT_CONTEXT_SECONDS="${SEGMENT_CONTEXT_SECONDS:-2}"
+TOP_SEGMENTS="${TOP_SEGMENTS:-4}"
 SEGMENT_MAX_FRAMES="${SEGMENT_MAX_FRAMES:-128}"
 AUDIO_ENERGY_SR="${AUDIO_ENERGY_SR:-8000}"
+SKIM_VIDEO_FPS="${SKIM_VIDEO_FPS:-0.5}"
+SKIM_SEGMENT_MAX_FRAMES="${SKIM_SEGMENT_MAX_FRAMES:-12}"
+SKIM_MAX_NEW_TOKENS="${SKIM_MAX_NEW_TOKENS:-1}"
 
 mkdir -p "${OUT_DIR}"
 
@@ -29,11 +33,15 @@ args=(
   --max-new-tokens "${MAX_NEW_TOKENS}"
   --attn-implementation "${ATTN_IMPLEMENTATION}"
   --device-map "${DEVICE_MAP}"
+  --retrieval-mode "${RETRIEVAL_MODE}"
   --segment-seconds "${SEGMENT_SECONDS}"
   --segment-context-seconds "${SEGMENT_CONTEXT_SECONDS}"
   --top-segments "${TOP_SEGMENTS}"
   --segment-max-frames "${SEGMENT_MAX_FRAMES}"
   --audio-energy-sr "${AUDIO_ENERGY_SR}"
+  --skim-video-fps "${SKIM_VIDEO_FPS}"
+  --skim-segment-max-frames "${SKIM_SEGMENT_MAX_FRAMES}"
+  --skim-max-new-tokens "${SKIM_MAX_NEW_TOKENS}"
 )
 
 if [[ -n "${LIMIT:-}" ]]; then
@@ -54,8 +62,14 @@ fi
 if [[ "${NO_AUDIO_ENERGY:-0}" == "1" ]]; then
   args+=(--no-audio-energy)
 fi
-if [[ "${NO_ORACLE_REASONING_TIMES:-0}" == "1" ]]; then
-  args+=(--no-oracle-reasoning-times)
+if [[ "${ORACLE_REASONING_TIMES:-0}" == "1" ]]; then
+  args+=(--oracle-reasoning-times)
+fi
+if [[ -n "${ROUTE_LAYER_START:-}" ]]; then
+  args+=(--route-layer-start "${ROUTE_LAYER_START}")
+fi
+if [[ -n "${ROUTE_LAYER_END:-}" ]]; then
+  args+=(--route-layer-end "${ROUTE_LAYER_END}")
 fi
 if [[ "${RETRIEVAL_ONLY:-0}" == "1" ]]; then
   args+=(--retrieval-only)
