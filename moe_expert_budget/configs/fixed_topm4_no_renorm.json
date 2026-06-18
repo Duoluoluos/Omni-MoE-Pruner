@@ -1,0 +1,13 @@
+{
+  "enabled": true,
+  "mode": "fixed_topm_mask",
+  "target_modality": "video",
+  "protected_modalities": ["text", "audio", "image", "special"],
+  "original_top_k": 8,
+  "top_m": 4,
+  "layer_start": 12,
+  "layer_end": 32,
+  "renormalize_weights": false,
+  "apply_during_decode": false,
+  "note": "Ablation A: top_m=4 without renormalization."
+}

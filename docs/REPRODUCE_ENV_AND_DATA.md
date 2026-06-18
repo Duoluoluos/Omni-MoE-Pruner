@@ -153,19 +153,11 @@ hf download Qwen/Qwen3-Omni-30B-A3B-Instruct \
   --max-workers 8
 ```
 
-Optional, for the Qwen2.5 demo:
-
-```bash
-hf download Qwen/Qwen2.5-Omni-7B \
-  --local-dir "${PROJECT_ROOT}/models/Qwen2.5-Omni-7B" \
-  --max-workers 8
-```
 
 The default paths expected by this repo are:
 
 ```text
 models/Qwen3-Omni-30B-A3B-Instruct
-models/Qwen2.5-Omni-7B
 ```
 
 Override at runtime only if needed:
@@ -182,30 +174,7 @@ Create data directories:
 mkdir -p "${PROJECT_ROOT}/eval_data" "${HF_HOME}"
 ```
 
-### Video-MME
 
-`lmms-eval` expects Video-MME media at:
-
-```text
-${HF_HOME}/videomme/data
-${HF_HOME}/videomme/subtitle
-```
-
-With the path contract above, that is:
-
-```text
-eval_data/huggingface/videomme/data
-eval_data/huggingface/videomme/subtitle
-```
-
-Download directly into that directory:
-
-```bash
-hf download lmms-lab/Video-MME \
-  --repo-type dataset \
-  --local-dir "${HF_HOME}/videomme" \
-  --max-workers 8
-```
 
 ### OmniVideoBench
 
@@ -225,53 +194,6 @@ eval_data/OmniVideoBench/data.json
 eval_data/OmniVideoBench/data.parquet
 ```
 
-### AVUTBenchmark
-
-Used by `profile_avut_qwen3`:
-
-```bash
-hf download tsinghua-ee/AVUTBenchmark \
-  --repo-type dataset \
-  --local-dir "${PROJECT_ROOT}/eval_data/AVUTBenchmark" \
-  --max-workers 8
-```
-
-Expected files include:
-
-```text
-eval_data/AVUTBenchmark/AV_Human_data.json
-eval_data/AVUTBenchmark/AV_Gemini_data.json
-```
-
-### ShortVid-Bench
-
-```bash
-hf download TencentARC/ShortVid-Bench \
-  --repo-type dataset \
-  --local-dir "${PROJECT_ROOT}/eval_data/ShortVid-Bench" \
-  --max-workers 8
-```
-
-Expected file:
-
-```text
-eval_data/ShortVid-Bench/ShortVid-Bench-1k.json
-```
-
-### WorldSense
-
-```bash
-hf download honglyhly/WorldSense \
-  --repo-type dataset \
-  --local-dir "${PROJECT_ROOT}/eval_data/WorldSense" \
-  --max-workers 8
-```
-
-Expected file:
-
-```text
-eval_data/WorldSense/worldsense_qa.json
-```
 
 ## Quick Verification
 
@@ -337,17 +259,3 @@ python profile_omnivideobench_qwen3/run_omnivideobench_profile.py \
   --data-path "${PROJECT_ROOT}/eval_data/OmniVideoBench/data.json" \
   --video-dir "${PROJECT_ROOT}/eval_data/OmniVideoBench"
 ```
-
-## Notes
-
-- `eval_data/`, `models/`, `logs/`, `.venv/`, and cache directories are intentionally ignored by Git.
-- Expect large downloads. Current local sizes are roughly:
-  - `models/Qwen3-Omni-30B-A3B-Instruct`: 66 GB
-  - `models/Qwen2.5-Omni-7B`: 21 GB
-  - `eval_data/huggingface/videomme`: 94 GB
-  - `eval_data/OmniVideoBench`: 54 GB
-  - `eval_data/AVUTBenchmark`: 24 GB
-  - `eval_data/WorldSense`: 17 GB
-  - `eval_data/ShortVid-Bench`: 12 GB
-- If a download is interrupted, rerun the same `hf download ... --local-dir ...` command; it should resume/reuse existing files.
-- Avoid creating a top-level directory named `videomme` in the repo root. `eval.sh` checks for this because it can shadow the `lmms-eval` task name.
