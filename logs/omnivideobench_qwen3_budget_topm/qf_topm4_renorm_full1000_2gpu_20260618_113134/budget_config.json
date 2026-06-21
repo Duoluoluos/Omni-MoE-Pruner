@@ -1,0 +1,20 @@
+{
+  "enabled": true,
+  "mode": "fixed_topm_mask",
+  "target_modality": "video",
+  "protected_modalities": [
+    "text",
+    "audio",
+    "image",
+    "special"
+  ],
+  "original_top_k": 8,
+  "top_m": 4,
+  "layer_start": 12,
+  "layer_end": 32,
+  "layer_start_ratio": 0.25,
+  "layer_end_ratio": 0.67,
+  "renormalize_weights": true,
+  "apply_during_decode": false,
+  "note": "Step 01 quality floor; mask-only ablation on video tokens in middle layers."
+}
