@@ -25,6 +25,9 @@ OUT_DIR="${OUT_DIR:?set OUT_DIR}"
 # LIMIT semantics: a positive integer caps samples; LIMIT=0 means full dataset.
 LIMIT="${LIMIT:-50}"
 RESUME="${RESUME:-0}"
+# device_map=auto shards the 30B model across all visible GPUs (needed for long
+# videos that OOM a single 80GB card).
+DEVICE_MAP="${DEVICE_MAP:-auto}"
 BUDGET_CONFIG="${BUDGET_CONFIG:-/mnt/bn/isp-traindata-lq2/wq/Omni-MoE-Pruner/moe_expert_budget/configs/fixed_topm_default.json}"
 mkdir -p "$OUT_DIR"
 RUN_LOG="${OUT_DIR}/run.log"
@@ -48,7 +51,7 @@ nohup /mnt/bn/isp-traindata-lq2/wq/Omni-MoE-Pruner/.venv/bin/python \
   --trajectory-bins 4 --trajectory-top-experts 4 \
   --torch-profile-samples 0 \
   --attn-implementation flash_attention_2 \
-  --device-map cuda:0 \
+  --device-map "${DEVICE_MAP}" \
   --max-new-tokens 100 \
   ${LIMIT_ARG} ${RESUME_ARG} \
   > "$RUN_LOG" 2>&1 &
