@@ -19,6 +19,50 @@ MODALITY_CODES = {"text": 0, "video": 1, "audio": 2, "image": 3, "decode": 4, "s
 MODALITY_NAMES = {0: "text", 1: "video", 2: "audio", 3: "image", 4: "decode"}
 
 
+def _default_layer_policy() -> dict[str, dict[str, Any]]:
+    return {
+        "early": {"range_ratio": [0.0, 0.25], "mode": "full"},
+        "middle": {"range_ratio": [0.25, 0.67], "mode": "dynamic"},
+        "late": {"range_ratio": [0.67, 1.0], "mode": "full"},
+    }
+
+
+def _default_task_policy() -> dict[str, dict[str, Any]]:
+    return {
+        "stress": {
+            "tasks": [
+                "temporal understanding",
+                "spatial understanding",
+                "reference reasoning",
+                "counting",
+            ],
+            "min_top_m": 6,
+        },
+        "medium": {
+            "tasks": [
+                "causal reasoning",
+                "hypothetical reasoning",
+                "relationship reasoning",
+                "ego reasoning",
+            ],
+            "min_top_m": 4,
+        },
+        "perception": {
+            "tasks": [
+                "fine-grained perception",
+                "attribute comparison",
+                "sentiment analysis",
+            ],
+            "min_top_m": 4,
+        },
+        "audio": {
+            "tasks": ["background&music understanding"],
+            "min_top_m": 4,
+        },
+        "default": {"min_top_m": 4},
+    }
+
+
 @dataclass
 class ExpertBudgetConfig:
     enabled: bool = True
@@ -34,6 +78,28 @@ class ExpertBudgetConfig:
     renormalize_weights: bool = True
     apply_during_decode: bool = False
     note: str = ""
+
+    # --- step 02: confidence_dynamic_topk_mask ---
+    # Candidate budgets, sorted descending in priority (high conf -> small top_m).
+    top_m_options: list[int] = field(default_factory=lambda: [4, 6, 8])
+    # Where thresholds come from: "profile_percentile" => calibrate on N samples;
+    # "explicit" => use the *_threshold values below directly.
+    threshold_source: str = "profile_percentile"
+    high_margin_percentile: float = 70.0
+    medium_margin_percentile: float = 40.0
+    boundary_margin_percentile: float = 50.0
+    # Explicit thresholds (used when threshold_source == "explicit", or filled in
+    # after calibration so the run is reproducible).
+    high_margin_threshold: float | None = None
+    medium_margin_threshold: float | None = None
+    boundary_threshold: float | None = None
+    # Number of dataset samples to scan during calibration of the percentiles.
+    calibrate_samples: int = 40
+
+    # --- step 03: task / layer / modality policy ---
+    policy_version: str = "omnivideobench_expert_budget_v1"
+    layer_policy: dict[str, dict[str, Any]] = field(default_factory=_default_layer_policy)
+    task_policy: dict[str, dict[str, Any]] = field(default_factory=_default_task_policy)
 
     @classmethod
     def from_json(cls, path: str | Path) -> "ExpertBudgetConfig":
@@ -63,6 +129,62 @@ class ExpertBudgetConfig:
     def target_layer_set(self, num_layers: int) -> set[int]:
         ls, le = self.resolved_layer_range(num_layers)
         return set(range(ls, le))
+
+    def layer_modes(self, num_layers: int) -> dict[int, str]:
+        """Resolve layer policy ratios to a per-layer mode map.
+
+        Backward compatible default: if no explicit ``layer_policy`` is present,
+        use the legacy ``layer_start/end`` middle-layer range as dynamic and keep
+        all other layers full top-k.
+        """
+        modes = {idx: "full" for idx in range(num_layers)}
+        if self.layer_start is not None and self.layer_end is not None:
+            for idx in self.target_layer_set(num_layers):
+                modes[idx] = "dynamic"
+            return modes
+        if not self.layer_policy:
+            for idx in self.target_layer_set(num_layers):
+                modes[idx] = "dynamic"
+            return modes
+        for name, spec in self.layer_policy.items():
+            mode = str(spec.get("mode", "full")).lower()
+            if mode not in {"full", "dynamic", "fixed"}:
+                raise ValueError(f"Unknown layer_policy mode {mode!r} for {name!r}")
+            if "layers" in spec:
+                layers = [int(x) for x in spec["layers"]]
+            else:
+                ratios = spec.get("range_ratio")
+                if ratios is None:
+                    continue
+                if len(ratios) != 2:
+                    raise ValueError(f"layer_policy {name!r} range_ratio must have 2 values")
+                start = max(0.0, min(float(ratios[0]), 1.0))
+                end = max(start, min(float(ratios[1]), 1.0))
+                ls = max(0, min(int(math.floor(start * num_layers)), num_layers))
+                le = max(ls, min(int(math.floor(end * num_layers)), num_layers))
+                layers = list(range(ls, le))
+            for idx in layers:
+                if 0 <= idx < num_layers:
+                    modes[idx] = mode
+        return modes
+
+    def target_layer_set_from_policy(self, num_layers: int, mode: str = "dynamic") -> set[int]:
+        want = mode.lower()
+        return {idx for idx, layer_mode in self.layer_modes(num_layers).items() if layer_mode == want}
+
+    def task_min_top_m(self, task_type: str | None) -> tuple[int, str]:
+        """Return the minimum top-m for an OmniVideoBench task and the matched cluster."""
+        default_min = int((self.task_policy.get("default") or {}).get("min_top_m", self.top_m))
+        if not task_type:
+            return default_min, "default"
+        normalized = str(task_type).strip().lower()
+        for cluster, spec in self.task_policy.items():
+            if cluster == "default":
+                continue
+            tasks = {str(t).strip().lower() for t in spec.get("tasks", [])}
+            if normalized in tasks:
+                return int(spec.get("min_top_m", default_min)), cluster
+        return default_min, "default"
 
     def target_modality_code(self) -> int:
         if self.target_modality not in MODALITY_CODES:

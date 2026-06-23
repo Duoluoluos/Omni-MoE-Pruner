@@ -184,7 +184,8 @@ class FixedTopMMaskInstaller:
                 return int(parts[i + 1])
         return None
 
-    def begin_sample(self, sample_index: int | None, input_ids: torch.Tensor) -> None:
+    def begin_sample(self, sample_index: int | None, input_ids: torch.Tensor, task_type: str | None = None) -> None:
+        del task_type
         ids = input_ids[0].detach().cpu().numpy().astype(np.int64)
         modalities = build_modality_vector(ids, self.token_ids)
         target_mask_np = resolve_target_token_mask(modalities, self.target_code, self.protected_codes)

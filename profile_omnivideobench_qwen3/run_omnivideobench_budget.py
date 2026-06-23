@@ -159,7 +159,7 @@ def evaluate_one(
     inputs = move_inputs_to_model(inputs, model, args.device_map)
     collector.begin_sample(sample_index, sample, inputs.input_ids, meta)
     if budget.enabled:
-        budget.begin_sample(sample_index, inputs.input_ids)
+        budget.begin_sample(sample_index, inputs.input_ids, sample.get("task_type", "Unknown"))
 
     prof_ctx = maybe_torch_profile(sample_index, args.torch_profile_samples, output_dir)
     ctx = prof_ctx.__enter__() if prof_ctx is not None else None
