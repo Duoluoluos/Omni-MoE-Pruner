@@ -14,6 +14,7 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
+from .compact_dispatch import compact_moe_forward
 from .mask_policy import (
     ExpertBudgetConfig,
     MODALITY_CODES,
@@ -33,6 +34,19 @@ class _DynCallStats:
     assignments_original: int = 0
     assignments_effective: int = 0
     target_active_sum: int = 0
+    compact_assignment_count_before: int = 0
+    compact_assignment_count_after: int = 0
+    compact_active_experts_before_sum: int = 0
+    compact_active_experts_after_sum: int = 0
+    compact_hot_to_mean_before_sum: float = 0.0
+    compact_hot_to_mean_after_sum: float = 0.0
+    compact_calls: int = 0
+    compact_dispatch_time_ms: float = 0.0
+    compact_expert_mlp_time_ms: float = 0.0
+    compact_combine_time_ms: float = 0.0
+    compact_debug_max_abs_diff: float = 0.0
+    compact_debug_mean_abs_diff_sum: float = 0.0
+    compact_debug_calls: int = 0
 
 
 @dataclass
@@ -41,6 +55,7 @@ class _DynSampleStats:
     task_type: str | None = None
     task_policy_cluster: str = "default"
     task_min_top_m: int | None = None
+    task_layer_full_layers: list[int] = field(default_factory=list)
     layers: dict[int, _DynCallStats] = field(default_factory=dict)
     target_layers: list[int] = field(default_factory=list)
     top_m_histogram: dict[int, int] = field(default_factory=dict)
@@ -74,18 +89,43 @@ class _DynSampleStats:
                 ),
                 "assignments_original": ls.assignments_original,
                 "assignments_effective": ls.assignments_effective,
+                "compact_assignment_count_before": ls.compact_assignment_count_before,
+                "compact_assignment_count_after": ls.compact_assignment_count_after,
+                "compact_active_experts_before_avg": (
+                    ls.compact_active_experts_before_sum / ls.compact_calls if ls.compact_calls else 0.0
+                ),
+                "compact_active_experts_after_avg": (
+                    ls.compact_active_experts_after_sum / ls.compact_calls if ls.compact_calls else 0.0
+                ),
+                "compact_hot_to_mean_before_avg": (
+                    ls.compact_hot_to_mean_before_sum / ls.compact_calls if ls.compact_calls else 0.0
+                ),
+                "compact_hot_to_mean_after_avg": (
+                    ls.compact_hot_to_mean_after_sum / ls.compact_calls if ls.compact_calls else 0.0
+                ),
+                "compact_dispatch_time_ms": ls.compact_dispatch_time_ms,
+                "compact_expert_mlp_time_ms": ls.compact_expert_mlp_time_ms,
+                "compact_combine_time_ms": ls.compact_combine_time_ms,
+                "compact_debug_max_abs_diff": ls.compact_debug_max_abs_diff,
+                "compact_debug_mean_abs_diff_avg": (
+                    ls.compact_debug_mean_abs_diff_sum / ls.compact_debug_calls if ls.compact_debug_calls else 0.0
+                ),
+                "compact_debug_calls": ls.compact_debug_calls,
             })
         hist = {str(k): int(self.top_m_histogram.get(k, 0)) for k in sorted(installer.top_m_options)}
         return {
             "enabled": bool(config.enabled),
             "mode": config.mode,
             "policy_version": config.policy_version,
+            "compact_dispatch": bool(installer.compact_dispatch),
             "target_layers": sorted(self.target_layers),
             "layer_policy": config.layer_policy,
             "task_type": self.task_type,
             "task_policy_cluster": self.task_policy_cluster,
             "task_min_top_m": self.task_min_top_m,
+            "task_layer_full_layers": list(self.task_layer_full_layers),
             "task_policy": config.task_policy,
+            "task_layer_policy": config.task_layer_policy,
             "top_m_options": list(installer.top_m_options),
             "original_top_k": config.original_top_k,
             "target_modality": config.target_modality,
@@ -95,6 +135,10 @@ class _DynSampleStats:
                 "top1_top2_high": installer.high_thr,
                 "top1_top2_medium": installer.medium_thr,
                 "boundary": installer.boundary_thr,
+            },
+            "threshold_granularity": installer.threshold_granularity,
+            "per_layer_thresholds": {
+                str(k): v for k, v in sorted(installer.per_layer_thresholds.items())
             },
             "top_m_histogram": hist,
             "assignment_count_original_est": total_orig,
@@ -117,6 +161,7 @@ class _ActiveSampleContext:
         self.task_type: str | None = None
         self.task_policy_cluster: str = "default"
         self.task_min_top_m: int | None = None
+        self.task_layer_full_layers: set[int] = set()
         self.stats: _DynSampleStats = _DynSampleStats()
 
 
@@ -160,10 +205,26 @@ class ConfidenceDynamicMaskInstaller:
         self.high_thr: float | None = config.high_margin_threshold
         self.medium_thr: float | None = config.medium_margin_threshold
         self.boundary_thr: float | None = config.boundary_threshold
+        self.threshold_granularity = str(getattr(config, "threshold_granularity", "global") or "global").lower()
+        if self.threshold_granularity not in {"global", "per_layer"}:
+            raise ValueError(f"Unknown threshold_granularity {self.threshold_granularity!r}")
+        self.per_layer_thresholds: dict[int, dict[str, float]] = {
+            int(k): {
+                "top1_top2_high": float(v["top1_top2_high"]),
+                "top1_top2_medium": float(v["top1_top2_medium"]),
+                "boundary": float(v["boundary"]),
+            }
+            for k, v in (getattr(config, "per_layer_thresholds", {}) or {}).items()
+            if all(name in v for name in ("top1_top2_high", "top1_top2_medium", "boundary"))
+        }
         self._calibrating = False
         self._calib_margin12: list[np.ndarray] = []
         self._calib_boundary: list[np.ndarray] = []
+        self._calib_margin12_by_layer: dict[int, list[np.ndarray]] = {}
+        self._calib_boundary_by_layer: dict[int, list[np.ndarray]] = {}
         self._enabled = bool(self.config.enabled) and self.m_small < self.text_top_k
+        self.compact_dispatch = bool(config.compact_dispatch) or "compact" in (config.mode or "").lower()
+        self._compact_debug_calls = 0
 
     @property
     def enabled(self) -> bool:
@@ -171,6 +232,10 @@ class ConfidenceDynamicMaskInstaller:
 
     @property
     def thresholds_ready(self) -> bool:
+        if self.threshold_granularity == "per_layer":
+            if not self.target_layers:
+                return True
+            return all(idx in self.per_layer_thresholds for idx in self.target_layers)
         return None not in (self.high_thr, self.medium_thr, self.boundary_thr)
 
     def install(self) -> int:
@@ -216,10 +281,14 @@ class ConfidenceDynamicMaskInstaller:
         self._calibrating = True
         self._calib_margin12 = []
         self._calib_boundary = []
+        self._calib_margin12_by_layer = {}
+        self._calib_boundary_by_layer = {}
         print("[expert_budget] (dynamic) calibration started", flush=True)
 
     def finish_calibration(self) -> dict[str, Any]:
         self._calibrating = False
+        if self.threshold_granularity == "per_layer":
+            return self._finish_per_layer_calibration()
         if not self._calib_margin12:
             self.high_thr = self.high_thr if self.high_thr is not None else 0.0
             self.medium_thr = self.medium_thr if self.medium_thr is not None else 0.0
@@ -240,8 +309,54 @@ class ConfidenceDynamicMaskInstaller:
         print(f"[expert_budget] (dynamic) calibrated thresholds={report['thresholds']}", flush=True)
         return report
 
+    def _finish_per_layer_calibration(self) -> dict[str, Any]:
+        per_layer: dict[str, dict[str, float]] = {}
+        counts: dict[str, dict[str, int]] = {}
+        fallback_layers: list[int] = []
+        for layer_idx in sorted(self.target_layers):
+            margin_parts = self._calib_margin12_by_layer.get(layer_idx, [])
+            boundary_parts = self._calib_boundary_by_layer.get(layer_idx, [])
+            if not margin_parts:
+                fallback_layers.append(layer_idx)
+                per_layer[str(layer_idx)] = {
+                    "top1_top2_high": float(self.high_thr if self.high_thr is not None else 0.0),
+                    "top1_top2_medium": float(self.medium_thr if self.medium_thr is not None else 0.0),
+                    "boundary": float(self.boundary_thr if self.boundary_thr is not None else 0.0),
+                }
+                counts[str(layer_idx)] = {"margin": 0, "boundary": 0}
+                continue
+            margin12 = np.concatenate(margin_parts)
+            boundary = np.concatenate(boundary_parts) if boundary_parts else np.array([], dtype=np.float32)
+            boundary_source = boundary if boundary.size else margin12
+            per_layer[str(layer_idx)] = {
+                "top1_top2_high": float(np.percentile(margin12, self.config.high_margin_percentile)),
+                "top1_top2_medium": float(np.percentile(margin12, self.config.medium_margin_percentile)),
+                "boundary": float(np.percentile(boundary_source, self.config.boundary_margin_percentile)),
+            }
+            counts[str(layer_idx)] = {"margin": int(margin12.size), "boundary": int(boundary.size)}
+        self.per_layer_thresholds = {int(k): v for k, v in per_layer.items()}
+        self.config.per_layer_thresholds = per_layer
+        report = self._threshold_report(
+            n_margin=sum(v["margin"] for v in counts.values()),
+            n_boundary=sum(v["boundary"] for v in counts.values()),
+            fallback=bool(fallback_layers),
+        )
+        report["per_layer_thresholds"] = per_layer
+        report["per_layer_counts"] = counts
+        report["fallback_layers"] = fallback_layers
+        self._calib_margin12 = []
+        self._calib_boundary = []
+        self._calib_margin12_by_layer = {}
+        self._calib_boundary_by_layer = {}
+        print(
+            f"[expert_budget] (dynamic) calibrated per-layer thresholds for {len(per_layer)} layers",
+            flush=True,
+        )
+        return report
+
     def _threshold_report(self, n_margin: int, n_boundary: int, fallback: bool = False) -> dict[str, Any]:
         return {
+            "threshold_granularity": self.threshold_granularity,
             "thresholds": {
                 "top1_top2_high": self.high_thr,
                 "top1_top2_medium": self.medium_thr,
@@ -265,6 +380,7 @@ class ConfidenceDynamicMaskInstaller:
         device = input_ids.device
         task_min_top_m, task_cluster = self.config.task_min_top_m(task_type)
         task_min_top_m = min(max(int(task_min_top_m), self.m_small), self.text_top_k)
+        task_layer_full_layers = self.config.task_layer_full_layers(task_type, self.num_layers)
         self.context.modalities = modalities
         self.context.target_token_mask = torch.from_numpy(target_mask_np).to(device=device)
         self.context.seq_len = int(ids.shape[0])
@@ -272,11 +388,13 @@ class ConfidenceDynamicMaskInstaller:
         self.context.task_type = task_type
         self.context.task_policy_cluster = task_cluster
         self.context.task_min_top_m = task_min_top_m
+        self.context.task_layer_full_layers = task_layer_full_layers
         self.context.stats = _DynSampleStats(
             sample_index=sample_index,
             task_type=task_type,
             task_policy_cluster=task_cluster,
             task_min_top_m=task_min_top_m,
+            task_layer_full_layers=sorted(task_layer_full_layers),
             layers={},
             target_layers=sorted(self.target_layers),
         )
@@ -290,6 +408,7 @@ class ConfidenceDynamicMaskInstaller:
         self.context.task_type = None
         self.context.task_policy_cluster = "default"
         self.context.task_min_top_m = None
+        self.context.task_layer_full_layers = set()
         self.context.stats = _DynSampleStats()
         return out
 
@@ -311,6 +430,7 @@ class ConfidenceDynamicMaskInstaller:
             apply_ctx = (
                 installer._enabled
                 and installer.layer_modes.get(layer_idx, "full") == "dynamic"
+                and layer_idx not in installer.context.task_layer_full_layers
                 and installer.context.target_token_mask is not None
                 and (batch_size * sequence_length == installer.context.seq_len)
             )
@@ -326,16 +446,22 @@ class ConfidenceDynamicMaskInstaller:
                 apply_ctx = False
 
             did_mask = False
+            keep_mask = None
+            layer_stats = None
             if apply_ctx:
                 rows = tgt_mask.nonzero(as_tuple=True)[0]
                 if installer._calibrating:
-                    installer._collect_calibration(routing_weights, rows, top_k)
+                    installer._collect_calibration(layer_idx, routing_weights, rows, top_k)
                 elif installer.thresholds_ready:
-                    chosen_m = installer._choose_top_m(routing_weights, rows, top_k)
+                    chosen_m = installer._choose_top_m(layer_idx, routing_weights, rows, top_k)
                     if installer.context.task_min_top_m is not None:
                         chosen_m = torch.clamp(chosen_m, min=int(installer.context.task_min_top_m), max=top_k)
+                    if installer.compact_dispatch:
+                        keep_mask = torch.ones_like(selected_experts, dtype=torch.bool)
+                        pos = torch.arange(top_k, device=routing_weights.device).unsqueeze(0)
+                        keep_mask[rows] = pos < chosen_m.unsqueeze(1)
                     installer._apply_dynamic_mask(routing_weights, rows, chosen_m, top_k)
-                    installer._record_stats(layer_idx, routing_weights.shape[0], rows, chosen_m, top_k)
+                    layer_stats = installer._record_stats(layer_idx, routing_weights.shape[0], rows, chosen_m, top_k)
                     did_mask = True
 
             if did_mask:
@@ -353,25 +479,52 @@ class ConfidenceDynamicMaskInstaller:
                 routing_weights = routing_weights / routing_weights.sum(dim=-1, keepdim=True).clamp_min(1e-20)
 
             routing_weights = routing_weights.to(flat.dtype)
-            final_hidden_states = torch.zeros(
-                (batch_size * sequence_length, hidden_dim),
-                dtype=flat.dtype,
-                device=flat.device,
-            )
-            expert_mask = F.one_hot(selected_experts, num_classes=num_experts).permute(2, 1, 0)
-            expert_hit = torch.greater(expert_mask.sum(dim=(-1, -2)), 0).nonzero()
-            for expert_idx in expert_hit:
-                expert_layer = module.experts[expert_idx]
-                idx, top_x = torch.where(expert_mask[expert_idx].squeeze(0))
-                current_state = flat[None, top_x].reshape(-1, hidden_dim)
-                current_hidden_states = expert_layer(current_state) * routing_weights[top_x, idx, None]
-                final_hidden_states.index_add_(0, top_x, current_hidden_states.to(flat.dtype))
+
+            if installer.compact_dispatch and did_mask and keep_mask is not None:
+                final_hidden_states, compact_metrics = compact_moe_forward(
+                    experts=module.experts,
+                    flat_hidden_states=flat,
+                    selected_experts=selected_experts,
+                    routing_weights=routing_weights,
+                    num_experts=num_experts,
+                    keep_mask=keep_mask,
+                )
+                if layer_stats is not None:
+                    installer._record_compact_metrics(layer_stats, compact_metrics)
+                if (
+                    layer_stats is not None
+                    and installer.config.compact_debug_compare
+                    and installer._compact_debug_calls < int(installer.config.compact_debug_max_calls)
+                ):
+                    reference = _mask_only_moe_forward(
+                        experts=module.experts,
+                        flat_hidden_states=flat,
+                        selected_experts=selected_experts,
+                        routing_weights=routing_weights,
+                        num_experts=num_experts,
+                    )
+                    installer._record_compact_debug_diff(layer_stats, final_hidden_states, reference)
+                    installer._compact_debug_calls += 1
+            else:
+                final_hidden_states = _mask_only_moe_forward(
+                    experts=module.experts,
+                    flat_hidden_states=flat,
+                    selected_experts=selected_experts,
+                    routing_weights=routing_weights,
+                    num_experts=num_experts,
+                )
             final_hidden_states = final_hidden_states.reshape(batch_size, sequence_length, hidden_dim)
             return final_hidden_states, router_logits
 
         module.forward = wrapped_forward
 
-    def _collect_calibration(self, routing_weights: torch.Tensor, rows: torch.Tensor, top_k: int) -> None:
+    def _collect_calibration(
+        self,
+        layer_idx: int,
+        routing_weights: torch.Tensor,
+        rows: torch.Tensor,
+        top_k: int,
+    ) -> None:
         n = int(rows.numel())
         if n == 0:
             return
@@ -379,15 +532,27 @@ class ConfidenceDynamicMaskInstaller:
             perm = torch.randperm(n, device=rows.device)[:_CALIB_MAX_ROWS_PER_CALL]
             rows = rows[perm]
         w = routing_weights[rows]
-        self._calib_margin12.append((w[:, 0] - w[:, 1]).detach().to("cpu", dtype=torch.float32).numpy())
+        margin12 = (w[:, 0] - w[:, 1]).detach().to("cpu", dtype=torch.float32).numpy()
+        self._calib_margin12.append(margin12)
+        if self.threshold_granularity == "per_layer":
+            self._calib_margin12_by_layer.setdefault(layer_idx, []).append(margin12)
         boundary_parts = []
         for m in (self.m_small, self.m_mid):
             if m < top_k:
                 boundary_parts.append((w[:, m - 1] - w[:, m]).detach().to("cpu", dtype=torch.float32).numpy())
         if boundary_parts:
-            self._calib_boundary.append(np.concatenate(boundary_parts))
+            boundary = np.concatenate(boundary_parts)
+            self._calib_boundary.append(boundary)
+            if self.threshold_granularity == "per_layer":
+                self._calib_boundary_by_layer.setdefault(layer_idx, []).append(boundary)
 
-    def _choose_top_m(self, routing_weights: torch.Tensor, rows: torch.Tensor, top_k: int) -> torch.Tensor:
+    def _choose_top_m(
+        self,
+        layer_idx: int,
+        routing_weights: torch.Tensor,
+        rows: torch.Tensor,
+        top_k: int,
+    ) -> torch.Tensor:
         w = routing_weights[rows]
         margin12 = w[:, 0] - w[:, 1]
         b_small = (
@@ -398,12 +563,28 @@ class ConfidenceDynamicMaskInstaller:
             w[:, self.m_mid - 1] - w[:, self.m_mid]
             if self.m_mid < top_k else torch.full_like(margin12, float("inf"))
         )
-        choose_small = (margin12 >= self.high_thr) & (b_small >= self.boundary_thr)
-        choose_mid = (~choose_small) & (margin12 >= self.medium_thr) & (b_mid >= self.boundary_thr)
+        high_thr, medium_thr, boundary_thr = self._thresholds_for_layer(layer_idx)
+        choose_small = (margin12 >= high_thr) & (b_small >= boundary_thr)
+        choose_mid = (~choose_small) & (margin12 >= medium_thr) & (b_mid >= boundary_thr)
         chosen = torch.full((w.shape[0],), self.m_large, device=w.device, dtype=torch.long)
         chosen[choose_mid] = self.m_mid
         chosen[choose_small] = self.m_small
         return chosen
+
+    def _thresholds_for_layer(self, layer_idx: int) -> tuple[float, float, float]:
+        if self.threshold_granularity == "per_layer":
+            layer_thr = self.per_layer_thresholds.get(layer_idx)
+            if layer_thr is not None:
+                return (
+                    float(layer_thr["top1_top2_high"]),
+                    float(layer_thr["top1_top2_medium"]),
+                    float(layer_thr["boundary"]),
+                )
+        return (
+            float(self.high_thr if self.high_thr is not None else 0.0),
+            float(self.medium_thr if self.medium_thr is not None else 0.0),
+            float(self.boundary_thr if self.boundary_thr is not None else 0.0),
+        )
 
     @staticmethod
     def _apply_dynamic_mask(
@@ -425,7 +606,7 @@ class ConfidenceDynamicMaskInstaller:
         rows: torch.Tensor,
         chosen_m: torch.Tensor,
         top_k: int,
-    ) -> None:
+    ) -> _DynCallStats:
         stats = self.context.stats
         ls = stats.layers.get(layer_idx)
         if ls is None:
@@ -443,3 +624,56 @@ class ConfidenceDynamicMaskInstaller:
             c = int((chosen_m == m).sum().item())
             if c:
                 stats.top_m_histogram[m] = stats.top_m_histogram.get(m, 0) + c
+        return ls
+
+    @staticmethod
+    def _record_compact_metrics(layer_stats: _DynCallStats, metrics: Any) -> None:
+        layer_stats.compact_assignment_count_before += metrics.assignment_count_before
+        layer_stats.compact_assignment_count_after += metrics.assignment_count_after
+        layer_stats.compact_active_experts_before_sum += metrics.active_experts_before
+        layer_stats.compact_active_experts_after_sum += metrics.active_experts_after
+        layer_stats.compact_hot_to_mean_before_sum += metrics.hot_to_mean_before
+        layer_stats.compact_hot_to_mean_after_sum += metrics.hot_to_mean_after
+        layer_stats.compact_calls += 1
+        layer_stats.compact_dispatch_time_ms += metrics.dispatch_time_ms
+        layer_stats.compact_expert_mlp_time_ms += metrics.expert_mlp_time_ms
+        layer_stats.compact_combine_time_ms += metrics.combine_time_ms
+
+    @staticmethod
+    def _record_compact_debug_diff(
+        layer_stats: _DynCallStats,
+        compact_output: torch.Tensor,
+        reference_output: torch.Tensor,
+    ) -> None:
+        diff = (compact_output.detach() - reference_output.detach()).abs().float()
+        layer_stats.compact_debug_max_abs_diff = max(
+            layer_stats.compact_debug_max_abs_diff,
+            float(diff.max().item()) if diff.numel() else 0.0,
+        )
+        layer_stats.compact_debug_mean_abs_diff_sum += float(diff.mean().item()) if diff.numel() else 0.0
+        layer_stats.compact_debug_calls += 1
+
+
+def _mask_only_moe_forward(
+    *,
+    experts: Any,
+    flat_hidden_states: torch.Tensor,
+    selected_experts: torch.Tensor,
+    routing_weights: torch.Tensor,
+    num_experts: int,
+) -> torch.Tensor:
+    num_tokens, hidden_dim = flat_hidden_states.shape
+    final_hidden_states = torch.zeros(
+        (num_tokens, hidden_dim),
+        dtype=flat_hidden_states.dtype,
+        device=flat_hidden_states.device,
+    )
+    expert_mask = F.one_hot(selected_experts, num_classes=num_experts).permute(2, 1, 0)
+    expert_hit = torch.greater(expert_mask.sum(dim=(-1, -2)), 0).nonzero()
+    for expert_idx in expert_hit:
+        expert_layer = experts[expert_idx]
+        idx, top_x = torch.where(expert_mask[expert_idx].squeeze(0))
+        current_state = flat_hidden_states[None, top_x].reshape(-1, hidden_dim)
+        current_hidden_states = expert_layer(current_state) * routing_weights[top_x, idx, None]
+        final_hidden_states.index_add_(0, top_x, current_hidden_states.to(flat_hidden_states.dtype))
+    return final_hidden_states

@@ -95,11 +95,30 @@ class ExpertBudgetConfig:
     boundary_threshold: float | None = None
     # Number of dataset samples to scan during calibration of the percentiles.
     calibrate_samples: int = 40
+    # "global" uses one calibrated threshold triplet for all dynamic layers.
+    # "per_layer" calibrates a separate triplet for each dynamic layer.
+    threshold_granularity: str = "global"
+    per_layer_thresholds: dict[str, dict[str, float]] = field(default_factory=dict)
 
     # --- step 03: task / layer / modality policy ---
     policy_version: str = "omnivideobench_expert_budget_v1"
     layer_policy: dict[str, dict[str, Any]] = field(default_factory=_default_layer_policy)
     task_policy: dict[str, dict[str, Any]] = field(default_factory=_default_task_policy)
+    # Optional task x layer overrides. Entries are matched by task name and can
+    # force selected layers back to full top-k even if layer_policy marks them
+    # dynamic. This supports targeted protection such as keeping late-middle
+    # layers full only for hypothetical/relationship reasoning.
+    task_layer_policy: dict[str, dict[str, Any]] = field(default_factory=dict)
+
+    # --- step 05: real compact dispatch ---
+    # When false, budgeted assignments are mask-only: dropped experts still get
+    # selected but their weights are zero. When true, dropped assignments are
+    # removed from the expert loop so their expert MLPs do not execute.
+    compact_dispatch: bool = False
+    # Debug-only: in compact mode, also compute the mask-only expert loop on the
+    # same forward inputs and record output deltas for the first N compact calls.
+    compact_debug_compare: bool = False
+    compact_debug_max_calls: int = 0
 
     @classmethod
     def from_json(cls, path: str | Path) -> "ExpertBudgetConfig":
@@ -186,7 +205,46 @@ class ExpertBudgetConfig:
                 return int(spec.get("min_top_m", default_min)), cluster
         return default_min, "default"
 
+    def task_layer_full_layers(self, task_type: str | None, num_layers: int) -> set[int]:
+        """Resolve task-specific layer overrides that force full top-k.
+
+        Config shape:
+
+        ``{"name": {"tasks": [...], "mode": "full", "layers": [24, ...]}}``
+
+        ``range_ratio`` can be used instead of explicit ``layers`` and follows
+        the same floor-based layer indexing as ``layer_policy``.
+        """
+        if not task_type or not self.task_layer_policy:
+            return set()
+        normalized = str(task_type).strip().lower()
+        full_layers: set[int] = set()
+        for _name, spec in self.task_layer_policy.items():
+            mode = str(spec.get("mode", "full")).lower()
+            if mode != "full":
+                continue
+            tasks = {str(t).strip().lower() for t in spec.get("tasks", [])}
+            if normalized not in tasks:
+                continue
+            if "layers" in spec:
+                layers = [int(x) for x in spec["layers"]]
+            else:
+                ratios = spec.get("range_ratio")
+                if ratios is None:
+                    continue
+                if len(ratios) != 2:
+                    raise ValueError(f"task_layer_policy {_name!r} range_ratio must have 2 values")
+                start = max(0.0, min(float(ratios[0]), 1.0))
+                end = max(start, min(float(ratios[1]), 1.0))
+                ls = max(0, min(int(math.floor(start * num_layers)), num_layers))
+                le = max(ls, min(int(math.floor(end * num_layers)), num_layers))
+                layers = list(range(ls, le))
+            full_layers.update(idx for idx in layers if 0 <= idx < num_layers)
+        return full_layers
+
     def target_modality_code(self) -> int:
+        if str(self.target_modality).lower() == "all":
+            return -1
         if self.target_modality not in MODALITY_CODES:
             raise ValueError(f"Unknown target_modality {self.target_modality}")
         return MODALITY_CODES[self.target_modality]
@@ -217,6 +275,10 @@ def resolve_target_token_mask(
 ) -> np.ndarray:
     """True where the token should have its top-k reduced; False where it must keep full top-k."""
     protected = set(int(c) for c in protected_codes)
+    if int(target_code) == -1:
+        if not protected:
+            return np.ones_like(modalities, dtype=bool)
+        return ~np.isin(modalities, list(protected))
     if int(target_code) in protected:
         return np.zeros_like(modalities, dtype=bool)
     return modalities == int(target_code)
