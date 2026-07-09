@@ -1,0 +1,63 @@
+{
+  "enabled": true,
+  "mode": "confidence_dynamic_topk_mask",
+  "target_modality": "video",
+  "protected_modalities": ["text", "audio", "image", "special"],
+  "original_top_k": 8,
+  "top_m": 4,
+  "layer_start": null,
+  "layer_end": null,
+  "layer_start_ratio": null,
+  "layer_end_ratio": null,
+  "renormalize_weights": true,
+  "apply_during_decode": false,
+  "note": "Loop3 Audio-as-Guard SCEB: keep audio protected at top-8 and use audio/stress task metadata to raise video min_top_m to 6 while otherwise using global both-signal SCEB thresholds.",
+  "top_m_options": [4, 6, 8],
+  "threshold_source": "explicit",
+  "high_margin_threshold": 0.008606448397040365,
+  "medium_margin_threshold": 0.002970809489488602,
+  "boundary_threshold": 0.0005592796951532364,
+  "calibrate_samples": 0,
+  "threshold_granularity": "global",
+  "policy_version": "sceb_loop3_audio_guard_v1",
+  "layer_policy": {
+    "early": {"range_ratio": [0.0, 0.25], "mode": "full"},
+    "middle": {"range_ratio": [0.25, 0.67], "mode": "dynamic"},
+    "late": {"range_ratio": [0.67, 1.0], "mode": "full"}
+  },
+  "task_policy": {
+    "stress": {
+      "tasks": [
+        "temporal understanding",
+        "spatial understanding",
+        "reference reasoning",
+        "counting"
+      ],
+      "min_top_m": 6
+    },
+    "medium": {
+      "tasks": [
+        "causal reasoning",
+        "hypothetical reasoning",
+        "relationship reasoning",
+        "ego reasoning"
+      ],
+      "min_top_m": 4
+    },
+    "perception": {
+      "tasks": [
+        "fine-grained perception",
+        "attribute comparison",
+        "sentiment analysis"
+      ],
+      "min_top_m": 4
+    },
+    "audio": {
+      "tasks": ["background&music understanding"],
+      "min_top_m": 6
+    },
+    "default": {"min_top_m": 4}
+  },
+  "task_layer_policy": {},
+  "compact_dispatch": false
+}
