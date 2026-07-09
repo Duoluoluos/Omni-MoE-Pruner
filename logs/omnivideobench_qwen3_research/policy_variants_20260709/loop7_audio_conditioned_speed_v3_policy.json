@@ -1,0 +1,126 @@
+{
+  "enabled": true,
+  "mode": "confidence_dynamic_topk_mask",
+  "target_modality": "video",
+  "protected_modalities": [
+    "text",
+    "audio",
+    "image",
+    "special"
+  ],
+  "original_top_k": 8,
+  "top_m": 4,
+  "layer_start": null,
+  "layer_end": null,
+  "layer_start_ratio": null,
+  "layer_end_ratio": null,
+  "renormalize_weights": true,
+  "apply_during_decode": false,
+  "note": "Loop7 Audio-Conditioned speed policy v3: audio tokens remain protected; audio/query regime controls how aggressively video-token expert budgets can move toward top-4/top-6 for latency evidence.",
+  "top_m_options": [
+    4,
+    6,
+    8
+  ],
+  "threshold_source": "explicit",
+  "high_margin_threshold": 0.0065,
+  "medium_margin_threshold": 0.0023,
+  "boundary_threshold": 0.00045,
+  "calibrate_samples": 0,
+  "threshold_granularity": "global",
+  "policy_version": "sceb_loop7_audio_conditioned_speed_v3",
+  "layer_policy": {
+    "early": {
+      "range_ratio": [
+        0.0,
+        0.25
+      ],
+      "mode": "full"
+    },
+    "middle": {
+      "range_ratio": [
+        0.25,
+        0.67
+      ],
+      "mode": "dynamic"
+    },
+    "late": {
+      "range_ratio": [
+        0.67,
+        1.0
+      ],
+      "mode": "full"
+    }
+  },
+  "task_policy": {
+    "audio_core": {
+      "tasks": [
+        "background&music understanding"
+      ],
+      "min_top_m": 8
+    },
+    "av_fragile": {
+      "tasks": [
+        "temporal understanding",
+        "spatial understanding",
+        "reference reasoning"
+      ],
+      "min_top_m": 6
+    },
+    "speed_safe_audio": {
+      "tasks": [
+        "counting",
+        "causal reasoning",
+        "relationship reasoning",
+        "sentiment analysis",
+        "summarization"
+      ],
+      "min_top_m": 4
+    },
+    "speed_probe_reasoning": {
+      "tasks": [
+        "hypothetical reasoning",
+        "ego reasoning",
+        "fine-grained perception",
+        "attribute comparison"
+      ],
+      "min_top_m": 4
+    },
+    "default": {
+      "min_top_m": 4
+    }
+  },
+  "task_layer_policy": {
+    "audio_core_late_middle_full": {
+      "tasks": [
+        "background&music understanding"
+      ],
+      "mode": "full",
+      "layers": [
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31
+      ]
+    },
+    "fragile_av_late_middle_full": {
+      "tasks": [
+        "temporal understanding",
+        "spatial understanding",
+        "reference reasoning"
+      ],
+      "mode": "full",
+      "layers": [
+        28,
+        29,
+        30,
+        31
+      ]
+    }
+  },
+  "compact_dispatch": false
+}
