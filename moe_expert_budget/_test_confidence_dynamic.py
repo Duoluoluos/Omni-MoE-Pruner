@@ -141,6 +141,99 @@ def main():
     rep = inst2.finish_calibration()
     assert inst2.thresholds_ready, rep
     print(f"[ok] calibration thresholds: {rep['thresholds']}")
+
+    cfg3 = ExpertBudgetConfig(
+        mode="local_prob_threshold_mask",
+        target_modality="video",
+        protected_modalities=["text", "audio", "image", "special"],
+        top_m_options=[4, 6, 8],
+        layer_start=0,
+        layer_end=1,
+        local_prob_threshold=0.12,
+        renormalize_weights=True,
+    )
+    model3, block3 = build_fake_model()
+    inst3 = ConfidenceDynamicMaskInstaller(model3, cfg3)
+    assert inst3.enabled and inst3.thresholds_ready
+    assert inst3.install() == 1
+    inst3.begin_sample(3, input_ids)
+    with torch.inference_mode():
+        block3(hidden)
+    local_stats = inst3.end_sample()
+    local_hist = local_stats["top_m_histogram"]
+    assert sum(local_hist.values()) == 8, local_hist
+    assert local_stats["margin_thresholds"]["local_prob"] == 0.12, local_stats["margin_thresholds"]
+    print(f"[ok] local-prob histogram totals target tokens: {local_hist}")
+
+    cfg4 = ExpertBudgetConfig(
+        mode="confidence_dynamic_topk_mask",
+        target_modality="video",
+        protected_modalities=["text", "audio", "image", "special"],
+        top_m_options=[4, 6, 8],
+        layer_start=0,
+        layer_end=1,
+        threshold_source="explicit",
+        high_margin_threshold=0.0,
+        medium_margin_threshold=0.0,
+        boundary_threshold=0.0,
+        renormalize_weights=True,
+        task_policy={"default": {"min_top_m": 4}},
+        audio_router_conditioning={
+            "enabled": True,
+            "min_audio_tokens": 1,
+            "fragile_margin_threshold": 1.0,
+            "fragile_min_top_m": 6,
+            "boundary_top_m": 4,
+        },
+    )
+    model4, block4 = build_fake_model()
+    inst4 = ConfidenceDynamicMaskInstaller(model4, cfg4)
+    assert inst4.enabled and inst4.thresholds_ready
+    assert inst4.install() == 1
+    inst4.begin_sample(4, input_ids)
+    with torch.inference_mode():
+        block4(hidden)
+    guarded_stats = inst4.end_sample()
+    guarded_hist = guarded_stats["top_m_histogram"]
+    assert guarded_hist["4"] == 0, guarded_hist
+    layer0 = guarded_stats["layer_summaries"][0]
+    assert layer0["audio_condition_state_counts"]["fragile"] == 1, layer0
+    assert layer0["audio_condition_floor_mean"] == 6.0, layer0
+    print(f"[ok] audio-router guard clamps video top-m: {guarded_hist}")
+
+    cfg5 = ExpertBudgetConfig(
+        mode="confidence_dynamic_topk_mask",
+        target_modality="video",
+        protected_modalities=["text", "audio", "image", "special"],
+        top_m_options=[4, 6, 8],
+        layer_start=0,
+        layer_end=1,
+        threshold_source="explicit",
+        high_margin_threshold=0.0,
+        medium_margin_threshold=0.0,
+        boundary_threshold=0.0,
+        renormalize_weights=True,
+        task_policy={"default": {"min_top_m": 4}},
+    )
+    model5, block5 = build_fake_model()
+    inst5 = ConfidenceDynamicMaskInstaller(model5, cfg5)
+    assert inst5.enabled and inst5.thresholds_ready
+    assert inst5.install() == 1
+    keep = torch.tensor(
+        [True, True, True, False, True, False, True, False, True, False, True],
+        dtype=torch.bool,
+    )
+    assert len(keep) == len(seq)
+    model5.thinker._sceb_omnizip_global_mask = keep
+    inst5.begin_sample(5, input_ids)
+    with torch.inference_mode():
+        block5(hidden[:, keep, :])
+    zipped_stats = inst5.end_sample()
+    zipped_hist = zipped_stats["top_m_histogram"]
+    assert sum(zipped_hist.values()) == 4, zipped_hist
+    assert zipped_stats["target_token_count"] == 4, zipped_stats
+    assert zipped_stats["protected_token_count"] == int(keep.sum().item()) - 4, zipped_stats
+    print(f"[ok] OmniZip-compressed modality mask aligns target tokens: {zipped_hist}")
     print("ALL DYNAMIC TESTS PASSED")
 
 

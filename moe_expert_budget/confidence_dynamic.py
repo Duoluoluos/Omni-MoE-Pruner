@@ -47,6 +47,12 @@ class _DynCallStats:
     compact_debug_max_abs_diff: float = 0.0
     compact_debug_mean_abs_diff_sum: float = 0.0
     compact_debug_calls: int = 0
+    audio_condition_calls: int = 0
+    audio_condition_audio_tokens_sum: int = 0
+    audio_condition_margin12_sum: float = 0.0
+    audio_condition_boundary_sum: float = 0.0
+    audio_condition_floor_sum: int = 0
+    audio_condition_state_counts: dict[str, int] = field(default_factory=dict)
 
 
 @dataclass
@@ -56,6 +62,10 @@ class _DynSampleStats:
     task_policy_cluster: str = "default"
     task_min_top_m: int | None = None
     task_layer_full_layers: list[int] = field(default_factory=list)
+    query_guard_enabled: bool = False
+    query_guard_cluster: str = "disabled"
+    query_guard_matched_rules: list[str] = field(default_factory=list)
+    query_guard_audio_tokens: int = 0
     layers: dict[int, _DynCallStats] = field(default_factory=dict)
     target_layers: list[int] = field(default_factory=list)
     top_m_histogram: dict[int, int] = field(default_factory=dict)
@@ -111,6 +121,21 @@ class _DynSampleStats:
                     ls.compact_debug_mean_abs_diff_sum / ls.compact_debug_calls if ls.compact_debug_calls else 0.0
                 ),
                 "compact_debug_calls": ls.compact_debug_calls,
+                "audio_condition_calls": ls.audio_condition_calls,
+                "audio_condition_audio_tokens_avg": (
+                    ls.audio_condition_audio_tokens_sum / ls.audio_condition_calls
+                    if ls.audio_condition_calls else 0.0
+                ),
+                "audio_condition_margin12_mean": (
+                    ls.audio_condition_margin12_sum / ls.audio_condition_calls if ls.audio_condition_calls else 0.0
+                ),
+                "audio_condition_boundary_mean": (
+                    ls.audio_condition_boundary_sum / ls.audio_condition_calls if ls.audio_condition_calls else 0.0
+                ),
+                "audio_condition_floor_mean": (
+                    ls.audio_condition_floor_sum / ls.audio_condition_calls if ls.audio_condition_calls else 0.0
+                ),
+                "audio_condition_state_counts": dict(sorted(ls.audio_condition_state_counts.items())),
             })
         hist = {str(k): int(self.top_m_histogram.get(k, 0)) for k in sorted(installer.top_m_options)}
         return {
@@ -126,6 +151,12 @@ class _DynSampleStats:
             "task_layer_full_layers": list(self.task_layer_full_layers),
             "task_policy": config.task_policy,
             "task_layer_policy": config.task_layer_policy,
+            "query_policy": config.query_policy,
+            "audio_router_conditioning": config.audio_router_conditioning,
+            "query_guard_enabled": bool(self.query_guard_enabled),
+            "query_guard_cluster": self.query_guard_cluster,
+            "query_guard_matched_rules": list(self.query_guard_matched_rules),
+            "query_guard_audio_tokens": int(self.query_guard_audio_tokens),
             "top_m_options": list(installer.top_m_options),
             "original_top_k": config.original_top_k,
             "target_modality": config.target_modality,
@@ -135,6 +166,7 @@ class _DynSampleStats:
                 "top1_top2_high": installer.high_thr,
                 "top1_top2_medium": installer.medium_thr,
                 "boundary": installer.boundary_thr,
+                "local_prob": installer.local_prob_threshold if installer.local_prob_mode else None,
             },
             "threshold_granularity": installer.threshold_granularity,
             "per_layer_thresholds": {
@@ -162,6 +194,10 @@ class _ActiveSampleContext:
         self.task_policy_cluster: str = "default"
         self.task_min_top_m: int | None = None
         self.task_layer_full_layers: set[int] = set()
+        self.query_guard_enabled: bool = False
+        self.query_guard_cluster: str = "disabled"
+        self.query_guard_matched_rules: list[str] = []
+        self.query_guard_audio_tokens: int = 0
         self.stats: _DynSampleStats = _DynSampleStats()
 
 
@@ -205,6 +241,12 @@ class ConfidenceDynamicMaskInstaller:
         self.high_thr: float | None = config.high_margin_threshold
         self.medium_thr: float | None = config.medium_margin_threshold
         self.boundary_thr: float | None = config.boundary_threshold
+        self.local_prob_mode = "local_prob" in str(config.mode or "").lower()
+        self.local_prob_threshold = float(
+            config.local_prob_threshold
+            if config.local_prob_threshold is not None
+            else (config.high_margin_threshold if config.high_margin_threshold is not None else 0.02)
+        )
         self.threshold_granularity = str(getattr(config, "threshold_granularity", "global") or "global").lower()
         if self.threshold_granularity not in {"global", "per_layer"}:
             raise ValueError(f"Unknown threshold_granularity {self.threshold_granularity!r}")
@@ -224,6 +266,8 @@ class ConfidenceDynamicMaskInstaller:
         self._calib_boundary_by_layer: dict[int, list[np.ndarray]] = {}
         self._enabled = bool(self.config.enabled) and self.m_small < self.text_top_k
         self.compact_dispatch = bool(config.compact_dispatch) or "compact" in (config.mode or "").lower()
+        self.audio_router_conditioning = getattr(config, "audio_router_conditioning", {}) or {}
+        self.audio_conditioning_enabled = bool(self.audio_router_conditioning.get("enabled", False))
         self._compact_debug_calls = 0
 
     @property
@@ -232,6 +276,8 @@ class ConfidenceDynamicMaskInstaller:
 
     @property
     def thresholds_ready(self) -> bool:
+        if self.local_prob_mode:
+            return True
         if self.threshold_granularity == "per_layer":
             if not self.target_layers:
                 return True
@@ -373,14 +419,36 @@ class ConfidenceDynamicMaskInstaller:
             "fallback_no_target_tokens": fallback,
         }
 
-    def begin_sample(self, sample_index: int | None, input_ids: torch.Tensor, task_type: str | None = None) -> None:
+    def begin_sample(
+        self,
+        sample_index: int | None,
+        input_ids: torch.Tensor,
+        task_type: str | None = None,
+        query_text: str | None = None,
+        sample_meta: dict[str, Any] | None = None,
+    ) -> None:
         ids = input_ids[0].detach().cpu().numpy().astype(np.int64)
         modalities = build_modality_vector(ids, self.token_ids)
         target_mask_np = resolve_target_token_mask(modalities, self.target_code, self.protected_codes)
         device = input_ids.device
-        task_min_top_m, task_cluster = self.config.task_min_top_m(task_type)
+        audio_token_count = int((modalities == MODALITY_CODES["audio"]).sum())
+        query_guard_enabled = self.config.query_policy_enabled()
+        query_guard_cluster = "disabled"
+        query_guard_matched_rules: list[str] = []
+        if query_guard_enabled:
+            task_min_top_m, query_guard_cluster, query_guard_matched_rules = self.config.query_min_top_m(
+                query_text=query_text,
+                audio_token_count=audio_token_count,
+            )
+            task_cluster = f"query:{query_guard_cluster}"
+        else:
+            task_min_top_m, task_cluster = self.config.task_min_top_m(task_type)
         task_min_top_m = min(max(int(task_min_top_m), self.m_small), self.text_top_k)
-        task_layer_full_layers = self.config.task_layer_full_layers(task_type, self.num_layers)
+        task_layer_full_layers = (
+            set()
+            if query_guard_enabled
+            else self.config.task_layer_full_layers(task_type, self.num_layers)
+        )
         self.context.modalities = modalities
         self.context.target_token_mask = torch.from_numpy(target_mask_np).to(device=device)
         self.context.seq_len = int(ids.shape[0])
@@ -389,12 +457,20 @@ class ConfidenceDynamicMaskInstaller:
         self.context.task_policy_cluster = task_cluster
         self.context.task_min_top_m = task_min_top_m
         self.context.task_layer_full_layers = task_layer_full_layers
+        self.context.query_guard_enabled = query_guard_enabled
+        self.context.query_guard_cluster = query_guard_cluster
+        self.context.query_guard_matched_rules = list(query_guard_matched_rules)
+        self.context.query_guard_audio_tokens = audio_token_count
         self.context.stats = _DynSampleStats(
             sample_index=sample_index,
             task_type=task_type,
             task_policy_cluster=task_cluster,
             task_min_top_m=task_min_top_m,
             task_layer_full_layers=sorted(task_layer_full_layers),
+            query_guard_enabled=query_guard_enabled,
+            query_guard_cluster=query_guard_cluster,
+            query_guard_matched_rules=list(query_guard_matched_rules),
+            query_guard_audio_tokens=audio_token_count,
             layers={},
             target_layers=sorted(self.target_layers),
         )
@@ -409,8 +485,71 @@ class ConfidenceDynamicMaskInstaller:
         self.context.task_policy_cluster = "default"
         self.context.task_min_top_m = None
         self.context.task_layer_full_layers = set()
+        self.context.query_guard_enabled = False
+        self.context.query_guard_cluster = "disabled"
+        self.context.query_guard_matched_rules = []
+        self.context.query_guard_audio_tokens = 0
         self.context.stats = _DynSampleStats()
         return out
+
+    def _target_mask_for_current_forward(self, token_count: int, device: torch.device) -> torch.Tensor | None:
+        """Return the target-token mask matching the current MoE hidden length.
+
+        OmniZip shortens the prefill hidden sequence before the text MoE layers.
+        `begin_sample()` sees the original `input_ids`, so its modality mask must
+        be compressed with OmniZip's `global_mask` before applying SCEB.
+        """
+        if self.context.modalities is None or self.context.target_token_mask is None:
+            return None
+        token_count = int(token_count)
+        if token_count <= 0:
+            return None
+
+        target_mask = self.context.target_token_mask
+        if token_count == int(self.context.seq_len) and target_mask.shape[0] == token_count:
+            return target_mask.to(device=device) if target_mask.device != device else target_mask
+
+        if token_count == 1 and not self.config.apply_during_decode:
+            return None
+
+        thinker = getattr(self.model, "thinker", None)
+        global_mask = getattr(thinker, "_sceb_omnizip_global_mask", None)
+        if global_mask is None:
+            return None
+
+        if isinstance(global_mask, torch.Tensor):
+            mask_cpu = global_mask.detach().reshape(-1).to("cpu")
+            if mask_cpu.dtype == torch.bool:
+                keep_np = mask_cpu.numpy().astype(bool, copy=False)
+            else:
+                idx_np = mask_cpu.to(dtype=torch.long).numpy()
+                keep_np = np.zeros(self.context.modalities.shape[0], dtype=bool)
+                if idx_np.size == 0 or idx_np.max(initial=-1) >= keep_np.shape[0] or idx_np.min(initial=0) < 0:
+                    return None
+                keep_np[idx_np] = True
+        else:
+            keep_np = np.asarray(global_mask).reshape(-1)
+            if keep_np.dtype != np.bool_:
+                idx_np = keep_np.astype(np.int64, copy=False)
+                keep_bool = np.zeros(self.context.modalities.shape[0], dtype=bool)
+                if idx_np.size == 0 or idx_np.max(initial=-1) >= keep_bool.shape[0] or idx_np.min(initial=0) < 0:
+                    return None
+                keep_bool[idx_np] = True
+                keep_np = keep_bool
+            else:
+                keep_np = keep_np.astype(bool, copy=False)
+
+        if keep_np.shape[0] != self.context.modalities.shape[0]:
+            return None
+        if int(keep_np.sum()) != token_count:
+            return None
+
+        modalities = self.context.modalities[keep_np]
+        target_mask_np = resolve_target_token_mask(modalities, self.target_code, self.protected_codes)
+        self.context.modalities = modalities
+        self.context.target_token_mask = torch.from_numpy(target_mask_np).to(device=device)
+        self.context.seq_len = token_count
+        return self.context.target_token_mask
 
     def _wrap_forward(self, module: Any, layer_idx: int) -> None:
         original_forward = module.forward
@@ -432,12 +571,14 @@ class ConfidenceDynamicMaskInstaller:
                 and installer.layer_modes.get(layer_idx, "full") == "dynamic"
                 and layer_idx not in installer.context.task_layer_full_layers
                 and installer.context.target_token_mask is not None
-                and (batch_size * sequence_length == installer.context.seq_len)
             )
             tgt_mask = None
             if apply_ctx:
-                tgt_mask = installer.context.target_token_mask
-                if tgt_mask.shape[0] != routing_weights.shape[0]:
+                tgt_mask = installer._target_mask_for_current_forward(
+                    routing_weights.shape[0],
+                    routing_weights.device,
+                )
+                if tgt_mask is None or tgt_mask.shape[0] != routing_weights.shape[0]:
                     apply_ctx = False
                     tgt_mask = None
                 elif tgt_mask.device != routing_weights.device:
@@ -456,12 +597,21 @@ class ConfidenceDynamicMaskInstaller:
                     chosen_m = installer._choose_top_m(layer_idx, routing_weights, rows, top_k)
                     if installer.context.task_min_top_m is not None:
                         chosen_m = torch.clamp(chosen_m, min=int(installer.context.task_min_top_m), max=top_k)
+                    audio_floor, audio_meta = installer._audio_condition_floor(
+                        layer_idx=layer_idx,
+                        routing_weights=routing_weights,
+                        top_k=top_k,
+                    )
+                    if audio_floor is not None:
+                        chosen_m = torch.clamp(chosen_m, min=int(audio_floor), max=top_k)
                     if installer.compact_dispatch:
                         keep_mask = torch.ones_like(selected_experts, dtype=torch.bool)
                         pos = torch.arange(top_k, device=routing_weights.device).unsqueeze(0)
                         keep_mask[rows] = pos < chosen_m.unsqueeze(1)
                     installer._apply_dynamic_mask(routing_weights, rows, chosen_m, top_k)
                     layer_stats = installer._record_stats(layer_idx, routing_weights.shape[0], rows, chosen_m, top_k)
+                    if audio_meta is not None:
+                        installer._record_audio_condition(layer_stats, audio_meta)
                     did_mask = True
 
             if did_mask:
@@ -554,6 +704,12 @@ class ConfidenceDynamicMaskInstaller:
         top_k: int,
     ) -> torch.Tensor:
         w = routing_weights[rows]
+        if self.local_prob_mode:
+            keep_counts = (w >= self.local_prob_threshold).sum(dim=1).clamp(min=self.m_small, max=self.m_large)
+            chosen = torch.full((w.shape[0],), self.m_large, device=w.device, dtype=torch.long)
+            chosen[keep_counts <= self.m_mid] = self.m_mid
+            chosen[keep_counts <= self.m_small] = self.m_small
+            return chosen
         margin12 = w[:, 0] - w[:, 1]
         b_small = (
             w[:, self.m_small - 1] - w[:, self.m_small]
@@ -570,6 +726,84 @@ class ConfidenceDynamicMaskInstaller:
         chosen[choose_mid] = self.m_mid
         chosen[choose_small] = self.m_small
         return chosen
+
+    def _audio_condition_floor(
+        self,
+        layer_idx: int,
+        routing_weights: torch.Tensor,
+        top_k: int,
+    ) -> tuple[int | None, dict[str, Any] | None]:
+        """Return an optional video top-m floor from same-layer audio routing."""
+        spec = self.audio_router_conditioning or {}
+        if not self.audio_conditioning_enabled:
+            return None, None
+        if self.target_code != MODALITY_CODES["video"]:
+            return None, None
+        modalities = self.context.modalities
+        if modalities is None or len(modalities) != routing_weights.shape[0]:
+            return None, None
+
+        audio_np = modalities == MODALITY_CODES["audio"]
+        audio_count = int(audio_np.sum())
+        min_audio_tokens = int(spec.get("min_audio_tokens", 1))
+        default_floor = spec.get("default_floor")
+        if audio_count < min_audio_tokens:
+            floor = spec.get("insufficient_audio_min_top_m", default_floor)
+            meta = {
+                "state": "insufficient_audio",
+                "audio_tokens": audio_count,
+                "margin12_mean": 0.0,
+                "boundary_mean": 0.0,
+                "floor": floor,
+            }
+            return (int(floor) if floor is not None else None), meta
+
+        audio_rows = torch.from_numpy(np.flatnonzero(audio_np)).to(device=routing_weights.device, dtype=torch.long)
+        w = routing_weights[audio_rows]
+        margin12 = w[:, 0] - w[:, 1]
+        boundary_top_m = int(spec.get("boundary_top_m", self.m_small))
+        if 0 < boundary_top_m < top_k:
+            boundary = w[:, boundary_top_m - 1] - w[:, boundary_top_m]
+        else:
+            boundary = torch.full_like(margin12, float("inf"))
+        margin_mean = float(margin12.detach().float().mean().item()) if margin12.numel() else 0.0
+        boundary_mean = float(boundary.detach().float().mean().item()) if boundary.numel() else 0.0
+
+        fragile_margin = spec.get("fragile_margin_threshold")
+        fragile_boundary = spec.get("fragile_boundary_threshold")
+        stable_margin = spec.get("stable_margin_threshold")
+        stable_boundary = spec.get("stable_boundary_threshold")
+
+        fragile = False
+        if fragile_margin is not None and margin_mean < float(fragile_margin):
+            fragile = True
+        if fragile_boundary is not None and boundary_mean < float(fragile_boundary):
+            fragile = True
+
+        stable = True
+        if stable_margin is not None and margin_mean < float(stable_margin):
+            stable = False
+        if stable_boundary is not None and boundary_mean < float(stable_boundary):
+            stable = False
+
+        if fragile:
+            state = "fragile"
+            floor = spec.get("fragile_min_top_m", default_floor)
+        elif stable and (stable_margin is not None or stable_boundary is not None):
+            state = "stable"
+            floor = spec.get("stable_min_top_m", default_floor)
+        else:
+            state = "neutral"
+            floor = spec.get("neutral_min_top_m", default_floor)
+
+        meta = {
+            "state": state,
+            "audio_tokens": audio_count,
+            "margin12_mean": margin_mean,
+            "boundary_mean": boundary_mean,
+            "floor": floor,
+        }
+        return (int(floor) if floor is not None else None), meta
 
     def _thresholds_for_layer(self, layer_idx: int) -> tuple[float, float, float]:
         if self.threshold_granularity == "per_layer":
@@ -625,6 +859,18 @@ class ConfidenceDynamicMaskInstaller:
             if c:
                 stats.top_m_histogram[m] = stats.top_m_histogram.get(m, 0) + c
         return ls
+
+    @staticmethod
+    def _record_audio_condition(layer_stats: _DynCallStats, meta: dict[str, Any]) -> None:
+        layer_stats.audio_condition_calls += 1
+        layer_stats.audio_condition_audio_tokens_sum += int(meta.get("audio_tokens", 0) or 0)
+        layer_stats.audio_condition_margin12_sum += float(meta.get("margin12_mean", 0.0) or 0.0)
+        layer_stats.audio_condition_boundary_sum += float(meta.get("boundary_mean", 0.0) or 0.0)
+        floor = meta.get("floor")
+        if floor is not None:
+            layer_stats.audio_condition_floor_sum += int(floor)
+        state = str(meta.get("state", "unknown"))
+        layer_stats.audio_condition_state_counts[state] = layer_stats.audio_condition_state_counts.get(state, 0) + 1
 
     @staticmethod
     def _record_compact_metrics(layer_stats: _DynCallStats, metrics: Any) -> None:

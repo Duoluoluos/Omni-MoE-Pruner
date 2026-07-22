@@ -8,6 +8,7 @@ from __future__ import annotations
 
 import json
 import math
+import re
 from dataclasses import dataclass, field, asdict
 from pathlib import Path
 from typing import Any, Iterable
@@ -109,6 +110,34 @@ class ExpertBudgetConfig:
     # dynamic. This supports targeted protection such as keeping late-middle
     # layers full only for hypothetical/relationship reasoning.
     task_layer_policy: dict[str, dict[str, Any]] = field(default_factory=dict)
+    # Optional label-free query guard. When enabled, top-m floors are selected
+    # from input text and modality presence instead of benchmark task labels.
+    #
+    # Shape:
+    # {
+    #   "enabled": true,
+    #   "default_min_top_m": 4,
+    #   "clusters": {
+    #     "audio_reference": {
+    #       "min_top_m": 6,
+    #       "requires_audio": true,
+    #       "any_keywords": ["hear", "sound"],
+    #       "any_regex": ["\\bsaid\\b"]
+    #     }
+    #   }
+    # }
+    query_policy: dict[str, Any] = field(default_factory=dict)
+    # Optional audio-router conditioning for video-target SCEB. This keeps audio
+    # tokens protected, but uses their same-layer router geometry as a guard for
+    # video-token expert budgets.
+    audio_router_conditioning: dict[str, Any] = field(default_factory=dict)
+
+    # --- related-work baseline: local router-probability threshold ---
+    # MoDES-style local-probability baseline. For target tokens, choose the
+    # smallest configured top-m bucket that covers the selected experts whose
+    # router probabilities exceed this threshold. Modalities/layers/tasks are
+    # still governed by the same SCEB protection policy.
+    local_prob_threshold: float | None = None
 
     # --- step 05: real compact dispatch ---
     # When false, budgeted assignments are mask-only: dropped experts still get
@@ -204,6 +233,68 @@ class ExpertBudgetConfig:
             if normalized in tasks:
                 return int(spec.get("min_top_m", default_min)), cluster
         return default_min, "default"
+
+    def query_policy_enabled(self) -> bool:
+        return bool((self.query_policy or {}).get("enabled", False))
+
+    def query_min_top_m(
+        self,
+        query_text: str | None,
+        audio_token_count: int = 0,
+    ) -> tuple[int, str, list[str]]:
+        """Return a label-free min top-m from query text and audio presence.
+
+        This deliberately does not inspect benchmark task labels. It is meant
+        for fair inference-time guards where only input text and modality
+        structure are available.
+        """
+        policy = self.query_policy or {}
+        default_min = int(policy.get("default_min_top_m", self.top_m))
+        if not policy.get("enabled", False):
+            return default_min, "query_default", []
+
+        text = str(query_text or "").strip().lower()
+        clusters = policy.get("clusters") or {}
+        ordered = sorted(
+            clusters.items(),
+            key=lambda kv: int((kv[1] or {}).get("priority", 1000)),
+        )
+        for cluster, raw_spec in ordered:
+            spec = raw_spec or {}
+            if bool(spec.get("requires_audio", False)) and audio_token_count <= 0:
+                continue
+            min_audio_tokens = spec.get("min_audio_tokens")
+            if min_audio_tokens is not None and audio_token_count < int(min_audio_tokens):
+                continue
+
+            exclude = [str(x).lower() for x in spec.get("exclude_keywords", [])]
+            if any(term and term in text for term in exclude):
+                continue
+
+            all_terms = [str(x).lower() for x in spec.get("all_keywords", [])]
+            if all_terms and not all(term in text for term in all_terms):
+                continue
+
+            matches: list[str] = []
+            any_terms = [str(x).lower() for x in spec.get("any_keywords", [])]
+            matches.extend([term for term in any_terms if term and term in text])
+            for pattern in spec.get("any_regex", []):
+                pattern_s = str(pattern)
+                try:
+                    if re.search(pattern_s, text):
+                        matches.append(f"re:{pattern_s}")
+                except re.error:
+                    continue
+
+            if any_terms or spec.get("any_regex"):
+                if not matches:
+                    continue
+            elif not all_terms:
+                continue
+
+            return int(spec.get("min_top_m", default_min)), str(cluster), matches[:16]
+
+        return default_min, "query_default", []
 
     def task_layer_full_layers(self, task_type: str | None, num_layers: int) -> set[int]:
         """Resolve task-specific layer overrides that force full top-k.

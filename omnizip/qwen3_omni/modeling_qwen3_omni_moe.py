@@ -2179,6 +2179,7 @@ class Qwen3OmniMoeThinkerForConditionalGeneration(
                 position_ids = position_ids.unsqueeze(0).expand(3, -1, -1)
 
         global_mask = None
+        self._sceb_omnizip_global_mask = None
         vision_pruning_mask = None
         if (
             pixel_values_videos is not None
@@ -2208,6 +2209,7 @@ class Qwen3OmniMoeThinkerForConditionalGeneration(
                 g=omnizip_config["g"],
             )
 
+            self._sceb_omnizip_global_mask = global_mask.detach()
             inputs_embeds = inputs_embeds[:, global_mask, :]
             if attention_mask is not None:
                 attention_mask = attention_mask[:, global_mask]
