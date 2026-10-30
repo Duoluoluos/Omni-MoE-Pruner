@@ -1,0 +1,55 @@
+{
+  "sample_index": 583,
+  "video": "videos/video_385.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 31968,
+    "total": 32424
+  },
+  "input_sha256": "288afaa3a19ea2e0d53233c50a7607456084c5de4b6fc8194548e2a2b0398bc9",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 10.712718209950253,
+      "option_logp": {
+        "A": -2.82936692237854,
+        "B": -0.4543670117855072,
+        "C": -3.20436692237854,
+        "D": -1.3293670415878296
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 9.862960090162233,
+      "option_logp": {
+        "A": -2.678633451461792,
+        "B": -0.1786334216594696,
+        "C": -3.678633451461792,
+        "D": -2.678633451461792
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. pushing Y",
+      "generation_s": 10.507504589855671,
+      "option_logp": {
+        "A": -3.4249520301818848,
+        "B": -0.04995201900601387,
+        "C": -4.549952030181885,
+        "D": -5.299952030181885
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

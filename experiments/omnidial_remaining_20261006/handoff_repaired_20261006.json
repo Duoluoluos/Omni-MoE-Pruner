@@ -1,0 +1,94 @@
+{
+  "checked_at": "2026-10-06T16:34:16.341845+08:00",
+  "worker": "921134cf872ab4e8",
+  "supervisor_pid": 993347,
+  "supervisor_alive": true,
+  "lock_directory": "/tmp/omnidial_remaining_20261006_locks",
+  "single_worker_lock": true,
+  "repair": {
+    "progress_reads": "3 attempts, 0.1-second spacing, last-state fallback",
+    "completion": "Verified full summary plus exited exact inference process; progress completion is optional",
+    "pid_identity": "Exact frozen run.py and --out arguments; reject multiple matching children",
+    "backfill_recovery": "Retry missing/failed completed-run backfills, up to 3 attempts per supervisor",
+    "old_failure_logs_preserved": true,
+    "frozen_run_artifacts_changed": false
+  },
+  "jobs": {
+    "qwen_all_worldsense": {
+      "pid": 993350,
+      "gpu": 0,
+      "stage": "prepare",
+      "completed": 4,
+      "expected": 3170,
+      "preflight_passed": true,
+      "warmup_passed": true,
+      "generation_reached": true,
+      "result_status": "planned",
+      "backend": "megatron_core_grouped_mlp",
+      "scope": [
+        0,
+        48
+      ]
+    },
+    "unimoe_partial_worldsense": {
+      "pid": 578987,
+      "gpu": 1,
+      "adopted_existing_pid": true,
+      "completed": 2304,
+      "expected": 3170,
+      "result_status": "planned",
+      "backend": "unimoe_native_deepspeed",
+      "scope": [
+        7,
+        19
+      ]
+    }
+  },
+  "gpu1_then": [
+    "unimoe_baselines_ovb",
+    "unimoe_terminal_ovb"
+  ],
+  "auto_backfill": true,
+  "partial_result_backfill": false,
+  "backfills": {
+    "qwen_all_avut": {
+      "table_sha256": "a51b75337472dc72f1c5f012d3df82f7d2646f989364d4f6e3ff7615525d983d",
+      "build_exit_code": 0,
+      "pdf_sha256": "146bb9628362850a6587ef11a31dcf4064607ca50e2568b02dcbcf316f70e758",
+      "summary_sha256": "1ea57b8dc471a14b3c4eb11c457519d0f48d6fe83f5e4573d8d9abe5d8329dd9",
+      "raw_sha256": "e2a51f51c53949db7688ae595c3c93f1559515d9c8acf2d20454fbfe8def3307",
+      "manifest_sha256": "de6ba51122638bd598f3a8ce617b301bfb66749c4ffa8b17cc23b18b8dab4700",
+      "backfill_script_sha256": "c27b59f36c63ba92b9b7c12240de12721fddf2553b41e7e104868bd823b7afba",
+      "lock_path": "/tmp/omnidial_remaining_20261006_locks/paper_backfill.lock",
+      "time": 1791275552.6751711
+    },
+    "unimoe_partial_avut": {
+      "table_sha256": "a51b75337472dc72f1c5f012d3df82f7d2646f989364d4f6e3ff7615525d983d",
+      "build_exit_code": 0,
+      "pdf_sha256": "146bb9628362850a6587ef11a31dcf4064607ca50e2568b02dcbcf316f70e758",
+      "summary_sha256": "218a2196de33ddc50eef3874e7754f2707ac5ed32d17fdf6a2ec8053ac21bae5",
+      "raw_sha256": "738f620e0c58693c50f31a462beb0bf7d6e419c933ed2870556d7e6473fa9bad",
+      "manifest_sha256": "bc05fa710f1d6df72d5021f9d881803be1e36143baa71ddc3ba7c3feca013684",
+      "backfill_script_sha256": "c27b59f36c63ba92b9b7c12240de12721fddf2553b41e7e104868bd823b7afba",
+      "lock_path": "/tmp/omnidial_remaining_20261006_locks/paper_backfill.lock",
+      "time": 1791275553.023927
+    }
+  },
+  "validation": {
+    "syntax": true,
+    "bounded_retry": true,
+    "last_state_fallback": true,
+    "verified_summary_without_progress": true,
+    "worker_local_flock": true,
+    "exact_process_identities": true,
+    "no_duplicate_matching_children": true,
+    "frozen_manifests_passed": 6,
+    "main_table_changed_cells": "Only 2 new AVUT accuracy/time pairs",
+    "historical_qwen_39_68_13_151_preserved": true
+  },
+  "administrative_sha256": {
+    "common.py": "7c1c45621bf63ffcb0341973e8aead84eb055fe27ddcdbbfb80b9cbdfc159a65",
+    "queue.py": "9664f819715c7b896913f52592c77685f86909364c20f4f982e5915211b5feb0",
+    "backfill.py": "c27b59f36c63ba92b9b7c12240de12721fddf2553b41e7e104868bd823b7afba"
+  }
+}

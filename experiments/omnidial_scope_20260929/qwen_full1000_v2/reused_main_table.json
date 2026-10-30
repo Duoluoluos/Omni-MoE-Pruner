@@ -1,0 +1,56 @@
+{
+  "source": "research_paper/acl_arr_oct2027/results/main_inference_display.csv",
+  "source_sha256": "393a7c7cb5217696dd4f7e3f68a1e9bf8205325e46bc919bf1cf8f560e6c6cfb",
+  "omnidial_scope": [
+    12,
+    32
+  ],
+  "rows": [
+    {
+      "backbone": "Qwen3-Omni Thinker",
+      "benchmark": "OmniVideoBench",
+      "method": "Native top-8",
+      "samples": "1000",
+      "accuracy_percent": "39.4",
+      "generation_seconds": "13.287",
+      "source": "paper/results/main_inference_matrix.csv"
+    },
+    {
+      "backbone": "Qwen3-Omni Thinker",
+      "benchmark": "OmniVideoBench",
+      "method": "Fixed top-8",
+      "samples": "1000",
+      "accuracy_percent": "39.4",
+      "generation_seconds": "13.438",
+      "source": "paper/results/main_inference_matrix.csv"
+    },
+    {
+      "backbone": "Qwen3-Omni Thinker",
+      "benchmark": "OmniVideoBench",
+      "method": "OmniDial",
+      "samples": "",
+      "accuracy_percent": "39.68",
+      "generation_seconds": "13.151",
+      "source": "paper/results/main_inference_matrix.csv"
+    },
+    {
+      "backbone": "Qwen3-Omni Thinker",
+      "benchmark": "OmniVideoBench",
+      "method": "Fixed top-6",
+      "samples": "1000",
+      "accuracy_percent": "39.0",
+      "generation_seconds": "13.254",
+      "source": "paper/results/main_inference_matrix.csv"
+    },
+    {
+      "backbone": "Qwen3-Omni Thinker",
+      "benchmark": "OmniVideoBench",
+      "method": "Fixed top-4",
+      "samples": "1000",
+      "accuracy_percent": "37.4",
+      "generation_seconds": "13.087",
+      "source": "paper/results/main_inference_matrix.csv"
+    }
+  ],
+  "use": "Historical aggregate references only. No synthetic paired deltas, transferred CIs or reruns."
+}

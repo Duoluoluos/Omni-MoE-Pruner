@@ -1,0 +1,49 @@
+{
+  "sample_index": 916,
+  "video": "videos/video_593.mp4",
+  "correct_option": "C",
+  "arm_order": [
+    "stack",
+    "omnizip"
+  ],
+  "arms": {
+    "stack": {
+      "answer": "D",
+      "output_text": "D. Because he",
+      "latency_s": 5.422284569591284,
+      "option_logp": {
+        "A": -3.4006476402282715,
+        "B": -2.6506476402282715,
+        "C": -1.025647759437561,
+        "D": -0.900647759437561
+      },
+      "retained_tokens": 18181,
+      "input_tokens": 45418,
+      "expert_rows": 5188328,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 67.43642663955688,
+      "gold_logp": -1.025647759437561,
+      "correct": false,
+      "gold_delta_minus_omnizip": -0.6726131737232208
+    },
+    "omnizip": {
+      "answer": "C",
+      "output_text": "C",
+      "latency_s": 5.3960636630654335,
+      "option_logp": {
+        "A": -4.103034496307373,
+        "B": -3.853034496307373,
+        "C": -0.3530345857143402,
+        "D": -1.3530346155166626
+      },
+      "retained_tokens": 18181,
+      "input_tokens": 45418,
+      "expert_rows": 6981888,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 67.43642663955688,
+      "gold_logp": -0.3530345857143402,
+      "correct": true
+    }
+  },
+  "complete": true
+}

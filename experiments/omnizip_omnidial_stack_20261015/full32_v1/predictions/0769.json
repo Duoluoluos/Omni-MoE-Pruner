@@ -1,0 +1,78 @@
+{
+  "sample_index": 769,
+  "video": "videos/video_518.mp4",
+  "correct_option": "C",
+  "arm_order": [
+    "omnizip",
+    "native",
+    "stack",
+    "omnidial"
+  ],
+  "arms": {
+    "omnizip": {
+      "answer": "D",
+      "output_text": "D",
+      "latency_s": 6.524081987328827,
+      "option_logp": {
+        "A": -2.549055576324463,
+        "B": -2.924055576324463,
+        "C": -1.549055576324463,
+        "D": -0.42405563592910767
+      },
+      "retained_tokens": 21440,
+      "input_tokens": 53726,
+      "expert_rows": 8233344,
+      "peak_allocated_gib": 68.98003005981445,
+      "js_to_native": 0.001887873271018417
+    },
+    "native": {
+      "answer": "D",
+      "output_text": "D",
+      "latency_s": 19.72952143009752,
+      "option_logp": {
+        "A": -2.3933866024017334,
+        "B": -2.7683866024017334,
+        "C": -1.3933866024017334,
+        "D": -0.5183866620063782
+      },
+      "retained_tokens": 53726,
+      "input_tokens": 53726,
+      "expert_rows": 20631168,
+      "peak_allocated_gib": 81.09348011016846,
+      "js_to_native": 0.0
+    },
+    "stack": {
+      "answer": "D",
+      "output_text": "D",
+      "latency_s": 6.40866922121495,
+      "option_logp": {
+        "A": -2.4694697856903076,
+        "B": -2.7194697856903076,
+        "C": -1.9694697856903076,
+        "D": -0.3444698452949524
+      },
+      "retained_tokens": 21440,
+      "input_tokens": 53726,
+      "expert_rows": 7235516,
+      "peak_allocated_gib": 68.98003005981445,
+      "js_to_native": 0.010333369849105956
+    },
+    "omnidial": {
+      "answer": "D",
+      "output_text": "D",
+      "latency_s": 19.361712637357414,
+      "option_logp": {
+        "A": -2.335946559906006,
+        "B": -2.710946559906006,
+        "C": -1.5859465599060059,
+        "D": -0.46094658970832825
+      },
+      "retained_tokens": 53726,
+      "input_tokens": 53726,
+      "expert_rows": 18329228,
+      "peak_allocated_gib": 81.09348011016846,
+      "js_to_native": 0.001457949327193166
+    }
+  },
+  "complete": true
+}

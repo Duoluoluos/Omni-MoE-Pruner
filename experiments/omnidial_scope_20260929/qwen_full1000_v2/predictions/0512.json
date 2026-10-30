@@ -1,0 +1,55 @@
+{
+  "sample_index": 512,
+  "video": "videos/video_336.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 21024,
+    "total": 21482
+  },
+  "input_sha256": "a566ad574f3daff6f045350960032ebf00e0f7dfe0460b16137e77291e479be2",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D.",
+      "generation_s": 6.856662119971588,
+      "option_logp": {
+        "A": -4.14280366897583,
+        "B": -8.267803192138672,
+        "C": -6.64280366897583,
+        "D": -0.017803505063056946
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. The father",
+      "generation_s": 6.618113924982026,
+      "option_logp": {
+        "A": -3.419339418411255,
+        "B": -7.169339656829834,
+        "C": -4.669339656829834,
+        "D": -0.044339511543512344
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 5.964273368008435,
+      "option_logp": {
+        "A": -5.007995128631592,
+        "B": -8.382994651794434,
+        "C": -7.132995128631592,
+        "D": -0.007995030842721462
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

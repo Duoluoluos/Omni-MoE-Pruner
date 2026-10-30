@@ -1,0 +1,55 @@
+{
+  "sample_index": 18,
+  "video": "videos/video_10.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 37872,
+    "total": 38362
+  },
+  "input_sha256": "35897d22309f0b3e5f1aaee87d20b12fba5e2ae8ed4fe4a8aced33451a13befb",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 12.44065625895746,
+      "option_logp": {
+        "A": -0.21023394167423248,
+        "B": -3.0852339267730713,
+        "C": -4.08523416519165,
+        "D": -2.0852339267730713
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 12.707909748889506,
+      "option_logp": {
+        "A": -0.06502360105514526,
+        "B": -3.56502366065979,
+        "C": -5.690023422241211,
+        "D": -3.81502366065979
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Because Superman",
+      "generation_s": 13.797505507944152,
+      "option_logp": {
+        "A": -0.6592641472816467,
+        "B": -1.409264087677002,
+        "C": -2.284264087677002,
+        "D": -2.034264087677002
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

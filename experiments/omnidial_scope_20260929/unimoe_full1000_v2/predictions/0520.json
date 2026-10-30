@@ -1,0 +1,55 @@
+{
+  "sample_index": 520,
+  "video": "videos/video_340.mp4",
+  "counts": {
+    "audio": 400,
+    "video": 4608,
+    "total": 5087
+  },
+  "input_sha256": "6ab1ee6e5103efd7398007646b579eb1d216ba14a09701d778283555b6a35d1f",
+  "timed": true,
+  "execution_session": "20260929T122251_g340-cd51-5100-b698-202f-fe01-948c_4187",
+  "gates_sha256": "c430e4e0f843dbba0060b45cae47716100224fafed11e282a5bc3e08e800d99a",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. Wave impact",
+      "generation_s": 2.1889748768880963,
+      "option_logp": {
+        "A": -0.05753488466143608,
+        "B": -7.182534694671631,
+        "C": -2.93253493309021,
+        "D": -6.432534694671631
+      }
+    },
+    "cg_middle": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 1.8842320730909705,
+      "option_logp": {
+        "A": -0.1451784074306488,
+        "B": -6.707678318023682,
+        "C": -2.0201783180236816,
+        "D": -6.707678318023682
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 1.8613928640261292,
+      "option_logp": {
+        "A": -0.05011235550045967,
+        "B": -7.237612247467041,
+        "C": -3.050112247467041,
+        "D": -7.175112247467041
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_middle",
+    "cg_early"
+  ],
+  "complete": true
+}

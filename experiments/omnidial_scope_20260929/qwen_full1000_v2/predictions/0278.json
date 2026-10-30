@@ -1,0 +1,55 @@
+{
+  "sample_index": 278,
+  "video": "videos/video_126.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 15696,
+    "total": 16188
+  },
+  "input_sha256": "60f85b6769a94fe16cce1b6d280ab011803b2bf7f49b9ccaddf4b9772ae10624",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 4.835359899094328,
+      "option_logp": {
+        "A": -1.2223761081695557,
+        "B": -0.5973761081695557,
+        "C": -1.9723761081695557,
+        "D": -4.222375869750977
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 4.4828432311769575,
+      "option_logp": {
+        "A": -1.1815927028656006,
+        "B": -1.9315927028656006,
+        "C": -0.6815926432609558,
+        "D": -3.1815927028656006
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. The man",
+      "generation_s": 5.927254581823945,
+      "option_logp": {
+        "A": -0.7857910394668579,
+        "B": -1.785791039466858,
+        "C": -1.035791039466858,
+        "D": -3.9107909202575684
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

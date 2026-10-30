@@ -1,0 +1,55 @@
+{
+  "sample_index": 129,
+  "video": "videos/video_56.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55757
+  },
+  "input_sha256": "0de39de29554dbd85719baffb1e4643aed1d88716a123066bb400739c9fac488",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.501326920930296,
+      "option_logp": {
+        "A": -2.3955283164978027,
+        "B": -1.3955283164978027,
+        "C": -2.0205283164978027,
+        "D": -0.645528256893158
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Hair",
+      "generation_s": 22.76475369511172,
+      "option_logp": {
+        "A": -1.7957360744476318,
+        "B": -1.1707360744476318,
+        "C": -2.670736074447632,
+        "D": -0.7957360744476318
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.572785028954968,
+      "option_logp": {
+        "A": -1.8389084339141846,
+        "B": -1.7139084339141846,
+        "C": -3.5889084339141846,
+        "D": -0.46390849351882935
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

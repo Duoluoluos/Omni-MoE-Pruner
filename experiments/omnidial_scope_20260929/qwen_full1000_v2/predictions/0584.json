@@ -1,0 +1,55 @@
+{
+  "sample_index": 584,
+  "video": "videos/video_385.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 31968,
+    "total": 32431
+  },
+  "input_sha256": "f9ce5d6f907623c0d77f6a138bf22635c16df2020b82259c7829c9af0ec02ed5",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 10.195040488848463,
+      "option_logp": {
+        "A": -0.36173534393310547,
+        "B": -2.6117353439331055,
+        "C": -1.6117353439331055,
+        "D": -3.6117353439331055
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 9.870301488088444,
+      "option_logp": {
+        "A": -0.19332082569599152,
+        "B": -3.1933207511901855,
+        "C": -2.4433207511901855,
+        "D": -3.0683207511901855
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. the yellow",
+      "generation_s": 11.255983697017655,
+      "option_logp": {
+        "A": -0.23686477541923523,
+        "B": -2.9868648052215576,
+        "C": -2.3618648052215576,
+        "D": -2.7368648052215576
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

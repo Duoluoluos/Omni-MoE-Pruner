@@ -1,0 +1,55 @@
+{
+  "sample_index": 989,
+  "video": "videos/video_621.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 7056,
+    "total": 7576
+  },
+  "input_sha256": "d9c73e4ef2f48bab21abd9aa1bee393f9fa9558684cf2bf31c2c6911d8594779",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Dark Willow",
+      "generation_s": 4.035034029977396,
+      "option_logp": {
+        "A": -3.3167078495025635,
+        "B": -1.3167078495025635,
+        "C": -2.0667078495025635,
+        "D": -0.5667077898979187
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 2.561040881089866,
+      "option_logp": {
+        "A": -2.3198728561401367,
+        "B": -2.1948728561401367,
+        "C": -0.31987282633781433,
+        "D": -2.8198728561401367
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 2.552192533155903,
+      "option_logp": {
+        "A": -5.366169452667236,
+        "B": -3.8661696910858154,
+        "C": -0.11616960167884827,
+        "D": -2.4911696910858154
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

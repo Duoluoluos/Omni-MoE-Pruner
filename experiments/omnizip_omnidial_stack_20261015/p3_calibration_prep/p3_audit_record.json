@@ -1,0 +1,107 @@
+{
+  "audit_target": "/Users/bytedance/Doubao/chats/2026-10-15/new-chat/omnizip_omnidial_stack/calibrate_p3.py",
+  "sha256": "438900942b33312fef2c6e34f714efd573810a8dde00a2bea3316cbe52ffca8f",
+  "constants": {
+    "INPUTS": null,
+    "DATA": null,
+    "CALIBRATION_INDICES": [
+      321,
+      333,
+      32,
+      41,
+      71,
+      88,
+      94,
+      200
+    ],
+    "SCOPE": [
+      12,
+      32
+    ],
+    "TARGET_STACK_ROW_RATIO": 0.3
+  },
+  "imports": [
+    "__future__",
+    "argparse",
+    "json",
+    "modeling_qwen3_omni_moe_stack",
+    "numpy",
+    "os",
+    "pathlib",
+    "qwen_mcore_controller_p0",
+    "qwen_omni_utils",
+    "random",
+    "run_mb_new2_cgskip_qwen3omni",
+    "sys",
+    "time",
+    "torch",
+    "traceback",
+    "transformers"
+  ],
+  "file_reads": [],
+  "record_keys_accessed": [],
+  "records_list_subscript_keys": [],
+  "forbidden_token_hits_total": 4,
+  "forbidden_real_reads": [],
+  "forbidden_only_self_declaration_or_comment": [
+    {
+      "token": "answer",
+      "string": "Input-only Zip-aware router calibration for P3.\n\nUses 8 length-stratified inputs from the fixed 32-sample set. It never "
+    },
+    {
+      "token": "label",
+      "string": "Input-only Zip-aware router calibration for P3.\n\nUses 8 length-stratified inputs from the fixed 32-sample set. It never "
+    },
+    {
+      "token": "answer",
+      "string": "closest predicted Stack/native expert-row ratio to 0.30; no labels or answers read"
+    },
+    {
+      "token": "label",
+      "string": "closest predicted Stack/native expert-row ratio to 0.30; no labels or answers read"
+    }
+  ],
+  "calibration_indices_subset_of_fixed32": true,
+  "calibration_indices_out_of_fixed32": [],
+  "fixed32_count": 32,
+  "cal_count": 8,
+  "build_conversation": {
+    "source": "/Users/bytedance/Library/Application Support/Doubao/Profile 1/.doubao/agent_mode/workspace/.sessions/38447363958199810/agents/s_000EbvltX8w/artifacts/remote/run_mb_new2_cgskip_qwen3omni.py",
+    "sha256": "1b1e6faa91aa802a7bfdc8c446c90bb2cdeecac909d25b37d931cba7ac62f536",
+    "record_keys_used": [
+      "options",
+      "question"
+    ],
+    "uses_video_path_arg": true,
+    "forbidden_in_body": []
+  },
+  "generate_once": {
+    "compares_to_gold": false,
+    "returns_discarded_in_p3_call": true,
+    "output_tokens_arg": 1
+  },
+  "verdict": "CLEAN: no answer/label/accuracy/gold-logp read in calibrate_p3.py call chain; 8 calibration indices are a 2-per-quartile length-stratified subset of the fixed 32.",
+  "file_reads_precise": [
+    {
+      "lineno": 37,
+      "call": "json.loads(INPUTS.read_text())",
+      "resolves_to": "experiments/omnidial_layer_followup_20260930/qwen_diagnostic32_v1/inputs.json",
+      "kind": "input_only_no_answer"
+    }
+  ],
+  "path_string_constants": {
+    "L13_ROOT": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner",
+    "L21_INPUTS": ".../qwen_diagnostic32_v1/inputs.json (input-only)",
+    "L44_eval_data_prefix": "eval_data/OmniVideoBench used ONLY as video dir prefix (r['video']), NOT data.json"
+  },
+  "out_files_written": [
+    "protocol.json",
+    "gates.json",
+    "complete.json",
+    "progress.json",
+    "failure.json"
+  ],
+  "data_json_read": false,
+  "gold_file_read": false,
+  "references_or_baseline_results_read": false
+}

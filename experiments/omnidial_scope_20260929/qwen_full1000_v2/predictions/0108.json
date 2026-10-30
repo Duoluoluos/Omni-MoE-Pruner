@@ -1,0 +1,55 @@
+{
+  "sample_index": 108,
+  "video": "videos/video_47.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55761
+  },
+  "input_sha256": "1542f443dc8688e6419ef3c810f8e33a8a0b06fc778b0da6bc787887696f426d",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Wolf thought",
+      "generation_s": 22.696565748890862,
+      "option_logp": {
+        "A": -2.072460651397705,
+        "B": -1.947460651397705,
+        "C": -1.072460651397705,
+        "D": -0.9474607110023499
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.486752395983785,
+      "option_logp": {
+        "A": -2.4756765365600586,
+        "B": -1.6006765365600586,
+        "C": -0.7256764769554138,
+        "D": -1.4756765365600586
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.448287750128657,
+      "option_logp": {
+        "A": -2.437805652618408,
+        "B": -1.8128056526184082,
+        "C": -0.812805712223053,
+        "D": -1.1878056526184082
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

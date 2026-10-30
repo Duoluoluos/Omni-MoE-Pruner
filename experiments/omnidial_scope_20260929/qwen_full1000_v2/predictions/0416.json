@@ -1,0 +1,55 @@
+{
+  "sample_index": 416,
+  "video": "videos/video_247.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55837
+  },
+  "input_sha256": "2af0e83281b3a215c0cb2e7a2665ded88aecaaab6d6c0d924953021a4b8e8f5b",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.526532246964052,
+      "option_logp": {
+        "A": -2.0478334426879883,
+        "B": -2.1728334426879883,
+        "C": -2.4228334426879883,
+        "D": -0.4228333532810211
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.780157702043653,
+      "option_logp": {
+        "A": -2.869248390197754,
+        "B": -3.369248390197754,
+        "C": -4.369248390197754,
+        "D": -0.11924850195646286
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. The allure",
+      "generation_s": 22.301663029007614,
+      "option_logp": {
+        "A": -2.4729249477386475,
+        "B": -2.7229249477386475,
+        "C": -3.2229249477386475,
+        "D": -0.22292503714561462
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

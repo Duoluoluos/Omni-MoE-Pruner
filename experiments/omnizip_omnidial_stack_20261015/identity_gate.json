@@ -1,0 +1,20 @@
+{
+  "passed": false,
+  "checks": [
+    {
+      "sample_index": 32,
+      "passed": false,
+      "output_text": "A.",
+      "historical_output_text": "A.",
+      "max_abs_option_logp_delta": 0.2645704746246338
+    },
+    {
+      "sample_index": 41,
+      "passed": false,
+      "output_text": "C.",
+      "historical_output_text": "C.",
+      "max_abs_option_logp_delta": 0.2354811429977417
+    }
+  ],
+  "tolerance": 1e-05
+}

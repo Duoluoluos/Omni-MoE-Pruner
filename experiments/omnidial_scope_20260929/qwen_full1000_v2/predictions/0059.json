@@ -1,0 +1,55 @@
+{
+  "sample_index": 59,
+  "video": "videos/video_29.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55794
+  },
+  "input_sha256": "f2dd988c8a4c6679a57a60b75b5a15ad34986c7b51c0ab68ff3dc3c0f1239802",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.67775546014309,
+      "option_logp": {
+        "A": -4.069167137145996,
+        "B": -4.944167137145996,
+        "C": -3.194167137145996,
+        "D": -0.06916717439889908
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. She sang",
+      "generation_s": 23.21041843900457,
+      "option_logp": {
+        "A": -2.426926612854004,
+        "B": -2.801926612854004,
+        "C": -1.301926612854004,
+        "D": -0.5519265532493591
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.849222589982674,
+      "option_logp": {
+        "A": -3.7581586837768555,
+        "B": -4.0081586837768555,
+        "C": -0.13315877318382263,
+        "D": -2.5081586837768555
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

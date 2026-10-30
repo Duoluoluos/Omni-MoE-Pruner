@@ -1,0 +1,55 @@
+{
+  "sample_index": 897,
+  "video": "videos/video_586.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 39888,
+    "total": 40355
+  },
+  "input_sha256": "e4094886c1b025ecff699eca7e99b466b868795c1b80d4a814a8344fe60d3fcd",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 14.037163818022236,
+      "option_logp": {
+        "A": -4.763830184936523,
+        "B": -0.13882999122142792,
+        "C": -2.1388299465179443,
+        "D": -7.138830184936523
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 13.349673258140683,
+      "option_logp": {
+        "A": -5.017517566680908,
+        "B": -0.6425175070762634,
+        "C": -0.7675175070762634,
+        "D": -6.767517566680908
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. To give",
+      "generation_s": 13.991943079046905,
+      "option_logp": {
+        "A": -5.037038803100586,
+        "B": -0.9120386242866516,
+        "C": -0.5370386242866516,
+        "D": -6.037038803100586
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 844,
+  "video": "videos/video_563.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 11570,
+    "total": 12112
+  },
+  "input_sha256": "5ef88870a527e194e787515297d5a30cac2c8709d832f3724ed87d393558ec74",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 3.8411469510756433,
+      "option_logp": {
+        "A": -6.578505992889404,
+        "B": -0.20350579917430878,
+        "C": -1.7035057544708252,
+        "D": -11.328505516052246
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. He aims",
+      "generation_s": 4.057170978980139,
+      "option_logp": {
+        "A": -7.628222465515137,
+        "B": -0.2532224953174591,
+        "C": -1.5032224655151367,
+        "D": -12.565722465515137
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 3.4622673101257533,
+      "option_logp": {
+        "A": -6.814808368682861,
+        "B": -0.3148084878921509,
+        "C": -1.3148084878921509,
+        "D": -11.81480884552002
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

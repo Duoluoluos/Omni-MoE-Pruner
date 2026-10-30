@@ -1,0 +1,55 @@
+{
+  "sample_index": 229,
+  "video": "videos/video_92.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55768
+  },
+  "input_sha256": "91e37d5ac8b1d9232e73adcdee5a598f5838ace7fe4184244f4d46678e6f952b",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Gong Jun",
+      "generation_s": 22.135136155877262,
+      "option_logp": {
+        "A": -1.2590292692184448,
+        "B": -1.6340292692184448,
+        "C": -1.6340292692184448,
+        "D": -1.1340292692184448
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 22.156386291841045,
+      "option_logp": {
+        "A": -1.0212432146072388,
+        "B": -1.7712432146072388,
+        "C": -1.5212432146072388,
+        "D": -1.3962432146072388
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.72183389798738,
+      "option_logp": {
+        "A": -1.2202198505401611,
+        "B": -1.7202198505401611,
+        "C": -1.3452198505401611,
+        "D": -1.3452198505401611
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

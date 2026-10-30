@@ -1,5 +1,8 @@
 # Local environments and caches
 .venv/
+# Shared, reusable Megatron-SWIFT LoRA runtime (compiled Python 3.12 + venv +
+# pip cache + build deps).  Lives on the shared mount so any worker can reuse it.
+/.omni_lora_runtime/
 .env
 .env.*
 __pycache__/
@@ -15,22 +18,26 @@ __pycache__/
 /.coco/
 /.pip-cache/
 /.tmp/
-/logs/
-nohup.out
-/profile_*/
-!/profile_avut_qwen3/
-!/profile_avut_qwen3/**
-!/profile_omnivideobench_qwen3/
-!/profile_omnivideobench_qwen3/**
-/profile_avut_qwen3/**/__pycache__/
-/profile_avut_qwen3/**/*.pyc
-/profile_omnivideobench_qwen3/**/__pycache__/
-/profile_omnivideobench_qwen3/**/*.pyc
-/OmniZip.pdf
-/run_qwen3_omni_bg.sh
-/scripts/
-/ltx_infer_merged_bf16_*.sh
 
 # Large local datasets and model weights
 /eval_data/
 /models/
+
+# Local runtime installations and private machine configuration
+/.runtime/
+/.local-tools/
+/.agents/
+/.codex/
+/.aws/
+
+# Model checkpoints; calibration pool_*.pt files are experiment records
+*.safetensors
+*.gguf
+*.ggml
+*.ckpt
+**/pytorch_model*.bin
+**/adapter_model.bin
+**/consolidated*.pth
+
+# Dataset bodies remain on shared storage; see docs/DATA_STORAGE.md
+/ft_data/

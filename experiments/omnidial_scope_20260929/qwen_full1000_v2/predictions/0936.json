@@ -1,0 +1,55 @@
+{
+  "sample_index": 936,
+  "video": "videos/video_602.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 44784,
+    "total": 45239
+  },
+  "input_sha256": "49de00c1d5af18850968f5a9f901cd8b8819c19e0e70d2421c030deb91c7bb14",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 15.721257694996893,
+      "option_logp": {
+        "A": -2.621270179748535,
+        "B": -3.246270179748535,
+        "C": -0.12127014994621277,
+        "D": -6.621270179748535
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 15.623163379030302,
+      "option_logp": {
+        "A": -5.133835315704346,
+        "B": -6.008835315704346,
+        "C": -0.008835270069539547,
+        "D": -8.383834838867188
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Captain",
+      "generation_s": 17.000126041006297,
+      "option_logp": {
+        "A": -4.168426990509033,
+        "B": -3.668426990509033,
+        "C": -0.043427012860774994,
+        "D": -7.668426990509033
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

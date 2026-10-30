@@ -1,0 +1,55 @@
+{
+  "sample_index": 816,
+  "video": "videos/video_553.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 10080,
+    "total": 10549
+  },
+  "input_sha256": "36d232ccf10f9dcc56fc7bac92c92ed9d0b9d109e78f2ca6c34aa7d3f806648a",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 3.1333700749091804,
+      "option_logp": {
+        "A": -5.683798789978027,
+        "B": -1.8087990283966064,
+        "C": -0.18379899859428406,
+        "D": -9.058798789978027
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. The mech",
+      "generation_s": 4.586512604029849,
+      "option_logp": {
+        "A": -3.294255256652832,
+        "B": -0.2942553758621216,
+        "C": -1.5442553758621216,
+        "D": -5.794255256652832
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Buying a",
+      "generation_s": 3.709706542082131,
+      "option_logp": {
+        "A": -4.9487714767456055,
+        "B": -1.323771357536316,
+        "C": -0.3237713873386383,
+        "D": -8.698771476745605
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

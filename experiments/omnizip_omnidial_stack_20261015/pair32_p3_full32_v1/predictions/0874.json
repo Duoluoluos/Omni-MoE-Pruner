@@ -1,0 +1,49 @@
+{
+  "sample_index": 874,
+  "video": "videos/video_578.mp4",
+  "correct_option": "A",
+  "arm_order": [
+    "omnizip",
+    "stack"
+  ],
+  "arms": {
+    "omnizip": {
+      "answer": "C",
+      "output_text": "C",
+      "latency_s": 4.1712453961372375,
+      "option_logp": {
+        "A": -2.112987995147705,
+        "B": -2.487987995147705,
+        "C": -0.23798787593841553,
+        "D": -4.987987995147705
+      },
+      "retained_tokens": 14623,
+      "input_tokens": 36469,
+      "expert_rows": 5615616,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 65.78357982635498,
+      "gold_logp": -2.112987995147705,
+      "correct": false
+    },
+    "stack": {
+      "answer": "B",
+      "output_text": "B. He is",
+      "latency_s": 4.228464357554913,
+      "option_logp": {
+        "A": -2.2640762329101562,
+        "B": -0.38907623291015625,
+        "C": -1.6390762329101562,
+        "D": -4.139076232910156
+      },
+      "retained_tokens": 14623,
+      "input_tokens": 36469,
+      "expert_rows": 4183012,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 65.78357982635498,
+      "gold_logp": -2.2640762329101562,
+      "correct": false,
+      "gold_delta_minus_omnizip": -0.15108823776245117
+    }
+  },
+  "complete": true
+}

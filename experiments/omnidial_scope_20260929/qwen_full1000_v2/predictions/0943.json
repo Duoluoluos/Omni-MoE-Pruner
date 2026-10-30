@@ -1,0 +1,55 @@
+{
+  "sample_index": 943,
+  "video": "videos/video_605.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55838
+  },
+  "input_sha256": "16b0cd9849c8809459f778d62668fd7896f82a3274cb74e7bb862cb9940b40a1",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. She felt",
+      "generation_s": 22.789936064044014,
+      "option_logp": {
+        "A": -6.379449367523193,
+        "B": -0.004449348896741867,
+        "C": -7.004449367523193,
+        "D": -7.004449367523193
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 21.48906269692816,
+      "option_logp": {
+        "A": -6.628534317016602,
+        "B": -0.0035341442562639713,
+        "C": -6.628534317016602,
+        "D": -8.378534317016602
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. She felt",
+      "generation_s": 22.35028695408255,
+      "option_logp": {
+        "A": -5.756224632263184,
+        "B": -0.006224531680345535,
+        "C": -7.381224632263184,
+        "D": -7.256224632263184
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

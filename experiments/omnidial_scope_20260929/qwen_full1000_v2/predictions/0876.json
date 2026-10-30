@@ -1,0 +1,55 @@
+{
+  "sample_index": 876,
+  "video": "videos/video_579.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 36720,
+    "total": 37195
+  },
+  "input_sha256": "a081b78e3b42b618ed2b7b097f71de00db57774b576982815608b8d65bb5bd0c",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B. Because Sheldon",
+      "generation_s": 12.51115645794198,
+      "option_logp": {
+        "A": -3.6900076866149902,
+        "B": -0.8150076270103455,
+        "C": -0.8150076270103455,
+        "D": -2.4400076866149902
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Because S",
+      "generation_s": 13.23183576297015,
+      "option_logp": {
+        "A": -2.6238865852355957,
+        "B": -1.1238867044448853,
+        "C": -0.6238867044448853,
+        "D": -2.7488865852355957
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C.",
+      "generation_s": 12.213027892867103,
+      "option_logp": {
+        "A": -5.767266750335693,
+        "B": -2.3922669887542725,
+        "C": -0.14226694405078888,
+        "D": -3.3922669887542725
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

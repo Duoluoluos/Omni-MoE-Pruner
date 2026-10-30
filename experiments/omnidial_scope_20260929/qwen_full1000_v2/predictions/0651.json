@@ -1,0 +1,55 @@
+{
+  "sample_index": 651,
+  "video": "videos/video_432.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 36000,
+    "total": 36484
+  },
+  "input_sha256": "6d9c680dccbffe0199ff0c19f6b0c39fe01f0efea37decd934ad1e85c3b3fedf",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 11.55966258305125,
+      "option_logp": {
+        "A": -5.942850112915039,
+        "B": -2.817850351333618,
+        "C": -6.317850112915039,
+        "D": -0.06785030663013458
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Every negot",
+      "generation_s": 12.888730644015595,
+      "option_logp": {
+        "A": -6.760087013244629,
+        "B": -4.885087013244629,
+        "C": -7.385087013244629,
+        "D": -0.010087225586175919
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Every negot",
+      "generation_s": 12.225094818044454,
+      "option_logp": {
+        "A": -6.1432366371154785,
+        "B": -4.2682366371154785,
+        "C": -7.0182366371154785,
+        "D": -0.018236584961414337
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

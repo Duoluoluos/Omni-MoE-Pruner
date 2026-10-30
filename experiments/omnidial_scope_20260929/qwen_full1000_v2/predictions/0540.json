@@ -1,0 +1,55 @@
+{
+  "sample_index": 540,
+  "video": "videos/video_350.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55787
+  },
+  "input_sha256": "ac9b65afcf373b5563fe06fdd48c31dcde4445c481ae03aabe31d0cf7e6ce6d8",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.62760798400268,
+      "option_logp": {
+        "A": -1.8866331577301025,
+        "B": -2.6366331577301025,
+        "C": -2.3866331577301025,
+        "D": -0.38663312792778015
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.654547076905146,
+      "option_logp": {
+        "A": -4.771157741546631,
+        "B": -5.271157741546631,
+        "C": -5.021157741546631,
+        "D": -0.021157754585146904
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Goal scored",
+      "generation_s": 23.19264162098989,
+      "option_logp": {
+        "A": -3.0768017768859863,
+        "B": -4.951801776885986,
+        "C": -3.9518017768859863,
+        "D": -0.07680179178714752
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 465,
+  "video": "videos/video_292.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55778
+  },
+  "input_sha256": "d3d3d94ad1f5fc79e9e6bfbd84450cac1760cda84c483443d25512ba364d82b4",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.95564924320206,
+      "option_logp": {
+        "A": -0.8663753867149353,
+        "B": -0.8663753867149353,
+        "C": -2.36637544631958,
+        "D": -2.86637544631958
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Chen L",
+      "generation_s": 22.84312229603529,
+      "option_logp": {
+        "A": -0.8489862680435181,
+        "B": -0.8489862680435181,
+        "C": -2.7239861488342285,
+        "D": -2.5989861488342285
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B. Chen L",
+      "generation_s": 22.124217834090814,
+      "option_logp": {
+        "A": -1.1700012683868408,
+        "B": -0.7950013279914856,
+        "C": -1.9200012683868408,
+        "D": -2.420001268386841
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

@@ -1,0 +1,588 @@
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0  0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0 24 25.9M   24 6511k    0     0  5543k      0  0:00:04  0:00:01  0:00:03 5542k 84 25.9M   84 22.0M    0     0  10.1M      0  0:00:02  0:00:02 --:--:-- 10.1M100 25.9M  100 25.9M    0     0  8397k      0  0:00:03  0:00:03 --:--:-- 8398k
+Python 3.12.13
+standard modules available
+pip 25.0.1 from /tmp/omnivideo_100k_qwen3_omni_lora/python-3.12.13/lib/python3.12/site-packages/pip (python 3.12)
+Looking in indexes: https://bytedpypi.byted.org/simple/
+Requirement already satisfied: pip in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (25.0.1)
+Collecting pip
+  Downloading https://bytedpypi.byted.org/packages/pip/pip-26.2.1-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 47.6 MB/s eta 0:00:00
+Collecting setuptools
+  Downloading https://bytedpypi.byted.org/packages/setuptools/setuptools-84.0.0-py3-none-any.whl (818 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 818.2/818.2 kB 79.0 MB/s eta 0:00:00
+Collecting wheel
+  Downloading https://bytedpypi.byted.org/packages/wheel/wheel-0.48.0-py3-none-any.whl (33 kB)
+Collecting packaging>=24.0 (from wheel)
+  Downloading https://bytedpypi.byted.org/packages/packaging/packaging-26.3-py3-none-any.whl (129 kB)
+Installing collected packages: setuptools, pip, packaging, wheel
+  Attempting uninstall: pip
+    Found existing installation: pip 25.0.1
+    Uninstalling pip-25.0.1:
+      Successfully uninstalled pip-25.0.1
+Successfully installed packaging-26.3 pip-26.2.1 setuptools-84.0.0 wheel-0.48.0
+Looking in indexes: https://bytedpypi.byted.org/simple/
+Collecting torch==2.8.0
+  Downloading torch-2.8.0-cp312-cp312-manylinux_2_28_x86_64.whl (887.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 887.9/887.9 MB 207.2 MB/s  0:00:02
+Collecting torchvision==0.23.0
+  Downloading torchvision-0.23.0-cp312-cp312-manylinux_2_28_x86_64.whl (8.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.6/8.6 MB 248.4 MB/s  0:00:00
+Collecting transformers==5.12.1
+  Downloading transformers-5.12.1-py3-none-any.whl (11.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 11.2/11.2 MB 107.3 MB/s  0:00:00
+Collecting ms-swift==4.4.2 (from ms-swift[megatron]==4.4.2)
+  Downloading ms_swift-4.4.2-py3-none-any.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 232.1 MB/s  0:00:00
+Collecting mcore-bridge==1.6.0
+  Downloading mcore_bridge-1.6.0-py3-none-any.whl (169 kB)
+Collecting megatron-core==0.18.0
+  Downloading megatron_core-0.18.0-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (2.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.0/2.0 MB 126.8 MB/s  0:00:00
+Collecting qwen-omni-utils>=0.0.9
+  Downloading qwen_omni_utils-0.0.9-py3-none-any.whl (9.7 kB)
+Collecting soundfile
+  Downloading soundfile-0.14.0-py2.py3-none-manylinux_2_28_x86_64.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 247.2 MB/s  0:00:00
+Collecting decord
+  Downloading decord-0.6.0-py3-none-manylinux2010_x86_64.whl (13.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 13.6/13.6 MB 358.5 MB/s  0:00:00
+Collecting librosa
+  Downloading librosa-1.0.0-py3-none-any.whl (294 kB)
+Collecting av
+  Downloading av-19.0.1-cp312-abi3-manylinux_2_28_x86_64.whl (35.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.0/35.0 MB 352.1 MB/s  0:00:00
+Collecting imageio-ffmpeg
+  Downloading imageio_ffmpeg-0.6.0-py3-none-manylinux2014_x86_64.whl (29.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 29.5/29.5 MB 373.4 MB/s  0:00:00
+Collecting filelock (from torch==2.8.0)
+  Downloading filelock-4.2.0-py3-none-any.whl (135 kB)
+Collecting typing-extensions>=4.10.0 (from torch==2.8.0)
+  Downloading typing_extensions-4.16.0-py3-none-any.whl (45 kB)
+Requirement already satisfied: setuptools in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch==2.8.0) (84.0.0)
+Collecting sympy>=1.13.3 (from torch==2.8.0)
+  Downloading sympy-1.14.0-py3-none-any.whl (6.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.3/6.3 MB 74.4 MB/s  0:00:00
+Collecting networkx (from torch==2.8.0)
+  Downloading networkx-3.7-py3-none-any.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 56.0 MB/s  0:00:00
+Collecting jinja2 (from torch==2.8.0)
+  Downloading jinja2-3.1.6-py3-none-any.whl (134 kB)
+Collecting fsspec (from torch==2.8.0)
+  Downloading fsspec-2026.9.0-py3-none-any.whl (221 kB)
+Collecting nvidia-cuda-nvrtc-cu12==12.8.93 (from torch==2.8.0)
+  Downloading nvidia_cuda_nvrtc_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (88.0 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 88.0/88.0 MB 338.5 MB/s  0:00:00
+Collecting nvidia-cuda-runtime-cu12==12.8.90 (from torch==2.8.0)
+  Downloading nvidia_cuda_runtime_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (954 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 954.8/954.8 kB 209.6 MB/s  0:00:00
+Collecting nvidia-cuda-cupti-cu12==12.8.90 (from torch==2.8.0)
+  Downloading nvidia_cuda_cupti_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (10.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.2/10.2 MB 352.4 MB/s  0:00:00
+Collecting nvidia-cudnn-cu12==9.10.2.21 (from torch==2.8.0)
+  Downloading nvidia_cudnn_cu12-9.10.2.21-py3-none-manylinux_2_27_x86_64.whl (706.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 706.8/706.8 MB 236.7 MB/s  0:00:01
+Collecting nvidia-cublas-cu12==12.8.4.1 (from torch==2.8.0)
+  Downloading nvidia_cublas_cu12-12.8.4.1-py3-none-manylinux_2_27_x86_64.whl (594.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 594.3/594.3 MB 260.3 MB/s  0:00:01
+Collecting nvidia-cufft-cu12==11.3.3.83 (from torch==2.8.0)
+  Downloading nvidia_cufft_cu12-11.3.3.83-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (193.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 193.1/193.1 MB 329.6 MB/s  0:00:00
+Collecting nvidia-curand-cu12==10.3.9.90 (from torch==2.8.0)
+  Downloading nvidia_curand_cu12-10.3.9.90-py3-none-manylinux_2_27_x86_64.whl (63.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.6/63.6 MB 356.5 MB/s  0:00:00
+Collecting nvidia-cusolver-cu12==11.7.3.90 (from torch==2.8.0)
+  Downloading nvidia_cusolver_cu12-11.7.3.90-py3-none-manylinux_2_27_x86_64.whl (267.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 267.5/267.5 MB 352.8 MB/s  0:00:00
+Collecting nvidia-cusparse-cu12==12.5.8.93 (from torch==2.8.0)
+  Downloading nvidia_cusparse_cu12-12.5.8.93-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (288.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 288.2/288.2 MB 352.8 MB/s  0:00:00
+Collecting nvidia-cusparselt-cu12==0.7.1 (from torch==2.8.0)
+  Downloading nvidia_cusparselt_cu12-0.7.1-py3-none-manylinux2014_x86_64.whl (287.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 287.2/287.2 MB 352.7 MB/s  0:00:00
+Collecting nvidia-nccl-cu12==2.27.3 (from torch==2.8.0)
+  Downloading nvidia_nccl_cu12-2.27.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (322.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 322.4/322.4 MB 344.1 MB/s  0:00:00
+Collecting nvidia-nvtx-cu12==12.8.90 (from torch==2.8.0)
+  Downloading nvidia_nvtx_cu12-12.8.90-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (89 kB)
+Collecting nvidia-nvjitlink-cu12==12.8.93 (from torch==2.8.0)
+  Downloading nvidia_nvjitlink_cu12-12.8.93-py3-none-manylinux2010_x86_64.manylinux_2_12_x86_64.whl (39.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 39.3/39.3 MB 349.9 MB/s  0:00:00
+Collecting nvidia-cufile-cu12==1.13.1.3 (from torch==2.8.0)
+  Downloading nvidia_cufile_cu12-1.13.1.3-py3-none-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 261.3 MB/s  0:00:00
+Collecting triton==3.4.0 (from torch==2.8.0)
+  Downloading triton-3.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (155.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 155.6/155.6 MB 336.8 MB/s  0:00:00
+Collecting numpy (from torchvision==0.23.0)
+  Downloading numpy-2.5.4-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (16.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 16.7/16.7 MB 337.7 MB/s  0:00:00
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision==0.23.0)
+  Downloading pillow-12.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.9/6.9 MB 309.5 MB/s  0:00:00
+Collecting huggingface-hub<2.0,>=1.5.0 (from transformers==5.12.1)
+  Downloading huggingface_hub-1.33.0-py3-none-any.whl (846 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 846.4/846.4 kB 86.7 MB/s  0:00:00
+Requirement already satisfied: packaging>=20.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from transformers==5.12.1) (26.3)
+Collecting pyyaml>=5.1 (from transformers==5.12.1)
+  Downloading pyyaml-6.0.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.9/807.9 kB 188.4 MB/s  0:00:00
+Collecting regex>=2025.10.22 (from transformers==5.12.1)
+  Downloading regex-2026.9.29-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (807 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 807.8/807.8 kB 170.9 MB/s  0:00:00
+Collecting tokenizers<=0.23.0,>=0.22.0 (from transformers==5.12.1)
+  Downloading tokenizers-0.22.2-cp39-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (3.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.3/3.3 MB 340.5 MB/s  0:00:00
+Collecting typer (from transformers==5.12.1)
+  Downloading typer-0.27.3-py3-none-any.whl (123 kB)
+Collecting safetensors>=0.4.3 (from transformers==5.12.1)
+  Downloading safetensors-0.8.0-cp310-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (516 kB)
+Collecting tqdm>=4.60 (from transformers==5.12.1)
+  Downloading tqdm-4.70.1-py3-none-any.whl (80 kB)
+Collecting accelerate (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading accelerate-1.15.0-py3-none-any.whl (394 kB)
+Collecting addict (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading addict-2.4.0-py3-none-any.whl (3.8 kB)
+Collecting aiohttp (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading aiohttp-3.14.5-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (1.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.9/1.9 MB 256.4 MB/s  0:00:00
+Collecting attrdict (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading attrdict-2.0.1-py2.py3-none-any.whl (9.9 kB)
+Collecting binpacking (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading binpacking-2.0.1-py3-none-any.whl (28 kB)
+Collecting charset-normalizer (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading charset_normalizer-3.5.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (257 kB)
+Collecting cpm-kernels (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading cpm_kernels-1.0.11-py3-none-any.whl (416 kB)
+Collecting dacite (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading dacite-1.9.2-py3-none-any.whl (16 kB)
+Collecting datasets<4.8.5,>=3.0 (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading datasets-4.8.4-py3-none-any.whl (526 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 527.0/527.0 kB 99.6 MB/s  0:00:00
+Collecting einops (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading einops-0.8.2-py3-none-any.whl (65 kB)
+Collecting fastapi (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading fastapi-0.143.2-py3-none-any.whl (144 kB)
+Collecting gradio<6.0,>=3.40.0 (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading gradio-5.50.0-py3-none-any.whl (63.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 63.5/63.5 MB 356.2 MB/s  0:00:00
+Collecting importlib-metadata (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading importlib_metadata-9.0.1-py3-none-any.whl (27 kB)
+Collecting json-repair (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading json_repair-0.64.0-py3-none-any.whl (51 kB)
+Collecting matplotlib (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading matplotlib-3.11.2-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (9.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.9/9.9 MB 155.5 MB/s  0:00:00
+Collecting modelscope>=1.23 (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading modelscope-1.40.2-py3-none-any.whl (6.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.1/6.1 MB 323.4 MB/s  0:00:00
+Collecting nltk (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading nltk-3.10.3-py3-none-any.whl (1.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.8/1.8 MB 161.7 MB/s  0:00:00
+Collecting openai (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading openai-3.31.0-py3-none-any.whl (2.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.2/2.2 MB 284.6 MB/s  0:00:00
+Collecting oss2 (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading oss2-2.19.1.tar.gz (298 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pandas (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pandas-3.0.6-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (10.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.8/10.8 MB 218.5 MB/s  0:00:00
+Collecting peft<0.20,>=0.11 (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading peft-0.19.1-py3-none-any.whl (680 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 680.7/680.7 kB 169.0 MB/s  0:00:00
+Collecting requests (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading requests-2.34.2-py3-none-any.whl (73 kB)
+Collecting rouge (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading rouge-1.0.1-py3-none-any.whl (13 kB)
+Collecting scipy (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading scipy-1.18.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (35.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 35.3/35.3 MB 355.3 MB/s  0:00:00
+Collecting sentencepiece (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading sentencepiece-0.2.2-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 260.1 MB/s  0:00:00
+Collecting simplejson>=3.3.0 (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading simplejson-4.2.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (198 kB)
+Collecting sortedcontainers>=1.5.9 (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading sortedcontainers-2.4.0-py2.py3-none-any.whl (29 kB)
+Collecting tensorboard (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading tensorboard-2.21.0-py3-none-any.whl (5.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 338.2 MB/s  0:00:00
+Collecting tiktoken (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading tiktoken-0.14.0-cp312-cp312-manylinux_2_28_x86_64.whl (1.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.2/1.2 MB 261.9 MB/s  0:00:00
+Collecting transformers-stream-generator (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading transformers-stream-generator-0.0.5.tar.gz (13 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting trl<1.0,>=0.15 (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading trl-0.29.1-py3-none-any.whl (530 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 531.0/531.0 kB 66.5 MB/s  0:00:00
+Collecting uvicorn (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading uvicorn-0.54.0-py3-none-any.whl (87 kB)
+Collecting zstandard (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading zstandard-0.25.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.5/5.5 MB 302.3 MB/s  0:00:00
+Collecting pyarrow>=21.0.0 (from datasets<4.8.5,>=3.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pyarrow-26.0.0-cp312-cp312-manylinux_2_28_x86_64.whl (53.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 53.9/53.9 MB 360.2 MB/s  0:00:00
+Collecting dill<0.4.2,>=0.3.0 (from datasets<4.8.5,>=3.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading dill-0.4.1-py3-none-any.whl (120 kB)
+Collecting httpx<1.0.0 (from datasets<4.8.5,>=3.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading httpx-0.28.1-py3-none-any.whl (73 kB)
+Collecting xxhash (from datasets<4.8.5,>=3.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading xxhash-4.0.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (261 kB)
+Collecting multiprocess<0.70.20 (from datasets<4.8.5,>=3.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading multiprocess-0.70.19-py312-none-any.whl (150 kB)
+Collecting fsspec (from torch==2.8.0)
+  Downloading fsspec-2026.2.0-py3-none-any.whl (202 kB)
+Collecting aiofiles<25.0,>=22.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading aiofiles-24.1.0-py3-none-any.whl (15 kB)
+Collecting anyio<5.0,>=3.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading anyio-4.15.1-py3-none-any.whl (132 kB)
+Collecting brotli>=1.1.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading brotli-1.2.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.4/1.4 MB 237.7 MB/s  0:00:00
+Collecting ffmpy (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading ffmpy-1.0.0-py3-none-any.whl (5.6 kB)
+Collecting gradio-client==1.14.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading gradio_client-1.14.0-py3-none-any.whl (325 kB)
+Collecting groovy~=0.1 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading groovy-0.1.2-py3-none-any.whl (14 kB)
+Collecting markupsafe<4.0,>=2.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading markupsafe-3.0.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB)
+Collecting orjson~=3.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading orjson-3.13.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (130 kB)
+Collecting pandas (from ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pandas-2.3.3-cp312-cp312-manylinux_2_24_x86_64.manylinux_2_28_x86_64.whl (12.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 12.4/12.4 MB 355.8 MB/s  0:00:00
+Collecting pillow!=8.3.*,>=5.3.0 (from torchvision==0.23.0)
+  Downloading pillow-11.3.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (6.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 358.8 MB/s  0:00:00
+Collecting pydantic<=2.12.3,>=2.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pydantic-2.12.3-py3-none-any.whl (462 kB)
+Collecting pydub (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pydub-0.25.1-py2.py3-none-any.whl (32 kB)
+Collecting python-multipart>=0.0.18 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading python_multipart-0.0.32-py3-none-any.whl (30 kB)
+Collecting ruff>=0.9.3 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading ruff-0.17.1-py3-none-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (10.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 10.4/10.4 MB 335.3 MB/s  0:00:00
+Collecting safehttpx<0.2.0,>=0.1.6 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading safehttpx-0.1.7-py3-none-any.whl (9.0 kB)
+Collecting semantic-version~=2.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading semantic_version-2.10.0-py2.py3-none-any.whl (15 kB)
+Collecting starlette<1.0,>=0.40.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading starlette-0.52.1-py3-none-any.whl (74 kB)
+Collecting tomlkit<0.14.0,>=0.12.0 (from gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading tomlkit-0.13.3-py3-none-any.whl (38 kB)
+Collecting websockets<16.0,>=13.0 (from gradio-client==1.14.0->gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading websockets-15.0.1-cp312-cp312-manylinux_2_5_x86_64.manylinux1_x86_64.manylinux_2_17_x86_64.manylinux2014_x86_64.whl (182 kB)
+Collecting idna>=2.8 (from anyio<5.0,>=3.0->gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading idna-3.20-py3-none-any.whl (69 kB)
+Collecting typing-inspection>=0.4.2 (from fastapi->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading typing_inspection-0.4.4-py3-none-any.whl (14 kB)
+Collecting annotated-doc>=0.0.2 (from fastapi->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading annotated_doc-0.0.5-py3-none-any.whl (5.3 kB)
+Collecting opentelemetry-api>=1.44.0 (from fastapi->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading opentelemetry_api-1.45.1-py3-none-any.whl (60 kB)
+Collecting certifi (from httpx<1.0.0->datasets<4.8.5,>=3.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading certifi-2026.7.22-py3-none-any.whl (136 kB)
+Collecting httpcore==1.* (from httpx<1.0.0->datasets<4.8.5,>=3.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading httpcore-1.0.9-py3-none-any.whl (78 kB)
+Collecting h11>=0.16 (from httpcore==1.*->httpx<1.0.0->datasets<4.8.5,>=3.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading h11-0.16.0-py3-none-any.whl (37 kB)
+Collecting click<9.0.0,>=8.4.2 (from huggingface-hub<2.0,>=1.5.0->transformers==5.12.1)
+  Downloading click-8.5.0-py3-none-any.whl (125 kB)
+Collecting hf-xet<2.0.0,>=1.6.0 (from huggingface-hub<2.0,>=1.5.0->transformers==5.12.1)
+  Downloading hf_xet-1.7.0-cp38-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (4.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.2/4.2 MB 271.3 MB/s  0:00:00
+Collecting python-dateutil>=2.8.2 (from pandas->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading python_dateutil-2.9.0.post0-py2.py3-none-any.whl (229 kB)
+Collecting pytz>=2020.1 (from pandas->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pytz-2026.5-py2.py3-none-any.whl (506 kB)
+Collecting tzdata>=2022.7 (from pandas->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading tzdata-2026.5-py2.py3-none-any.whl (347 kB)
+Collecting psutil (from peft<0.20,>=0.11->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading psutil-7.2.2-cp36-abi3-manylinux2010_x86_64.manylinux_2_12_x86_64.manylinux_2_28_x86_64.whl (155 kB)
+Collecting annotated-types>=0.6.0 (from pydantic<=2.12.3,>=2.0->gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading annotated_types-0.8.0-py3-none-any.whl (13 kB)
+Collecting pydantic-core==2.41.4 (from pydantic<=2.12.3,>=2.0->gradio<6.0,>=3.40.0->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pydantic_core-2.41.4-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (2.1 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.1/2.1 MB 260.1 MB/s  0:00:00
+Collecting shellingham>=1.3.0 (from typer->transformers==5.12.1)
+  Downloading shellingham-1.5.4-py2.py3-none-any.whl (9.8 kB)
+Collecting rich>=13.8.0 (from typer->transformers==5.12.1)
+  Downloading rich-15.0.0-py3-none-any.whl (310 kB)
+Collecting cffi>=1.0 (from soundfile)
+  Downloading cffi-2.1.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (221 kB)
+Collecting numba>=0.61.0 (from librosa)
+  Downloading numba-0.68.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (3.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 3.9/3.9 MB 322.3 MB/s  0:00:00
+Collecting scikit-learn>=1.6.0 (from librosa)
+  Downloading scikit_learn-1.9.1-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (9.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 9.2/9.2 MB 354.1 MB/s  0:00:00
+Collecting joblib>=1.2 (from librosa)
+  Downloading joblib-1.6.0-py3-none-any.whl (306 kB)
+Collecting decorator>=5.2.1 (from librosa)
+  Downloading decorator-5.3.1-py3-none-any.whl (10 kB)
+Collecting pooch>=1.7 (from librosa)
+  Downloading pooch-1.9.0-py3-none-any.whl (67 kB)
+Collecting soxr>=1.0.0 (from librosa)
+  Downloading soxr-1.1.0-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (240 kB)
+Collecting lazy_loader>=0.3 (from librosa)
+  Downloading lazy_loader-0.6-py3-none-any.whl (8.8 kB)
+Collecting msgpack>=1.0.5 (from librosa)
+  Downloading msgpack-1.2.3-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (472 kB)
+Collecting aiohappyeyeballs>=2.5.0 (from aiohttp->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading aiohappyeyeballs-2.7.1-py3-none-any.whl (15 kB)
+Collecting aiosignal>=1.4.0 (from aiohttp->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading aiosignal-1.4.0-py3-none-any.whl (7.5 kB)
+Collecting attrs>=17.3.0 (from aiohttp->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading attrs-26.1.0-py3-none-any.whl (67 kB)
+Collecting frozenlist>=1.1.1 (from aiohttp->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading frozenlist-1.8.0-cp312-cp312-manylinux1_x86_64.manylinux_2_28_x86_64.manylinux_2_5_x86_64.whl (242 kB)
+Collecting multidict<8.0,>=4.5 (from aiohttp->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading multidict-7.1.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (483 kB)
+Collecting propcache>=0.2.0 (from aiohttp->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading propcache-0.5.4-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (250 kB)
+Collecting yarl<2.0,>=1.25.1 (from aiohttp->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading yarl-1.25.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (117 kB)
+Collecting pycparser (from cffi>=1.0->soundfile)
+  Downloading pycparser-3.11-py3-none-any.whl (51 kB)
+Collecting cloudpickle>=3.0 (from joblib>=1.2->librosa)
+  Downloading cloudpickle-3.1.2-py3-none-any.whl (22 kB)
+Collecting modelscope-hub>=0.4.6 (from modelscope>=1.23->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading modelscope_hub-0.4.6-py3-none-any.whl (237 kB)
+Collecting urllib3>=1.26 (from modelscope>=1.23->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading urllib3-2.8.0-py3-none-any.whl (135 kB)
+Collecting cryptography>=41 (from modelscope-hub>=0.4.6->modelscope>=1.23->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading cryptography-50.0.2-cp311-abi3-manylinux_2_34_x86_64.whl (4.8 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.8/4.8 MB 319.7 MB/s  0:00:00
+Collecting llvmlite<0.51,>=0.50.0dev0 (from numba>=0.61.0->librosa)
+  Downloading llvmlite-0.50.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (59.7 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 59.7/59.7 MB 365.9 MB/s  0:00:00
+Collecting platformdirs>=2.5.0 (from pooch>=1.7->librosa)
+  Downloading platformdirs-4.13.3-py3-none-any.whl (32 kB)
+Collecting six>=1.5 (from python-dateutil>=2.8.2->pandas->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading six-1.17.0-py2.py3-none-any.whl (11 kB)
+Collecting markdown-it-py>=2.2.0 (from rich>=13.8.0->typer->transformers==5.12.1)
+  Downloading markdown_it_py-4.2.0-py3-none-any.whl (91 kB)
+Collecting pygments<3.0.0,>=2.13.0 (from rich>=13.8.0->typer->transformers==5.12.1)
+  Downloading pygments-2.21.0-py3-none-any.whl (1.3 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.3/1.3 MB 243.5 MB/s  0:00:00
+Collecting mdurl~=0.1 (from markdown-it-py>=2.2.0->rich>=13.8.0->typer->transformers==5.12.1)
+  Downloading mdurl-0.1.2-py3-none-any.whl (10.0 kB)
+Collecting narwhals>=2.0.1 (from scikit-learn>=1.6.0->librosa)
+  Downloading narwhals-2.27.1-py3-none-any.whl (483 kB)
+Collecting threadpoolctl>=3.5.0 (from scikit-learn>=1.6.0->librosa)
+  Downloading threadpoolctl-3.7.0-py3-none-any.whl (26 kB)
+Collecting mpmath<1.4,>=1.1.0 (from sympy>=1.13.3->torch==2.8.0)
+  Downloading mpmath-1.3.0-py3-none-any.whl (536 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 536.2/536.2 kB 135.8 MB/s  0:00:00
+Collecting zipp>=3.20 (from importlib-metadata->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading zipp-4.1.1-py3-none-any.whl (10 kB)
+Collecting contourpy>=1.0.1 (from matplotlib->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading contourpy-1.4.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (383 kB)
+Collecting cycler>=0.10 (from matplotlib->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading cycler-0.12.1-py3-none-any.whl (8.3 kB)
+Collecting fonttools>=4.28.2 (from matplotlib->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading fonttools-4.67.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (5.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 5.4/5.4 MB 78.7 MB/s  0:00:00
+Collecting kiwisolver>=1.3.1 (from matplotlib->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading kiwisolver-1.5.1-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (1.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 1.5/1.5 MB 24.9 MB/s  0:00:00
+Collecting pyparsing>=3 (from matplotlib->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pyparsing-3.3.3-py3-none-any.whl (126 kB)
+Collecting defusedxml (from nltk->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading defusedxml-0.7.1-py2.py3-none-any.whl (25 kB)
+Collecting httpx2<3,>=2.12.0 (from openai->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading httpx2-2.13.1-py3-none-any.whl (95 kB)
+Collecting jiter<1,>=0.16.0 (from openai->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading jiter-0.17.0-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl (345 kB)
+Collecting sniffio (from openai->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading sniffio-1.3.1-py3-none-any.whl (10 kB)
+Collecting httpcore2==2.13.1 (from httpx2<3,>=2.12.0->openai->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading httpcore2-2.13.1-py3-none-any.whl (83 kB)
+Collecting truststore>=0.10 (from httpx2<3,>=2.12.0->openai->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading truststore-0.10.5-py3-none-any.whl (19 kB)
+Collecting crcmod>=1.7 (from oss2->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading crcmod-1.7.tar.gz (89 kB)
+  Installing build dependencies: started
+  Installing build dependencies: finished with status 'done'
+  Getting requirements to build wheel: started
+  Getting requirements to build wheel: finished with status 'done'
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Collecting pycryptodome>=3.4.7 (from oss2->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading pycryptodome-4.0.0-cp39-abi3-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (2.5 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 2.5/2.5 MB 227.7 MB/s  0:00:00
+Collecting aliyun-python-sdk-kms>=2.4.1 (from oss2->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading aliyun_python_sdk_kms-2.16.5-py2.py3-none-any.whl (99 kB)
+Collecting aliyun-python-sdk-core>=2.13.12 (from oss2->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading aliyun_python_sdk_core-2.16.1-py3-none-any.whl (521 kB)
+Collecting jmespath<2.0.0,>=0.9.3 (from aliyun-python-sdk-core>=2.13.12->oss2->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading jmespath-1.1.0-py3-none-any.whl (20 kB)
+Collecting absl-py>=0.4 (from tensorboard->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading absl_py-2.5.1-py3-none-any.whl (137 kB)
+Collecting grpcio<2.0,>=1.74.0 (from tensorboard->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading grpcio-1.84.0-cp312-cp312-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (7.2 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 7.2/7.2 MB 326.1 MB/s  0:00:00
+Collecting markdown>=2.6.8 (from tensorboard->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading markdown-3.11.1-py3-none-any.whl (116 kB)
+Collecting protobuf<8.0.0,>=6.31.1 (from tensorboard->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading protobuf-7.36.2-cp310-abi3-manylinux2014_x86_64.whl (343 kB)
+Collecting tensorboard-data-server<0.8.0,>=0.7.0 (from tensorboard->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading tensorboard_data_server-0.7.2-py3-none-manylinux_2_31_x86_64.whl (6.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 6.6/6.6 MB 346.0 MB/s  0:00:00
+Collecting werkzeug>=1.0.1 (from tensorboard->ms-swift==4.4.2->ms-swift[megatron]==4.4.2)
+  Downloading werkzeug-3.1.9-py3-none-any.whl (228 kB)
+Building wheels for collected packages: oss2, crcmod, transformers-stream-generator
+  Building wheel for oss2 (pyproject.toml): started
+  Building wheel for oss2 (pyproject.toml): finished with status 'done'
+  Created wheel for oss2: filename=oss2-2.19.1-py3-none-any.whl size=124037 sha256=8d515e9504a6cb6182fa5712371b6c5a16f681cceecd3f3fecaf1624fb07235c
+  Stored in directory: /tmp/omnivideo_100k_qwen3_omni_lora/pip-cache/wheels/22/67/72/aab95ada7f11c795c79d0d1545a342afd688ebc02c119ef889
+  Building wheel for crcmod (pyproject.toml): started
+  Building wheel for crcmod (pyproject.toml): finished with status 'done'
+  Created wheel for crcmod: filename=crcmod-1.7-cp312-cp312-linux_x86_64.whl size=31354 sha256=9c2eeebf4aa885577b2350878203731808f81db699d6848e8929ccaeb3f94b32
+  Stored in directory: /tmp/omnivideo_100k_qwen3_omni_lora/pip-cache/wheels/68/f8/f5/1a12fdc8b476db601617f93bb29185c462cc2e24fcc7ac63d1
+  Building wheel for transformers-stream-generator (pyproject.toml): started
+  Building wheel for transformers-stream-generator (pyproject.toml): finished with status 'done'
+  Created wheel for transformers-stream-generator: filename=transformers_stream_generator-0.0.5-py3-none-any.whl size=12526 sha256=cc32d26076f202c004a7f73bff9aca7105586dd78ca74ef8eec6fd3dac4ee9a5
+  Stored in directory: /tmp/omnivideo_100k_qwen3_omni_lora/pip-cache/wheels/12/d9/f7/51528caf4b22b9a40093f3ae1144e20691ad98edd693c061d5
+Successfully built oss2 crcmod transformers-stream-generator
+Installing collected packages: sortedcontainers, pytz, pydub, nvidia-cusparselt-cu12, mpmath, crcmod, cpm-kernels, brotli, addict, zstandard, zipp, xxhash, websockets, urllib3, tzdata, typing-extensions, truststore, triton, tqdm, tomlkit, threadpoolctl, tensorboard-data-server, sympy, sniffio, six, simplejson, shellingham, sentencepiece, semantic-version, safetensors, ruff, regex, pyyaml, python-multipart, pyparsing, pygments, pycryptodome, pycparser, pyarrow, psutil, protobuf, propcache, platformdirs, pillow, orjson, nvidia-nvtx-cu12, nvidia-nvjitlink-cu12, nvidia-nccl-cu12, nvidia-curand-cu12, nvidia-cufile-cu12, nvidia-cuda-runtime-cu12, nvidia-cuda-nvrtc-cu12, nvidia-cuda-cupti-cu12, nvidia-cublas-cu12, numpy, networkx, narwhals, multidict, msgpack, mdurl, markupsafe, markdown, llvmlite, lazy_loader, kiwisolver, json-repair, jmespath, jiter, imageio-ffmpeg, idna, hf-xet, h11, groovy, fsspec, frozenlist, fonttools, filelock, ffmpy, einops, dill, defusedxml, decorator, dacite, cycler, cloudpickle, click, charset-normalizer, certifi, binpacking, av, attrs, annotated-types, annotated-doc, aiohappyeyeballs, aiofiles, absl-py, yarl, werkzeug, uvicorn, typing-inspection, soxr, scipy, rouge, requests, python-dateutil, pydantic-core, opentelemetry-api, nvidia-cusparse-cu12, nvidia-cufft-cu12, nvidia-cudnn-cu12, numba, multiprocess, markdown-it-py, joblib, jinja2, importlib-metadata, httpcore2, httpcore, grpcio, decord, contourpy, cffi, attrdict, anyio, aiosignal, tiktoken, tensorboard, starlette, soundfile, scikit-learn, rich, pydantic, pooch, pandas, nvidia-cusolver-cu12, nltk, matplotlib, httpx2, httpx, cryptography, aiohttp, typer, torch, safehttpx, openai, modelscope-hub, librosa, huggingface-hub, fastapi, aliyun-python-sdk-core, torchvision, tokenizers, qwen-omni-utils, modelscope, megatron-core, gradio-client, datasets, aliyun-python-sdk-kms, accelerate, transformers, oss2, gradio, trl, transformers-stream-generator, peft, ms-swift, mcore-bridge
+
+Successfully installed absl-py-2.5.1 accelerate-1.15.0 addict-2.4.0 aiofiles-24.1.0 aiohappyeyeballs-2.7.1 aiohttp-3.14.5 aiosignal-1.4.0 aliyun-python-sdk-core-2.16.1 aliyun-python-sdk-kms-2.16.5 annotated-doc-0.0.5 annotated-types-0.8.0 anyio-4.15.1 attrdict-2.0.1 attrs-26.1.0 av-19.0.1 binpacking-2.0.1 brotli-1.2.0 certifi-2026.7.22 cffi-2.1.1 charset-normalizer-3.5.2 click-8.5.0 cloudpickle-3.1.2 contourpy-1.4.0 cpm-kernels-1.0.11 crcmod-1.7 cryptography-50.0.2 cycler-0.12.1 dacite-1.9.2 datasets-4.8.4 decorator-5.3.1 decord-0.6.0 defusedxml-0.7.1 dill-0.4.1 einops-0.8.2 fastapi-0.143.2 ffmpy-1.0.0 filelock-4.2.0 fonttools-4.67.0 frozenlist-1.8.0 fsspec-2026.2.0 gradio-5.50.0 gradio-client-1.14.0 groovy-0.1.2 grpcio-1.84.0 h11-0.16.0 hf-xet-1.7.0 httpcore-1.0.9 httpcore2-2.13.1 httpx-0.28.1 httpx2-2.13.1 huggingface-hub-1.33.0 idna-3.20 imageio-ffmpeg-0.6.0 importlib-metadata-9.0.1 jinja2-3.1.6 jiter-0.17.0 jmespath-1.1.0 joblib-1.6.0 json-repair-0.64.0 kiwisolver-1.5.1 lazy_loader-0.6 librosa-1.0.0 llvmlite-0.50.0 markdown-3.11.1 markdown-it-py-4.2.0 markupsafe-3.0.4 matplotlib-3.11.2 mcore-bridge-1.6.0 mdurl-0.1.2 megatron-core-0.18.0 modelscope-1.40.2 modelscope-hub-0.4.6 mpmath-1.3.0 ms-swift-4.4.2 msgpack-1.2.3 multidict-7.1.0 multiprocess-0.70.19 narwhals-2.27.1 networkx-3.7 nltk-3.10.3 numba-0.68.0 numpy-2.5.4 nvidia-cublas-cu12-12.8.4.1 nvidia-cuda-cupti-cu12-12.8.90 nvidia-cuda-nvrtc-cu12-12.8.93 nvidia-cuda-runtime-cu12-12.8.90 nvidia-cudnn-cu12-9.10.2.21 nvidia-cufft-cu12-11.3.3.83 nvidia-cufile-cu12-1.13.1.3 nvidia-curand-cu12-10.3.9.90 nvidia-cusolver-cu12-11.7.3.90 nvidia-cusparse-cu12-12.5.8.93 nvidia-cusparselt-cu12-0.7.1 nvidia-nccl-cu12-2.27.3 nvidia-nvjitlink-cu12-12.8.93 nvidia-nvtx-cu12-12.8.90 openai-3.31.0 opentelemetry-api-1.45.1 orjson-3.13.0 oss2-2.19.1 pandas-2.3.3 peft-0.19.1 pillow-11.3.0 platformdirs-4.13.3 pooch-1.9.0 propcache-0.5.4 protobuf-7.36.2 psutil-7.2.2 pyarrow-26.0.0 pycparser-3.11 pycryptodome-4.0.0 pydantic-2.12.3 pydantic-core-2.41.4 pydub-0.25.1 pygments-2.21.0 pyparsing-3.3.3 python-dateutil-2.9.0.post0 python-multipart-0.0.32 pytz-2026.5 pyyaml-6.0.3 qwen-omni-utils-0.0.9 regex-2026.9.29 requests-2.34.2 rich-15.0.0 rouge-1.0.1 ruff-0.17.1 safehttpx-0.1.7 safetensors-0.8.0 scikit-learn-1.9.1 scipy-1.18.1 semantic-version-2.10.0 sentencepiece-0.2.2 shellingham-1.5.4 simplejson-4.2.0 six-1.17.0 sniffio-1.3.1 sortedcontainers-2.4.0 soundfile-0.14.0 soxr-1.1.0 starlette-0.52.1 sympy-1.14.0 tensorboard-2.21.0 tensorboard-data-server-0.7.2 threadpoolctl-3.7.0 tiktoken-0.14.0 tokenizers-0.22.2 tomlkit-0.13.3 torch-2.8.0 torchvision-0.23.0 tqdm-4.70.1 transformers-5.12.1 transformers-stream-generator-0.0.5 triton-3.4.0 trl-0.29.1 truststore-0.10.5 typer-0.27.3 typing-extensions-4.16.0 typing-inspection-0.4.4 tzdata-2026.5 urllib3-2.8.0 uvicorn-0.54.0 websockets-15.0.1 werkzeug-3.1.9 xxhash-4.0.1 yarl-1.25.1 zipp-4.1.1 zstandard-0.25.0
+Looking in indexes: https://bytedpypi.byted.org/simple/, https://pypi.nvidia.com
+Collecting transformer-engine==2.16.0 (from transformer-engine[pytorch]==2.16.0)
+  Downloading transformer_engine-2.16.0-py3-none-any.whl (912 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 912.4/912.4 kB 9.3 MB/s  0:00:00
+Collecting transformer_engine_torch==2.16.0 (from transformer-engine[pytorch]==2.16.0)
+  Downloading transformer_engine_torch-2.16.0.tar.gz (334 kB)
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: torch>=2.1 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (2.8.0)
+Requirement already satisfied: einops in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (0.8.2)
+Collecting onnxscript (from transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0)
+  Downloading onnxscript-0.7.2-py3-none-any.whl (754 kB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 754.2/754.2 kB 37.2 MB/s  0:00:00
+Collecting onnx (from transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0)
+  Downloading onnx-1.23.2-cp312-abi3-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (8.9 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.9/8.9 MB 137.9 MB/s  0:00:00
+Requirement already satisfied: packaging in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (26.3)
+Requirement already satisfied: pydantic in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (2.12.3)
+Collecting nvdlfw-inspect (from transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0)
+  Downloading nvdlfw_inspect-0.2.2-py3-none-any.whl (30 kB)
+Collecting transformer_engine_cu12==2.16.0 (from transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0)
+  Downloading transformer_engine_cu12-2.16.0-py3-none-manylinux_2_28_x86_64.whl (302.6 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 302.6/302.6 MB 1.0 MB/s  0:05:08
+Requirement already satisfied: importlib-metadata>=1.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from transformer_engine_cu12==2.16.0->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (9.0.1)
+Requirement already satisfied: zipp>=3.20 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from importlib-metadata>=1.0->transformer_engine_cu12==2.16.0->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (4.1.1)
+Requirement already satisfied: filelock in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (4.2.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (4.16.0)
+Requirement already satisfied: setuptools in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (1.14.0)
+Requirement already satisfied: networkx in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (3.7)
+Requirement already satisfied: jinja2 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (3.1.6)
+Requirement already satisfied: fsspec in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (2026.2.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (12.8.93)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (12.8.90)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (12.8.90)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (9.10.2.21)
+Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (12.8.4.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (11.3.3.83)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (10.3.9.90)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (11.7.3.90)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (12.5.8.93)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.27.3 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (2.27.3)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (12.8.90)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (12.8.93)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (1.13.1.3)
+Requirement already satisfied: triton==3.4.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (3.4.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from sympy>=1.13.3->torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from jinja2->torch>=2.1->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (3.0.4)
+Requirement already satisfied: pyyaml>=6.0.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from nvdlfw-inspect->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (6.0.3)
+Requirement already satisfied: numpy>=1.23.2 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from onnx->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (2.5.4)
+Requirement already satisfied: protobuf>=6.31.1 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from onnx->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (7.36.2)
+Collecting ml_dtypes>=0.5.4 (from onnx->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0)
+  Downloading ml_dtypes-0.6.0-cp312-cp312-manylinux_2_27_x86_64.manylinux_2_28_x86_64.whl (409 kB)
+Collecting onnx_ir<2,>=0.1.16 (from onnxscript->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0)
+  Downloading onnx_ir-1.0.0-py3-none-any.whl (185 kB)
+Requirement already satisfied: annotated-types>=0.6.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from pydantic->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (0.8.0)
+Requirement already satisfied: pydantic-core==2.41.4 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from pydantic->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (2.41.4)
+Requirement already satisfied: typing-inspection>=0.4.2 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from pydantic->transformer_engine_torch==2.16.0->transformer-engine[pytorch]==2.16.0) (0.4.4)
+Building wheels for collected packages: transformer_engine_torch
+  Building wheel for transformer_engine_torch (pyproject.toml): started
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): still running...
+  Building wheel for transformer_engine_torch (pyproject.toml): finished with status 'done'
+  Created wheel for transformer_engine_torch: filename=transformer_engine_torch-2.16.0-cp312-cp312-linux_x86_64.whl size=816488 sha256=6e3e95be6a4e5224aa9e735130079e6dbdd5675a98761ae95f15c047ee4c0c1f
+  Stored in directory: /tmp/pip-ephem-wheel-cache-ppi4ihal/wheels/15/41/15/91928cdd5923aa45075178bd7d746af82a0b71cbaf51781901
+Successfully built transformer_engine_torch
+Installing collected packages: transformer-engine, ml_dtypes, onnx, transformer_engine_cu12, onnx_ir, onnxscript, nvdlfw-inspect, transformer_engine_torch
+
+Successfully installed ml_dtypes-0.6.0 nvdlfw-inspect-0.2.2 onnx-1.23.2 onnx_ir-1.0.0 onnxscript-0.7.2 transformer-engine-2.16.0 transformer_engine_cu12-2.16.0 transformer_engine_torch-2.16.0
+Looking in indexes: https://bytedpypi.byted.org/simple/
+Collecting flash-attn==2.8.3
+  Downloading flash_attn-2.8.3.tar.gz (8.4 MB)
+     ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 8.4/8.4 MB 161.9 MB/s  0:00:00
+  Preparing metadata (pyproject.toml): started
+  Preparing metadata (pyproject.toml): finished with status 'done'
+Requirement already satisfied: torch in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from flash-attn==2.8.3) (2.8.0)
+Requirement already satisfied: einops in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from flash-attn==2.8.3) (0.8.2)
+Requirement already satisfied: filelock in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (4.2.0)
+Requirement already satisfied: typing-extensions>=4.10.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (4.16.0)
+Requirement already satisfied: setuptools in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (84.0.0)
+Requirement already satisfied: sympy>=1.13.3 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (1.14.0)
+Requirement already satisfied: networkx in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (3.7)
+Requirement already satisfied: jinja2 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (3.1.6)
+Requirement already satisfied: fsspec in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (2026.2.0)
+Requirement already satisfied: nvidia-cuda-nvrtc-cu12==12.8.93 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (12.8.93)
+Requirement already satisfied: nvidia-cuda-runtime-cu12==12.8.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (12.8.90)
+Requirement already satisfied: nvidia-cuda-cupti-cu12==12.8.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (12.8.90)
+Requirement already satisfied: nvidia-cudnn-cu12==9.10.2.21 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (9.10.2.21)
+Requirement already satisfied: nvidia-cublas-cu12==12.8.4.1 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (12.8.4.1)
+Requirement already satisfied: nvidia-cufft-cu12==11.3.3.83 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (11.3.3.83)
+Requirement already satisfied: nvidia-curand-cu12==10.3.9.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (10.3.9.90)
+Requirement already satisfied: nvidia-cusolver-cu12==11.7.3.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (11.7.3.90)
+Requirement already satisfied: nvidia-cusparse-cu12==12.5.8.93 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (12.5.8.93)
+Requirement already satisfied: nvidia-cusparselt-cu12==0.7.1 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (0.7.1)
+Requirement already satisfied: nvidia-nccl-cu12==2.27.3 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (2.27.3)
+Requirement already satisfied: nvidia-nvtx-cu12==12.8.90 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (12.8.90)
+Requirement already satisfied: nvidia-nvjitlink-cu12==12.8.93 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (12.8.93)
+Requirement already satisfied: nvidia-cufile-cu12==1.13.1.3 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (1.13.1.3)
+Requirement already satisfied: triton==3.4.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from torch->flash-attn==2.8.3) (3.4.0)
+Requirement already satisfied: mpmath<1.4,>=1.1.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from sympy>=1.13.3->torch->flash-attn==2.8.3) (1.3.0)
+Requirement already satisfied: MarkupSafe>=2.0 in /tmp/omnivideo_100k_qwen3_omni_lora/venv/lib/python3.12/site-packages (from jinja2->torch->flash-attn==2.8.3) (3.0.4)
+Building wheels for collected packages: flash-attn
+  Building wheel for flash-attn (pyproject.toml): started
+  Building wheel for flash-attn (pyproject.toml): finished with status 'done'
+  Created wheel for flash-attn: filename=flash_attn-2.8.3-cp312-cp312-linux_x86_64.whl size=256040057 sha256=f25da18657a87fc83dc1bfb8b7751b82246e9db355510226b674fd437c34b5fb
+  Stored in directory: /tmp/omnivideo_100k_qwen3_omni_lora/pip-cache/wheels/ae/15/d4/f086e73dc4a9c3b8913a7e07ec6dc1db2b1df19066c3f3a94a
+Successfully built flash-attn
+Installing collected packages: flash-attn
+Successfully installed flash-attn-2.8.3
+Ignoring known decord 0.6.0 wheel-metadata platform warning.
+{'torch': '2.8.0+cu128', 'cuda': '12.8', 'transformers': '5.12.1', 'swift': '4.4.2'}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 307,
+  "video": "videos/video_155.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 29664,
+    "total": 30115
+  },
+  "input_sha256": "035a219f5f7cd883c78a3ffd65022141eab919c2fcf4a78282799ab3f59926e2",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 8.986910243984312,
+      "option_logp": {
+        "A": -1.2845573425292969,
+        "B": -4.659557342529297,
+        "C": -3.034557342529297,
+        "D": -0.40955737233161926
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 9.307403437094763,
+      "option_logp": {
+        "A": -0.27467018365859985,
+        "B": -4.399670124053955,
+        "C": -1.774670124053955,
+        "D": -2.899670124053955
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Bullet.",
+      "generation_s": 10.374643923016265,
+      "option_logp": {
+        "A": -0.2006188929080963,
+        "B": -3.3256189823150635,
+        "C": -2.0756189823150635,
+        "D": -4.075618743896484
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

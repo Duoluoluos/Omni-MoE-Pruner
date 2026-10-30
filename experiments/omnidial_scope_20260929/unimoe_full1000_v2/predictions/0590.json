@@ -1,0 +1,55 @@
+{
+  "sample_index": 590,
+  "video": "videos/video_391.mp4",
+  "counts": {
+    "audio": 1800,
+    "video": 4608,
+    "total": 6500
+  },
+  "input_sha256": "b47d02c8bd264dabdceaa133e612876998a2615dbde62113d2f6f101703d8a7f",
+  "timed": true,
+  "execution_session": "20260929T122251_g340-cd51-5100-b698-202f-fe01-948c_4187",
+  "gates_sha256": "c430e4e0f843dbba0060b45cae47716100224fafed11e282a5bc3e08e800d99a",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. Finn Mc",
+      "generation_s": 2.9162922280374914,
+      "option_logp": {
+        "A": -0.8846823573112488,
+        "B": -0.7596823573112488,
+        "C": -2.6971824169158936,
+        "D": -3.3846824169158936
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 2.60852421191521,
+      "option_logp": {
+        "A": -2.04962158203125,
+        "B": -1.17462158203125,
+        "C": -0.92462158203125,
+        "D": -1.79962158203125
+      }
+    },
+    "cg_middle": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 2.59469087398611,
+      "option_logp": {
+        "A": -0.5565496683120728,
+        "B": -1.5565496683120728,
+        "C": -2.056549549102783,
+        "D": -2.431549549102783
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_middle"
+  ],
+  "complete": true
+}

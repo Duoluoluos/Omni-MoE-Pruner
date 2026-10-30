@@ -1,0 +1,55 @@
+{
+  "sample_index": 72,
+  "video": "videos/video_33.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55764
+  },
+  "input_sha256": "38ce7355b98c7c38eafa5c6eb18741449dfb3cf6ea62f1d3888ab888ec8c3418",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Blaming",
+      "generation_s": 22.15003529796377,
+      "option_logp": {
+        "A": -3.6426315307617188,
+        "B": -4.267631530761719,
+        "C": -1.2676315307617188,
+        "D": -0.39263153076171875
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Nagging",
+      "generation_s": 22.845112496055663,
+      "option_logp": {
+        "A": -2.5842278003692627,
+        "B": -3.5842278003692627,
+        "C": -0.4592278301715851,
+        "D": -1.3342278003692627
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.59844385809265,
+      "option_logp": {
+        "A": -2.718512535095215,
+        "B": -4.468512535095215,
+        "C": -1.2185125350952148,
+        "D": -0.46851250529289246
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 446,
+  "video": "videos/video_273.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55754
+  },
+  "input_sha256": "e51034e980aa223b21392f2c6b69adbd7608ae5a738e709e9fe57d66d1f6137f",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C. Petting",
+      "generation_s": 22.262098882114515,
+      "option_logp": {
+        "A": -3.0984976291656494,
+        "B": -3.4734976291656494,
+        "C": -0.2234976887702942,
+        "D": -2.0984976291656494
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Petting",
+      "generation_s": 22.30667448719032,
+      "option_logp": {
+        "A": -3.175205707550049,
+        "B": -3.050205707550049,
+        "C": -0.17520567774772644,
+        "D": -2.675205707550049
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Petting",
+      "generation_s": 23.053616407094523,
+      "option_logp": {
+        "A": -2.450216054916382,
+        "B": -3.200216054916382,
+        "C": -0.450216144323349,
+        "D": -1.4502161741256714
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

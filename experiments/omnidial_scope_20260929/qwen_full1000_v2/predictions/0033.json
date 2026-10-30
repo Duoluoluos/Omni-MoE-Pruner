@@ -1,0 +1,55 @@
+{
+  "sample_index": 33,
+  "video": "videos/video_15.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 41328,
+    "total": 41809
+  },
+  "input_sha256": "a1acd7b08a0584bcd511fdcdec8884603a4495897dbd87c57418ac2eeb468735",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. He wants",
+      "generation_s": 14.780377647140995,
+      "option_logp": {
+        "A": -0.23148998618125916,
+        "B": -5.981490135192871,
+        "C": -1.6064900159835815,
+        "D": -6.231490135192871
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. He wants",
+      "generation_s": 15.578158291056752,
+      "option_logp": {
+        "A": -0.003382914699614048,
+        "B": -6.878382682800293,
+        "C": -6.503382682800293,
+        "D": -7.628382682800293
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 14.533338967943564,
+      "option_logp": {
+        "A": -0.04794701188802719,
+        "B": -5.922946929931641,
+        "C": -3.1729469299316406,
+        "D": -6.922946929931641
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

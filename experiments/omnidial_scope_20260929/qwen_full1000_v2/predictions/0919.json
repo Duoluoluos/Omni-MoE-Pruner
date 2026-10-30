@@ -1,0 +1,55 @@
+{
+  "sample_index": 919,
+  "video": "videos/video_593.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 44928,
+    "total": 45417
+  },
+  "input_sha256": "7c6b54fe27ea10d0e56db4a3729b5dbf4a79a3cd71e2331acedbc18104e5cefc",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 15.835462260060012,
+      "option_logp": {
+        "A": -4.407843112945557,
+        "B": -4.782843112945557,
+        "C": -4.532843112945557,
+        "D": -0.032843202352523804
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. The mission",
+      "generation_s": 16.54130110400729,
+      "option_logp": {
+        "A": -3.3109731674194336,
+        "B": -4.810973167419434,
+        "C": -4.435973167419434,
+        "D": -0.06097326800227165
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. The mission",
+      "generation_s": 17.33071238407865,
+      "option_logp": {
+        "A": -4.155043125152588,
+        "B": -4.905043125152588,
+        "C": -5.155043125152588,
+        "D": -0.030043132603168488
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 456,
+  "video": "videos/video_283.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55770
+  },
+  "input_sha256": "869a328ef363d35b8998e47dee168baeda2a36bd90cd8730177bfea930a719e3",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Microwave with",
+      "generation_s": 22.101615705061704,
+      "option_logp": {
+        "A": -1.7765886783599854,
+        "B": -2.9015886783599854,
+        "C": -0.27658867835998535,
+        "D": -4.151588439941406
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.4342870619148,
+      "option_logp": {
+        "A": -2.566228151321411,
+        "B": -3.566228151321411,
+        "C": -1.8162281513214111,
+        "D": -0.31622815132141113
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Plant with",
+      "generation_s": 22.662455800920725,
+      "option_logp": {
+        "A": -2.6526570320129395,
+        "B": -3.0276570320129395,
+        "C": -1.0276570320129395,
+        "D": -0.6526569724082947
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

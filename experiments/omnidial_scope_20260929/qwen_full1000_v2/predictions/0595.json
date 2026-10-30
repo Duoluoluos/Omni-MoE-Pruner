@@ -1,0 +1,55 @@
+{
+  "sample_index": 595,
+  "video": "videos/video_395.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 15264,
+    "total": 15839
+  },
+  "input_sha256": "25b59bd7d17f39e5566559b692cc00149b5871d8994a09e7700061f06ece4b74",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Artich",
+      "generation_s": 5.829989360878244,
+      "option_logp": {
+        "A": -6.535035133361816,
+        "B": -0.2850351929664612,
+        "C": -1.4100351333618164,
+        "D": -9.597535133361816
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. All garden",
+      "generation_s": 5.0062851258553565,
+      "option_logp": {
+        "A": -7.2688679695129395,
+        "B": -2.0188679695129395,
+        "C": -0.1438680738210678,
+        "D": -12.643868446350098
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 4.405148406978697,
+      "option_logp": {
+        "A": -8.89146614074707,
+        "B": -0.016466200351715088,
+        "C": -4.14146614074707,
+        "D": -10.95396614074707
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

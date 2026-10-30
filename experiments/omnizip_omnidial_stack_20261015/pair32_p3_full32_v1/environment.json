@@ -1,0 +1,15 @@
+{
+  "python": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/bin/python",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA H20",
+  "model_source": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/modeling_qwen3_omni_moe_stack.py",
+  "model_source_sha256": "68091ea9c4291c7c817ffa8b0d33809a4b0f43d75c7449e7029e49f012578625",
+  "runner_sha256": "59d73159bf39e191cb474656e9187c14f1ea48a835449a9a4288ffeede23374f",
+  "frozen_gates_sha256": "05ccd6934cb96d38a61cacc8d73b19ad9eced51acfabb75b949670f5a06ad49c",
+  "mcore_experts_source": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/qwen_mcore_experts_p0.py",
+  "mcore_controller_source": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/qwen_mcore_controller_p0.py",
+  "backend": "custom-Qwen + MCore GroupedMLP P0; HAVE_TE=False; no fused/TE dispatcher",
+  "mcore_python_path": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.tmp/qwen_runtime_mcore_20260924/python",
+  "mcore": "0.12.3"
+}

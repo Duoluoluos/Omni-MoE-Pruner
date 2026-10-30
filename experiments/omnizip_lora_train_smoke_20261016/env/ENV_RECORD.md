@@ -1,0 +1,11 @@
+# Qwen3-Omni LoRA 隔离环境记录 (2026-10-16)
+- venv: /tmp/omnivideo_100k_qwen3_omni_lora/venv (隔离, 不改全局/共享推理.venv)
+- python 3.12.13 (Megatron-Core 0.18 要求; 现编于 /tmp/.../python-3.12.13), pip 26.2.1
+- torch 2.8.0+cu128, CUDA 12.8
+- transformers 5.12.1, ms-swift 4.4.2, mcore-bridge 1.6.0
+- megatron-core 0.18.0 (note: 与推理 vendored mcore 0.12.3 不同; 稀疏机制 smoke 仅在 0.12.3 合成张量验证, 0.18 无安全集成证明)
+- transformer-engine 2.16.0, flash-attn 2.8.3, peft 0.19.1, accelerate 1.15.0
+- grouped_gemm: 未独立 pip 安装(n/a); NCCL nvidia-nccl-cu12 2.27.3
+- check-env: "Qwen3-Omni LoRA runtime check passed." (mcore 0.18.0, apex 未装回退 torch norm)
+- 日志: experiments/lora_env_setup_20261016/setup.log
+- 共享复用: model models/Qwen3-Omni-30B-A3B-Instruct, 数据 ft_data/, 缓存 ft_data/processed_cache

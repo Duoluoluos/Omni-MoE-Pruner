@@ -1,0 +1,55 @@
+{
+  "sample_index": 117,
+  "video": "videos/video_50.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55765
+  },
+  "input_sha256": "346d82457e1a70428f76d31fe0d77c39ef6f0db2714358baf97aa30a69b87ab0",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 21.51467400486581,
+      "option_logp": {
+        "A": -3.99763560295105,
+        "B": -0.122635617852211,
+        "C": -2.37263560295105,
+        "D": -6.622635841369629
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. The door",
+      "generation_s": 22.122994347009808,
+      "option_logp": {
+        "A": -4.576321125030518,
+        "B": -0.20132093131542206,
+        "C": -1.8263208866119385,
+        "D": -5.951321125030518
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. The door",
+      "generation_s": 22.77314525586553,
+      "option_logp": {
+        "A": -4.185878276824951,
+        "B": -0.06087849289178848,
+        "C": -3.1858785152435303,
+        "D": -6.810878276824951
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

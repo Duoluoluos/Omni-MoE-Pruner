@@ -1,0 +1,55 @@
+{
+  "sample_index": 374,
+  "video": "videos/video_214.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55753
+  },
+  "input_sha256": "d4df061c45042ab73cd57af0248ed9d9a41170111b2f3885a21d4c20145735aa",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Weaponized",
+      "generation_s": 23.050262114033103,
+      "option_logp": {
+        "A": -3.985856533050537,
+        "B": -0.11085651069879532,
+        "C": -6.110856533050537,
+        "D": -2.485856533050537
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. Weaponized",
+      "generation_s": 22.344240822130814,
+      "option_logp": {
+        "A": -6.8800530433654785,
+        "B": -0.0050531295128166676,
+        "C": -5.7550530433654785,
+        "D": -7.8800530433654785
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 21.57646823208779,
+      "option_logp": {
+        "A": -6.0066328048706055,
+        "B": -0.006632575765252113,
+        "C": -6.5066328048706055,
+        "D": -6.1316328048706055
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 494,
+  "video": "videos/video_319.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 5616,
+    "total": 6089
+  },
+  "input_sha256": "954cc2741d8b0b7c1100ab6c4542aaf3e5fdc7e071b867baca2c1c87f02cc90d",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.6506862682290375,
+      "option_logp": {
+        "A": -4.061648368835449,
+        "B": -0.06164856627583504,
+        "C": -3.1866486072540283,
+        "D": -7.311648368835449
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. He shows",
+      "generation_s": 2.8750914509873837,
+      "option_logp": {
+        "A": -5.630435466766357,
+        "B": -0.005435450002551079,
+        "C": -6.630435466766357,
+        "D": -8.1929349899292
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.2790817199274898,
+      "option_logp": {
+        "A": -4.406192779541016,
+        "B": -0.031192690134048462,
+        "C": -4.531192779541016,
+        "D": -4.906192779541016
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

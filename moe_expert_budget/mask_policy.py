@@ -139,16 +139,6 @@ class ExpertBudgetConfig:
     # still governed by the same SCEB protection policy.
     local_prob_threshold: float | None = None
 
-    # --- step 05: real compact dispatch ---
-    # When false, budgeted assignments are mask-only: dropped experts still get
-    # selected but their weights are zero. When true, dropped assignments are
-    # removed from the expert loop so their expert MLPs do not execute.
-    compact_dispatch: bool = False
-    # Debug-only: in compact mode, also compute the mask-only expert loop on the
-    # same forward inputs and record output deltas for the first N compact calls.
-    compact_debug_compare: bool = False
-    compact_debug_max_calls: int = 0
-
     @classmethod
     def from_json(cls, path: str | Path) -> "ExpertBudgetConfig":
         path = Path(path)

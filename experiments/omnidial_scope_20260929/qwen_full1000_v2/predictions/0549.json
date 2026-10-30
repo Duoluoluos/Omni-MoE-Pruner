@@ -1,0 +1,55 @@
+{
+  "sample_index": 549,
+  "video": "videos/video_354.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55765
+  },
+  "input_sha256": "595113ca9f6de8a8f56e93c5bb0ae9087278c425bd1255df39c1d385ef9a6c85",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.58155821589753,
+      "option_logp": {
+        "A": -1.5236194133758545,
+        "B": -1.8986194133758545,
+        "C": -0.7736194133758545,
+        "D": -1.7736194133758545
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Directly",
+      "generation_s": 22.3266448371578,
+      "option_logp": {
+        "A": -1.1772464513778687,
+        "B": -1.1772464513778687,
+        "C": -1.0522464513778687,
+        "D": -3.427246570587158
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. The underside",
+      "generation_s": 23.01861109188758,
+      "option_logp": {
+        "A": -0.15663491189479828,
+        "B": -2.65663480758667,
+        "C": -3.03163480758667,
+        "D": -3.65663480758667
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 733,
+  "video": "videos/video_491.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 4464,
+    "total": 4936
+  },
+  "input_sha256": "ca5b21bc574a83f4b91ee3634a32655f6df1f3d907cc3a17eb5d284fbe91a0b3",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.0887168110348284,
+      "option_logp": {
+        "A": -9.000739097595215,
+        "B": -0.0007390628452412784,
+        "C": -10.063239097595215,
+        "D": -7.625739097595215
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. She pays",
+      "generation_s": 3.572073445888236,
+      "option_logp": {
+        "A": -8.750534057617188,
+        "B": -0.0005341533687897027,
+        "C": -10.625534057617188,
+        "D": -8.375534057617188
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.0828766119666398,
+      "option_logp": {
+        "A": -8.813098907470703,
+        "B": -0.0005987281911075115,
+        "C": -9.500598907470703,
+        "D": -9.000598907470703
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

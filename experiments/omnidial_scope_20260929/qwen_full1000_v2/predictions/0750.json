@@ -1,0 +1,55 @@
+{
+  "sample_index": 750,
+  "video": "videos/video_501.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 46368,
+    "total": 46818
+  },
+  "input_sha256": "00c04dcf493e2c3b8234c60774e705d7fc8cbe0f6d1d4c634234d9a93b66a99c",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Ronnie Mal",
+      "generation_s": 17.770927598932758,
+      "option_logp": {
+        "A": -1.224618911743164,
+        "B": -1.724618911743164,
+        "C": -2.349618911743164,
+        "D": -0.8496189713478088
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 16.523554908810183,
+      "option_logp": {
+        "A": -1.6316423416137695,
+        "B": -2.2566423416137695,
+        "C": -0.5066422820091248,
+        "D": -2.3816423416137695
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Ronnie Mal",
+      "generation_s": 17.18801170308143,
+      "option_logp": {
+        "A": -1.8004822731018066,
+        "B": -2.0504822731018066,
+        "C": -2.1754822731018066,
+        "D": -0.5504822134971619
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

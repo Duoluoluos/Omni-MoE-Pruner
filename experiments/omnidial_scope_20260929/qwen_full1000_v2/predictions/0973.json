@@ -1,0 +1,55 @@
+{
+  "sample_index": 973,
+  "video": "videos/video_616.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55769
+  },
+  "input_sha256": "56407b1b2c9c3b7bd2a147722a7773a30e7a9ef9465de8eb9da33fdabc6da196",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.82521812315099,
+      "option_logp": {
+        "A": -0.4328131079673767,
+        "B": -1.1828131675720215,
+        "C": -3.9328131675720215,
+        "D": -4.1828131675720215
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 21.4334917741362,
+      "option_logp": {
+        "A": -1.2764962911605835,
+        "B": -0.4014963209629059,
+        "C": -3.526496410369873,
+        "D": -3.901496410369873
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. The cucumber",
+      "generation_s": 22.68786029983312,
+      "option_logp": {
+        "A": -0.5969066619873047,
+        "B": -0.9719066619873047,
+        "C": -3.5969066619873047,
+        "D": -3.4719066619873047
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

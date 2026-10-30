@@ -1,0 +1,55 @@
+{
+  "sample_index": 715,
+  "video": "videos/video_479.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 39312,
+    "total": 39769
+  },
+  "input_sha256": "1a7c204858bff17bde79898a5d9ae880af6a10920fe2c6a504f96194934859fd",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 12.974241343094036,
+      "option_logp": {
+        "A": -8.003652572631836,
+        "B": -6.253652095794678,
+        "C": -0.0036522133741527796,
+        "D": -7.378652095794678
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 13.08534599095583,
+      "option_logp": {
+        "A": -7.877707004547119,
+        "B": -6.377707004547119,
+        "C": -0.002706794999539852,
+        "D": -9.252706527709961
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. To avoid",
+      "generation_s": 14.373921044869348,
+      "option_logp": {
+        "A": -4.937007427215576,
+        "B": -1.9370074272155762,
+        "C": -0.18700744211673737,
+        "D": -4.187007427215576
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

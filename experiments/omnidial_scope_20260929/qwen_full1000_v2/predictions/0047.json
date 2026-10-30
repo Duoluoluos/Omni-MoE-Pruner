@@ -1,0 +1,55 @@
+{
+  "sample_index": 47,
+  "video": "videos/video_23.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 39456,
+    "total": 39915
+  },
+  "input_sha256": "f4b3970a86598f91566454d79ee55f6a9ac395511c8e70f62ce0673e092ba289",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 13.364130859961733,
+      "option_logp": {
+        "A": -0.027837786823511124,
+        "B": -5.277837753295898,
+        "C": -4.027837753295898,
+        "D": -5.777837753295898
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Triangle.",
+      "generation_s": 14.42916618194431,
+      "option_logp": {
+        "A": -0.15392817556858063,
+        "B": -4.028928279876709,
+        "C": -2.153928279876709,
+        "D": -5.278928279876709
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 13.123500691959634,
+      "option_logp": {
+        "A": -0.5085563063621521,
+        "B": -3.758556365966797,
+        "C": -1.0085563659667969,
+        "D": -5.133556365966797
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

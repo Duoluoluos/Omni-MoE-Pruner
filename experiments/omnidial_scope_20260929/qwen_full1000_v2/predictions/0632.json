@@ -1,0 +1,55 @@
+{
+  "sample_index": 632,
+  "video": "videos/video_421.mp4",
+  "counts": {
+    "audio": 318,
+    "video": 3456,
+    "total": 3956
+  },
+  "input_sha256": "7f5a3725ca4c5282f6bd1fa516edf7d4a3404fc1ea6d30dba6e84ae51061970e",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. The interviewer",
+      "generation_s": 3.4901330180000514,
+      "option_logp": {
+        "A": -0.0019851280376315117,
+        "B": -10.751985549926758,
+        "C": -6.8769850730896,
+        "D": -7.1269850730896
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 1.9737031359691173,
+      "option_logp": {
+        "A": -0.0003415954706724733,
+        "B": -11.250341415405273,
+        "C": -9.625341415405273,
+        "D": -8.875341415405273
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 1.9652966449502856,
+      "option_logp": {
+        "A": -0.00016437610611319542,
+        "B": -12.500164031982422,
+        "C": -9.625164031982422,
+        "D": -10.875164031982422
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 490,
+  "video": "videos/video_315.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 18288,
+    "total": 18771
+  },
+  "input_sha256": "6757f4cc7e2419ad3460872e1e104b8f16383b55748077b01a1420115fb7fda0",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 5.198345344047993,
+      "option_logp": {
+        "A": -0.0363517589867115,
+        "B": -6.661351680755615,
+        "C": -3.4113516807556152,
+        "D": -9.661352157592773
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 5.175813427893445,
+      "option_logp": {
+        "A": -1.4133590459823608,
+        "B": -5.53835916519165,
+        "C": -0.28835904598236084,
+        "D": -6.16335916519165
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Visible fear",
+      "generation_s": 6.647198753897101,
+      "option_logp": {
+        "A": -2.0259618759155273,
+        "B": -5.400961875915527,
+        "C": -0.1509619653224945,
+        "D": -5.775961875915527
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

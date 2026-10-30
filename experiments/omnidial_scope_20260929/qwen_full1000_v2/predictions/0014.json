@@ -1,0 +1,55 @@
+{
+  "sample_index": 14,
+  "video": "videos/video_8.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 41472,
+    "total": 41957
+  },
+  "input_sha256": "6b71adbaeec0e2f016b05175162644d99229ffdd42cb6db37e615a05d1f66aae",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Because Kenny",
+      "generation_s": 14.825526945991442,
+      "option_logp": {
+        "A": -3.668882369995117,
+        "B": -4.668882369995117,
+        "C": -0.0438823401927948,
+        "D": -6.418882369995117
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 14.018752241972834,
+      "option_logp": {
+        "A": -3.9001471996307373,
+        "B": -5.900146961212158,
+        "C": -0.02514711022377014,
+        "D": -7.400146961212158
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Because Kenny",
+      "generation_s": 15.359200309030712,
+      "option_logp": {
+        "A": -0.9320293664932251,
+        "B": -3.9320292472839355,
+        "C": -0.5570293664932251,
+        "D": -4.5570292472839355
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

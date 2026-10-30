@@ -1,0 +1,55 @@
+{
+  "sample_index": 951,
+  "video": "videos/video_609.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55768
+  },
+  "input_sha256": "1b54f72785a2efdcf058bfe13fdaada29d2d6790ab6e778648393b03501922c6",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. She enjoys",
+      "generation_s": 22.119697108166292,
+      "option_logp": {
+        "A": -3.2742366790771484,
+        "B": -2.3992366790771484,
+        "C": -0.1492367386817932,
+        "D": -5.274236679077148
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. She enjoys",
+      "generation_s": 22.73796576797031,
+      "option_logp": {
+        "A": -1.5004268884658813,
+        "B": -3.250426769256592,
+        "C": -0.37542688846588135,
+        "D": -3.000426769256592
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.47562422999181,
+      "option_logp": {
+        "A": -3.3296823501586914,
+        "B": -3.3296823501586914,
+        "C": -0.07968240976333618,
+        "D": -5.579682350158691
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

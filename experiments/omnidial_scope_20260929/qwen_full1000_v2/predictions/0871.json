@@ -1,0 +1,55 @@
+{
+  "sample_index": 871,
+  "video": "videos/video_576.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 40032,
+    "total": 40511
+  },
+  "input_sha256": "1f571bd5f77301312a54a03c41b2634119bb9b4b4e6a77c32c7f11f5a5bd386d",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. The rocket",
+      "generation_s": 14.725812966935337,
+      "option_logp": {
+        "A": -4.172235488891602,
+        "B": -0.9222357273101807,
+        "C": -0.5472357273101807,
+        "D": -5.172235488891602
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 13.439511458855122,
+      "option_logp": {
+        "A": -4.301060676574707,
+        "B": -3.551060438156128,
+        "C": -0.05106046423316002,
+        "D": -5.176060676574707
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 13.38667262904346,
+      "option_logp": {
+        "A": -7.009268760681152,
+        "B": -5.134268760681152,
+        "C": -0.00926870759576559,
+        "D": -6.259268760681152
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

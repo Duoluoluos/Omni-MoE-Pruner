@@ -1,0 +1,3354 @@
+{
+  "sample_index": 546,
+  "video": "videos/video_353.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55777
+  },
+  "input_sha256": "26a6954e291e37d65dc27ff6ccfd868db70c43f124403fbc12ceecae2281e084",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.472211798187345,
+      "option_logp": {
+        "A": -6.522052764892578,
+        "B": -6.397052764892578,
+        "C": -0.02205277979373932,
+        "D": -4.022052764892578
+      },
+      "work_ledger": {
+        "prefill:0": {
+          "tokens": 55777,
+          "routed_rows": 444548
+        },
+        "prefill:1": {
+          "tokens": 55777,
+          "routed_rows": 429276
+        },
+        "prefill:2": {
+          "tokens": 55777,
+          "routed_rows": 416288
+        },
+        "prefill:3": {
+          "tokens": 55777,
+          "routed_rows": 332124
+        },
+        "prefill:4": {
+          "tokens": 55777,
+          "routed_rows": 354200
+        },
+        "prefill:5": {
+          "tokens": 55777,
+          "routed_rows": 333928
+        },
+        "prefill:6": {
+          "tokens": 55777,
+          "routed_rows": 307308
+        },
+        "prefill:7": {
+          "tokens": 55777,
+          "routed_rows": 335540
+        },
+        "prefill:8": {
+          "tokens": 55777,
+          "routed_rows": 316532
+        },
+        "prefill:9": {
+          "tokens": 55777,
+          "routed_rows": 327124
+        },
+        "prefill:10": {
+          "tokens": 55777,
+          "routed_rows": 346344
+        },
+        "prefill:11": {
+          "tokens": 55777,
+          "routed_rows": 323168
+        },
+        "prefill:12": {
+          "tokens": 55777,
+          "routed_rows": 312664
+        },
+        "prefill:13": {
+          "tokens": 55777,
+          "routed_rows": 343472
+        },
+        "prefill:14": {
+          "tokens": 55777,
+          "routed_rows": 342720
+        },
+        "prefill:15": {
+          "tokens": 55777,
+          "routed_rows": 344700
+        },
+        "prefill:16": {
+          "tokens": 55777,
+          "routed_rows": 309844
+        },
+        "prefill:17": {
+          "tokens": 55777,
+          "routed_rows": 289324
+        },
+        "prefill:18": {
+          "tokens": 55777,
+          "routed_rows": 278648
+        },
+        "prefill:19": {
+          "tokens": 55777,
+          "routed_rows": 300076
+        },
+        "prefill:20": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:21": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:22": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:23": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:24": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:25": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:26": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:27": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:28": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:29": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:30": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:31": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:32": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:33": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:34": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:35": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:36": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:37": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:38": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:39": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:40": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:41": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:42": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:43": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:44": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:45": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:46": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:47": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "decode:0": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:1": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:2": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:3": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:4": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:5": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:6": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:7": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:8": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:9": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:10": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:11": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:12": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:13": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:14": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:15": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:16": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:17": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:18": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:19": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:20": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:21": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:22": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:23": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:24": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:25": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:26": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:27": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:28": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:29": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:30": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:31": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:32": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:33": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:34": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:35": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:36": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:37": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:38": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:39": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:40": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:41": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:42": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:43": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:44": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:45": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:46": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:47": {
+          "tokens": 1,
+          "routed_rows": 8
+        }
+      },
+      "js_to_native": 0.0006216668637264945
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. The snakes",
+      "generation_s": 22.160475729964674,
+      "option_logp": {
+        "A": -6.219364166259766,
+        "B": -6.094364166259766,
+        "C": -0.0943639874458313,
+        "D": -2.4693639278411865
+      },
+      "work_ledger": {
+        "prefill:0": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:1": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:2": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:3": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:4": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:5": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:6": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:7": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:8": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:9": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:10": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:11": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:12": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:13": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:14": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:15": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:16": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:17": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:18": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:19": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:20": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:21": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:22": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:23": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:24": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:25": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:26": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:27": {
+          "tokens": 55777,
+          "routed_rows": 446216
+        },
+        "prefill:28": {
+          "tokens": 55777,
+          "routed_rows": 353684
+        },
+        "prefill:29": {
+          "tokens": 55777,
+          "routed_rows": 336916
+        },
+        "prefill:30": {
+          "tokens": 55777,
+          "routed_rows": 316164
+        },
+        "prefill:31": {
+          "tokens": 55777,
+          "routed_rows": 328948
+        },
+        "prefill:32": {
+          "tokens": 55777,
+          "routed_rows": 320016
+        },
+        "prefill:33": {
+          "tokens": 55777,
+          "routed_rows": 328924
+        },
+        "prefill:34": {
+          "tokens": 55777,
+          "routed_rows": 333380
+        },
+        "prefill:35": {
+          "tokens": 55777,
+          "routed_rows": 351028
+        },
+        "prefill:36": {
+          "tokens": 55777,
+          "routed_rows": 349224
+        },
+        "prefill:37": {
+          "tokens": 55777,
+          "routed_rows": 371196
+        },
+        "prefill:38": {
+          "tokens": 55777,
+          "routed_rows": 368372
+        },
+        "prefill:39": {
+          "tokens": 55777,
+          "routed_rows": 360440
+        },
+        "prefill:40": {
+          "tokens": 55777,
+          "routed_rows": 384212
+        },
+        "prefill:41": {
+          "tokens": 55777,
+          "routed_rows": 378608
+        },
+        "prefill:42": {
+          "tokens": 55777,
+          "routed_rows": 387260
+        },
+        "prefill:43": {
+          "tokens": 55777,
+          "routed_rows": 395372
+        },
+        "prefill:44": {
+          "tokens": 55777,
+          "routed_rows": 412436
+        },
+        "prefill:45": {
+          "tokens": 55777,
+          "routed_rows": 412348
+        },
+        "prefill:46": {
+          "tokens": 55777,
+          "routed_rows": 425788
+        },
+        "prefill:47": {
+          "tokens": 55777,
+          "routed_rows": 421704
+        },
+        "decode:0": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:1": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:2": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:3": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:4": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:5": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:6": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:7": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:8": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:9": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:10": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:11": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:12": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:13": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:14": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:15": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:16": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:17": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:18": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:19": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:20": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:21": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:22": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:23": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:24": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:25": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:26": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:27": {
+          "tokens": 3,
+          "routed_rows": 24
+        },
+        "decode:28": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:29": {
+          "tokens": 3,
+          "routed_rows": 16
+        },
+        "decode:30": {
+          "tokens": 3,
+          "routed_rows": 16
+        },
+        "decode:31": {
+          "tokens": 3,
+          "routed_rows": 16
+        },
+        "decode:32": {
+          "tokens": 3,
+          "routed_rows": 16
+        },
+        "decode:33": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:34": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:35": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:36": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:37": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:38": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:39": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:40": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:41": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:42": {
+          "tokens": 3,
+          "routed_rows": 12
+        },
+        "decode:43": {
+          "tokens": 3,
+          "routed_rows": 16
+        },
+        "decode:44": {
+          "tokens": 3,
+          "routed_rows": 16
+        },
+        "decode:45": {
+          "tokens": 3,
+          "routed_rows": 16
+        },
+        "decode:46": {
+          "tokens": 3,
+          "routed_rows": 16
+        },
+        "decode:47": {
+          "tokens": 3,
+          "routed_rows": 12
+        }
+      },
+      "js_to_native": 0.009310418670903587
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.809082070132717,
+      "option_logp": {
+        "A": -4.579072952270508,
+        "B": -5.704072952270508,
+        "C": -0.32907310128211975,
+        "D": -1.3290730714797974
+      },
+      "work_ledger": {
+        "prefill:0": {
+          "tokens": 55777,
+          "routed_rows": 444548
+        },
+        "prefill:1": {
+          "tokens": 55777,
+          "routed_rows": 429276
+        },
+        "prefill:2": {
+          "tokens": 55777,
+          "routed_rows": 416288
+        },
+        "prefill:3": {
+          "tokens": 55777,
+          "routed_rows": 332124
+        },
+        "prefill:4": {
+          "tokens": 55777,
+          "routed_rows": 354200
+        },
+        "prefill:5": {
+          "tokens": 55777,
+          "routed_rows": 333928
+        },
+        "prefill:6": {
+          "tokens": 55777,
+          "routed_rows": 307308
+        },
+        "prefill:7": {
+          "tokens": 55777,
+          "routed_rows": 335540
+        },
+        "prefill:8": {
+          "tokens": 55777,
+          "routed_rows": 316532
+        },
+        "prefill:9": {
+          "tokens": 55777,
+          "routed_rows": 327124
+        },
+        "prefill:10": {
+          "tokens": 55777,
+          "routed_rows": 346344
+        },
+        "prefill:11": {
+          "tokens": 55777,
+          "routed_rows": 323168
+        },
+        "prefill:12": {
+          "tokens": 55777,
+          "routed_rows": 312664
+        },
+        "prefill:13": {
+          "tokens": 55777,
+          "routed_rows": 343472
+        },
+        "prefill:14": {
+          "tokens": 55777,
+          "routed_rows": 342720
+        },
+        "prefill:15": {
+          "tokens": 55777,
+          "routed_rows": 344700
+        },
+        "prefill:16": {
+          "tokens": 55777,
+          "routed_rows": 309844
+        },
+        "prefill:17": {
+          "tokens": 55777,
+          "routed_rows": 289324
+        },
+        "prefill:18": {
+          "tokens": 55777,
+          "routed_rows": 278648
+        },
+        "prefill:19": {
+          "tokens": 55777,
+          "routed_rows": 300076
+        },
+        "prefill:20": {
+          "tokens": 55777,
+          "routed_rows": 293952
+        },
+        "prefill:21": {
+          "tokens": 55777,
+          "routed_rows": 292692
+        },
+        "prefill:22": {
+          "tokens": 55777,
+          "routed_rows": 296708
+        },
+        "prefill:23": {
+          "tokens": 55777,
+          "routed_rows": 312984
+        },
+        "prefill:24": {
+          "tokens": 55777,
+          "routed_rows": 309612
+        },
+        "prefill:25": {
+          "tokens": 55777,
+          "routed_rows": 351120
+        },
+        "prefill:26": {
+          "tokens": 55777,
+          "routed_rows": 359348
+        },
+        "prefill:27": {
+          "tokens": 55777,
+          "routed_rows": 359696
+        },
+        "prefill:28": {
+          "tokens": 55777,
+          "routed_rows": 357396
+        },
+        "prefill:29": {
+          "tokens": 55777,
+          "routed_rows": 339408
+        },
+        "prefill:30": {
+          "tokens": 55777,
+          "routed_rows": 314524
+        },
+        "prefill:31": {
+          "tokens": 55777,
+          "routed_rows": 327820
+        },
+        "prefill:32": {
+          "tokens": 55777,
+          "routed_rows": 320168
+        },
+        "prefill:33": {
+          "tokens": 55777,
+          "routed_rows": 330368
+        },
+        "prefill:34": {
+          "tokens": 55777,
+          "routed_rows": 335328
+        },
+        "prefill:35": {
+          "tokens": 55777,
+          "routed_rows": 352828
+        },
+        "prefill:36": {
+          "tokens": 55777,
+          "routed_rows": 349760
+        },
+        "prefill:37": {
+          "tokens": 55777,
+          "routed_rows": 372120
+        },
+        "prefill:38": {
+          "tokens": 55777,
+          "routed_rows": 368996
+        },
+        "prefill:39": {
+          "tokens": 55777,
+          "routed_rows": 360824
+        },
+        "prefill:40": {
+          "tokens": 55777,
+          "routed_rows": 385348
+        },
+        "prefill:41": {
+          "tokens": 55777,
+          "routed_rows": 380592
+        },
+        "prefill:42": {
+          "tokens": 55777,
+          "routed_rows": 391444
+        },
+        "prefill:43": {
+          "tokens": 55777,
+          "routed_rows": 399548
+        },
+        "prefill:44": {
+          "tokens": 55777,
+          "routed_rows": 414072
+        },
+        "prefill:45": {
+          "tokens": 55777,
+          "routed_rows": 413740
+        },
+        "prefill:46": {
+          "tokens": 55777,
+          "routed_rows": 426980
+        },
+        "prefill:47": {
+          "tokens": 55777,
+          "routed_rows": 422996
+        },
+        "decode:0": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:1": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:2": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:3": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:4": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:5": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:6": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:7": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:8": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:9": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:10": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:11": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:12": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:13": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:14": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:15": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:16": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:17": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:18": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:19": {
+          "tokens": 1,
+          "routed_rows": 8
+        },
+        "decode:20": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:21": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:22": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:23": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:24": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:25": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:26": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:27": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:28": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:29": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:30": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:31": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:32": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:33": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:34": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:35": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:36": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:37": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:38": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:39": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:40": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:41": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:42": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:43": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:44": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:45": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:46": {
+          "tokens": 1,
+          "routed_rows": 4
+        },
+        "decode:47": {
+          "tokens": 1,
+          "routed_rows": 4
+        }
+      },
+      "js_to_native": 0.06991350529985152
+    }
+  },
+  "probes": {
+    "routed_zero_all": {
+      "answer": "A",
+      "output_text": "and final result is",
+      "option_logp": {
+        "A": -8.167400360107422,
+        "B": -8.589275360107422,
+        "C": -10.026775360107422,
+        "D": -10.542400360107422
+      },
+      "js_to_native": 0.6917486555049663
+    }
+  },
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "native": {
+    "answer": "C",
+    "output_text": "C",
+    "option_logp": {
+      "A": -7.152967929840088,
+      "B": -7.402967929840088,
+      "C": -0.02796785905957222,
+      "D": -3.652967929840088
+    },
+    "work_ledger": {
+      "prefill:0": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:1": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:2": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:3": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:4": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:5": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:6": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:7": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:8": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:9": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:10": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:11": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:12": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:13": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:14": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:15": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:16": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:17": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:18": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:19": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:20": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:21": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:22": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:23": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:24": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:25": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:26": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:27": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:28": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:29": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:30": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:31": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:32": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:33": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:34": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:35": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:36": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:37": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:38": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:39": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:40": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:41": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:42": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:43": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:44": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:45": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:46": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "prefill:47": {
+        "tokens": 55777,
+        "routed_rows": 446216
+      },
+      "decode:0": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:1": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:2": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:3": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:4": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:5": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:6": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:7": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:8": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:9": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:10": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:11": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:12": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:13": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:14": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:15": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:16": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:17": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:18": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:19": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:20": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:21": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:22": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:23": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:24": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:25": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:26": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:27": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:28": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:29": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:30": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:31": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:32": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:33": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:34": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:35": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:36": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:37": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:38": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:39": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:40": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:41": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:42": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:43": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:44": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:45": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:46": {
+        "tokens": 1,
+        "routed_rows": 8
+      },
+      "decode:47": {
+        "tokens": 1,
+        "routed_rows": 8
+      }
+    }
+  },
+  "native_decomposition": [
+    {
+      "layer": 0,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 9.713662147521973,
+      "routed_norm": 0.3367069959640503,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.03451572358608246,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 0,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 10.477105140686035,
+      "routed_norm": 0.2558943033218384,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.024722307920455933,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 0,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 8.995464324951172,
+      "routed_norm": 0.6397033929824829,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07140461355447769,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 1,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 12.169769287109375,
+      "routed_norm": 0.6050832271575928,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.04852260649204254,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 1,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 15.921649932861328,
+      "routed_norm": 0.563043475151062,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.035543426871299744,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 1,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 12.331655502319336,
+      "routed_norm": 1.739639401435852,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.12015986442565918,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 2,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 13.734931945800781,
+      "routed_norm": 0.7233666181564331,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05129190534353256,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 2,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 19.735740661621094,
+      "routed_norm": 0.7131801247596741,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.035995759069919586,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 2,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 16.134321212768555,
+      "routed_norm": 7.0642242431640625,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.10563313961029053,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 3,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 14.678021430969238,
+      "routed_norm": 0.7330043315887451,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.047897420823574066,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 3,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 23.59491729736328,
+      "routed_norm": 1.0266033411026,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.04336745664477348,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 3,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 16.249568939208984,
+      "routed_norm": 4.696722030639648,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0937306359410286,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 4,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 16.0462589263916,
+      "routed_norm": 0.7866186499595642,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.04758541285991669,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 4,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 24.483936309814453,
+      "routed_norm": 1.1695014238357544,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0474625788629055,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 4,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 16.974647521972656,
+      "routed_norm": 0.9563961029052734,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05628430098295212,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 5,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 16.55064582824707,
+      "routed_norm": 0.9671175479888916,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.056254275143146515,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 5,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 24.757699966430664,
+      "routed_norm": 1.3391692638397217,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.053731828927993774,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 5,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 17.657514572143555,
+      "routed_norm": 1.1443358659744263,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.065311498939991,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 6,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 17.20667839050293,
+      "routed_norm": 0.7603398561477661,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.04251256212592125,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 6,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 26.9455509185791,
+      "routed_norm": 1.5033868551254272,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05536811053752899,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 6,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 18.610788345336914,
+      "routed_norm": 0.9963068962097168,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.053354278206825256,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 7,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 16.90359878540039,
+      "routed_norm": 0.7705652117729187,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.04377945140004158,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 7,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 26.886579513549805,
+      "routed_norm": 1.530234456062317,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.056345000863075256,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 7,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 18.57887077331543,
+      "routed_norm": 1.0575498342514038,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05647909641265869,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 8,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 17.329504013061523,
+      "routed_norm": 0.9289059638977051,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.052442312240600586,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 8,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 27.391874313354492,
+      "routed_norm": 1.7343618869781494,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06258436292409897,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 8,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 18.899232864379883,
+      "routed_norm": 1.0970755815505981,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05835670605301857,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 9,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 17.54798126220703,
+      "routed_norm": 0.9071274399757385,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05029642954468727,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 9,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 27.15801429748535,
+      "routed_norm": 1.6300450563430786,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05948352813720703,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 9,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 19.357545852661133,
+      "routed_norm": 1.2958649396896362,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06677928566932678,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 10,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 17.545866012573242,
+      "routed_norm": 1.009880542755127,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.056594930589199066,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 10,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 26.41049575805664,
+      "routed_norm": 1.657261610031128,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06213947385549545,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 10,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 19.803546905517578,
+      "routed_norm": 1.2013341188430786,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06076923757791519,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 11,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 18.133628845214844,
+      "routed_norm": 1.053214192390442,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05718972533941269,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 11,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 26.775861740112305,
+      "routed_norm": 1.9706697463989258,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07285352051258087,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 11,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 20.526546478271484,
+      "routed_norm": 1.331148624420166,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06595447659492493,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 12,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 18.53748321533203,
+      "routed_norm": 0.9750626683235168,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.052002936601638794,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 12,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 26.97760581970215,
+      "routed_norm": 1.7273343801498413,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06364232301712036,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 12,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 21.122434616088867,
+      "routed_norm": 1.414888858795166,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06765265762805939,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 13,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 19.943634033203125,
+      "routed_norm": 1.2892546653747559,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06465839594602585,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 13,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 27.44075584411621,
+      "routed_norm": 1.873744010925293,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06788437813520432,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 13,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 22.295677185058594,
+      "routed_norm": 1.5140751600265503,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06858472526073456,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 14,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 20.609806060791016,
+      "routed_norm": 1.2734586000442505,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06121097505092621,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 14,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 27.979833602905273,
+      "routed_norm": 1.8824257850646973,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06681187450885773,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 14,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 22.019763946533203,
+      "routed_norm": 1.3788869380950928,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06277298927307129,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 15,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 21.568735122680664,
+      "routed_norm": 1.2663129568099976,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05811675637960434,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 15,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 28.911060333251953,
+      "routed_norm": 1.7113157510757446,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05888865888118744,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 15,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 22.870149612426758,
+      "routed_norm": 1.323715329170227,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05878154933452606,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 16,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 21.98325538635254,
+      "routed_norm": 1.2671191692352295,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05708395689725876,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 16,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 29.847110748291016,
+      "routed_norm": 1.947747826576233,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06490033119916916,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 16,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 23.161001205444336,
+      "routed_norm": 1.3519412279129028,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05886075645685196,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 17,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 22.155057907104492,
+      "routed_norm": 1.5046826601028442,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06742951273918152,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 17,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 30.319028854370117,
+      "routed_norm": 2.40108585357666,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0789678767323494,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 17,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 23.320446014404297,
+      "routed_norm": 1.3911478519439697,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06043614447116852,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 18,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 24.8072509765625,
+      "routed_norm": 1.597367286682129,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06368043273687363,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 18,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 33.645694732666016,
+      "routed_norm": 2.342252254486084,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06922595202922821,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 18,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 25.84644317626953,
+      "routed_norm": 1.6301571130752563,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0640663132071495,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 19,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 24.074007034301758,
+      "routed_norm": 1.4445219039916992,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.05913671851158142,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 19,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 32.50185775756836,
+      "routed_norm": 2.1218395233154297,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06482353806495667,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 19,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 25.154916763305664,
+      "routed_norm": 1.615999460220337,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0646425262093544,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 20,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 23.969623565673828,
+      "routed_norm": 1.705676794052124,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07075683772563934,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 20,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 31.985492706298828,
+      "routed_norm": 2.236830234527588,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0697253942489624,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 20,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 24.638050079345703,
+      "routed_norm": 1.6473002433776855,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06842190772294998,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 21,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 23.471094131469727,
+      "routed_norm": 1.6697936058044434,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07069025188684464,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 21,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 30.90849494934082,
+      "routed_norm": 2.2999632358551025,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07457275688648224,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 21,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 24.575702667236328,
+      "routed_norm": 2.174884557723999,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08931069821119308,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 22,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 24.01026153564453,
+      "routed_norm": 1.7829904556274414,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07381824404001236,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 22,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 30.776287078857422,
+      "routed_norm": 2.4942498207092285,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08024855703115463,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 22,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 25.16051483154297,
+      "routed_norm": 1.8055686950683594,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07150363177061081,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 23,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 24.582324981689453,
+      "routed_norm": 1.786205768585205,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07263149321079254,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 23,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 31.81793785095215,
+      "routed_norm": 2.458534002304077,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07740643620491028,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 23,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 26.36841583251953,
+      "routed_norm": 1.8835886716842651,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07326404005289078,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 24,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 24.919523239135742,
+      "routed_norm": 1.7256641387939453,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06870827823877335,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 24,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 32.08209228515625,
+      "routed_norm": 2.6755099296569824,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08272611349821091,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 24,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 26.75153160095215,
+      "routed_norm": 2.048158884048462,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0758247971534729,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 25,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 25.50767707824707,
+      "routed_norm": 2.0305111408233643,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07919616252183914,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 25,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 31.80531120300293,
+      "routed_norm": 2.4663853645324707,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07746641337871552,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 25,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 27.2656307220459,
+      "routed_norm": 2.22757625579834,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0820036381483078,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 26,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 24.81342887878418,
+      "routed_norm": 1.7811280488967896,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07142946124076843,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 26,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 30.53020668029785,
+      "routed_norm": 2.0046606063842773,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06544118374586105,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 26,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 26.750329971313477,
+      "routed_norm": 2.0590784549713135,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07792872190475464,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 27,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 26.229267120361328,
+      "routed_norm": 1.782546043395996,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06731526553630829,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 27,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 31.8001708984375,
+      "routed_norm": 1.9961276054382324,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06244441866874695,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 27,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 28.045726776123047,
+      "routed_norm": 2.022097110748291,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07350420951843262,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 28,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 26.645540237426758,
+      "routed_norm": 1.7017247676849365,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06315800547599792,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 28,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 32.36363220214844,
+      "routed_norm": 1.8643020391464233,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.057402584701776505,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 28,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 28.643796920776367,
+      "routed_norm": 1.9512841701507568,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06836619228124619,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 29,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 27.27116584777832,
+      "routed_norm": 2.227849006652832,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08151254057884216,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 29,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 33.042381286621094,
+      "routed_norm": 2.701828718185425,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08174854516983032,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 29,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 29.18327522277832,
+      "routed_norm": 2.0595703125,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07184568047523499,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 30,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 29.70606803894043,
+      "routed_norm": 2.1066207885742188,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06946583837270737,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 30,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 36.4697380065918,
+      "routed_norm": 2.4590094089508057,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06661802530288696,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 30,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 31.431501388549805,
+      "routed_norm": 2.062357187271118,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06650020182132721,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 31,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 29.266019821166992,
+      "routed_norm": 1.9453158378601074,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06448733806610107,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 31,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 35.14752197265625,
+      "routed_norm": 2.4127490520477295,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.06735537946224213,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 31,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 30.52431297302246,
+      "routed_norm": 2.5424625873565674,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08718018978834152,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 32,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 28.99443817138672,
+      "routed_norm": 2.3899362087249756,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08059541136026382,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 32,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 34.46794128417969,
+      "routed_norm": 2.6032819747924805,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07460572570562363,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 32,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 30.57049560546875,
+      "routed_norm": 2.2810604572296143,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0761089026927948,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 33,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 28.616653442382812,
+      "routed_norm": 2.4611048698425293,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08417883515357971,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 33,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 34.46648025512695,
+      "routed_norm": 2.6906094551086426,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07733844965696335,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 33,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 31.160802841186523,
+      "routed_norm": 3.3971006870269775,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.10242493450641632,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 34,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 29.98231315612793,
+      "routed_norm": 2.4964261054992676,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08219671994447708,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 34,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 35.22162628173828,
+      "routed_norm": 2.576514959335327,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07217720150947571,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 34,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 32.79387283325195,
+      "routed_norm": 2.981109619140625,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0928066149353981,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 35,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 30.824966430664062,
+      "routed_norm": 3.0579075813293457,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.09788438677787781,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 35,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 36.064537048339844,
+      "routed_norm": 3.3007566928863525,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.09059693664312363,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 35,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 33.83985900878906,
+      "routed_norm": 3.4000136852264404,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.10165639966726303,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 36,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 31.220184326171875,
+      "routed_norm": 2.5795578956604004,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08107057958841324,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 36,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 36.39496612548828,
+      "routed_norm": 2.84704327583313,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.07737793028354645,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 36,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 34.291229248046875,
+      "routed_norm": 3.613381862640381,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.10453161597251892,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 37,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 33.70878601074219,
+      "routed_norm": 3.467535972595215,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.1016405001282692,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 37,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 37.84758758544922,
+      "routed_norm": 3.2381398677825928,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08480150997638702,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 37,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 36.23942947387695,
+      "routed_norm": 4.847513675689697,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.13592348992824554,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 38,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 34.858341217041016,
+      "routed_norm": 3.2785091400146484,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.09328585118055344,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 38,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 38.37177276611328,
+      "routed_norm": 3.1241798400878906,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.08052285760641098,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 38,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 36.59484100341797,
+      "routed_norm": 4.757086277008057,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.13199743628501892,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 39,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 37.14080047607422,
+      "routed_norm": 3.804733991622925,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.10015926510095596,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 39,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 40.817359924316406,
+      "routed_norm": 3.910576343536377,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.09418657422065735,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 39,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 40.14094543457031,
+      "routed_norm": 5.511364936828613,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.13939905166625977,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 40,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 39.77862548828125,
+      "routed_norm": 3.9985909461975098,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.09929807484149933,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 40,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 43.98524475097656,
+      "routed_norm": 4.021851062774658,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.0901767686009407,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 40,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 42.79255676269531,
+      "routed_norm": 6.4101409912109375,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.1505584567785263,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 41,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 43.087074279785156,
+      "routed_norm": 5.953464508056641,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.13536927103996277,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 41,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 46.80905532836914,
+      "routed_norm": 5.709030628204346,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.11988574266433716,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 41,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 45.55707550048828,
+      "routed_norm": 8.524052619934082,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.19008652865886688,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 42,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 44.7216796875,
+      "routed_norm": 5.940339088439941,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.1308903694152832,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 42,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 47.31223678588867,
+      "routed_norm": 5.208944320678711,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.107453852891922,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 42,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 48.342063903808594,
+      "routed_norm": 9.710515022277832,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.20301009714603424,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 43,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 46.5501594543457,
+      "routed_norm": 5.298346042633057,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.11295418441295624,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 43,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 47.68882751464844,
+      "routed_norm": 5.76711368560791,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.11776882410049438,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 43,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 50.04984664916992,
+      "routed_norm": 10.159442901611328,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.20362579822540283,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 44,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 45.85504913330078,
+      "routed_norm": 5.024761199951172,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.10756471753120422,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 44,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 46.22035217285156,
+      "routed_norm": 5.061528205871582,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.10684514045715332,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 44,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 51.88030242919922,
+      "routed_norm": 11.105644226074219,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.21533600986003876,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 45,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 47.664466857910156,
+      "routed_norm": 5.606667995452881,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.11411081254482269,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 45,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 47.793304443359375,
+      "routed_norm": 5.102204322814941,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.10379677265882492,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 45,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 54.13080596923828,
+      "routed_norm": 11.732946395874023,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.21512289345264435,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 46,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 46.76206970214844,
+      "routed_norm": 6.533551216125488,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.13853934407234192,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 46,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 46.15675735473633,
+      "routed_norm": 5.763409614562988,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.12299255281686783,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 46,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 55.81571578979492,
+      "routed_norm": 18.35407829284668,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.284634530544281,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 47,
+      "modality": "audio",
+      "sampled_tokens": 128,
+      "population_tokens": 390,
+      "input_norm": 48.06611633300781,
+      "routed_norm": 27.759668350219727,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.5866509675979614,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 47,
+      "modality": "video",
+      "sampled_tokens": 128,
+      "population_tokens": 55296,
+      "input_norm": 44.199771881103516,
+      "routed_norm": 27.708877563476562,
+      "shared_norm": 0.0,
+      "routed_over_input": 0.6334647536277771,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    },
+    {
+      "layer": 47,
+      "modality": "other",
+      "sampled_tokens": 91,
+      "population_tokens": 91,
+      "input_norm": 59.42989730834961,
+      "routed_norm": 61.052391052246094,
+      "shared_norm": 0.0,
+      "routed_over_input": 1.042258858680725,
+      "shared_over_input": 0.0,
+      "routed_shared_cosine": null
+    }
+  ],
+  "complete": true
+}

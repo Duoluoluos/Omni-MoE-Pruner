@@ -1,0 +1,49 @@
+{
+  "sample_index": 288,
+  "video": "videos/video_136.mp4",
+  "correct_option": "C",
+  "arm_order": [
+    "stack",
+    "omnizip"
+  ],
+  "arms": {
+    "stack": {
+      "answer": "C",
+      "output_text": "C. rabbit and",
+      "latency_s": 2.438920009881258,
+      "option_logp": {
+        "A": -2.445396661758423,
+        "B": -1.4453966617584229,
+        "C": -0.5703966617584229,
+        "D": -2.195396661758423
+      },
+      "retained_tokens": 8397,
+      "input_tokens": 20760,
+      "expert_rows": 2363598,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 62.89372730255127,
+      "gold_logp": -0.5703966617584229,
+      "correct": true,
+      "gold_delta_minus_omnizip": 3.0861146450042725
+    },
+    "omnizip": {
+      "answer": "A",
+      "output_text": "A",
+      "latency_s": 2.2953988425433636,
+      "option_logp": {
+        "A": -0.15651126205921173,
+        "B": -5.906511306762695,
+        "C": -3.6565113067626953,
+        "D": -2.1565113067626953
+      },
+      "retained_tokens": 8397,
+      "input_tokens": 20760,
+      "expert_rows": 3224832,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 62.89372730255127,
+      "gold_logp": -3.6565113067626953,
+      "correct": false
+    }
+  },
+  "complete": true
+}

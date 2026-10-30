@@ -1,0 +1,55 @@
+{
+  "sample_index": 264,
+  "video": "videos/video_112.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 31968,
+    "total": 32426
+  },
+  "input_sha256": "b03af26667630718c5345000332e545141252515f0eeee6a49d31db2baadce65",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 10.32487700600177,
+      "option_logp": {
+        "A": -0.9956730604171753,
+        "B": -1.2456730604171753,
+        "C": -1.3706730604171753,
+        "D": -2.495673179626465
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A. NADA",
+      "generation_s": 10.655075917951763,
+      "option_logp": {
+        "A": -0.9417481422424316,
+        "B": -1.5667481422424316,
+        "C": -1.0667481422424316,
+        "D": -2.9417481422424316
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. NESREN",
+      "generation_s": 11.500163583084941,
+      "option_logp": {
+        "A": -1.1791002750396729,
+        "B": -0.9291002750396729,
+        "C": -1.4291002750396729,
+        "D": -2.929100275039673
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

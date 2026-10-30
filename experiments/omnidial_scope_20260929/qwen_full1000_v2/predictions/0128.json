@@ -1,0 +1,55 @@
+{
+  "sample_index": 128,
+  "video": "videos/video_55.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55751
+  },
+  "input_sha256": "7b09c1cb077ec848968c31166811c3c64ceaa3da424d28cdb7b9747062511189",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B. Siberian",
+      "generation_s": 22.23545622592792,
+      "option_logp": {
+        "A": -1.9701744318008423,
+        "B": -0.8451744318008423,
+        "C": -1.0951744318008423,
+        "D": -2.3451743125915527
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Siberian",
+      "generation_s": 23.037378238048404,
+      "option_logp": {
+        "A": -1.8609243631362915,
+        "B": -0.3609243631362915,
+        "C": -2.235924243927002,
+        "D": -3.235924243927002
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 21.618052724050358,
+      "option_logp": {
+        "A": -1.5991346836090088,
+        "B": -0.7241347432136536,
+        "C": -1.3491346836090088,
+        "D": -2.974134683609009
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

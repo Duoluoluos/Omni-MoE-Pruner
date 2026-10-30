@@ -1,0 +1,55 @@
+{
+  "sample_index": 135,
+  "video": "videos/video_58.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55811
+  },
+  "input_sha256": "093b078a1d6a74775576a3d9bb215db8dc6d29535181902491dbcb4d8656d8e5",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 21.509086759993806,
+      "option_logp": {
+        "A": -0.6461577415466309,
+        "B": -1.0211577415466309,
+        "C": -2.521157741546631,
+        "D": -3.396157741546631
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. The proposing",
+      "generation_s": 22.19332477916032,
+      "option_logp": {
+        "A": -0.13994580507278442,
+        "B": -3.1399457454681396,
+        "C": -2.6399457454681396,
+        "D": -4.389945983886719
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. The proposing",
+      "generation_s": 22.75343871791847,
+      "option_logp": {
+        "A": -0.2299095243215561,
+        "B": -2.2299094200134277,
+        "C": -2.4799094200134277,
+        "D": -4.479909420013428
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

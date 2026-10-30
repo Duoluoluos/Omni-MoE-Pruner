@@ -1,0 +1,55 @@
+{
+  "sample_index": 530,
+  "video": "videos/video_345.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 13392,
+    "total": 13873
+  },
+  "input_sha256": "e52b34baf6643a09055f4c7bae5ee1ce5c08db65a423fd59e5c893855ba7d39c",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 3.8791546940337867,
+      "option_logp": {
+        "A": -5.883983612060547,
+        "B": -5.383983612060547,
+        "C": -6.633983612060547,
+        "D": -0.008983668871223927
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 3.893298079026863,
+      "option_logp": {
+        "A": -6.007333278656006,
+        "B": -5.632333278656006,
+        "C": -7.007333278656006,
+        "D": -0.007333147339522839
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. He realizes",
+      "generation_s": 5.312789193820208,
+      "option_logp": {
+        "A": -4.171462535858154,
+        "B": -3.6714625358581543,
+        "C": -5.671462535858154,
+        "D": -0.04646260291337967
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

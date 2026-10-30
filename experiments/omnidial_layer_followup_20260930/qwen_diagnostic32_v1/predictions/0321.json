@@ -1,0 +1,50 @@
+{
+  "sample_index": 321,
+  "video": "videos/video_169.mp4",
+  "input_sha256": "f0834515a8bfc203e32b1e8035e936849dda1fbf450df28c7543fdc849f6b6f1",
+  "counts": {
+    "audio": 153,
+    "video": 1584,
+    "total": 1818
+  },
+  "arms": {},
+  "probes": {
+    "routed_zero_early": {
+      "answer": "F",
+      "output_text": "of the OS,",
+      "option_logp": {
+        "A": -9.09238052368164,
+        "B": -7.092380523681641,
+        "C": -11.15488052368164,
+        "D": -10.46738052368164
+      },
+      "execution_session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"
+    },
+    "routed_zero_middle": {
+      "answer": "C",
+      "output_text": "C",
+      "option_logp": {
+        "A": -3.8129560947418213,
+        "B": -3.9379560947418213,
+        "C": -0.3129560649394989,
+        "D": -1.9379560947418213
+      },
+      "execution_session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"
+    },
+    "routed_zero_late": {
+      "answer": "A",
+      "output_text": "A",
+      "option_logp": {
+        "A": -1.0443928241729736,
+        "B": -3.9818928241729736,
+        "C": -2.8568928241729736,
+        "D": -2.9193928241729736
+      },
+      "execution_session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"
+    }
+  },
+  "execution_session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "manifest_sha256": "81a79d3ff7f02e64435c2687e1eaceb562ee949ef55193d0053e29f039636cbe",
+  "complete": true
+}

@@ -1,0 +1,82 @@
+{
+  "sample_index": 539,
+  "video": "videos/video_350.mp4",
+  "correct_option": "B",
+  "arm_order": [
+    "stack",
+    "native",
+    "omnizip",
+    "omnidial"
+  ],
+  "arms": {
+    "stack": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 6.7878639455884695,
+      "option_logp": {
+        "A": -2.352145195007324,
+        "B": -0.1021452248096466,
+        "C": -7.227145195007324,
+        "D": -7.352145195007324
+      },
+      "retained_tokens": 22298,
+      "input_tokens": 55800,
+      "expert_rows": 7386460,
+      "expert_rows_source": "full32_v1_same_sample_arm",
+      "peak_allocated_gib": 69.37642335891724,
+      "js_to_native": 0.031822561533802876
+    },
+    "native": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 21.052375613711774,
+      "option_logp": {
+        "A": -6.751413345336914,
+        "B": -0.0014135378878563643,
+        "C": -10.001413345336914,
+        "D": -9.251413345336914
+      },
+      "retained_tokens": 55800,
+      "input_tokens": 55800,
+      "expert_rows": 21427584,
+      "expert_rows_source": "full32_v1_same_sample_arm",
+      "peak_allocated_gib": 82.46319150924683,
+      "js_to_native": 2.1003793230989148e-17
+    },
+    "omnizip": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 6.870156701654196,
+      "option_logp": {
+        "A": -7.001114368438721,
+        "B": -0.0011143434094265103,
+        "C": -10.501113891601562,
+        "D": -9.626113891601562
+      },
+      "retained_tokens": 22298,
+      "input_tokens": 55800,
+      "expert_rows": 8562816,
+      "expert_rows_source": "full32_v1_same_sample_arm",
+      "peak_allocated_gib": 69.38540029525757,
+      "js_to_native": 1.1848480724434356e-05
+    },
+    "omnidial": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 20.57036494463682,
+      "option_logp": {
+        "A": -6.379750728607178,
+        "B": -0.004750869236886501,
+        "C": -8.004751205444336,
+        "D": -6.004750728607178
+      },
+      "retained_tokens": 55800,
+      "input_tokens": 55800,
+      "expert_rows": 18863568,
+      "expert_rows_source": "full32_v1_same_sample_arm",
+      "peak_allocated_gib": 82.44029235839844,
+      "js_to_native": 0.0007909589474468272
+    }
+  },
+  "complete": true
+}

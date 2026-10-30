@@ -1,0 +1,55 @@
+{
+  "sample_index": 914,
+  "video": "videos/video_592.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55839
+  },
+  "input_sha256": "efe3a734ad0653abef1d3dc6913ad68ea78a5dea84c39b53fae1f1aba8a33e51",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.679529058979824,
+      "option_logp": {
+        "A": -1.5933096408843994,
+        "B": -2.5933096408843994,
+        "C": -0.3433096408843994,
+        "D": -4.59330940246582
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Cut milk",
+      "generation_s": 23.283988865092397,
+      "option_logp": {
+        "A": -4.097044944763184,
+        "B": -1.7220449447631836,
+        "C": -0.22204488515853882,
+        "D": -5.972044944763184
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.854056677082554,
+      "option_logp": {
+        "A": -3.8307735919952393,
+        "B": -2.9557735919952393,
+        "C": -0.08077357709407806,
+        "D": -5.95577335357666
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

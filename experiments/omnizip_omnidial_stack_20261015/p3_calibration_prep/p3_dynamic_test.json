@@ -1,0 +1,28 @@
+{
+  "subset_check": {
+    "calibration_indices": [
+      321,
+      333,
+      32,
+      41,
+      71,
+      88,
+      94,
+      200
+    ],
+    "subset_fixed32": true,
+    "out_of_set": []
+  },
+  "test_A_label_free_selection": {
+    "deterministic": true,
+    "selected": "p3_balanced",
+    "gold_vector_injected_but_unused": 0.6
+  },
+  "test_B_prompt_no_gold": {
+    "prompt_tail": "turn on the turn signal.\nD. To change lanes.\nAnswer with only the option letter.",
+    "gold_letter_injected_marker": [],
+    "ends_with_instruction": true,
+    "options_shown_count": 4
+  },
+  "PASS": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 415,
+  "video": "videos/video_247.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55776
+  },
+  "input_sha256": "f3104364a8003e2aecfa0bd7232d705136ba5b1485783b1564e2b9ed25fcff6f",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Woman with",
+      "generation_s": 22.755843674996868,
+      "option_logp": {
+        "A": -5.329197406768799,
+        "B": -4.954197406768799,
+        "C": -1.3291974067687988,
+        "D": -0.3291974663734436
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Ghostly",
+      "generation_s": 22.235167457954958,
+      "option_logp": {
+        "A": -4.842954635620117,
+        "B": -4.717954635620117,
+        "C": -0.7179548740386963,
+        "D": -0.7179548740386963
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.55326863983646,
+      "option_logp": {
+        "A": -4.288808822631836,
+        "B": -4.413808822631836,
+        "C": -0.7888087630271912,
+        "D": -0.6638087630271912
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

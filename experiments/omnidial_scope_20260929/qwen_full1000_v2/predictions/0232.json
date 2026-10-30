@@ -1,0 +1,55 @@
+{
+  "sample_index": 232,
+  "video": "videos/video_93.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55764
+  },
+  "input_sha256": "4d338a600961d593ca293ebfe8e9717c88fa23d0b4fef617b022c3a770dd6b02",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 21.727178781991825,
+      "option_logp": {
+        "A": -1.7360683679580688,
+        "B": -0.9860683679580688,
+        "C": -2.6110682487487793,
+        "D": -0.9860683679580688
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Chen Xia",
+      "generation_s": 22.688170779962093,
+      "option_logp": {
+        "A": -1.1852035522460938,
+        "B": -0.9352036118507385,
+        "C": -2.8102035522460938,
+        "D": -1.4352035522460938
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 21.79753678990528,
+      "option_logp": {
+        "A": -1.3083847761154175,
+        "B": -0.8083847761154175,
+        "C": -2.808384895324707,
+        "D": -1.5583847761154175
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

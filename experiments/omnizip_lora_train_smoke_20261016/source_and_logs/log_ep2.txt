@@ -1,0 +1,11 @@
+$ torchrun --nproc_per_node=2 --master_port=29513 /tmp/ep2_test.py
+[rank1] ep_rank=1 ep_world=2 num_local=4 global_range=[4,8) w1=(16, 256)
+[rank0] ep_rank=0 ep_world=2 num_local=4 global_range=[0,4) w1=(16, 256)
+[rank0] loss=0.062 finite=True w1grad=True
+[rank1] loss=0.002 finite=True w1grad=True
+
+# notes
+# - synthetic E=8 experts, ep=2 -> each rank holds 4 local experts. NO 30B model.
+# - per-rank gates PASSED before the final barrier.
+# - final barrier crashed on NCCL "Failed to open libnvidia-ml.so.1" (monitoring lib missing;
+#   environment warning, NOT a correctness failure). All gates already printed OK per rank.

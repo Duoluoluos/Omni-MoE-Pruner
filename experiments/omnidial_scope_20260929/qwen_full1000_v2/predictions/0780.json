@@ -1,0 +1,55 @@
+{
+  "sample_index": 780,
+  "video": "videos/video_528.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55760
+  },
+  "input_sha256": "87c763235204b109c1f162aac43822b9d794ea9159d7b6d4c31740bd87096ec4",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D. Trill",
+      "generation_s": 22.133386587025598,
+      "option_logp": {
+        "A": -2.9967403411865234,
+        "B": -1.871740460395813,
+        "C": -2.2467403411865234,
+        "D": -0.3717404305934906
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. Tremolo",
+      "generation_s": 22.431102726142853,
+      "option_logp": {
+        "A": -1.9268693923950195,
+        "B": -0.9268693923950195,
+        "C": -2.8018693923950195,
+        "D": -0.9268693923950195
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Trill",
+      "generation_s": 23.065960156964138,
+      "option_logp": {
+        "A": -3.2494137287139893,
+        "B": -2.8744137287139893,
+        "C": -3.8744137287139893,
+        "D": -0.1244136244058609
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

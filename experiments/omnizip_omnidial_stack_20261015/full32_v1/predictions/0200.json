@@ -1,0 +1,78 @@
+{
+  "sample_index": 200,
+  "video": "videos/video_81.mp4",
+  "correct_option": "A",
+  "arm_order": [
+    "stack",
+    "omnizip",
+    "native",
+    "omnidial"
+  ],
+  "arms": {
+    "stack": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 6.723328921943903,
+      "option_logp": {
+        "A": -2.7563846111297607,
+        "B": -0.25638464093208313,
+        "C": -4.63138484954834,
+        "D": -1.8813846111297607
+      },
+      "retained_tokens": 22254,
+      "input_tokens": 55757,
+      "expert_rows": 7485956,
+      "peak_allocated_gib": 69.353018283844,
+      "js_to_native": 0.02973624943421961
+    },
+    "omnizip": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 6.888096426613629,
+      "option_logp": {
+        "A": -1.391840934753418,
+        "B": -0.7668408751487732,
+        "C": -5.391840934753418,
+        "D": -1.266840934753418
+      },
+      "retained_tokens": 22254,
+      "input_tokens": 55757,
+      "expert_rows": 8545920,
+      "peak_allocated_gib": 69.353018283844,
+      "js_to_native": 0.008616142877400205
+    },
+    "native": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 20.930519489571452,
+      "option_logp": {
+        "A": -1.532616138458252,
+        "B": -0.532616138458252,
+        "C": -5.157616138458252,
+        "D": -1.657616138458252
+      },
+      "retained_tokens": 55757,
+      "input_tokens": 55757,
+      "expert_rows": 21411072,
+      "peak_allocated_gib": 81.9243893623352,
+      "js_to_native": 0.0
+    },
+    "omnidial": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 20.56764233019203,
+      "option_logp": {
+        "A": -1.572969913482666,
+        "B": -0.4479699432849884,
+        "C": -4.572969913482666,
+        "D": -1.947969913482666
+      },
+      "retained_tokens": 55757,
+      "input_tokens": 55757,
+      "expert_rows": 19058960,
+      "peak_allocated_gib": 81.9243893623352,
+      "js_to_native": 0.002685686325728748
+    }
+  },
+  "complete": true
+}

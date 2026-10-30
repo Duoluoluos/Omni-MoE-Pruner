@@ -1,0 +1,94 @@
+{
+  "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+  "pid": 993350,
+  "session": "20261006T163224_g340-cd51-4b00-156b-5f51-68a7-8693_993350",
+  "torch": "2.6.0+cu124",
+  "transformers": "4.57.3",
+  "cuda": "12.4",
+  "gpu": "NVIDIA H20",
+  "visible_devices": "0",
+  "python": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/bin/python",
+  "backend": "megatron_core_grouped_mlp",
+  "model_config_sha256": "eab5093d47807aaf894119506b238b2b1cee70d08456e894fee9a012d88f2e0d",
+  "model_source_sha256": "e33242324a7434e738f8ad207876e2a74d9586f1eec26e139941e31a61c8ae6c",
+  "processor_source_sha256": "9a76d2dd84228fdfe5200808fe46d1fbd7884450944b5ee1f3fe8a8b03cad83f",
+  "manifest_sha256": "26a07f1ed9da735436f00d79c33d8aa6a7ed2ea037ac57dad8de40122ffa51e7",
+  "ffmpeg": "ffmpeg version 7.0.2-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2024 the FFmpeg developers",
+  "weights": [
+    {
+      "name": "model-00001-of-00015.safetensors",
+      "size": 4997899632,
+      "mtime_ns": 1781072971691677000
+    },
+    {
+      "name": "model-00002-of-00015.safetensors",
+      "size": 4997754216,
+      "mtime_ns": 1781073777423252000
+    },
+    {
+      "name": "model-00003-of-00015.safetensors",
+      "size": 4997754216,
+      "mtime_ns": 1781074819515589000
+    },
+    {
+      "name": "model-00004-of-00015.safetensors",
+      "size": 4997755648,
+      "mtime_ns": 1781071891910714000
+    },
+    {
+      "name": "model-00005-of-00015.safetensors",
+      "size": 4997755792,
+      "mtime_ns": 1781075169839988000
+    },
+    {
+      "name": "model-00006-of-00015.safetensors",
+      "size": 4997755792,
+      "mtime_ns": 1781072946275331000
+    },
+    {
+      "name": "model-00007-of-00015.safetensors",
+      "size": 4997755792,
+      "mtime_ns": 1781073338844738000
+    },
+    {
+      "name": "model-00008-of-00015.safetensors",
+      "size": 4997755792,
+      "mtime_ns": 1781072485545297000
+    },
+    {
+      "name": "model-00009-of-00015.safetensors",
+      "size": 4997755792,
+      "mtime_ns": 1781085280239942000
+    },
+    {
+      "name": "model-00010-of-00015.safetensors",
+      "size": 4997755792,
+      "mtime_ns": 1781079624378057000
+    },
+    {
+      "name": "model-00011-of-00015.safetensors",
+      "size": 4997755792,
+      "mtime_ns": 1781085272422468000
+    },
+    {
+      "name": "model-00012-of-00015.safetensors",
+      "size": 4997755792,
+      "mtime_ns": 1781085271326214000
+    },
+    {
+      "name": "model-00013-of-00015.safetensors",
+      "size": 4999771808,
+      "mtime_ns": 1781085275548520000
+    },
+    {
+      "name": "model-00014-of-00015.safetensors",
+      "size": 4996618552,
+      "mtime_ns": 1781085270421141000
+    },
+    {
+      "name": "model-00015-of-00015.safetensors",
+      "size": 553698794,
+      "mtime_ns": 1781080713639500000
+    }
+  ]
+}

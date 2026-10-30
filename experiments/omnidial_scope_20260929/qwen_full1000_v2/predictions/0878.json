@@ -1,0 +1,55 @@
+{
+  "sample_index": 878,
+  "video": "videos/video_580.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 20592,
+    "total": 21065
+  },
+  "input_sha256": "e34f98a155153171591b98481a78ac3d319f6b45e3f409207d8cf16c92250593",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 5.8759244829416275,
+      "option_logp": {
+        "A": -2.2807250022888184,
+        "B": -0.28072497248649597,
+        "C": -2.0307250022888184,
+        "D": -4.655725002288818
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 5.853597762063146,
+      "option_logp": {
+        "A": -0.5660913586616516,
+        "B": -1.9410912990570068,
+        "C": -1.3160912990570068,
+        "D": -3.941091299057007
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Between the",
+      "generation_s": 7.264765525003895,
+      "option_logp": {
+        "A": -0.3012121915817261,
+        "B": -4.051212310791016,
+        "C": -1.426212191581726,
+        "D": -6.301212310791016
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 520,
+  "video": "videos/video_340.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 6048,
+    "total": 6515
+  },
+  "input_sha256": "fa7d2e79a9ae6f5ada3d06705507f94afe614f2d8cfdb5f4a38f20bf047afc0d",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Human action",
+      "generation_s": 3.8486898408737034,
+      "option_logp": {
+        "A": -8.000608444213867,
+        "B": -9.625608444213867,
+        "C": -8.875608444213867,
+        "D": -0.0006081400788389146
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 2.3593206820078194,
+      "option_logp": {
+        "A": -2.990023612976074,
+        "B": -7.990023612976074,
+        "C": -2.865023612976074,
+        "D": -0.11502353847026825
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 2.3511941770557314,
+      "option_logp": {
+        "A": -5.634715557098389,
+        "B": -7.509715557098389,
+        "C": -5.259715557098389,
+        "D": -0.009715652093291283
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

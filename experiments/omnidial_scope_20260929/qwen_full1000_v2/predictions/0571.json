@@ -1,0 +1,55 @@
+{
+  "sample_index": 571,
+  "video": "videos/video_375.mp4",
+  "counts": {
+    "audio": 150,
+    "video": 1584,
+    "total": 1802
+  },
+  "input_sha256": "34a7f04e9a21651e2fdf3927b1c0eca3b58eedb743bb7a3cb7ef5004aacf4d92",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 1.701482241973281,
+      "option_logp": {
+        "A": -5.682211399078369,
+        "B": -0.057211607694625854,
+        "C": -3.0572116374969482,
+        "D": -5.432211399078369
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Wind instrument",
+      "generation_s": 3.188919585896656,
+      "option_logp": {
+        "A": -3.837336778640747,
+        "B": -0.08733666688203812,
+        "C": -2.962336778640747,
+        "D": -4.837336540222168
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 1.6775349418167025,
+      "option_logp": {
+        "A": -4.685505390167236,
+        "B": -0.06050557270646095,
+        "C": -3.1855056285858154,
+        "D": -4.935505390167236
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

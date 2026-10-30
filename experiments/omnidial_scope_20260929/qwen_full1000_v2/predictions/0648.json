@@ -1,0 +1,55 @@
+{
+  "sample_index": 648,
+  "video": "videos/video_430.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 37152,
+    "total": 37627
+  },
+  "input_sha256": "d62da61b481c1c1c577053d8f72850b03ffa25628c44cffee2724b261f36d6af",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 12.04091720096767,
+      "option_logp": {
+        "A": -0.5827815532684326,
+        "B": -4.082781791687012,
+        "C": -1.2077815532684326,
+        "D": -2.0827815532684326
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 12.470249260775745,
+      "option_logp": {
+        "A": -0.2961285412311554,
+        "B": -3.921128511428833,
+        "C": -1.796128511428833,
+        "D": -2.671128511428833
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. The woman",
+      "generation_s": 13.487547897035256,
+      "option_logp": {
+        "A": -0.773400068283081,
+        "B": -3.148400068283081,
+        "C": -1.398400068283081,
+        "D": -1.398400068283081
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

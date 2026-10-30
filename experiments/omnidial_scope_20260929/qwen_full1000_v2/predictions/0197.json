@@ -1,0 +1,55 @@
+{
+  "sample_index": 197,
+  "video": "videos/video_80.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55854
+  },
+  "input_sha256": "2c95452df21dde9b52355b74fd3eea7e30a2d54a8fb54ca7fb22e6f83d6100a1",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Fertil",
+      "generation_s": 23.114328163908795,
+      "option_logp": {
+        "A": -0.5752860903739929,
+        "B": -1.5752861499786377,
+        "C": -1.8252861499786377,
+        "D": -2.7002861499786377
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. Fertil",
+      "generation_s": 22.369170046178624,
+      "option_logp": {
+        "A": -0.4354535639286041,
+        "B": -1.9354535341262817,
+        "C": -2.8104536533355713,
+        "D": -1.9354535341262817
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A. Fertil",
+      "generation_s": 22.438587286975235,
+      "option_logp": {
+        "A": -0.377776175737381,
+        "B": -2.2527761459350586,
+        "C": -2.6277761459350586,
+        "D": -2.0027761459350586
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

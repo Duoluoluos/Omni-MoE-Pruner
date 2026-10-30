@@ -1,0 +1,78 @@
+{
+  "sample_index": 874,
+  "video": "videos/video_578.mp4",
+  "correct_option": "A",
+  "arm_order": [
+    "omnidial",
+    "omnizip",
+    "native",
+    "stack"
+  ],
+  "arms": {
+    "omnidial": {
+      "answer": "C",
+      "output_text": "C",
+      "latency_s": 10.55909982509911,
+      "option_logp": {
+        "A": -1.2464393377304077,
+        "B": -1.2464393377304077,
+        "C": -0.8714393377304077,
+        "D": -5.246439456939697
+      },
+      "retained_tokens": 36469,
+      "input_tokens": 36469,
+      "expert_rows": 12388880,
+      "peak_allocated_gib": 74.03350067138672,
+      "js_to_native": 0.05234729940968123
+    },
+    "omnizip": {
+      "answer": "C",
+      "output_text": "C",
+      "latency_s": 4.10069898981601,
+      "option_logp": {
+        "A": -2.112987995147705,
+        "B": -2.487987995147705,
+        "C": -0.23798787593841553,
+        "D": -4.987987995147705
+      },
+      "retained_tokens": 14623,
+      "input_tokens": 36469,
+      "expert_rows": 5615616,
+      "peak_allocated_gib": 65.78357934951782,
+      "js_to_native": 0.006784654482153623
+    },
+    "native": {
+      "answer": "C",
+      "output_text": "C",
+      "latency_s": 10.741156299598515,
+      "option_logp": {
+        "A": -1.6049635410308838,
+        "B": -2.479963541030884,
+        "C": -0.35496360063552856,
+        "D": -4.354963779449463
+      },
+      "retained_tokens": 36469,
+      "input_tokens": 36469,
+      "expert_rows": 14004480,
+      "peak_allocated_gib": 74.03350067138672,
+      "js_to_native": 0.0
+    },
+    "stack": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 4.010476808063686,
+      "option_logp": {
+        "A": -3.599127769470215,
+        "B": -0.7241278290748596,
+        "C": -0.7241278290748596,
+        "D": -6.349127769470215
+      },
+      "retained_tokens": 14623,
+      "input_tokens": 36469,
+      "expert_rows": 4891716,
+      "peak_allocated_gib": 65.78357934951782,
+      "js_to_native": 0.12783547384159064
+    }
+  },
+  "complete": true
+}

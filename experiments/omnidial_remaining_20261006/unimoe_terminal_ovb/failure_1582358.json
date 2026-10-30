@@ -1,0 +1,5 @@
+{
+  "error": "",
+  "traceback": "Traceback (most recent call last):\n  File \"/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnidial_remaining_20261006/unimoe_terminal_ovb/source/run.py\", line 143, in <module>\n    with run_lock(a.out,a.recover_lock):run(a.out)\n                                        ^^^^^^^^^^\n  File \"/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnidial_remaining_20261006/unimoe_terminal_ovb/source/run.py\", line 102, in run\n    assert max(abs(value['option_logp'][k]-r['arm']['option_logp'][k]) for k in option_ids)<1e-5\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n",
+  "time": 1791295178.0689716
+}

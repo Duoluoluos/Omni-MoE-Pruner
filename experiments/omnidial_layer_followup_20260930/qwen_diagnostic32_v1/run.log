@@ -1,0 +1,380 @@
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (6.0.0.post1)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+{"stage": "loading", "time": 1790750212.4518657, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+`torch_dtype` is deprecated! Use `dtype` instead!
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_interleaved', 'interleaved', 'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'interleaved', 'mrope_section'}
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Loading checkpoint shards:   0%|          | 0/15 [00:00<?, ?it/s]Loading checkpoint shards:   7%|▋         | 1/15 [00:20<04:43, 20.23s/it]Loading checkpoint shards:  13%|█▎        | 2/15 [00:40<04:27, 20.55s/it]Loading checkpoint shards:  20%|██        | 3/15 [01:01<04:07, 20.61s/it]Loading checkpoint shards:  27%|██▋       | 4/15 [01:22<03:48, 20.74s/it]Loading checkpoint shards:  33%|███▎      | 5/15 [01:42<03:25, 20.60s/it]Loading checkpoint shards:  40%|████      | 6/15 [02:03<03:05, 20.62s/it]Loading checkpoint shards:  47%|████▋     | 7/15 [02:23<02:43, 20.46s/it]Loading checkpoint shards:  53%|█████▎    | 8/15 [02:43<02:22, 20.37s/it]Loading checkpoint shards:  60%|██████    | 9/15 [03:04<02:01, 20.33s/it]Loading checkpoint shards:  67%|██████▋   | 10/15 [03:25<01:42, 20.58s/it]Loading checkpoint shards:  73%|███████▎  | 11/15 [03:46<01:22, 20.70s/it]Loading checkpoint shards:  80%|████████  | 12/15 [04:07<01:02, 20.79s/it]Loading checkpoint shards:  87%|████████▋ | 13/15 [04:28<00:42, 21.06s/it]Loading checkpoint shards:  93%|█████████▎| 14/15 [04:53<00:22, 22.11s/it]Loading checkpoint shards: 100%|██████████| 15/15 [04:55<00:00, 16.13s/it]Loading checkpoint shards: 100%|██████████| 15/15 [04:55<00:00, 19.72s/it]
+{"stage": "identity_prepare", "time": 1790750552.1372976, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 321}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+qwen-vl-utils using decord to read video.
+{"stage": "identity_forward", "time": 1790750573.4679058, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 321}
+{"stage": "identity_prepare", "time": 1790750580.5538547, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 539}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "identity_forward", "time": 1790750605.6449254, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 539}
+{"stage": "prepare", "time": 1790750648.6450877, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 32}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790750665.8636494, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 32, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790750680.3618982, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 32, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790750694.2871501, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 0, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 32, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790750709.0934546, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 1, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790750709.1100476, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 1, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 41}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790750715.874646, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 1, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 41, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790750728.606588, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 1, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 41, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790750741.4963474, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 1, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 41, "arm": "routed_zero_middle"}
+{"stage": "running", "time": 1790750755.072474, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 2, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790750755.091898, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 2, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 71}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790750769.7765608, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 2, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 71, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790750791.1712317, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 2, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 71, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790750812.5704098, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 2, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 71, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790750835.333062, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 3, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790750835.3524332, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 3, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 88}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790750847.2734058, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 3, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 88, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790750868.6732666, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 3, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 88, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790750890.0755455, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 3, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 88, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790750912.855614, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 4, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790750912.8748767, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 4, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 94}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790750952.796202, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 4, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 94, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790750974.365009, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 4, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 94, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790750995.7835374, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 4, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 94, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790751018.4107065, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 5, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751018.429718, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 5, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 121}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751048.483708, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 5, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 121, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751063.6691017, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 5, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 121, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751078.9326816, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 5, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 121, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790751095.1107478, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 6, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751095.1273646, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 6, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 200}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751108.904035, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 6, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 200, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751130.4304101, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 6, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 200, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751152.1444912, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 6, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 200, "arm": "routed_zero_middle"}
+{"stage": "running", "time": 1790751174.9049394, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 7, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751174.924619, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 7, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 208}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751213.9794707, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 7, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 208, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751235.3923573, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 7, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 208, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751257.1320684, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 7, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 208, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790751279.8781915, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 8, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751279.898654, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 8, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 211}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751321.9716122, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 8, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 211, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751343.4133348, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 8, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 211, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751365.1075964, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 8, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 211, "arm": "routed_zero_middle"}
+{"stage": "running", "time": 1790751387.905413, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 9, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751387.9967537, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 9, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 288}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751392.3756976, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 9, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 288, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751397.9764435, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 9, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 288, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751403.5759943, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 9, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 288, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790751409.8116438, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 10, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751409.823909, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 10, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 295}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751414.4107358, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 10, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 295, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751422.973725, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 10, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 295, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751431.7259314, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 10, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 295, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790751440.989157, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 11, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751441.0020773, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 11, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 297}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751455.7479196, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 11, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 297, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751470.0038512, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 11, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 297, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751484.4919508, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 11, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 297, "arm": "routed_zero_middle"}
+{"stage": "running", "time": 1790751499.787423, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 12, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751499.8085263, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 12, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 315}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751508.159331, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 12, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 315, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751513.227615, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 12, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 315, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751518.4031434, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 12, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 315, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790751523.865689, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 13, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751523.8891242, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 13, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 321}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751525.0527368, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 13, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 321, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751526.4774218, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 13, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 321, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751527.8973548, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 13, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 321, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790751529.3407242, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 14, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751529.3530443, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 14, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 333}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751532.2682443, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 14, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 333, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751534.3844333, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 14, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 333, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751536.4896822, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 14, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 333, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790751538.8297334, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 15, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751538.8394687, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 15, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 344}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751547.2421067, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 15, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 344, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751564.4970098, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 15, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 344, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751581.852147, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 15, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 344, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790751600.4478462, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 16, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751600.4653783, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 16, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 389}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751636.855697, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 16, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 389, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751658.258228, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 16, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 389, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751679.9709327, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 16, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 389, "arm": "routed_zero_middle"}
+{"stage": "running", "time": 1790751702.7467117, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 17, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751702.7676344, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 17, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 424}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751715.2841616, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 17, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 424, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751736.8216956, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 17, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 424, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751758.5931835, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 17, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 424, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790751781.441086, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 18, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751781.4649584, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 18, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 515}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751793.3592665, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 18, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 515, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790751802.8103442, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 18, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 515, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751812.4341693, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 18, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 515, "arm": "routed_zero_middle"}
+{"stage": "running", "time": 1790751822.5986574, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 19, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751822.6123967, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 19, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 539}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751847.330243, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 19, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 539, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751868.8197505, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 19, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 539, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751890.5276637, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 19, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 539, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790751913.3351984, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 20, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790751913.3893359, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 20, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 546}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790751946.3841019, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 20, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 546, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790751968.0343096, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 20, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 546, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790751989.5792408, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 20, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 546, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790752012.3552806, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 21, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752012.4063563, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 21, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 585}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752014.2863715, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 21, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 585, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790752016.4158618, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 21, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 585, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790752018.6386025, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 21, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 585, "arm": "routed_zero_middle"}
+{"stage": "running", "time": 1790752020.9502287, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 22, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752020.9600809, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 22, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 641}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752022.8291862, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 22, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 641, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790752024.9112003, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 22, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 641, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752027.0683768, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 22, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 641, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790752029.3628561, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 23, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752029.3727002, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 23, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 672}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752034.0080588, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 23, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 672, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752037.4645984, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 23, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 672, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790752040.894423, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 23, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 672, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790752044.8077433, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 24, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752044.8176374, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 24, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 678}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752045.987338, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 24, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 678, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752047.5631812, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 24, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 678, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790752049.172404, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 24, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 678, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790752050.9330673, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 25, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752050.942533, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 25, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 699}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752057.8117237, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 25, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 699, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752067.4622085, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 25, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 699, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790752077.158446, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 25, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 699, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790752087.7573743, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 26, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752087.7717342, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 26, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 769}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752104.6812496, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 26, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 769, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752124.984992, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 26, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 769, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790752145.6330743, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 26, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 769, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790752167.252091, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 27, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752167.2712436, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 27, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 859}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752168.8960266, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 27, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 859, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790752170.862357, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 27, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 859, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752172.703202, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 27, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 859, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790752174.6499808, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 28, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752174.6599228, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 28, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 870}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752181.05352, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 28, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 870, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790752194.378334, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 28, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 870, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752207.7119067, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 28, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 870, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790752222.0957627, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 29, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752222.120765, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 29, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 874}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752235.0235398, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 29, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 874, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752246.4581442, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 29, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 874, "arm": "routed_zero_early"}
+{"stage": "generate_probe", "time": 1790752258.0834858, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 29, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 874, "arm": "routed_zero_late"}
+{"stage": "running", "time": 1790752270.3140328, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 30, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752270.3407774, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 30, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 882}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752272.083663, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 30, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 882, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790752274.7357817, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 30, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 882, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752277.4035287, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 30, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 882, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790752280.409376, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 31, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "prepare", "time": 1790752280.419093, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 31, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 916}
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{"stage": "generate_probe", "time": 1790752297.2266533, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 31, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 916, "arm": "routed_zero_middle"}
+{"stage": "generate_probe", "time": 1790752312.8788457, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 31, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 916, "arm": "routed_zero_late"}
+{"stage": "generate_probe", "time": 1790752328.6215303, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 31, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481", "sample_index": 916, "arm": "routed_zero_early"}
+{"stage": "running", "time": 1790752345.4150536, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 32, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"stage": "analyzing", "time": 1790752345.582826, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 32, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}
+{"result_status": "verified", "n": 32, "model": "qwen", "probes": {"routed_zero_early": {"policy": {"branch": "routed", "scope": [0, 20]}, "vs_native": {"n": 32, "accuracy_pct": 3.125, "accuracy_delta_pp": -25.0, "gold_logp_delta": -6.392117486499956, "flip_pct": 96.875}}, "routed_zero_middle": {"policy": {"branch": "routed", "scope": [12, 32]}, "vs_native": {"n": 32, "accuracy_pct": 21.875, "accuracy_delta_pp": -6.25, "gold_logp_delta": 0.0778873514600491, "flip_pct": 65.625}}, "routed_zero_late": {"policy": {"branch": "routed", "scope": [28, 48]}, "vs_native": {"n": 32, "accuracy_pct": 15.625, "accuracy_delta_pp": -12.5, "gold_logp_delta": -0.7033493585668111, "flip_pct": 71.875}}}, "arms": {}, "raw_sha256": "ea4c81468dc3996f8577a897bd55f1e326e061cf4e46b4ba315e589790453814", "manifest_sha256": "81a79d3ff7f02e64435c2687e1eaceb562ee949ef55193d0053e29f039636cbe", "main_table_eligible": false, "limitations": ["32 preselected unique videos; descriptive means, not a full-benchmark accuracy estimate.", "Native-weight branch removal is not the renormalized OmniDial fallback.", "Protection changes both layer coverage and realized work.", "Archived references are from an earlier session; timing is not a paired same-session comparison.", "One checkpoint per model, OmniVideoBench only."], "timing": "Pilot times retained in raw records only; no full-set latency claim."}
+{"stage": "complete", "time": 1790752349.4979794, "pid": 437481, "host": "g340-cd51-5100-b698-202f-fe01-948c", "model": "qwen", "completed": 32, "expected": 32, "session": "20260930T143652_g340-cd51-5100-b698-202f-fe01-948c_437481"}

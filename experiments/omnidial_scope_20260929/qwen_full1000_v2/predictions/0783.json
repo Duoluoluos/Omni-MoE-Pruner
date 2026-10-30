@@ -1,0 +1,55 @@
+{
+  "sample_index": 783,
+  "video": "videos/video_531.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55784
+  },
+  "input_sha256": "1943dfc8555433f2520e47dea478310ae90b2ddb9955c6e2433e06529102284c",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.984196323901415,
+      "option_logp": {
+        "A": -0.006788524333387613,
+        "B": -5.381788730621338,
+        "C": -6.381788730621338,
+        "D": -10.00678825378418
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A. Because S",
+      "generation_s": 22.264935865066946,
+      "option_logp": {
+        "A": -0.006758923642337322,
+        "B": -6.756758689880371,
+        "C": -5.256758689880371,
+        "D": -9.069258689880371
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Because S",
+      "generation_s": 23.1780661449302,
+      "option_logp": {
+        "A": -0.03236677870154381,
+        "B": -5.282366752624512,
+        "C": -3.6573667526245117,
+        "D": -7.907366752624512
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

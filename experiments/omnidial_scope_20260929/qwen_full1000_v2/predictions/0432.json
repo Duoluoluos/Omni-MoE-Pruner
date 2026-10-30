@@ -1,0 +1,55 @@
+{
+  "sample_index": 432,
+  "video": "videos/video_259.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55786
+  },
+  "input_sha256": "bea1439ada3d3244a16224aab224551144ac9b5352e63ff8726d3fdc7dee27fb",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. The solo",
+      "generation_s": 22.652798877097666,
+      "option_logp": {
+        "A": -6.378827095031738,
+        "B": -7.003827095031738,
+        "C": -7.003827095031738,
+        "D": -0.0038270342629402876
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. The solo",
+      "generation_s": 22.254467249149457,
+      "option_logp": {
+        "A": -6.379818916320801,
+        "B": -6.879818916320801,
+        "C": -6.379818916320801,
+        "D": -0.0048188501968979836
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.494112994056195,
+      "option_logp": {
+        "A": -6.752798080444336,
+        "B": -7.502798080444336,
+        "C": -7.377798080444336,
+        "D": -0.002797977067530155
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

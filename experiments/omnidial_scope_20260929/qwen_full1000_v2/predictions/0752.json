@@ -1,0 +1,55 @@
+{
+  "sample_index": 752,
+  "video": "videos/video_503.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55759
+  },
+  "input_sha256": "03dd8170ee1a8f2a3c9552970407e72a9ad614e7fdeaa1c2dc1ecca3c4a70a26",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. G Minor",
+      "generation_s": 22.255655047949404,
+      "option_logp": {
+        "A": -1.5315786600112915,
+        "B": -0.4065786898136139,
+        "C": -3.031578779220581,
+        "D": -2.781578779220581
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B. G Minor",
+      "generation_s": 22.320342807099223,
+      "option_logp": {
+        "A": -1.4970272779464722,
+        "B": -0.6220272779464722,
+        "C": -1.8720272779464722,
+        "D": -2.8720273971557617
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. G Major",
+      "generation_s": 23.047388361999765,
+      "option_logp": {
+        "A": -0.9387168884277344,
+        "B": -1.0637168884277344,
+        "C": -1.6887168884277344,
+        "D": -2.6887168884277344
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

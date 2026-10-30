@@ -1,0 +1,55 @@
+{
+  "sample_index": 751,
+  "video": "videos/video_502.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 48384,
+    "total": 48850
+  },
+  "input_sha256": "2971e036f501d1253f79caaa9e1d4f79b4aa24fd7670cb04aa2c37536324b010",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Wearable",
+      "generation_s": 19.117905487073585,
+      "option_logp": {
+        "A": -6.4050092697143555,
+        "B": -3.6550095081329346,
+        "C": -6.5300092697143555,
+        "D": -0.030009469017386436
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D. Wearable",
+      "generation_s": 18.38171312911436,
+      "option_logp": {
+        "A": -6.920616626739502,
+        "B": -3.170616388320923,
+        "C": -6.670616626739502,
+        "D": -0.045616503804922104
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Wearable",
+      "generation_s": 18.489531940082088,
+      "option_logp": {
+        "A": -6.318788051605225,
+        "B": -1.3187880516052246,
+        "C": -6.193788051605225,
+        "D": -0.31878799200057983
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

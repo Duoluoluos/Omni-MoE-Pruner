@@ -1,0 +1,36 @@
+{
+  "result_status": "verified",
+  "n": 3170,
+  "timed_n": 3165,
+  "reused_n": 0,
+  "model": "unimoe",
+  "benchmark": "worldsense",
+  "scope": [
+    7,
+    19
+  ],
+  "backend": "unimoe_native_deepspeed",
+  "task_ids": [
+    "MT-U-WS"
+  ],
+  "raw_sha256": "ca2fc41fbc11422fe8bf5800ad81dd95a252efeebc5a32053e44a7cad5ca9a09",
+  "manifest_sha256": "f550bf36ab2382bfda338f1d66d01d650550bdaa33581ce897c83e569829c3a5",
+  "arms_sha256": "198411406ccbeede1d64118a00edb676117a2c86ccf576e822a67b70b1955ea7",
+  "arms": {
+    "omnidial": {
+      "policy": {
+        "kind": "cgcc",
+        "scope": [
+          7,
+          19
+        ]
+      },
+      "correct": 1485,
+      "accuracy_percent": 46.845425867507885,
+      "generation_seconds": 2.255886114088268,
+      "diagnostic_prefill_work": {}
+    }
+  },
+  "checked_time": 1791279977.6555412,
+  "verification": "Full frozen question coverage, exact source/input/gate hashes, modality preflight, per-session warmup, finite metrics; historical controls are separate sessions."
+}

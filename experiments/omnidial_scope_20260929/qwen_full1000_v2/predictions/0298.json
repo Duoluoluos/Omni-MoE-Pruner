@@ -1,0 +1,55 @@
+{
+  "sample_index": 298,
+  "video": "videos/video_146.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 36000,
+    "total": 36464
+  },
+  "input_sha256": "b216a7a299751872819f449479bbc8f9e31f53438ffd4b9f56e476fb4f7b3161",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 11.583608101122081,
+      "option_logp": {
+        "A": -0.1496134102344513,
+        "B": -5.899613380432129,
+        "C": -2.024613380432129,
+        "D": -6.024613380432129
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Kitchen",
+      "generation_s": 12.927846385864541,
+      "option_logp": {
+        "A": -0.18648138642311096,
+        "B": -5.936481475830078,
+        "C": -1.8114813566207886,
+        "D": -6.436481475830078
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 11.554251124151051,
+      "option_logp": {
+        "A": -0.14825193583965302,
+        "B": -6.023252010345459,
+        "C": -2.023252010345459,
+        "D": -7.148252010345459
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

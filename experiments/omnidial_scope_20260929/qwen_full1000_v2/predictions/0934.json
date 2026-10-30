@@ -1,0 +1,55 @@
+{
+  "sample_index": 934,
+  "video": "videos/video_601.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 44496,
+    "total": 44971
+  },
+  "input_sha256": "f9230e9f4e5c6e2cd66a384ed4e28bfc8cc08f3643b30d090a94dac354c874b0",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 15.549780562985688,
+      "option_logp": {
+        "A": -4.046892166137695,
+        "B": -3.9218921661376953,
+        "C": -4.921892166137695,
+        "D": -0.046892210841178894
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. The waiter",
+      "generation_s": 16.210780957946554,
+      "option_logp": {
+        "A": -1.947033405303955,
+        "B": -1.697033405303955,
+        "C": -3.447033405303955,
+        "D": -0.44703343510627747
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. The waiter",
+      "generation_s": 16.972656625090167,
+      "option_logp": {
+        "A": -3.843355417251587,
+        "B": -2.968355417251587,
+        "C": -4.218355655670166,
+        "D": -0.09335542470216751
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

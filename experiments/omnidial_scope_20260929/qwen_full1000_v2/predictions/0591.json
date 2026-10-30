@@ -1,0 +1,55 @@
+{
+  "sample_index": 591,
+  "video": "videos/video_392.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 40032,
+    "total": 40529
+  },
+  "input_sha256": "4470fdb2ce8490bdbd18db9267dc1caf4d6bc6c217b8dbccf691488485a39bb0",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 13.378986761206761,
+      "option_logp": {
+        "A": -0.5784895420074463,
+        "B": -2.4534895420074463,
+        "C": -1.9534895420074463,
+        "D": -1.5784895420074463
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Because Chandler",
+      "generation_s": 14.738593953894451,
+      "option_logp": {
+        "A": -0.6968781352043152,
+        "B": -2.32187819480896,
+        "C": -1.82187819480896,
+        "D": -1.44687819480896
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Because Ross",
+      "generation_s": 14.046007845085114,
+      "option_logp": {
+        "A": -1.7317259311676025,
+        "B": -1.1067259311676025,
+        "C": -2.8567259311676025,
+        "D": -0.8567259907722473
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

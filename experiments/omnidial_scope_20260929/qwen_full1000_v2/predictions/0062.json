@@ -1,0 +1,55 @@
+{
+  "sample_index": 62,
+  "video": "videos/video_30.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55756
+  },
+  "input_sha256": "b2e7bf3cf01cbc5235c446bc7be6a0a8edc472f9e7efd74f4803ba3e7c0caff8",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 21.406107266200706,
+      "option_logp": {
+        "A": -3.128998279571533,
+        "B": -0.12899817526340485,
+        "C": -4.378998279571533,
+        "D": -2.753998279571533
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. Embarrass",
+      "generation_s": 22.242946736048907,
+      "option_logp": {
+        "A": -4.5179266929626465,
+        "B": -0.017926810309290886,
+        "C": -6.0179266929626465,
+        "D": -5.6429266929626465
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Embarrass",
+      "generation_s": 22.772405977128074,
+      "option_logp": {
+        "A": -3.673004388809204,
+        "B": -0.048004504293203354,
+        "C": -4.298004627227783,
+        "D": -4.923004627227783
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

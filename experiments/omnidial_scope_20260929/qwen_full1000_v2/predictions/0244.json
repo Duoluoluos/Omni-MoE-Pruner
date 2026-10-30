@@ -1,0 +1,55 @@
+{
+  "sample_index": 244,
+  "video": "videos/video_99.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 25344,
+    "total": 25802
+  },
+  "input_sha256": "28d7aa935148ed1aa36016ef44b7a4ec443aecbe007c0c7c9a01a98a94214c69",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 7.404658995103091,
+      "option_logp": {
+        "A": -3.641697406768799,
+        "B": -1.6416972875595093,
+        "C": -0.3916972875595093,
+        "D": -2.266697406768799
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 7.673918203916401,
+      "option_logp": {
+        "A": -3.595179796218872,
+        "B": -2.970179796218872,
+        "C": -0.0951797142624855,
+        "D": -4.470179557800293
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. jawline",
+      "generation_s": 8.006177664967254,
+      "option_logp": {
+        "A": -3.9532787799835205,
+        "B": -3.5782787799835205,
+        "C": -0.07827869057655334,
+        "D": -3.5782787799835205
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

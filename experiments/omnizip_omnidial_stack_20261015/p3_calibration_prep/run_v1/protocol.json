@@ -1,0 +1,43 @@
+{
+  "schema": "p3-zip-aware-input-only-calibration-v1",
+  "indices": [
+    321,
+    333,
+    32,
+    41,
+    71,
+    88,
+    94,
+    200
+  ],
+  "scope": [
+    12,
+    32
+  ],
+  "candidates": {
+    "p3_conservative": {
+      "top2_fraction": 0.5,
+      "top4_fraction": 0.35,
+      "top8_fraction": 0.15
+    },
+    "p3_balanced": {
+      "top2_fraction": 0.65,
+      "top4_fraction": 0.25,
+      "top8_fraction": 0.1
+    },
+    "p3_aggressive": {
+      "top2_fraction": 0.8,
+      "top4_fraction": 0.15,
+      "top8_fraction": 0.05
+    }
+  },
+  "selection": "closest predicted Stack/native expert-row ratio to 0.30; no labels or answers read",
+  "target_stack_row_ratio": 0.3,
+  "prior_zip_retention": 0.4076261686632181,
+  "omnizip": {
+    "rho_audio": 0.3,
+    "rho_video": 0.6,
+    "g": 3,
+    "contextual_ratio": 0.05
+  }
+}

@@ -1,0 +1,78 @@
+{
+  "sample_index": 389,
+  "video": "videos/video_226.mp4",
+  "correct_option": "B",
+  "arm_order": [
+    "native",
+    "omnidial",
+    "omnizip",
+    "stack"
+  ],
+  "arms": {
+    "native": {
+      "answer": "B",
+      "output_text": "B. The scenery",
+      "latency_s": 21.246563229709864,
+      "option_logp": {
+        "A": -3.672114372253418,
+        "B": -0.047114450484514236,
+        "C": -3.922114372253418,
+        "D": -8.547114372253418
+      },
+      "retained_tokens": 55764,
+      "input_tokens": 55764,
+      "expert_rows": 21414528,
+      "peak_allocated_gib": 81.92703676223755,
+      "js_to_native": 4.6336413842490296e-17
+    },
+    "omnidial": {
+      "answer": "A",
+      "output_text": "A",
+      "latency_s": 20.824392874725163,
+      "option_logp": {
+        "A": -0.746188223361969,
+        "B": -0.871188223361969,
+        "C": -2.246188163757324,
+        "D": -6.996188163757324
+      },
+      "retained_tokens": 55764,
+      "input_tokens": 55764,
+      "expert_rows": 19279852,
+      "peak_allocated_gib": 81.92703676223755,
+      "js_to_native": 0.1928854217057453
+    },
+    "omnizip": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 6.81277022510767,
+      "option_logp": {
+        "A": -3.548231363296509,
+        "B": -0.04823127016425133,
+        "C": -4.04823112487793,
+        "D": -8.98573112487793
+      },
+      "retained_tokens": 22262,
+      "input_tokens": 55764,
+      "expert_rows": 8548992,
+      "peak_allocated_gib": 69.35304498672485,
+      "js_to_native": 9.83857250422594e-05
+    },
+    "stack": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 6.712148622609675,
+      "option_logp": {
+        "A": -1.0919387340545654,
+        "B": -0.5919386744499207,
+        "C": -2.2169387340545654,
+        "D": -7.216938495635986
+      },
+      "retained_tokens": 22262,
+      "input_tokens": 55764,
+      "expert_rows": 7601452,
+      "peak_allocated_gib": 69.35304498672485,
+      "js_to_native": 0.12328335687816913
+    }
+  },
+  "complete": true
+}

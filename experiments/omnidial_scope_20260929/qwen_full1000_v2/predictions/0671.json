@@ -1,0 +1,55 @@
+{
+  "sample_index": 671,
+  "video": "videos/video_446.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 28730,
+    "total": 29216
+  },
+  "input_sha256": "173d2a323230e6740b59d795e6425a4cb38896d262e45e18300fc9f8205175d9",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. She rests",
+      "generation_s": 9.278093938948587,
+      "option_logp": {
+        "A": -2.5649406909942627,
+        "B": -1.0649406909942627,
+        "C": -0.5649406909942627,
+        "D": -5.189940452575684
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. She makes",
+      "generation_s": 10.020890339976177,
+      "option_logp": {
+        "A": -0.5980322360992432,
+        "B": -0.8480322360992432,
+        "C": -3.973032236099243,
+        "D": -6.348031997680664
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 8.632457804167643,
+      "option_logp": {
+        "A": -1.6930938959121704,
+        "B": -0.5680938959121704,
+        "C": -1.4430938959121704,
+        "D": -4.443093776702881
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

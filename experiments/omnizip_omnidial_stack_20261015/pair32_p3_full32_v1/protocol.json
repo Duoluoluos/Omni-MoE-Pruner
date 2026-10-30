@@ -1,0 +1,91 @@
+{
+  "schema": "omnizip-vs-stack-p3-paired-v1",
+  "model": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/models/Qwen3-Omni-30B-A3B-Instruct",
+  "dataset": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/eval_data/OmniVideoBench/data.json",
+  "dataset_sha256": "f6e503652b0061858a1c6cae19f28e870b753c2b8215b3fdcefb5c7f72f8e6ac",
+  "indices": [
+    32,
+    41,
+    71,
+    88,
+    94,
+    121,
+    200,
+    208,
+    211,
+    288,
+    295,
+    297,
+    315,
+    321,
+    333,
+    344,
+    389,
+    424,
+    515,
+    539,
+    546,
+    585,
+    641,
+    672,
+    678,
+    699,
+    769,
+    859,
+    870,
+    874,
+    882,
+    916
+  ],
+  "seed": 20261015,
+  "dtype": "bfloat16",
+  "batch_size": 1,
+  "max_new_tokens": 4,
+  "arms": [
+    "omnizip",
+    "stack"
+  ],
+  "scope": [
+    12,
+    32
+  ],
+  "frozen_gates": {
+    "path": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/p3_calibration_prep/run_v2/gates.json",
+    "sha256": "05ccd6934cb96d38a61cacc8d73b19ad9eced51acfabb75b949670f5a06ad49c",
+    "selected": "p3_balanced",
+    "tau2": 0.048523245017537825,
+    "tau4": 0.07061227278622294,
+    "captured_rows": 159840,
+    "selected_policy": {
+      "top2_fraction": 0.65,
+      "top4_fraction": 0.25,
+      "top8_fraction": 0.1,
+      "tau2": 0.048523245017537825,
+      "tau4": 0.07061227278622294,
+      "achieved_budget_fractions": {
+        "2": 0.6499968735588908,
+        "4": 0.25000517713014075,
+        "8": 0.09999794931096849
+      },
+      "mean_budget_in_scope": 3.0999980501260924,
+      "predicted_stack_expert_row_ratio": 0.30359653213877025,
+      "distance_to_target": 0.0035965321387702587
+    }
+  },
+  "omnizip": {
+    "rho_audio": 0.3,
+    "rho_video": 0.6,
+    "g": 3,
+    "contextual_ratio": 0.05
+  },
+  "row_accounting": "runtime GPU counter; NOT copied from full32_v1",
+  "ordering": "random.Random(SEED+sample_index).shuffle([omnizip,stack]); recorded per row",
+  "metrics": [
+    "latency_s",
+    "expert_rows(real)",
+    "option_logp",
+    "gold_logp",
+    "gold_delta_stack_minus_omnizip",
+    "accuracy"
+  ]
+}

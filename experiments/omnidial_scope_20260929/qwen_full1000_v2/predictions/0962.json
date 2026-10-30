@@ -1,0 +1,55 @@
+{
+  "sample_index": 962,
+  "video": "videos/video_613.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55855
+  },
+  "input_sha256": "a8d8d64afe2c44f1121eb7ba8fa0ed53cebb0c5722a38ba28c850e67013960de",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Australia (",
+      "generation_s": 22.7272409980651,
+      "option_logp": {
+        "A": -0.16845352947711945,
+        "B": -4.918453693389893,
+        "C": -1.918453574180603,
+        "D": -8.293453216552734
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. Australia (",
+      "generation_s": 22.16139357886277,
+      "option_logp": {
+        "A": -0.14971892535686493,
+        "B": -5.774718761444092,
+        "C": -2.024718999862671,
+        "D": -9.21221923828125
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A. Australia (",
+      "generation_s": 22.097362759988755,
+      "option_logp": {
+        "A": -0.3922792077064514,
+        "B": -5.767279148101807,
+        "C": -1.1422791481018066,
+        "D": -7.767279148101807
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

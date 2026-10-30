@@ -1,0 +1,243 @@
+{
+  "qwen": {
+    "status": "verified",
+    "n": 32,
+    "completed_at": "2026-09-30T15:12:29.497979+08:00",
+    "summary_sha256": "242b71ee1aea8aa0d7c4e560bee7354b78ccc5a2d2955009079499177a1b50cb",
+    "source_sha256": "ea4c81468dc3996f8577a897bd55f1e326e061cf4e46b4ba315e589790453814",
+    "probes": {
+      "routed_zero_early": {
+        "policy": {
+          "branch": "routed",
+          "scope": [
+            0,
+            20
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 3.125,
+          "accuracy_delta_pp": -25.0,
+          "gold_logp_delta": -6.392117486499956,
+          "flip_pct": 96.875
+        }
+      },
+      "routed_zero_middle": {
+        "policy": {
+          "branch": "routed",
+          "scope": [
+            12,
+            32
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 21.875,
+          "accuracy_delta_pp": -6.25,
+          "gold_logp_delta": 0.0778873514600491,
+          "flip_pct": 65.625
+        }
+      },
+      "routed_zero_late": {
+        "policy": {
+          "branch": "routed",
+          "scope": [
+            28,
+            48
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 15.625,
+          "accuracy_delta_pp": -12.5,
+          "gold_logp_delta": -0.7033493585668111,
+          "flip_pct": 71.875
+        }
+      }
+    },
+    "arms": {}
+  },
+  "unimoe": {
+    "status": "verified",
+    "n": 32,
+    "completed_at": "2026-09-30T14:59:22.842591+08:00",
+    "summary_sha256": "f47eca63f45693722ae9e73f22a461332038723007a1b82de35953bd638cf68e",
+    "source_sha256": "b0adcac30a38066b66b69d4cfaf757c18dc88ea3f363bb8d3e85cd72c116ddd4",
+    "probes": {
+      "routed_zero_early": {
+        "policy": {
+          "branch": "routed",
+          "scope": [
+            0,
+            12
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 6.25,
+          "accuracy_delta_pp": -18.75,
+          "gold_logp_delta": -5.459925728006056,
+          "flip_pct": 100
+        }
+      },
+      "shared_zero_early": {
+        "policy": {
+          "branch": "shared",
+          "scope": [
+            0,
+            12
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 28.125,
+          "accuracy_delta_pp": 3.125,
+          "gold_logp_delta": 0.03369944843871053,
+          "flip_pct": 15.625
+        }
+      },
+      "routed_zero_middle": {
+        "policy": {
+          "branch": "routed",
+          "scope": [
+            7,
+            19
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 25.0,
+          "accuracy_delta_pp": 0,
+          "gold_logp_delta": 0.2666932697466109,
+          "flip_pct": 78.125
+        }
+      },
+      "shared_zero_middle": {
+        "policy": {
+          "branch": "shared",
+          "scope": [
+            7,
+            19
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 28.125,
+          "accuracy_delta_pp": 3.125,
+          "gold_logp_delta": -0.018296096081030555,
+          "flip_pct": 3.125
+        }
+      },
+      "routed_zero_late": {
+        "policy": {
+          "branch": "routed",
+          "scope": [
+            16,
+            28
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 18.75,
+          "accuracy_delta_pp": -6.25,
+          "gold_logp_delta": -0.8557000758301001,
+          "flip_pct": 62.5
+        }
+      },
+      "shared_zero_late": {
+        "policy": {
+          "branch": "shared",
+          "scope": [
+            16,
+            28
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 28.125,
+          "accuracy_delta_pp": 3.125,
+          "gold_logp_delta": 0.004260499807969609,
+          "flip_pct": 3.125
+        }
+      }
+    },
+    "arms": {
+      "cg_late_protect_last": {
+        "policy": {
+          "kind": "cgcc",
+          "scope": [
+            16,
+            27
+          ]
+        },
+        "vs_native": {
+          "n": 32,
+          "accuracy_pct": 31.25,
+          "accuracy_delta_pp": 6.25,
+          "gold_logp_delta": 0.07654583015391836,
+          "flip_pct": 12.5
+        },
+        "vs_late": {
+          "n": 32,
+          "accuracy_pct": 31.25,
+          "accuracy_delta_pp": 6.25,
+          "gold_logp_delta": 0.719535779011494,
+          "flip_pct": 9.375
+        },
+        "work": {
+          "new": {
+            "prefill_routed_rows": 10919792,
+            "prefill_shared_rows": 11922176,
+            "prefill_tokens": 5961088,
+            "decode_routed_rows": 3692,
+            "decode_shared_rows": 2240,
+            "decode_tokens": 1120
+          },
+          "late": {
+            "prefill_routed_rows": 10820908,
+            "prefill_shared_rows": 11922176,
+            "prefill_tokens": 5961088,
+            "decode_routed_rows": 3688,
+            "decode_shared_rows": 2296,
+            "decode_tokens": 1148
+          },
+          "native": {
+            "prefill_routed_rows": 11955428,
+            "prefill_shared_rows": 11922176,
+            "prefill_tokens": 5961088,
+            "decode_routed_rows": 3696,
+            "decode_shared_rows": 1848,
+            "decode_tokens": 924
+          }
+        }
+      }
+    },
+    "terminal_work_change_pct": 0.9138234979911175,
+    "new_native_work_pct": 91.33752467916665,
+    "late_native_work_pct": 90.5104192003833,
+    "late_correct": 8,
+    "protected_correct": 10
+  },
+  "checked_at": "2026-10-05T07:04:22.150725+00:00",
+  "worker_check": {
+    "worker": "ed8cf8975c804c34.worker_0.job.wangqi-2248@merlin-ssh-proxy-cn.byted.org:22222",
+    "ssh_exit_code": 255,
+    "message": "ssh-proxy error: job run ed8cf8975c804c34 is not running",
+    "inference_failure": false
+  },
+  "main_table_gap_tasks": {
+    "configurations": 6,
+    "launched": 0,
+    "job_groups": 5,
+    "status": "planned; not queued"
+  },
+  "quota_resolution": {
+    "date": "2026-10-05",
+    "cleanup_record": "research_paper/maintenance/cleanup_20261005.json",
+    "files_deleted": 5557,
+    "logical_bytes_released": 258399448,
+    "write_probe": "passed: directory creation + 1 MiB + fsync + atomic rename",
+    "normal_sandbox_execution_restored": true
+  },
+  "environment_issue_at_original_check": "Sandbox startup failed: cannot mkdir project/.aws: Disk quota exceeded. Read-only checks completed outside sandbox; no data cleanup performed."
+}

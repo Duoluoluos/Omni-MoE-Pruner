@@ -1,0 +1,55 @@
+{
+  "sample_index": 777,
+  "video": "videos/video_526.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55801
+  },
+  "input_sha256": "378d7c35fa4712d6d098a8990c8ddfb44c88b3c0129dfda1ffd57c5fbad337c2",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Food,",
+      "generation_s": 22.662339766975492,
+      "option_logp": {
+        "A": -0.29560595750808716,
+        "B": -4.7956061363220215,
+        "C": -1.4206058979034424,
+        "D": -5.4206061363220215
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C. Food,",
+      "generation_s": 22.006762905046344,
+      "option_logp": {
+        "A": -1.613631010055542,
+        "B": -4.613631248474121,
+        "C": -0.23863102495670319,
+        "D": -6.113631248474121
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. Food,",
+      "generation_s": 22.247171096038073,
+      "option_logp": {
+        "A": -0.6862483620643616,
+        "B": -3.061248302459717,
+        "C": -0.8112483620643616,
+        "D": -6.311248302459717
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

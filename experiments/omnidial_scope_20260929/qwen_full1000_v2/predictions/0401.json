@@ -1,0 +1,55 @@
+{
+  "sample_index": 401,
+  "video": "videos/video_238.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55748
+  },
+  "input_sha256": "7f207a43509629349fd5ec1974e9859c97832e271f8459299c13d05b0575892f",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.533306300174445,
+      "option_logp": {
+        "A": -1.3208646774291992,
+        "B": -6.070864677429199,
+        "C": -0.32086464762687683,
+        "D": -6.320864677429199
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.98482339316979,
+      "option_logp": {
+        "A": -0.4333093464374542,
+        "B": -6.808309555053711,
+        "C": -1.0583093166351318,
+        "D": -6.683309555053711
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Tense",
+      "generation_s": 22.968209831044078,
+      "option_logp": {
+        "A": -1.0590286254882812,
+        "B": -5.934028625488281,
+        "C": -0.43402859568595886,
+        "D": -6.559028625488281
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

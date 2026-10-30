@@ -1,0 +1,55 @@
+{
+  "sample_index": 644,
+  "video": "videos/video_427.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 37872,
+    "total": 38346
+  },
+  "input_sha256": "f6cc05fcc0ab1c08810c76d21391464c80f6ce44eb01c1afa0228baaa4a16c51",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 12.355347592849284,
+      "option_logp": {
+        "A": -3.9246394634246826,
+        "B": -5.4246392250061035,
+        "C": -0.5496394038200378,
+        "D": -0.9246394038200378
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Ross doesn",
+      "generation_s": 13.037846618099138,
+      "option_logp": {
+        "A": -2.7068490982055664,
+        "B": -5.706849098205566,
+        "C": -0.08184906095266342,
+        "D": -4.956849098205566
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Ross wants",
+      "generation_s": 13.77637422713451,
+      "option_logp": {
+        "A": -0.7610992789268494,
+        "B": -3.886099338531494,
+        "C": -0.7610992789268494,
+        "D": -3.136099338531494
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

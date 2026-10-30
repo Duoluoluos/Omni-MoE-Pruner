@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnidial_remaining_20261006/queue.py", line 63, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnidial_remaining_20261006/queue.py", line 42, in main
+    progress=read(out/'progress.json') if (out/'progress.json').exists() else None
+             ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnidial_remaining_20261006/common.py", line 8, in read
+    def read(p):return json.loads(Path(p).read_text())
+                                  ^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.11/pathlib.py", line 1060, in read_text
+    return f.read()
+           ^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory
+Supervisor PID 993347; worker-local locks: /tmp/omnidial_remaining_20261006_locks
+Backfill qwen_all_avut: PID 993348; attempt 1 this supervisor
+Launched qwen_all_worldsense on GPU0: PID 993350
+Backfill unimoe_partial_avut: PID 993351; attempt 1 this supervisor
+Backfill qwen_all_avut: complete (exit 0)
+Backfill unimoe_partial_avut: complete (exit 0)
+Backfill unimoe_partial_worldsense: PID 1207972; attempt 1 this supervisor
+Launched unimoe_baselines_ovb on GPU1: PID 1207993
+Backfill unimoe_partial_worldsense: complete (exit 0)
+Backfill unimoe_baselines_ovb: PID 1582356; attempt 1 this supervisor
+Launched unimoe_terminal_ovb on GPU1: PID 1582358
+Backfill unimoe_baselines_ovb: complete (exit 0)
+Backfill qwen_all_worldsense: PID 1623956; attempt 1 this supervisor
+Backfill qwen_all_worldsense: complete (exit 0)

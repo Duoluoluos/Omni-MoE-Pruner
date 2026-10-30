@@ -1,0 +1,55 @@
+{
+  "sample_index": 327,
+  "video": "videos/video_175.mp4",
+  "counts": {
+    "audio": 382,
+    "video": 4176,
+    "total": 4630
+  },
+  "input_sha256": "95257691a9eb5382d0e23bc2c83d2414cbf7455f0c53b5e9cf1a6ee0507bdad9",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.0609689990524203,
+      "option_logp": {
+        "A": -6.884096145629883,
+        "B": -0.009096252731978893,
+        "C": -4.884096145629883,
+        "D": -8.634096145629883
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. To demonstrate",
+      "generation_s": 3.5199978530872613,
+      "option_logp": {
+        "A": -4.794742584228516,
+        "B": -0.1697424203157425,
+        "C": -1.919742465019226,
+        "D": -8.294742584228516
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. To measure",
+      "generation_s": 2.6318571099545807,
+      "option_logp": {
+        "A": -5.073258876800537,
+        "B": -1.3232591152191162,
+        "C": -0.3232590854167938,
+        "D": -6.698258876800537
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

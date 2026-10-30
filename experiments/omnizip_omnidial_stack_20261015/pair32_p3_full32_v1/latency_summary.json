@@ -1,0 +1,36 @@
+{
+  "n": 32,
+  "stack_mean_latency_s": 4.274547234294005,
+  "omnizip_mean_latency_s": 4.314771814504638,
+  "latency": {
+    "mean_of_ratios": 1.0225292588616544,
+    "ci95_mean_of_ratios": [
+      0.9924359112880885,
+      1.057875133134262
+    ],
+    "ratio_of_means": 0.9906774721955368,
+    "ci95_ratio_of_means": [
+      0.9807096775242921,
+      1.0020101850952055
+    ],
+    "paired_mean_diff_s": -0.040224580210633576,
+    "ci95_paired_mean_diff_s": [
+      -0.0894050211441936,
+      0.007593005156377304
+    ],
+    "bootstrap_method": "per-replicate sample mean; paired index resampling (B=2000, seed=20261015); percentiles over 2000 replicate means, NOT over flattened B*n individual values"
+  },
+  "expert_row_ratio": {
+    "mean_of_ratios": 0.7409897014709559,
+    "ci95_mean_of_ratios": [
+      0.7370649276945069,
+      0.7446637932894343
+    ],
+    "ratio_of_means": 0.7426163989414082,
+    "ci95_ratio_of_means": [
+      0.7381490844117831,
+      0.7466405419449873
+    ]
+  },
+  "regenerated_from": "raw_results.jsonl (read-only); bootstrap CI corrected to per-replicate mean"
+}

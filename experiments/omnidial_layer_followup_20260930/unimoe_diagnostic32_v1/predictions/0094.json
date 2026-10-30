@@ -1,0 +1,548 @@
+{
+  "sample_index": 94,
+  "video": "videos/video_42.mp4",
+  "input_sha256": "fdb4d0dec217c2c6db0d24b92fb24772d544f57bcb5f8af59c90d9f5d9dd5d43",
+  "counts": {
+    "audio": 4000,
+    "video": 4608,
+    "total": 8682
+  },
+  "arms": {
+    "cg_late_protect_last": {
+      "answer": "B",
+      "output_text": "B",
+      "option_logp": {
+        "A": -1.4675569534301758,
+        "B": -0.9675569534301758,
+        "C": -1.8425569534301758,
+        "D": -1.4675569534301758
+      },
+      "generation_s": 3.8600070860702544,
+      "execution_session": "20260930T143629_g340-cd51-5100-b698-202f-fe01-948c_437482",
+      "work_ledger": {
+        "prefill:0": {
+          "routed_rows": 24648,
+          "shared_rows": 17364,
+          "selected_slots": 28105,
+          "selected_real": 22603,
+          "selected_null": 5502,
+          "tokens": 8682
+        },
+        "prefill:1": {
+          "routed_rows": 20840,
+          "shared_rows": 17364,
+          "selected_slots": 22816,
+          "selected_real": 18245,
+          "selected_null": 4571,
+          "tokens": 8682
+        },
+        "prefill:2": {
+          "routed_rows": 18396,
+          "shared_rows": 17364,
+          "selected_slots": 20883,
+          "selected_real": 16582,
+          "selected_null": 4301,
+          "tokens": 8682
+        },
+        "prefill:3": {
+          "routed_rows": 17124,
+          "shared_rows": 17364,
+          "selected_slots": 18270,
+          "selected_real": 14734,
+          "selected_null": 3536,
+          "tokens": 8682
+        },
+        "prefill:4": {
+          "routed_rows": 17216,
+          "shared_rows": 17364,
+          "selected_slots": 19080,
+          "selected_real": 14898,
+          "selected_null": 4182,
+          "tokens": 8682
+        },
+        "prefill:5": {
+          "routed_rows": 14972,
+          "shared_rows": 17364,
+          "selected_slots": 16833,
+          "selected_real": 13637,
+          "selected_null": 3196,
+          "tokens": 8682
+        },
+        "prefill:6": {
+          "routed_rows": 21060,
+          "shared_rows": 17364,
+          "selected_slots": 23003,
+          "selected_real": 18166,
+          "selected_null": 4837,
+          "tokens": 8682
+        },
+        "prefill:7": {
+          "routed_rows": 19972,
+          "shared_rows": 17364,
+          "selected_slots": 22734,
+          "selected_real": 18464,
+          "selected_null": 4270,
+          "tokens": 8682
+        },
+        "prefill:8": {
+          "routed_rows": 20492,
+          "shared_rows": 17364,
+          "selected_slots": 23626,
+          "selected_real": 19132,
+          "selected_null": 4494,
+          "tokens": 8682
+        },
+        "prefill:9": {
+          "routed_rows": 19988,
+          "shared_rows": 17364,
+          "selected_slots": 21252,
+          "selected_real": 17348,
+          "selected_null": 3904,
+          "tokens": 8682
+        },
+        "prefill:10": {
+          "routed_rows": 19920,
+          "shared_rows": 17364,
+          "selected_slots": 22451,
+          "selected_real": 19093,
+          "selected_null": 3358,
+          "tokens": 8682
+        },
+        "prefill:11": {
+          "routed_rows": 20804,
+          "shared_rows": 17364,
+          "selected_slots": 22864,
+          "selected_real": 19203,
+          "selected_null": 3661,
+          "tokens": 8682
+        },
+        "prefill:12": {
+          "routed_rows": 19812,
+          "shared_rows": 17364,
+          "selected_slots": 22634,
+          "selected_real": 18399,
+          "selected_null": 4235,
+          "tokens": 8682
+        },
+        "prefill:13": {
+          "routed_rows": 21196,
+          "shared_rows": 17364,
+          "selected_slots": 22437,
+          "selected_real": 18515,
+          "selected_null": 3922,
+          "tokens": 8682
+        },
+        "prefill:14": {
+          "routed_rows": 23168,
+          "shared_rows": 17364,
+          "selected_slots": 22740,
+          "selected_real": 19407,
+          "selected_null": 3333,
+          "tokens": 8682
+        },
+        "prefill:15": {
+          "routed_rows": 20668,
+          "shared_rows": 17364,
+          "selected_slots": 23505,
+          "selected_real": 19029,
+          "selected_null": 4476,
+          "tokens": 8682
+        },
+        "prefill:16": {
+          "routed_rows": 16144,
+          "shared_rows": 17364,
+          "selected_slots": 16828,
+          "selected_real": 14175,
+          "selected_null": 2653,
+          "tokens": 8682
+        },
+        "prefill:17": {
+          "routed_rows": 13552,
+          "shared_rows": 17364,
+          "selected_slots": 16189,
+          "selected_real": 13081,
+          "selected_null": 3108,
+          "tokens": 8682
+        },
+        "prefill:18": {
+          "routed_rows": 15268,
+          "shared_rows": 17364,
+          "selected_slots": 16937,
+          "selected_real": 14055,
+          "selected_null": 2882,
+          "tokens": 8682
+        },
+        "prefill:19": {
+          "routed_rows": 15304,
+          "shared_rows": 17364,
+          "selected_slots": 16775,
+          "selected_real": 13459,
+          "selected_null": 3316,
+          "tokens": 8682
+        },
+        "prefill:20": {
+          "routed_rows": 14784,
+          "shared_rows": 17364,
+          "selected_slots": 15963,
+          "selected_real": 12855,
+          "selected_null": 3108,
+          "tokens": 8682
+        },
+        "prefill:21": {
+          "routed_rows": 11084,
+          "shared_rows": 17364,
+          "selected_slots": 13410,
+          "selected_real": 9945,
+          "selected_null": 3465,
+          "tokens": 8682
+        },
+        "prefill:22": {
+          "routed_rows": 10596,
+          "shared_rows": 17364,
+          "selected_slots": 11934,
+          "selected_real": 8979,
+          "selected_null": 2955,
+          "tokens": 8682
+        },
+        "prefill:23": {
+          "routed_rows": 7872,
+          "shared_rows": 17364,
+          "selected_slots": 9147,
+          "selected_real": 7283,
+          "selected_null": 1864,
+          "tokens": 8682
+        },
+        "prefill:24": {
+          "routed_rows": 10068,
+          "shared_rows": 17364,
+          "selected_slots": 9041,
+          "selected_real": 7464,
+          "selected_null": 1577,
+          "tokens": 8682
+        },
+        "prefill:25": {
+          "routed_rows": 7248,
+          "shared_rows": 17364,
+          "selected_slots": 8441,
+          "selected_real": 6874,
+          "selected_null": 1567,
+          "tokens": 8682
+        },
+        "prefill:26": {
+          "routed_rows": 10300,
+          "shared_rows": 17364,
+          "selected_slots": 10449,
+          "selected_real": 8365,
+          "selected_null": 2084,
+          "tokens": 8682
+        },
+        "prefill:27": {
+          "routed_rows": 11672,
+          "shared_rows": 17364,
+          "selected_slots": 15130,
+          "selected_real": 9014,
+          "selected_null": 6116,
+          "tokens": 8682
+        },
+        "decode:0": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 4,
+          "selected_real": 3,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:1": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 3,
+          "selected_real": 2,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:2": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 1,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:3": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 1,
+          "selected_real": 1,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:4": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 3,
+          "selected_real": 2,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:5": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 2,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:6": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 3,
+          "selected_real": 2,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:7": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 1,
+          "selected_real": 1,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:8": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 3,
+          "selected_real": 2,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:9": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 3,
+          "selected_real": 2,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:10": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 1,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:11": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 1,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:12": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 1,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:13": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 1,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:14": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 1,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:15": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 1,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:16": {
+          "routed_rows": 0,
+          "shared_rows": 2,
+          "selected_slots": 0,
+          "selected_real": 0,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:17": {
+          "routed_rows": 0,
+          "shared_rows": 2,
+          "selected_slots": 0,
+          "selected_real": 0,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:18": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 1,
+          "selected_null": 1,
+          "tokens": 1
+        },
+        "decode:19": {
+          "routed_rows": 0,
+          "shared_rows": 2,
+          "selected_slots": 0,
+          "selected_real": 0,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:20": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 2,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:21": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 2,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:22": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 2,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:23": {
+          "routed_rows": 0,
+          "shared_rows": 2,
+          "selected_slots": 0,
+          "selected_real": 0,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:24": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 2,
+          "selected_real": 2,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:25": {
+          "routed_rows": 0,
+          "shared_rows": 2,
+          "selected_slots": 0,
+          "selected_real": 0,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:26": {
+          "routed_rows": 0,
+          "shared_rows": 2,
+          "selected_slots": 0,
+          "selected_real": 0,
+          "selected_null": 0,
+          "tokens": 1
+        },
+        "decode:27": {
+          "routed_rows": 4,
+          "shared_rows": 2,
+          "selected_slots": 3,
+          "selected_real": 3,
+          "selected_null": 0,
+          "tokens": 1
+        }
+      },
+      "instrumentation_identity": true,
+      "profile_js": 0.0
+    }
+  },
+  "probes": {
+    "shared_zero_early": {
+      "answer": "B",
+      "output_text": "B",
+      "option_logp": {
+        "A": -1.3746916055679321,
+        "B": -1.1246916055679321,
+        "C": -1.9996916055679321,
+        "D": -1.2496916055679321
+      },
+      "execution_session": "20260930T143629_g340-cd51-5100-b698-202f-fe01-948c_437482"
+    },
+    "shared_zero_middle": {
+      "answer": "B",
+      "output_text": "B",
+      "option_logp": {
+        "A": -1.5455238819122314,
+        "B": -0.9205238819122314,
+        "C": -1.9205238819122314,
+        "D": -1.4205238819122314
+      },
+      "execution_session": "20260930T143629_g340-cd51-5100-b698-202f-fe01-948c_437482"
+    },
+    "routed_zero_early": {
+      "answer": null,
+      "output_text": "6\n7",
+      "option_logp": {
+        "A": -8.638093948364258,
+        "B": -6.856843948364258,
+        "C": -7.731843948364258,
+        "D": -7.950593948364258
+      },
+      "execution_session": "20260930T143629_g340-cd51-5100-b698-202f-fe01-948c_437482"
+    },
+    "routed_zero_late": {
+      "answer": "A",
+      "output_text": "A",
+      "option_logp": {
+        "A": -0.056493308395147324,
+        "B": -5.431493282318115,
+        "C": -4.556493282318115,
+        "D": -3.4314932823181152
+      },
+      "execution_session": "20260930T143629_g340-cd51-5100-b698-202f-fe01-948c_437482"
+    },
+    "routed_zero_middle": {
+      "answer": "C",
+      "output_text": "C",
+      "option_logp": {
+        "A": -2.077655076980591,
+        "B": -3.077655076980591,
+        "C": -0.6401550769805908,
+        "D": -1.5776550769805908
+      },
+      "execution_session": "20260930T143629_g340-cd51-5100-b698-202f-fe01-948c_437482"
+    },
+    "shared_zero_late": {
+      "answer": "B",
+      "output_text": "B",
+      "option_logp": {
+        "A": -1.498795986175537,
+        "B": -0.8737960457801819,
+        "C": -1.998795986175537,
+        "D": -1.498795986175537
+      },
+      "execution_session": "20260930T143629_g340-cd51-5100-b698-202f-fe01-948c_437482"
+    }
+  },
+  "execution_session": "20260930T143629_g340-cd51-5100-b698-202f-fe01-948c_437482",
+  "gates_sha256": "c430e4e0f843dbba0060b45cae47716100224fafed11e282a5bc3e08e800d99a",
+  "manifest_sha256": "2d483c44a3636f7083fb1170a123c63439bd5cdee727ed3d19290e2ff7daeb30",
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 391,
+  "video": "videos/video_228.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55753
+  },
+  "input_sha256": "4c2ec8b120f9bfde6d302e88554b0722180301c154e3ec8cf553e523d1305b38",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A. Look the",
+      "generation_s": 22.071172968950123,
+      "option_logp": {
+        "A": -0.013540566898882389,
+        "B": -6.138540744781494,
+        "C": -4.638540744781494,
+        "D": -7.513540744781494
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.834217321826145,
+      "option_logp": {
+        "A": -0.03153084218502045,
+        "B": -4.031530857086182,
+        "C": -4.656530857086182,
+        "D": -6.406530857086182
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Look the",
+      "generation_s": 22.792718107113615,
+      "option_logp": {
+        "A": -0.006815164815634489,
+        "B": -6.506814956665039,
+        "C": -5.506814956665039,
+        "D": -7.506814956665039
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

@@ -1,0 +1,23 @@
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (6.0.0.post1)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_interleaved', 'interleaved', 'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'interleaved', 'mrope_section'}
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Loading checkpoint shards:   0%|          | 0/15 [00:00<?, ?it/s]Loading checkpoint shards:   7%|▋         | 1/15 [00:12<03:01, 12.99s/it]Loading checkpoint shards:  13%|█▎        | 2/15 [00:25<02:48, 12.97s/it]Loading checkpoint shards:  20%|██        | 3/15 [00:39<02:36, 13.07s/it]Loading checkpoint shards:  27%|██▋       | 4/15 [00:52<02:26, 13.31s/it]Loading checkpoint shards:  33%|███▎      | 5/15 [01:05<02:12, 13.22s/it]Loading checkpoint shards:  40%|████      | 6/15 [01:19<01:59, 13.23s/it]Loading checkpoint shards:  47%|████▋     | 7/15 [01:32<01:45, 13.14s/it]Loading checkpoint shards:  53%|█████▎    | 8/15 [01:45<01:31, 13.12s/it]Loading checkpoint shards:  60%|██████    | 9/15 [01:58<01:18, 13.10s/it]Loading checkpoint shards:  67%|██████▋   | 10/15 [02:11<01:05, 13.13s/it]Loading checkpoint shards:  73%|███████▎  | 11/15 [02:25<00:53, 13.31s/it]Loading checkpoint shards:  80%|████████  | 12/15 [02:38<00:40, 13.35s/it]Loading checkpoint shards:  87%|████████▋ | 13/15 [02:53<00:27, 13.85s/it]Loading checkpoint shards:  93%|█████████▎| 14/15 [03:08<00:14, 14.12s/it]Loading checkpoint shards: 100%|██████████| 15/15 [03:09<00:00, 10.32s/it]Loading checkpoint shards: 100%|██████████| 15/15 [03:09<00:00, 12.65s/it]
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.tmp/qwen_runtime_mcore_20260924/python/megatron/core/transformer/transformer_config.py:1065: UserWarning: Using a large number of experts (e.g. >=32) without fp32 routing. Consider enabling moe_router_dtype for better numerical stability.
+  warnings.warn(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+qwen-vl-utils using decord to read video.
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+[rank0]:[W1015 19:12:42.212838251 ProcessGroupNCCL.cpp:1496] Warning: WARNING: destroy_process_group() was not called before program exit, which can leak resources. For more info, please see https://pytorch.org/docs/stable/distributed.html#shutdown (function operator())

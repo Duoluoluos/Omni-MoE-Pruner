@@ -1,0 +1,161 @@
+{
+  "worker": "921134cf872ab4e8",
+  "pid": 993347,
+  "jobs": {
+    "qwen_all_avut": {
+      "gpu": 0,
+      "execution": "complete",
+      "result_status": "verified",
+      "pid": 102679,
+      "adopted": true,
+      "started_check": 1791254135.80565,
+      "progress": {
+        "stage": "complete",
+        "completed": 1733,
+        "expected": 1733,
+        "pid": 102679,
+        "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+        "session": "20261006T103233_g340-cd51-4b00-156b-5f51-68a7-8693_102679",
+        "time": 1791270055.4957447,
+        "result_status": "verified"
+      },
+      "summary_sha256": "1ea57b8dc471a14b3c4eb11c457519d0f48d6fe83f5e4573d8d9abe5d8329dd9",
+      "backfill": "complete",
+      "backfill_pid": 993348,
+      "backfill_started": 1791275529.8166382,
+      "backfill_exit_code": 0,
+      "backfill_finished": 1791275571.8564944
+    },
+    "unimoe_partial_avut": {
+      "gpu": 1,
+      "execution": "complete",
+      "result_status": "verified",
+      "pid": 102680,
+      "adopted": true,
+      "started_check": 1791254135.8125415,
+      "progress": {
+        "stage": "complete",
+        "completed": 1733,
+        "expected": 1733,
+        "pid": 102680,
+        "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+        "session": "20261006T103226_g340-cd51-4b00-156b-5f51-68a7-8693_102680",
+        "time": 1791265420.0715775,
+        "result_status": "verified"
+      },
+      "summary_sha256": "218a2196de33ddc50eef3874e7754f2707ac5ed32d17fdf6a2ec8053ac21bae5",
+      "backfill": "complete",
+      "backfill_exit_code": 0,
+      "backfill_history": [
+        {
+          "backfill": "failed",
+          "backfill_exit_code": 1
+        }
+      ],
+      "backfill_pid": 993351,
+      "backfill_started": 1791275530.6705706,
+      "backfill_finished": 1791275571.8634806
+    },
+    "unimoe_partial_worldsense": {
+      "gpu": 1,
+      "execution": "complete",
+      "result_status": "verified",
+      "pid": 578987,
+      "started_check": 1791265425.4019105,
+      "progress": {
+        "stage": "complete",
+        "completed": 3170,
+        "expected": 3170,
+        "pid": 578987,
+        "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+        "session": "20261006T134350_g340-cd51-4b00-156b-5f51-68a7-8693_578987",
+        "time": 1791279940.487299,
+        "result_status": "verified"
+      },
+      "pid_identity_verified": true,
+      "summary_sha256": "30da428bf4093ad175a8907c8465efadf166528f217504ea69d1058cd10ab6f9",
+      "backfill": "complete",
+      "backfill_pid": 1207972,
+      "backfill_started": 1791279956.415379,
+      "backfill_exit_code": 0,
+      "backfill_finished": 1791279998.01069
+    },
+    "qwen_all_worldsense": {
+      "gpu": 0,
+      "execution": "complete",
+      "result_status": "verified",
+      "progress": {
+        "stage": "complete",
+        "completed": 3170,
+        "expected": 3170,
+        "pid": 993350,
+        "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+        "session": "20261006T163224_g340-cd51-4b00-156b-5f51-68a7-8693_993350",
+        "time": 1791298845.1975372,
+        "result_status": "verified"
+      },
+      "pid": 993350,
+      "started_check": 1791275530.3853571,
+      "pid_identity_verified": true,
+      "failure": "Duplicate matching inference processes: [993350, 1427961]",
+      "summary_sha256": "0cddc73bec31e71c36a6a47e94bc14f9d766f0b1e8c76c4afaf04cbf94c77412",
+      "backfill": "complete",
+      "backfill_pid": 1623956,
+      "backfill_started": 1791298848.3981998,
+      "backfill_exit_code": 0,
+      "backfill_finished": 1791298889.3315032
+    },
+    "unimoe_baselines_ovb": {
+      "gpu": 1,
+      "execution": "complete",
+      "result_status": "verified",
+      "progress": {
+        "stage": "complete",
+        "completed": 1000,
+        "expected": 1000,
+        "pid": 1207993,
+        "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+        "session": "20261006T174602_g340-cd51-4b00-156b-5f51-68a7-8693_1207993",
+        "time": 1791295106.8377285,
+        "result_status": "verified"
+      },
+      "pid": 1207993,
+      "started_check": 1791279956.999746,
+      "pid_identity_verified": true,
+      "summary_sha256": "6a359fe1a1b2cd7d849c1bb3a0d8d801845b47631539a9d35d6bada3558ae5da",
+      "backfill": "complete",
+      "backfill_pid": 1582356,
+      "backfill_started": 1791295112.4393723,
+      "backfill_exit_code": 0,
+      "backfill_finished": 1791295133.5187697
+    },
+    "unimoe_terminal_ovb": {
+      "gpu": 1,
+      "execution": "failed",
+      "result_status": "planned",
+      "progress": {
+        "stage": "preflight_passed",
+        "completed": 0,
+        "expected": 1000,
+        "pid": 1582358,
+        "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+        "session": "20261006T215837_g340-cd51-4b00-156b-5f51-68a7-8693_1582358",
+        "time": 1791295163.7295318,
+        "backend": "unimoe_native_deepspeed",
+        "counts": {
+          "audio": 1400,
+          "video": 4608,
+          "total": 6111
+        }
+      },
+      "pid": 1582358,
+      "started_check": 1791295112.993546,
+      "pid_identity_verified": true,
+      "failure": "Process exited without a verified full result; see run.log. Other independent queued jobs may proceed."
+    }
+  },
+  "checked_time": 1791298909.6732693,
+  "phase": "complete_with_failures",
+  "lock_directory": "/tmp/omnidial_remaining_20261006_locks",
+  "supervisor_started": 1791275529.5196183
+}

@@ -1,0 +1,101 @@
+{
+  "result_status": "verified",
+  "n": 1000,
+  "timed_n": 995,
+  "reused_n": 0,
+  "model": "unimoe",
+  "benchmark": "omnivideobench",
+  "scope": [
+    7,
+    19
+  ],
+  "backend": "unimoe_native_deepspeed",
+  "task_ids": [
+    "MT-U-ALLOC",
+    "MT-U-ASET"
+  ],
+  "raw_sha256": "166279d4cdf8c158e1c0f7bf496926684af61da83109e6ab663028c665a4c1f1",
+  "manifest_sha256": "1f436d698c95a62bbd1e0d8db68d98e6e270e655377a4a0f493c950fad95f4f5",
+  "arms_sha256": "a299eb6fa27aee62305538d040f75cb0b984fa2a4c5e31f639dcef666a4a17ce",
+  "arms": {
+    "alloc": {
+      "policy": {
+        "kind": "alloc",
+        "scope": [
+          7,
+          19
+        ],
+        "schedule": [
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          2,
+          2,
+          1,
+          2,
+          3,
+          2,
+          2,
+          1,
+          1,
+          2,
+          3,
+          2,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4,
+          4
+        ],
+        "global_assigned_budget": 23,
+        "exact_budget_control": true
+      },
+      "correct": 371,
+      "accuracy_percent": 37.1,
+      "generation_seconds": 2.861580653575216,
+      "diagnostic_prefill_work": {
+        "routed_rows": 10732012,
+        "shared_rows": 11922176,
+        "selected_slots": 12052117,
+        "selected_real": 9775372,
+        "selected_null": 2276745,
+        "tokens": 5961088
+      }
+    },
+    "aset": {
+      "policy": {
+        "kind": "aset",
+        "scope": [
+          7,
+          19
+        ],
+        "theta_min": 0.5375000000000001,
+        "theta_max": 0.7375,
+        "gamma": 2.0,
+        "assigned_mean": 1.9223521947860718,
+        "target": 1.9076172074263784
+      },
+      "correct": 382,
+      "accuracy_percent": 38.2,
+      "generation_seconds": 2.861728670531837,
+      "diagnostic_prefill_work": {
+        "routed_rows": 10669828,
+        "shared_rows": 11922176,
+        "selected_slots": 11934569,
+        "selected_real": 9740293,
+        "selected_null": 2194276,
+        "tokens": 5961088
+      }
+    }
+  },
+  "checked_time": 1791295118.2854927,
+  "verification": "Full frozen question coverage, exact source/input/gate hashes, modality preflight, per-session warmup, finite metrics; historical controls are separate sessions."
+}

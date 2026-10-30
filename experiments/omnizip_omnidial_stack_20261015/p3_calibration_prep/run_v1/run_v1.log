@@ -1,0 +1,20 @@
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (6.0.0.post1)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'interleaved', 'mrope_interleaved', 'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'interleaved', 'mrope_section'}
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Loading checkpoint shards:   0%|          | 0/15 [00:00<?, ?it/s]Loading checkpoint shards:   7%|▋         | 1/15 [00:22<05:19, 22.80s/it]Loading checkpoint shards:  13%|█▎        | 2/15 [00:44<04:48, 22.23s/it]Loading checkpoint shards:  20%|██        | 3/15 [01:06<04:22, 21.85s/it]Loading checkpoint shards:  27%|██▋       | 4/15 [01:28<04:01, 21.95s/it]Loading checkpoint shards:  33%|███▎      | 5/15 [01:49<03:37, 21.74s/it]Loading checkpoint shards:  40%|████      | 6/15 [02:12<03:18, 22.01s/it]Loading checkpoint shards:  47%|████▋     | 7/15 [02:33<02:55, 21.94s/it]Loading checkpoint shards:  53%|█████▎    | 8/15 [02:56<02:34, 22.14s/it]Loading checkpoint shards:  60%|██████    | 9/15 [03:18<02:12, 22.15s/it]Loading checkpoint shards:  67%|██████▋   | 10/15 [03:41<01:52, 22.53s/it]Loading checkpoint shards:  73%|███████▎  | 11/15 [04:04<01:29, 22.39s/it]Loading checkpoint shards:  80%|████████  | 12/15 [04:26<01:07, 22.43s/it]Loading checkpoint shards:  87%|████████▋ | 13/15 [04:49<00:45, 22.66s/it]Loading checkpoint shards:  93%|█████████▎| 14/15 [05:13<00:23, 23.02s/it]Loading checkpoint shards: 100%|██████████| 15/15 [05:16<00:00, 16.83s/it]Loading checkpoint shards: 100%|██████████| 15/15 [05:16<00:00, 21.07s/it]
+Traceback (most recent call last):
+  File "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/calibrate_p3.py", line 71, in <module>
+    try:main()
+        ^^^^^^
+  File "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/calibrate_p3.py", line 41, in main
+    ctl=MCoreQwenControllerP0(model,scope=SCOPE,tau_reduce=0.08694529702904027)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/qwen_mcore_controller_p0.py", line 13, in __init__
+    block.grouped_experts=MCoreGroupedExpertsP0(block)
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/qwen_mcore_experts_p0.py", line 27, in __init__
+    from megatron.core.transformer.moe.experts import GroupedMLP
+ModuleNotFoundError: No module named 'megatron'

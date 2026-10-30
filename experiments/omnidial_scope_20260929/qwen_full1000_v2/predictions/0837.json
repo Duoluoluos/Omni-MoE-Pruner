@@ -1,0 +1,55 @@
+{
+  "sample_index": 837,
+  "video": "videos/video_562.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 6336,
+    "total": 6840
+  },
+  "input_sha256": "e35a7440e6bf8b87a7c95bcfce80b0b26bc5f2a98b631f08f1efb1ed0da53fa2",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 2.402572758961469,
+      "option_logp": {
+        "A": -1.9470151662826538,
+        "B": -5.947015285491943,
+        "C": -3.6970150470733643,
+        "D": -0.19701513648033142
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 2.4053503258619457,
+      "option_logp": {
+        "A": -1.3055473566055298,
+        "B": -3.6805472373962402,
+        "C": -3.0555472373962402,
+        "D": -0.4305473566055298
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. The smooth",
+      "generation_s": 3.899031633976847,
+      "option_logp": {
+        "A": -1.3585631847381592,
+        "B": -4.10856294631958,
+        "C": -3.733563184738159,
+        "D": -0.3585631549358368
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

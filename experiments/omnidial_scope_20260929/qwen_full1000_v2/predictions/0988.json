@@ -1,0 +1,55 @@
+{
+  "sample_index": 988,
+  "video": "videos/video_621.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 7056,
+    "total": 7561
+  },
+  "input_sha256": "9d17e81e556db55fa334b322209a1ec1d87daa4589fb14efeefb2022571a8169",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 2.5860772379674017,
+      "option_logp": {
+        "A": -1.1653997898101807,
+        "B": -1.7903997898101807,
+        "C": -0.6653997898101807,
+        "D": -5.165399551391602
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. Team Spirit",
+      "generation_s": 3.1810185729991645,
+      "option_logp": {
+        "A": -0.6420804262161255,
+        "B": -1.5170804262161255,
+        "C": -1.3920804262161255,
+        "D": -6.142080307006836
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 2.9247269339393824,
+      "option_logp": {
+        "A": -0.7143324613571167,
+        "B": -1.8393324613571167,
+        "C": -1.2143324613571167,
+        "D": -2.9643325805664062
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

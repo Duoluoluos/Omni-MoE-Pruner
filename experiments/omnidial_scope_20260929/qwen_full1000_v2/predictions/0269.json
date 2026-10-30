@@ -1,0 +1,55 @@
+{
+  "sample_index": 269,
+  "video": "videos/video_117.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 37008,
+    "total": 37474
+  },
+  "input_sha256": "f8b3a8d49324f5c0385f8f36f322f3749967dd2d0565590e23a3718df576d91a",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 11.976697809062898,
+      "option_logp": {
+        "A": -2.894970178604126,
+        "B": -0.14497022330760956,
+        "C": -2.644970178604126,
+        "D": -4.894970417022705
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. A couple",
+      "generation_s": 12.593057302990928,
+      "option_logp": {
+        "A": -4.1713738441467285,
+        "B": -0.17137400805950165,
+        "C": -2.0463740825653076,
+        "D": -5.4213738441467285
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. A couple",
+      "generation_s": 13.281433215830475,
+      "option_logp": {
+        "A": -2.12532901763916,
+        "B": -0.5003291368484497,
+        "C": -1.3753291368484497,
+        "D": -4.12532901763916
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

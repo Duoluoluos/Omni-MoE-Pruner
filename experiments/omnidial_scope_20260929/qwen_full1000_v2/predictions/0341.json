@@ -1,0 +1,55 @@
+{
+  "sample_index": 341,
+  "video": "videos/video_189.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 46944,
+    "total": 47415
+  },
+  "input_sha256": "6a782f0c11bb5b45a091f0f2901bfc64ce6938176c3d61df3a8d8f46b59c718f",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 16.923753239912912,
+      "option_logp": {
+        "A": -2.718308448791504,
+        "B": -0.8433084487915039,
+        "C": -1.593308448791504,
+        "D": -1.218308448791504
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 16.954730900004506,
+      "option_logp": {
+        "A": -2.1411938667297363,
+        "B": -1.5161939859390259,
+        "C": -1.6411939859390259,
+        "D": -0.7661939859390259
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Mad as",
+      "generation_s": 18.454001981997862,
+      "option_logp": {
+        "A": -2.80354905128479,
+        "B": -1.42854905128479,
+        "C": -1.67854905128479,
+        "D": -0.6785491108894348
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

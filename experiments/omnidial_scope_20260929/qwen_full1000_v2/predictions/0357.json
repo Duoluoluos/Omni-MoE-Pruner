@@ -1,0 +1,55 @@
+{
+  "sample_index": 357,
+  "video": "videos/video_199.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 54576,
+    "total": 55041
+  },
+  "input_sha256": "cb5623e9da67d2d4096a77a86fceaa4a443b5f98f8d673b97808bb74b8723770",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.132675461936742,
+      "option_logp": {
+        "A": -2.6436197757720947,
+        "B": -3.7686197757720947,
+        "C": -3.2686197757720947,
+        "D": -0.1436198651790619
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.310220269020647,
+      "option_logp": {
+        "A": -2.541938066482544,
+        "B": -2.416938066482544,
+        "C": -2.541938066482544,
+        "D": -0.29193809628486633
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. an innocent",
+      "generation_s": 22.600215109065175,
+      "option_logp": {
+        "A": -4.788729667663574,
+        "B": -3.788729429244995,
+        "C": -5.038729667663574,
+        "D": -0.038729503750801086
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

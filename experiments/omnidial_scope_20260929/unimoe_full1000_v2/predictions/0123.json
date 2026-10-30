@@ -1,0 +1,55 @@
+{
+  "sample_index": 123,
+  "video": "videos/video_53.mp4",
+  "counts": {
+    "audio": 3600,
+    "video": 4608,
+    "total": 8287
+  },
+  "input_sha256": "f25fa51aec564ac7acadcb54d3a724b15391ceecd9206ebc0c92cb375af606f0",
+  "timed": true,
+  "execution_session": "20260929T122251_g340-cd51-5100-b698-202f-fe01-948c_4187",
+  "gates_sha256": "c430e4e0f843dbba0060b45cae47716100224fafed11e282a5bc3e08e800d99a",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 3.645231056958437,
+      "option_logp": {
+        "A": -2.3605542182922363,
+        "B": -0.7355541586875916,
+        "C": -1.4855542182922363,
+        "D": -1.6105542182922363
+      }
+    },
+    "cg_middle": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 3.6126804668456316,
+      "option_logp": {
+        "A": -2.3624508380889893,
+        "B": -0.737450897693634,
+        "C": -1.2374508380889893,
+        "D": -1.9874508380889893
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. Doulu",
+      "generation_s": 3.862581776920706,
+      "option_logp": {
+        "A": -4.909511089324951,
+        "B": -0.284510999917984,
+        "C": -1.6595109701156616,
+        "D": -4.159511089324951
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_middle",
+    "cg_late"
+  ],
+  "complete": true
+}

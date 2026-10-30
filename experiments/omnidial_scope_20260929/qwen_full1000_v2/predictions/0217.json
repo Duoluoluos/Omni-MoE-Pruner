@@ -1,0 +1,55 @@
+{
+  "sample_index": 217,
+  "video": "videos/video_86.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55742
+  },
+  "input_sha256": "921ab8ded10a6f64ff0f599f70f9e3b945c7feb35424cf91cfca382958dd9940",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.886103603057563,
+      "option_logp": {
+        "A": -0.8029564023017883,
+        "B": -4.427956581115723,
+        "C": -1.6779563426971436,
+        "D": -1.0529563426971436
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D. Grey.",
+      "generation_s": 22.071565211983398,
+      "option_logp": {
+        "A": -1.2125554084777832,
+        "B": -2.837555408477783,
+        "C": -1.5875554084777832,
+        "D": -0.8375554084777832
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Red.",
+      "generation_s": 22.828074380988255,
+      "option_logp": {
+        "A": -0.7493550777435303,
+        "B": -3.1243550777435303,
+        "C": -0.9993550777435303,
+        "D": -2.2493550777435303
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

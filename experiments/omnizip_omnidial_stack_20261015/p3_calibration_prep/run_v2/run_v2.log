@@ -1,0 +1,142 @@
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/requests/__init__.py:113: RequestsDependencyWarning: urllib3 (2.5.0) or chardet (6.0.0.post1)/charset_normalizer (3.4.4) doesn't match a supported version!
+  warnings.warn(
+`torch_dtype` is deprecated! Use `dtype` instead!
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_interleaved', 'interleaved', 'mrope_section'}
+Unrecognized keys in `rope_scaling` for 'rope_type'='default': {'mrope_section', 'interleaved'}
+You are attempting to use Flash Attention 2 without specifying a torch dtype. This might lead to unexpected behaviour
+Loading checkpoint shards:   0%|          | 0/15 [00:00<?, ?it/s]Loading checkpoint shards:   7%|▋         | 1/15 [00:22<05:09, 22.11s/it]Loading checkpoint shards:  13%|█▎        | 2/15 [00:44<04:46, 22.06s/it]Loading checkpoint shards:  20%|██        | 3/15 [01:05<04:21, 21.76s/it]Loading checkpoint shards:  27%|██▋       | 4/15 [01:27<03:59, 21.79s/it]Loading checkpoint shards:  33%|███▎      | 5/15 [01:48<03:37, 21.73s/it]Loading checkpoint shards:  40%|████      | 6/15 [02:11<03:18, 22.02s/it]Loading checkpoint shards:  47%|████▋     | 7/15 [02:33<02:55, 21.93s/it]Loading checkpoint shards:  53%|█████▎    | 8/15 [02:55<02:34, 22.00s/it]Loading checkpoint shards:  60%|██████    | 9/15 [03:17<02:11, 21.99s/it]Loading checkpoint shards:  67%|██████▋   | 10/15 [03:40<01:50, 22.20s/it]Loading checkpoint shards:  73%|███████▎  | 11/15 [04:02<01:28, 22.16s/it]Loading checkpoint shards:  80%|████████  | 12/15 [04:24<01:06, 22.23s/it]Loading checkpoint shards:  87%|████████▋ | 13/15 [04:47<00:45, 22.58s/it]Loading checkpoint shards:  93%|█████████▎| 14/15 [05:12<00:23, 23.11s/it]Loading checkpoint shards: 100%|██████████| 15/15 [05:14<00:00, 16.89s/it]Loading checkpoint shards: 100%|██████████| 15/15 [05:14<00:00, 20.98s/it]
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.tmp/qwen_runtime_mcore_20260924/python/megatron/core/transformer/transformer_config.py:1065: UserWarning: Using a large number of experts (e.g. >=32) without fp32 routing. Consider enabling moe_router_dtype for better numerical stability.
+  warnings.warn(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+qwen-vl-utils using decord to read video.
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/qwen-omni-utils/src/qwen_omni_utils/v2_5/audio_process.py:85: UserWarning: PySoundFile failed. Trying audioread instead.
+  librosa.load(
+/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/lib/python3.11/site-packages/librosa/core/audio.py:184: FutureWarning: librosa.core.audio.__audioread_load
+	Deprecated as of librosa version 0.10.0.
+	It will be removed in librosa version 1.0.
+  y, sr_native = __audioread_load(path, offset, duration, dtype)
+{
+  "schema": "p3-zip-aware-gates-v1",
+  "selected": "p3_balanced",
+  "selected_policy": {
+    "top2_fraction": 0.65,
+    "top4_fraction": 0.25,
+    "top8_fraction": 0.1,
+    "tau2": 0.048523245017537825,
+    "tau4": 0.07061227278622294,
+    "achieved_budget_fractions": {
+      "2": 0.6499968735588908,
+      "4": 0.25000517713014075,
+      "8": 0.09999794931096849
+    },
+    "mean_budget_in_scope": 3.0999980501260924,
+    "predicted_stack_expert_row_ratio": 0.30359653213877025,
+    "distance_to_target": 0.0035965321387702587
+  },
+  "candidates": {
+    "p3_conservative": {
+      "top2_fraction": 0.5,
+      "top4_fraction": 0.35,
+      "top8_fraction": 0.15,
+      "tau2": 0.05677546904181403,
+      "tau4": 0.07372786411458498,
+      "achieved_budget_fractions": {
+        "2": 0.5000036234831153,
+        "4": 0.3500022972562531,
+        "8": 0.14999407926063157
+      },
+      "mean_budget_in_scope": 3.5999690700762956,
+      "predicted_stack_expert_row_ratio": 0.3142111816859027,
+      "distance_to_target": 0.014211181685902685
+    },
+    "p3_balanced": {
+      "top2_fraction": 0.65,
+      "top4_fraction": 0.25,
+      "top8_fraction": 0.1,
+      "tau2": 0.048523245017537825,
+      "tau4": 0.07061227278622294,
+      "achieved_budget_fractions": {
+        "2": 0.6499968735588908,
+        "4": 0.25000517713014075,
+        "8": 0.09999794931096849
+      },
+      "mean_budget_in_scope": 3.0999980501260924,
+      "predicted_stack_expert_row_ratio": 0.30359653213877025,
+      "distance_to_target": 0.0035965321387702587
+    },
+    "p3_aggressive": {
+      "top2_fraction": 0.8,
+      "top4_fraction": 0.15,
+      "top8_fraction": 0.05,
+      "tau2": 0.04191956316148794,
+      "tau4": 0.06681664897220384,
+      "achieved_budget_fractions": {
+        "2": 0.7999984397101176,
+        "4": 0.15000216986970122,
+        "8": 0.04999939042018118
+      },
+      "mean_budget_in_scope": 2.6000006822604895,
+      "predicted_stack_expert_row_ratio": 0.2929813232114395,
+      "distance_to_target": 0.007018676788560496
+    }
+  },
+  "calibration_indices": [
+    321,
+    333,
+    32,
+    41,
+    71,
+    88,
+    94,
+    200
+  ],
+  "captured_rows": 159840,
+  "weighted_rows": 2499160.0,
+  "scope": [
+    12,
+    32
+  ],
+  "answer_fields_read": false,
+  "selection_rule": "closest predicted Stack/native expert-row ratio to frozen target 0.30"
+}

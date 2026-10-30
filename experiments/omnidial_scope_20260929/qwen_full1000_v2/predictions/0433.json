@@ -1,0 +1,55 @@
+{
+  "sample_index": 433,
+  "video": "videos/video_260.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 49920,
+    "total": 50398
+  },
+  "input_sha256": "f41cf4ebc26c139839f3b4eb2324bd650d27b79ebc893cc384ffc7024940d9ac",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B. Perform a",
+      "generation_s": 18.959185699932277,
+      "option_logp": {
+        "A": -3.5815677642822266,
+        "B": -0.581567645072937,
+        "C": -3.7065677642822266,
+        "D": -0.956567645072937
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Retreat and",
+      "generation_s": 19.70773502299562,
+      "option_logp": {
+        "A": -2.918821334838867,
+        "B": -1.7938213348388672,
+        "C": -3.418821334838867,
+        "D": -0.2938213050365448
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. Perform a",
+      "generation_s": 19.17552576889284,
+      "option_logp": {
+        "A": -3.5743956565856934,
+        "B": -0.1993955820798874,
+        "C": -4.699395656585693,
+        "D": -1.9493955373764038
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

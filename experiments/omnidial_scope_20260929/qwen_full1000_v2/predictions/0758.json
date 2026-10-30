@@ -1,0 +1,55 @@
+{
+  "sample_index": 758,
+  "video": "videos/video_509.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 51984,
+    "total": 52457
+  },
+  "input_sha256": "bde9e779452c1b6dec553beaf2047ab6e522b651235117c5a2215d745866ec9f",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 19.569575363071635,
+      "option_logp": {
+        "A": -1.424752116203308,
+        "B": -4.799752235412598,
+        "C": -4.674752235412598,
+        "D": -0.2997521162033081
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. The audience",
+      "generation_s": 21.04594306414947,
+      "option_logp": {
+        "A": -4.762907981872559,
+        "B": -5.762907981872559,
+        "C": -7.012907981872559,
+        "D": -0.012907998636364937
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 19.744767602998763,
+      "option_logp": {
+        "A": -1.4557197093963623,
+        "B": -3.4557197093963623,
+        "C": -4.205719947814941,
+        "D": -0.3307197690010071
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

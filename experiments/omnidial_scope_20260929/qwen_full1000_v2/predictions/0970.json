@@ -1,0 +1,55 @@
+{
+  "sample_index": 970,
+  "video": "videos/video_615.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55775
+  },
+  "input_sha256": "72692c3984a8698784a9e29345823d75c100d1ec009124f166ba423ca8a2b1b0",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Pepp",
+      "generation_s": 22.683373680105433,
+      "option_logp": {
+        "A": -3.689136028289795,
+        "B": -2.314136028289795,
+        "C": -1.939136028289795,
+        "D": -0.3141360580921173
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B. She had",
+      "generation_s": 21.99876547185704,
+      "option_logp": {
+        "A": -3.6589367389678955,
+        "B": -0.2839367985725403,
+        "C": -2.6589367389678955,
+        "D": -1.9089367389678955
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Pepp",
+      "generation_s": 22.12460147892125,
+      "option_logp": {
+        "A": -4.995594024658203,
+        "B": -2.620594024658203,
+        "C": -3.495594024658203,
+        "D": -0.12059411406517029
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

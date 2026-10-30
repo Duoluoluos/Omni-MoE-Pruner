@@ -1,0 +1,55 @@
+{
+  "sample_index": 68,
+  "video": "videos/video_32.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55778
+  },
+  "input_sha256": "2164649485e1826b272c4c57bfffa5e7acb12ac6bba742bd157a7a41e2a84175",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Toxic communities",
+      "generation_s": 22.732628567842767,
+      "option_logp": {
+        "A": -0.1505211889743805,
+        "B": -2.6505212783813477,
+        "C": -6.150521278381348,
+        "D": -2.7755212783813477
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 21.43429284496233,
+      "option_logp": {
+        "A": -0.2645197808742523,
+        "B": -1.7645198106765747,
+        "C": -6.139519691467285,
+        "D": -2.889519691467285
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. Toxic communities",
+      "generation_s": 22.257751715835184,
+      "option_logp": {
+        "A": -0.033016569912433624,
+        "B": -3.9080166816711426,
+        "C": -7.283016681671143,
+        "D": -4.783016681671143
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

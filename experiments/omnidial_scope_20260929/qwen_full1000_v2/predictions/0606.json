@@ -1,0 +1,55 @@
+{
+  "sample_index": 606,
+  "video": "videos/video_404.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 25740,
+    "total": 26199
+  },
+  "input_sha256": "97f5d5c0cd87668bb8e5aa95b3544993e0630df4429ea8a5d66d76942835a652",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 7.587320632999763,
+      "option_logp": {
+        "A": -0.11428818106651306,
+        "B": -6.739288330078125,
+        "C": -2.239288091659546,
+        "D": -9.614288330078125
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Singing",
+      "generation_s": 8.996066661085933,
+      "option_logp": {
+        "A": -0.3881421685218811,
+        "B": -6.888142108917236,
+        "C": -1.1381421089172363,
+        "D": -10.388142585754395
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 7.594769387040287,
+      "option_logp": {
+        "A": -1.8064002990722656,
+        "B": -6.681400299072266,
+        "C": -0.18140028417110443,
+        "D": -10.868900299072266
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

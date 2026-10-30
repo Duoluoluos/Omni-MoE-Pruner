@@ -1,0 +1,55 @@
+{
+  "sample_index": 883,
+  "video": "videos/video_582.mp4",
+  "counts": {
+    "audio": 600,
+    "video": 4608,
+    "total": 5299
+  },
+  "input_sha256": "b87b6de19cd220229b07bb81075a4b49169cd282acced0b474d837f567e119fb",
+  "timed": true,
+  "execution_session": "20260929T122251_g340-cd51-5100-b698-202f-fe01-948c_4187",
+  "gates_sha256": "c430e4e0f843dbba0060b45cae47716100224fafed11e282a5bc3e08e800d99a",
+  "arms": {
+    "cg_middle": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 1.9895828599110246,
+      "option_logp": {
+        "A": -0.23222021758556366,
+        "B": -2.98222017288208,
+        "C": -2.10722017288208,
+        "D": -3.35722017288208
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.H holding the",
+      "generation_s": 2.190098447026685,
+      "option_logp": {
+        "A": -0.25327858328819275,
+        "B": -3.4407784938812256,
+        "C": -1.7532786130905151,
+        "D": -4.065778732299805
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 1.9551531160250306,
+      "option_logp": {
+        "A": -0.11716847121715546,
+        "B": -3.242168426513672,
+        "C": -2.992168426513672,
+        "D": -3.867168426513672
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_middle",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

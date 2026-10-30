@@ -1,0 +1,55 @@
+{
+  "sample_index": 920,
+  "video": "videos/video_594.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55804
+  },
+  "input_sha256": "7f629c9c9d8fe9fe66520be2d3b08d3c0ab2ab61a9df579f78435ae653318004",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Solves",
+      "generation_s": 22.758220823016018,
+      "option_logp": {
+        "A": -6.76878547668457,
+        "B": -5.89378547668457,
+        "C": -4.26878547668457,
+        "D": -0.018785422667860985
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.462811201112345,
+      "option_logp": {
+        "A": -6.294816970825195,
+        "B": -5.669816970825195,
+        "C": -3.2948169708251953,
+        "D": -0.04481688141822815
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 21.71943831909448,
+      "option_logp": {
+        "A": -6.044705390930176,
+        "B": -6.044705390930176,
+        "C": -3.2947051525115967,
+        "D": -0.04470517113804817
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

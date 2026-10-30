@@ -1,0 +1,55 @@
+{
+  "sample_index": 163,
+  "video": "videos/video_68.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55759
+  },
+  "input_sha256": "3c405b6645cca6618f3c276881be0f52e66011e9b4fefff92a141a5e637c1f4e",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D.",
+      "generation_s": 21.871066514169797,
+      "option_logp": {
+        "A": -2.6452255249023438,
+        "B": -2.5202255249023438,
+        "C": -1.7702256441116333,
+        "D": -0.3952256441116333
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. Right mouse",
+      "generation_s": 22.951927796937525,
+      "option_logp": {
+        "A": -2.385941505432129,
+        "B": -2.760941505432129,
+        "C": -2.635941505432129,
+        "D": -0.26094159483909607
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D.",
+      "generation_s": 21.92503562895581,
+      "option_logp": {
+        "A": -1.640038013458252,
+        "B": -1.515038013458252,
+        "C": -1.765038013458252,
+        "D": -0.890038013458252
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

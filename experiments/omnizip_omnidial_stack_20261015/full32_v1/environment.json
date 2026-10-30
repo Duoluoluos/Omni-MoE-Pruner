@@ -1,0 +1,12 @@
+{
+  "python": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/bin/python",
+  "torch": "2.6.0+cu124",
+  "cuda": "12.4",
+  "gpu": "NVIDIA H20",
+  "model_source": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/modeling_qwen3_omni_moe_stack.py",
+  "model_source_sha256": "68091ea9c4291c7c817ffa8b0d33809a4b0f43d75c7449e7029e49f012578625",
+  "runner_sha256": "1362daff663ce0d44a766929255d2983ac09ccdb2d6d38d7c5c119eb9ac9ed1b",
+  "mcore_experts_source": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/qwen_mcore_experts.py",
+  "mcore_controller_source": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/source/qwen_mcore_controller.py",
+  "mcore": "0.12.3"
+}

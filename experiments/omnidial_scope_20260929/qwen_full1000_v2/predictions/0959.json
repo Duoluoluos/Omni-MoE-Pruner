@@ -1,0 +1,55 @@
+{
+  "sample_index": 959,
+  "video": "videos/video_611.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55786
+  },
+  "input_sha256": "c20ee59f56a984c9205ad4ad727b5ba241841760ac194efdd73bfa80009cc9a5",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Zhang Z",
+      "generation_s": 22.98391255689785,
+      "option_logp": {
+        "A": -0.8568980693817139,
+        "B": -1.8568980693817139,
+        "C": -1.3568980693817139,
+        "D": -1.8568980693817139
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.94846056494862,
+      "option_logp": {
+        "A": -0.9468615055084229,
+        "B": -1.8218615055084229,
+        "C": -1.5718615055084229,
+        "D": -1.4468615055084229
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 21.51675988221541,
+      "option_logp": {
+        "A": -1.033066749572754,
+        "B": -1.908066749572754,
+        "C": -1.283066749572754,
+        "D": -1.533066749572754
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

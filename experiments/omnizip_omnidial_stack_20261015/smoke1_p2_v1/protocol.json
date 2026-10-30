@@ -1,0 +1,60 @@
+{
+  "schema": "omnizip-omnidial-2x2-p2-compact-contribution-buffer-v1",
+  "model": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/models/Qwen3-Omni-30B-A3B-Instruct",
+  "dataset": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/eval_data/OmniVideoBench/data.json",
+  "dataset_sha256": "f6e503652b0061858a1c6cae19f28e870b753c2b8215b3fdcefb5c7f72f8e6ac",
+  "indices": [
+    32
+  ],
+  "seed": 20261015,
+  "dtype": "bfloat16",
+  "batch_size": 1,
+  "max_new_tokens": 4,
+  "backend": "megatron-core GroupedMLP expert backend; HF multimodal/attention/KV cache",
+  "omnizip": {
+    "rho_audio": 0.3,
+    "rho_video": 0.6,
+    "g": 3,
+    "contextual_ratio": 0.05
+  },
+  "omnidial": {
+    "scope": [
+      12,
+      32
+    ],
+    "kind": "cgcc",
+    "tau_reduce": 0.08694529702904027,
+    "source": "frozen 2026-09-29 input-only calibration"
+  },
+  "arms": {
+    "native": {
+      "omnizip": false,
+      "omnidial": false
+    },
+    "omnizip": {
+      "omnizip": true,
+      "omnidial": false
+    },
+    "omnidial": {
+      "omnizip": false,
+      "omnidial": true
+    },
+    "stack": {
+      "omnizip": true,
+      "omnidial": true
+    }
+  },
+  "timing": "CUDA-synchronized generate; prepared inputs excluded; randomized within-sample arm order",
+  "primary": [
+    "paired accuracy",
+    "gold option logp",
+    "latency",
+    "retained tokens",
+    "MCore expert rows",
+    "peak allocated memory"
+  ],
+  "interaction": {
+    "additive": "y11-y10-y01+y00",
+    "multiplicative_efficiency": "observed stack work/latency ratio versus product of individual ratios"
+  }
+}

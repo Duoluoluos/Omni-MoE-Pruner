@@ -1,0 +1,55 @@
+{
+  "sample_index": 892,
+  "video": "videos/video_585.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 14040,
+    "total": 14504
+  },
+  "input_sha256": "1d11bd2df9236e058637268ebedb1cf2be8728d3b73d6c13d3465d9ec10c60ec",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Grandma and",
+      "generation_s": 4.651004190091044,
+      "option_logp": {
+        "A": -6.626673221588135,
+        "B": -9.251673698425293,
+        "C": -0.0016732513904571533,
+        "D": -9.501673698425293
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 4.043429885059595,
+      "option_logp": {
+        "A": -5.2557783126831055,
+        "B": -9.005778312683105,
+        "C": -0.005778275430202484,
+        "D": -8.755778312683105
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Grandma and",
+      "generation_s": 5.4819753700867295,
+      "option_logp": {
+        "A": -3.896702289581299,
+        "B": -7.646702289581299,
+        "C": -0.02170219086110592,
+        "D": -8.27170181274414
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

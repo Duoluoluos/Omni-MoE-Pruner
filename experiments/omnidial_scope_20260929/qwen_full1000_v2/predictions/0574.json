@@ -1,0 +1,55 @@
+{
+  "sample_index": 574,
+  "video": "videos/video_378.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 44208,
+    "total": 44716
+  },
+  "input_sha256": "23bf05d3ae3dff0685eb7c277bd54eb5331f57aef8bc5de2a4f9ba45103c3f2c",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. They move",
+      "generation_s": 16.81585403205827,
+      "option_logp": {
+        "A": -1.3139450550079346,
+        "B": -8.188944816589355,
+        "C": -0.3139450252056122,
+        "D": -11.751444816589355
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 15.405967271188274,
+      "option_logp": {
+        "A": -1.4067003726959229,
+        "B": -8.656700134277344,
+        "C": -0.28170034289360046,
+        "D": -10.906700134277344
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. They move",
+      "generation_s": 16.086960564134642,
+      "option_logp": {
+        "A": -0.6333208084106445,
+        "B": -8.258320808410645,
+        "C": -0.7583208084106445,
+        "D": -11.445820808410645
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

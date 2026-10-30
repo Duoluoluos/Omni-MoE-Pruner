@@ -1,0 +1,55 @@
+{
+  "sample_index": 781,
+  "video": "videos/video_529.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55757
+  },
+  "input_sha256": "7d4bc567e7c0dfc1cd8a54a14bbcf3100e4c5c69d287f3b104acfad0d555c133",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. Critic",
+      "generation_s": 22.123902092920616,
+      "option_logp": {
+        "A": -4.420975685119629,
+        "B": -0.04597577452659607,
+        "C": -4.045975685119629,
+        "D": -4.420975685119629
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 22.11339572793804,
+      "option_logp": {
+        "A": -3.7494187355041504,
+        "B": -0.12441878020763397,
+        "C": -2.8744187355041504,
+        "D": -3.3744187355041504
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 21.85083037498407,
+      "option_logp": {
+        "A": -3.870204448699951,
+        "B": -0.12020455300807953,
+        "C": -3.620204448699951,
+        "D": -2.745204448699951
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

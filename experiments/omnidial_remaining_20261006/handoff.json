@@ -1,0 +1,49 @@
+{
+  "checked_at": "2026-10-06T10:48:33.958177+08:00",
+  "worker": "921134cf872ab4e8.worker_0.job.wangqi-2248@merlin-ssh-proxy-cn.byted.org:22222",
+  "supervisor_pid": 116421,
+  "gpu0": [
+    "qwen_all_avut",
+    "qwen_all_worldsense"
+  ],
+  "gpu1": [
+    "unimoe_partial_avut",
+    "unimoe_partial_worldsense",
+    "unimoe_baselines_ovb",
+    "unimoe_terminal_ovb"
+  ],
+  "auto_backfill": true,
+  "partial_result_backfill": false,
+  "worldsense": {
+    "new_n": 3170,
+    "historical_n": 3167,
+    "difference_disclosed": true
+  },
+  "jobs": {
+    "qwen_all_avut": {
+      "stage": "generate",
+      "completed": 229,
+      "expected": 1733,
+      "pid": 102679,
+      "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+      "session": "20261006T103233_g340-cd51-4b00-156b-5f51-68a7-8693_102679",
+      "time": 1791254912.597611,
+      "sample_index": 229,
+      "order": [
+        "omnidial"
+      ]
+    },
+    "unimoe_partial_avut": {
+      "stage": "prepare",
+      "completed": 159,
+      "expected": 1733,
+      "pid": 102680,
+      "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+      "session": "20261006T103226_g340-cd51-4b00-156b-5f51-68a7-8693_102680",
+      "time": 1791254910.8680532,
+      "sample_index": 159
+    }
+  },
+  "process_check": "PIDs 102679 / 102680 / 116421 alive in final SSH check; both inference jobs passed preflight and committed real predictions.",
+  "paper_pdf_sha256": "213e518c23fc23ff0f84eb13932a9aecc1c645cbfc737a29b0576051934db0ed"
+}

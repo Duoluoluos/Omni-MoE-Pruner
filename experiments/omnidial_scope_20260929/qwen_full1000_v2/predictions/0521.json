@@ -1,0 +1,55 @@
+{
+  "sample_index": 521,
+  "video": "videos/video_341.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 5616,
+    "total": 6110
+  },
+  "input_sha256": "35d303a68c031b1e343352cccdfa723d6833b0bf2a3964cc41e01731ce499681",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 2.6913193948566914,
+      "option_logp": {
+        "A": -1.5128979682922363,
+        "B": -4.762897968292236,
+        "C": -0.26289796829223633,
+        "D": -6.137897968292236
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 2.3148698289878666,
+      "option_logp": {
+        "A": -2.7304937839508057,
+        "B": -1.9804937839508057,
+        "C": -0.23049381375312805,
+        "D": -6.105494022369385
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. The participant",
+      "generation_s": 2.88225731998682,
+      "option_logp": {
+        "A": -3.326232433319092,
+        "B": -3.326232433319092,
+        "C": -0.07623231410980225,
+        "D": -6.826232433319092
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

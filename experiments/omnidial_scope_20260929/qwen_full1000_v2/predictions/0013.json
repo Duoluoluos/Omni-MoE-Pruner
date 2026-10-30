@@ -1,0 +1,55 @@
+{
+  "sample_index": 13,
+  "video": "videos/video_7.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 38160,
+    "total": 38697
+  },
+  "input_sha256": "c1aeca7b56dfd6055438cc846eb260997c1a93a2157623d1c70549535fa1649b",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 12.584010374965146,
+      "option_logp": {
+        "A": -8.000401496887207,
+        "B": -0.00040189296123571694,
+        "C": -10.750401496887207,
+        "D": -12.250401496887207
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. He serves",
+      "generation_s": 13.192099333042279,
+      "option_logp": {
+        "A": -8.625313758850098,
+        "B": -0.00031394799589179456,
+        "C": -10.750313758850098,
+        "D": -11.562813758850098
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. He serves",
+      "generation_s": 13.897666471777484,
+      "option_logp": {
+        "A": -8.375360488891602,
+        "B": -0.00036042393185198307,
+        "C": -11.125360488891602,
+        "D": -12.500360488891602
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

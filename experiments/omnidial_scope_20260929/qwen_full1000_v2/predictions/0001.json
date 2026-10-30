@@ -1,0 +1,55 @@
+{
+  "sample_index": 1,
+  "video": "videos/video_1.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 29952,
+    "total": 30420
+  },
+  "input_sha256": "f1f5a8a506a29688820d18aa3fe9aa49bc3596540c3040d264187a4efa775530",
+  "timed": false,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B. Southwest",
+      "generation_s": 9.669767849845812,
+      "option_logp": {
+        "A": -1.899843692779541,
+        "B": -0.7748436331748962,
+        "C": -1.524843692779541,
+        "D": -1.774843692779541
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Southwest",
+      "generation_s": 10.407283055130392,
+      "option_logp": {
+        "A": -1.5407984256744385,
+        "B": -1.1657984256744385,
+        "C": -1.2907984256744385,
+        "D": -1.6657984256744385
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C.",
+      "generation_s": 9.387000364949927,
+      "option_logp": {
+        "A": -1.826797366142273,
+        "B": -1.326797366142273,
+        "C": -0.701797366142273,
+        "D": -2.5767974853515625
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 522,
+  "video": "videos/video_341.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 5616,
+    "total": 6087
+  },
+  "input_sha256": "55aabcb411f8704715f56bffdd34be88f61d6491e2e5edf76c758924ca41601c",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. A crying",
+      "generation_s": 2.920978410867974,
+      "option_logp": {
+        "A": -2.626343250274658,
+        "B": -0.37634336948394775,
+        "C": -4.126343250274658,
+        "D": -1.5013433694839478
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.661780142923817,
+      "option_logp": {
+        "A": -4.373579025268555,
+        "B": -0.12357906252145767,
+        "C": -2.4985790252685547,
+        "D": -3.8735790252685547
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.3214207419659942,
+      "option_logp": {
+        "A": -2.0355870723724365,
+        "B": -0.41058704257011414,
+        "C": -3.2855870723724365,
+        "D": -1.7855870723724365
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

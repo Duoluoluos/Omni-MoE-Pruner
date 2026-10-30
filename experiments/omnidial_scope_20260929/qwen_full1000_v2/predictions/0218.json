@@ -1,0 +1,55 @@
+{
+  "sample_index": 218,
+  "video": "videos/video_87.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55773
+  },
+  "input_sha256": "c6a7ebdac9259e97e08973aebc51c84e72912d0bc89aeee428154d54ddba72e3",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D. He showed",
+      "generation_s": 22.067146299174055,
+      "option_logp": {
+        "A": -4.669294834136963,
+        "B": -3.669294834136963,
+        "C": -0.7942948937416077,
+        "D": -0.6692948937416077
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. He caused",
+      "generation_s": 22.142225812887773,
+      "option_logp": {
+        "A": -3.9081130027770996,
+        "B": -2.9081130027770996,
+        "C": -0.2831130921840668,
+        "D": -1.7831131219863892
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. He showed",
+      "generation_s": 22.74894131696783,
+      "option_logp": {
+        "A": -5.146331787109375,
+        "B": -4.396331787109375,
+        "C": -1.5213319063186646,
+        "D": -0.27133190631866455
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

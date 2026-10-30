@@ -1,0 +1,55 @@
+{
+  "sample_index": 601,
+  "video": "videos/video_399.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 5040,
+    "total": 5549
+  },
+  "input_sha256": "32fdce0fa73e7edc64312c38d234af854efabb6203052496fcee857c300c2a49",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. He walks",
+      "generation_s": 3.7254106618929654,
+      "option_logp": {
+        "A": -7.876023769378662,
+        "B": -7.626023769378662,
+        "C": -0.0010237219976261258,
+        "D": -12.376023292541504
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 2.268506824038923,
+      "option_logp": {
+        "A": -8.375846862792969,
+        "B": -7.625846862792969,
+        "C": -0.0008469808381050825,
+        "D": -11.125846862792969
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. He walks",
+      "generation_s": 2.8590118098072708,
+      "option_logp": {
+        "A": -8.375632286071777,
+        "B": -8.375632286071777,
+        "C": -0.0006326819420792162,
+        "D": -13.063132286071777
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_early",
+    "cg_late"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 650,
+  "video": "videos/video_431.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 18144,
+    "total": 18601
+  },
+  "input_sha256": "584442ec1ff117fbe7fe2db308589e636d86084bc809a7d5aca32dc78b032e82",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C. Painful",
+      "generation_s": 5.866856351029128,
+      "option_logp": {
+        "A": -5.289349555969238,
+        "B": -1.4143494367599487,
+        "C": -0.28934940695762634,
+        "D": -6.164349555969238
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C.",
+      "generation_s": 5.572570268064737,
+      "option_logp": {
+        "A": -5.288496494293213,
+        "B": -1.413496732711792,
+        "C": -0.2884967029094696,
+        "D": -6.663496494293213
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Painful",
+      "generation_s": 6.835324969841167,
+      "option_logp": {
+        "A": -6.103564262390137,
+        "B": -0.9785643815994263,
+        "C": -0.4785643517971039,
+        "D": -6.728564262390137
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

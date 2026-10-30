@@ -1,0 +1,55 @@
+{
+  "sample_index": 335,
+  "video": "videos/video_183.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 11664,
+    "total": 12121
+  },
+  "input_sha256": "6d868f054d11f69635ae91d03ce1a6ab2dc6a0aefc2c505d5e74cb645c37fccd",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 3.804016737965867,
+      "option_logp": {
+        "A": -8.252452850341797,
+        "B": -0.0024525821208953857,
+        "C": -6.627452373504639,
+        "D": -7.377452373504639
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 3.4682236900553107,
+      "option_logp": {
+        "A": -8.376818656921387,
+        "B": -0.0018186711240559816,
+        "C": -7.251818656921387,
+        "D": -7.501818656921387
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Pride",
+      "generation_s": 4.920898047043011,
+      "option_logp": {
+        "A": -9.250600814819336,
+        "B": -0.0006007535266689956,
+        "C": -8.125600814819336,
+        "D": -9.125600814819336
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

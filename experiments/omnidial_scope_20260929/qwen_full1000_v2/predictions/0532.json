@@ -1,0 +1,55 @@
+{
+  "sample_index": 532,
+  "video": "videos/video_346.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 26928,
+    "total": 27400
+  },
+  "input_sha256": "b45e7169a9f4e9ca49b74ad76d7e6641ea5d407dc276b33f0c10c476336ab558",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. He loses",
+      "generation_s": 9.599159361794591,
+      "option_logp": {
+        "A": -0.4408093988895416,
+        "B": -5.06580924987793,
+        "C": -1.0658093690872192,
+        "D": -5.44080924987793
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 8.404509411891922,
+      "option_logp": {
+        "A": -0.7157724499702454,
+        "B": -4.21577262878418,
+        "C": -0.7157724499702454,
+        "D": -5.34077262878418
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 8.032573667820543,
+      "option_logp": {
+        "A": -0.9137134552001953,
+        "B": -5.038713455200195,
+        "C": -0.5387134552001953,
+        "D": -4.913713455200195
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

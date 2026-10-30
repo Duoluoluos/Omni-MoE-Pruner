@@ -1,0 +1,40 @@
+{
+  "checked_at": "2026-09-29T04:28:58.234593+00:00",
+  "worker": "ed8cf8975c804c34.worker_0.job.wangqi-2248@merlin-ssh-proxy-cn.byted.org:22222",
+  "qwen": {
+    "gpu": 0,
+    "pid": 1737,
+    "backend": "existing HF",
+    "preflight_passed": true,
+    "state": {
+      "stage": "generate",
+      "pid": 1737,
+      "host": "g340-cd51-5100-b698-202f-fe01-948c",
+      "time": 1790656131.1872957,
+      "model": "qwen",
+      "completed": 0,
+      "session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+      "sample_index": 0,
+      "arm": "cg_late"
+    }
+  },
+  "unimoe": {
+    "gpu": 1,
+    "pid": 4187,
+    "backend": "existing DeepSpeed",
+    "real_calibration_forward_confirmed": true,
+    "state": {
+      "stage": "preflight",
+      "pid": 4187,
+      "host": "g340-cd51-5100-b698-202f-fe01-948c",
+      "time": 1790656118.1280997,
+      "model": "unimoe",
+      "completed": 0,
+      "session": "20260929T122251_g340-cd51-5100-b698-202f-fe01-948c_4187",
+      "sample_index": 962
+    }
+  },
+  "result_status": "planned",
+  "papers_changed": false,
+  "continues_detached": true
+}

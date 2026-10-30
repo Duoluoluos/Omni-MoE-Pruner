@@ -1,0 +1,49 @@
+{
+  "sample_index": 41,
+  "video": "videos/video_20.mp4",
+  "correct_option": "D",
+  "arm_order": [
+    "omnizip",
+    "stack"
+  ],
+  "arms": {
+    "omnizip": {
+      "answer": "C",
+      "output_text": "C",
+      "latency_s": 4.55232223123312,
+      "option_logp": {
+        "A": -1.7362314462661743,
+        "B": -6.111231327056885,
+        "C": -0.23623140156269073,
+        "D": -3.4862313270568848
+      },
+      "retained_tokens": 15691,
+      "input_tokens": 39189,
+      "expert_rows": 6025728,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 66.28963804244995,
+      "gold_logp": -3.4862313270568848,
+      "correct": false
+    },
+    "stack": {
+      "answer": "C",
+      "output_text": "C. Monday.",
+      "latency_s": 4.603054583072662,
+      "option_logp": {
+        "A": -3.4746897220611572,
+        "B": -3.4746897220611572,
+        "C": -0.09968966990709305,
+        "D": -3.7246897220611572
+      },
+      "retained_tokens": 15691,
+      "input_tokens": 39189,
+      "expert_rows": 4473640,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 66.28963804244995,
+      "gold_logp": -3.7246897220611572,
+      "correct": false,
+      "gold_delta_minus_omnizip": -0.23845839500427246
+    }
+  },
+  "complete": true
+}

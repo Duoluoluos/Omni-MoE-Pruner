@@ -1,0 +1,55 @@
+{
+  "sample_index": 708,
+  "video": "videos/video_473.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 12672,
+    "total": 13128
+  },
+  "input_sha256": "0f2b0646c2e1b7113655cf835d31cbc7df18201f5bab22644730e37e0022a039",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. He has",
+      "generation_s": 5.42874951614067,
+      "option_logp": {
+        "A": -0.020298605784773827,
+        "B": -4.520298480987549,
+        "C": -6.145298480987549,
+        "D": -5.020298480987549
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 3.8175163499545306,
+      "option_logp": {
+        "A": -0.004478662274777889,
+        "B": -5.754478454589844,
+        "C": -8.629478454589844,
+        "D": -7.004478454589844
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 3.8134524449706078,
+      "option_logp": {
+        "A": -0.004066057503223419,
+        "B": -5.879065990447998,
+        "C": -8.379066467285156,
+        "D": -7.129065990447998
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

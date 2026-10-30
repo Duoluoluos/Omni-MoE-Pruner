@@ -1,0 +1,49 @@
+{
+  "sample_index": 546,
+  "video": "videos/video_353.mp4",
+  "correct_option": "C",
+  "arm_order": [
+    "omnizip",
+    "stack"
+  ],
+  "arms": {
+    "omnizip": {
+      "answer": "C",
+      "output_text": "C",
+      "latency_s": 6.989516496658325,
+      "option_logp": {
+        "A": -7.256794452667236,
+        "B": -7.881794452667236,
+        "C": -0.006794326473027468,
+        "D": -5.256794452667236
+      },
+      "retained_tokens": 22274,
+      "input_tokens": 55777,
+      "expert_rows": 8553600,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 69.35309505462646,
+      "gold_logp": -0.006794326473027468,
+      "correct": true
+    },
+    "stack": {
+      "answer": "D",
+      "output_text": "D. The snakes",
+      "latency_s": 6.932920679450035,
+      "option_logp": {
+        "A": -3.700932741165161,
+        "B": -4.950932502746582,
+        "C": -3.200932741165161,
+        "D": -0.07593270391225815
+      },
+      "retained_tokens": 22274,
+      "input_tokens": 55777,
+      "expert_rows": 6392984,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 69.35309505462646,
+      "gold_logp": -3.200932741165161,
+      "correct": false,
+      "gold_delta_minus_omnizip": -3.1941384146921337
+    }
+  },
+  "complete": true
+}

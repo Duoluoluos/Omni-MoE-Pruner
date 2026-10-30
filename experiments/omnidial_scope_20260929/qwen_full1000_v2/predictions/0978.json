@@ -1,0 +1,55 @@
+{
+  "sample_index": 978,
+  "video": "videos/video_619.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 5184,
+    "total": 5666
+  },
+  "input_sha256": "fbe1c123f7fa33a2daa363868238f071d07165d4d1ea00b51fc1a56539041dd4",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 2.2166113320272416,
+      "option_logp": {
+        "A": -10.011336326599121,
+        "B": -10.136336326599121,
+        "C": -4.511336803436279,
+        "D": -0.01133667305111885
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 2.2160889450460672,
+      "option_logp": {
+        "A": -9.87920093536377,
+        "B": -9.50420093536377,
+        "C": -5.754200458526611,
+        "D": -0.004200564697384834
+      }
+    },
+    "cg_all": {
+      "answer": "D",
+      "output_text": "D. The significant",
+      "generation_s": 3.6918607640545815,
+      "option_logp": {
+        "A": -10.75029468536377,
+        "B": -11.00029468536377,
+        "C": -8.75029468536377,
+        "D": -0.00029476112104021013
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

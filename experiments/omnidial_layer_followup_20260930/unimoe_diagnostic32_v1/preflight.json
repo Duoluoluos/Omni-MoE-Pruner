@@ -1,0 +1,24 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "sample_index": 321,
+      "max_abs_option_logp_delta": 0.0,
+      "embedding_audit": {
+        "audio": 200,
+        "video": 1440
+      },
+      "noop_identity": true
+    },
+    {
+      "sample_index": 539,
+      "max_abs_option_logp_delta": 0.0,
+      "embedding_audit": {
+        "audio": 4000,
+        "video": 4608
+      },
+      "noop_identity": true
+    }
+  ],
+  "gates_sha256": "c430e4e0f843dbba0060b45cae47716100224fafed11e282a5bc3e08e800d99a"
+}

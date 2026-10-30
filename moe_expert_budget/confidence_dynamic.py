@@ -14,7 +14,6 @@ import numpy as np
 import torch
 import torch.nn.functional as F
 
-from .compact_dispatch import compact_moe_forward
 from .mask_policy import (
     ExpertBudgetConfig,
     MODALITY_CODES,
@@ -34,19 +33,6 @@ class _DynCallStats:
     assignments_original: int = 0
     assignments_effective: int = 0
     target_active_sum: int = 0
-    compact_assignment_count_before: int = 0
-    compact_assignment_count_after: int = 0
-    compact_active_experts_before_sum: int = 0
-    compact_active_experts_after_sum: int = 0
-    compact_hot_to_mean_before_sum: float = 0.0
-    compact_hot_to_mean_after_sum: float = 0.0
-    compact_calls: int = 0
-    compact_dispatch_time_ms: float = 0.0
-    compact_expert_mlp_time_ms: float = 0.0
-    compact_combine_time_ms: float = 0.0
-    compact_debug_max_abs_diff: float = 0.0
-    compact_debug_mean_abs_diff_sum: float = 0.0
-    compact_debug_calls: int = 0
     audio_condition_calls: int = 0
     audio_condition_audio_tokens_sum: int = 0
     audio_condition_margin12_sum: float = 0.0
@@ -99,28 +85,6 @@ class _DynSampleStats:
                 ),
                 "assignments_original": ls.assignments_original,
                 "assignments_effective": ls.assignments_effective,
-                "compact_assignment_count_before": ls.compact_assignment_count_before,
-                "compact_assignment_count_after": ls.compact_assignment_count_after,
-                "compact_active_experts_before_avg": (
-                    ls.compact_active_experts_before_sum / ls.compact_calls if ls.compact_calls else 0.0
-                ),
-                "compact_active_experts_after_avg": (
-                    ls.compact_active_experts_after_sum / ls.compact_calls if ls.compact_calls else 0.0
-                ),
-                "compact_hot_to_mean_before_avg": (
-                    ls.compact_hot_to_mean_before_sum / ls.compact_calls if ls.compact_calls else 0.0
-                ),
-                "compact_hot_to_mean_after_avg": (
-                    ls.compact_hot_to_mean_after_sum / ls.compact_calls if ls.compact_calls else 0.0
-                ),
-                "compact_dispatch_time_ms": ls.compact_dispatch_time_ms,
-                "compact_expert_mlp_time_ms": ls.compact_expert_mlp_time_ms,
-                "compact_combine_time_ms": ls.compact_combine_time_ms,
-                "compact_debug_max_abs_diff": ls.compact_debug_max_abs_diff,
-                "compact_debug_mean_abs_diff_avg": (
-                    ls.compact_debug_mean_abs_diff_sum / ls.compact_debug_calls if ls.compact_debug_calls else 0.0
-                ),
-                "compact_debug_calls": ls.compact_debug_calls,
                 "audio_condition_calls": ls.audio_condition_calls,
                 "audio_condition_audio_tokens_avg": (
                     ls.audio_condition_audio_tokens_sum / ls.audio_condition_calls
@@ -142,7 +106,6 @@ class _DynSampleStats:
             "enabled": bool(config.enabled),
             "mode": config.mode,
             "policy_version": config.policy_version,
-            "compact_dispatch": bool(installer.compact_dispatch),
             "target_layers": sorted(self.target_layers),
             "layer_policy": config.layer_policy,
             "task_type": self.task_type,
@@ -265,10 +228,8 @@ class ConfidenceDynamicMaskInstaller:
         self._calib_margin12_by_layer: dict[int, list[np.ndarray]] = {}
         self._calib_boundary_by_layer: dict[int, list[np.ndarray]] = {}
         self._enabled = bool(self.config.enabled) and self.m_small < self.text_top_k
-        self.compact_dispatch = bool(config.compact_dispatch) or "compact" in (config.mode or "").lower()
         self.audio_router_conditioning = getattr(config, "audio_router_conditioning", {}) or {}
         self.audio_conditioning_enabled = bool(self.audio_router_conditioning.get("enabled", False))
-        self._compact_debug_calls = 0
 
     @property
     def enabled(self) -> bool:
@@ -587,7 +548,6 @@ class ConfidenceDynamicMaskInstaller:
                 apply_ctx = False
 
             did_mask = False
-            keep_mask = None
             layer_stats = None
             if apply_ctx:
                 rows = tgt_mask.nonzero(as_tuple=True)[0]
@@ -604,10 +564,6 @@ class ConfidenceDynamicMaskInstaller:
                     )
                     if audio_floor is not None:
                         chosen_m = torch.clamp(chosen_m, min=int(audio_floor), max=top_k)
-                    if installer.compact_dispatch:
-                        keep_mask = torch.ones_like(selected_experts, dtype=torch.bool)
-                        pos = torch.arange(top_k, device=routing_weights.device).unsqueeze(0)
-                        keep_mask[rows] = pos < chosen_m.unsqueeze(1)
                     installer._apply_dynamic_mask(routing_weights, rows, chosen_m, top_k)
                     layer_stats = installer._record_stats(layer_idx, routing_weights.shape[0], rows, chosen_m, top_k)
                     if audio_meta is not None:
@@ -630,39 +586,13 @@ class ConfidenceDynamicMaskInstaller:
 
             routing_weights = routing_weights.to(flat.dtype)
 
-            if installer.compact_dispatch and did_mask and keep_mask is not None:
-                final_hidden_states, compact_metrics = compact_moe_forward(
-                    experts=module.experts,
-                    flat_hidden_states=flat,
-                    selected_experts=selected_experts,
-                    routing_weights=routing_weights,
-                    num_experts=num_experts,
-                    keep_mask=keep_mask,
-                )
-                if layer_stats is not None:
-                    installer._record_compact_metrics(layer_stats, compact_metrics)
-                if (
-                    layer_stats is not None
-                    and installer.config.compact_debug_compare
-                    and installer._compact_debug_calls < int(installer.config.compact_debug_max_calls)
-                ):
-                    reference = _mask_only_moe_forward(
-                        experts=module.experts,
-                        flat_hidden_states=flat,
-                        selected_experts=selected_experts,
-                        routing_weights=routing_weights,
-                        num_experts=num_experts,
-                    )
-                    installer._record_compact_debug_diff(layer_stats, final_hidden_states, reference)
-                    installer._compact_debug_calls += 1
-            else:
-                final_hidden_states = _mask_only_moe_forward(
-                    experts=module.experts,
-                    flat_hidden_states=flat,
-                    selected_experts=selected_experts,
-                    routing_weights=routing_weights,
-                    num_experts=num_experts,
-                )
+            final_hidden_states = _mask_only_moe_forward(
+                experts=module.experts,
+                flat_hidden_states=flat,
+                selected_experts=selected_experts,
+                routing_weights=routing_weights,
+                num_experts=num_experts,
+            )
             final_hidden_states = final_hidden_states.reshape(batch_size, sequence_length, hidden_dim)
             return final_hidden_states, router_logits
 
@@ -871,33 +801,6 @@ class ConfidenceDynamicMaskInstaller:
             layer_stats.audio_condition_floor_sum += int(floor)
         state = str(meta.get("state", "unknown"))
         layer_stats.audio_condition_state_counts[state] = layer_stats.audio_condition_state_counts.get(state, 0) + 1
-
-    @staticmethod
-    def _record_compact_metrics(layer_stats: _DynCallStats, metrics: Any) -> None:
-        layer_stats.compact_assignment_count_before += metrics.assignment_count_before
-        layer_stats.compact_assignment_count_after += metrics.assignment_count_after
-        layer_stats.compact_active_experts_before_sum += metrics.active_experts_before
-        layer_stats.compact_active_experts_after_sum += metrics.active_experts_after
-        layer_stats.compact_hot_to_mean_before_sum += metrics.hot_to_mean_before
-        layer_stats.compact_hot_to_mean_after_sum += metrics.hot_to_mean_after
-        layer_stats.compact_calls += 1
-        layer_stats.compact_dispatch_time_ms += metrics.dispatch_time_ms
-        layer_stats.compact_expert_mlp_time_ms += metrics.expert_mlp_time_ms
-        layer_stats.compact_combine_time_ms += metrics.combine_time_ms
-
-    @staticmethod
-    def _record_compact_debug_diff(
-        layer_stats: _DynCallStats,
-        compact_output: torch.Tensor,
-        reference_output: torch.Tensor,
-    ) -> None:
-        diff = (compact_output.detach() - reference_output.detach()).abs().float()
-        layer_stats.compact_debug_max_abs_diff = max(
-            layer_stats.compact_debug_max_abs_diff,
-            float(diff.max().item()) if diff.numel() else 0.0,
-        )
-        layer_stats.compact_debug_mean_abs_diff_sum += float(diff.mean().item()) if diff.numel() else 0.0
-        layer_stats.compact_debug_calls += 1
 
 
 def _mask_only_moe_forward(

@@ -1,0 +1,55 @@
+{
+  "sample_index": 234,
+  "video": "videos/video_94.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55758
+  },
+  "input_sha256": "369ab0c5a9c94440e1d6c3d89068f3a74798dd9071c18f05148e7fc440949857",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A. Sha Yi",
+      "generation_s": 22.05125438608229,
+      "option_logp": {
+        "A": -0.6431808471679688,
+        "B": -3.0181808471679688,
+        "C": -0.8931808471679688,
+        "D": -4.268180847167969
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 22.09015630092472,
+      "option_logp": {
+        "A": -0.5934993028640747,
+        "B": -2.343499183654785,
+        "C": -1.0934993028640747,
+        "D": -4.343499183654785
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.820923483930528,
+      "option_logp": {
+        "A": -0.8060406446456909,
+        "B": -2.3060407638549805,
+        "C": -0.8060406446456909,
+        "D": -5.6810407638549805
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

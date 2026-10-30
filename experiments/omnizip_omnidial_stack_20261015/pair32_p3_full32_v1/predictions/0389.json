@@ -1,0 +1,49 @@
+{
+  "sample_index": 389,
+  "video": "videos/video_226.mp4",
+  "correct_option": "B",
+  "arm_order": [
+    "omnizip",
+    "stack"
+  ],
+  "arms": {
+    "omnizip": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 6.929030783474445,
+      "option_logp": {
+        "A": -3.548231363296509,
+        "B": -0.04823127016425133,
+        "C": -4.04823112487793,
+        "D": -8.98573112487793
+      },
+      "retained_tokens": 22262,
+      "input_tokens": 55764,
+      "expert_rows": 8548992,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 69.35304546356201,
+      "gold_logp": -0.04823127016425133,
+      "correct": true
+    },
+    "stack": {
+      "answer": "A",
+      "output_text": "A. I surf",
+      "latency_s": 6.9252003356814384,
+      "option_logp": {
+        "A": -0.2793991267681122,
+        "B": -2.9043991565704346,
+        "C": -3.0293991565704346,
+        "D": -2.0293991565704346
+      },
+      "retained_tokens": 22262,
+      "input_tokens": 55764,
+      "expert_rows": 6500594,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 69.35304546356201,
+      "gold_logp": -2.9043991565704346,
+      "correct": false,
+      "gold_delta_minus_omnizip": -2.8561678864061832
+    }
+  },
+  "complete": true
+}

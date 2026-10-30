@@ -1,0 +1,55 @@
+{
+  "sample_index": 531,
+  "video": "videos/video_346.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 26928,
+    "total": 27402
+  },
+  "input_sha256": "f89cb81289cab5722e8fbc334c82a46dddb54ebfaf6b0ad83f623553ac944398",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 8.416605648119003,
+      "option_logp": {
+        "A": -0.75467449426651,
+        "B": -4.879674434661865,
+        "C": -0.87967449426651,
+        "D": -2.2546744346618652
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Toweling",
+      "generation_s": 9.606309254886582,
+      "option_logp": {
+        "A": -0.10240964591503143,
+        "B": -6.477409839630127,
+        "C": -2.477409601211548,
+        "D": -4.477409839630127
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 8.038930972106755,
+      "option_logp": {
+        "A": -0.6464633941650391,
+        "B": -5.896463394165039,
+        "C": -0.7714633941650391,
+        "D": -4.646463394165039
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

@@ -1,0 +1,84 @@
+{
+  "host": "g340-cd51-4b00-156b-5f51-68a7-8693",
+  "pid": 1207993,
+  "session": "20261006T174602_g340-cd51-4b00-156b-5f51-68a7-8693_1207993",
+  "torch": "2.5.1+cu124",
+  "transformers": "4.51.3",
+  "cuda": "12.4",
+  "gpu": "NVIDIA H20",
+  "visible_devices": "1",
+  "python": "/home/tiger/uni_moe_venv/bin/python",
+  "backend": "unimoe_native_deepspeed",
+  "model_config_sha256": "bc4a980809f7dc092235198059e028d53e52d4334c9c209afad653276c18463d",
+  "model_source_sha256": "887dfb1dbca53d736783fded577d7354037127c7ab79997c00c44e27ea393096",
+  "processor_source_sha256": "1aa5071480690609c5d35acf5f4e9d9a4d054293d1c76044bb042e53250d3a86",
+  "manifest_sha256": "1f436d698c95a62bbd1e0d8db68d98e6e270e655377a4a0f493c950fad95f4f5",
+  "ffmpeg": "ffmpeg version 7.0.2-static https://johnvansickle.com/ffmpeg/  Copyright (c) 2000-2024 the FFmpeg developers",
+  "weights": [
+    {
+      "name": "model-00001-of-00013.safetensors",
+      "size": 5246553544,
+      "mtime_ns": 1788360188296742000
+    },
+    {
+      "name": "model-00002-of-00013.safetensors",
+      "size": 5295839936,
+      "mtime_ns": 1788359777458404000
+    },
+    {
+      "name": "model-00003-of-00013.safetensors",
+      "size": 5295839920,
+      "mtime_ns": 1788359773558139000
+    },
+    {
+      "name": "model-00004-of-00013.safetensors",
+      "size": 5295839920,
+      "mtime_ns": 1788359885390593000
+    },
+    {
+      "name": "model-00005-of-00013.safetensors",
+      "size": 5295839936,
+      "mtime_ns": 1788359893535577000
+    },
+    {
+      "name": "model-00006-of-00013.safetensors",
+      "size": 5295839936,
+      "mtime_ns": 1788359894214925000
+    },
+    {
+      "name": "model-00007-of-00013.safetensors",
+      "size": 5295839920,
+      "mtime_ns": 1788359894397370000
+    },
+    {
+      "name": "model-00008-of-00013.safetensors",
+      "size": 5295839928,
+      "mtime_ns": 1788359896593201000
+    },
+    {
+      "name": "model-00009-of-00013.safetensors",
+      "size": 5295839928,
+      "mtime_ns": 1788360127664531000
+    },
+    {
+      "name": "model-00010-of-00013.safetensors",
+      "size": 5356282128,
+      "mtime_ns": 1788360139285696000
+    },
+    {
+      "name": "model-00011-of-00013.safetensors",
+      "size": 5360629640,
+      "mtime_ns": 1788360304151597000
+    },
+    {
+      "name": "model-00012-of-00013.safetensors",
+      "size": 5366163656,
+      "mtime_ns": 1788370914349135000
+    },
+    {
+      "name": "model-00013-of-00013.safetensors",
+      "size": 1666464448,
+      "mtime_ns": 1788360253615509000
+    }
+  ]
+}

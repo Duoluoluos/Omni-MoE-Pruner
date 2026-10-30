@@ -1,0 +1,55 @@
+{
+  "sample_index": 547,
+  "video": "videos/video_353.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55784
+  },
+  "input_sha256": "d3b67d4abf370ca7227d641ff97dc6d1835a98710515fed05bb45d603de87e3a",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D.",
+      "generation_s": 21.76673654001206,
+      "option_logp": {
+        "A": -2.4929723739624023,
+        "B": -1.2429723739624023,
+        "C": -4.117972373962402,
+        "D": -0.49297231435775757
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. Colle",
+      "generation_s": 22.135009310906753,
+      "option_logp": {
+        "A": -0.425772488117218,
+        "B": -1.4257724285125732,
+        "C": -5.550772666931152,
+        "D": -2.3007724285125732
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Guests in",
+      "generation_s": 22.857834768947214,
+      "option_logp": {
+        "A": -1.6490857601165771,
+        "B": -0.7740857005119324,
+        "C": -3.649085760116577,
+        "D": -1.1490857601165771
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

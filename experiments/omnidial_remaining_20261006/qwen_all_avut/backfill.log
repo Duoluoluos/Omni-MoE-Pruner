@@ -1,0 +1,36 @@
+{
+  "result_status": "verified",
+  "n": 1733,
+  "timed_n": 1728,
+  "reused_n": 0,
+  "model": "qwen",
+  "benchmark": "avut",
+  "scope": [
+    0,
+    48
+  ],
+  "backend": "megatron_core_grouped_mlp",
+  "task_ids": [
+    "MT-Q-AVUT"
+  ],
+  "raw_sha256": "e2a51f51c53949db7688ae595c3c93f1559515d9c8acf2d20454fbfe8def3307",
+  "manifest_sha256": "de6ba51122638bd598f3a8ce617b301bfb66749c4ffa8b17cc23b18b8dab4700",
+  "arms_sha256": "1151758cc6ebb1456542d205b52dcf74a6d45a9db5f768de8a679e03bd352080",
+  "arms": {
+    "omnidial": {
+      "policy": {
+        "kind": "cgcc",
+        "scope": [
+          0,
+          48
+        ]
+      },
+      "correct": 1173,
+      "accuracy_percent": 67.68609347951529,
+      "generation_seconds": 2.178352194574944,
+      "diagnostic_prefill_work": {}
+    }
+  },
+  "checked_time": 1791275539.8799663,
+  "verification": "Full frozen question coverage, exact source/input/gate hashes, modality preflight, per-session warmup, finite metrics; historical controls are separate sessions."
+}

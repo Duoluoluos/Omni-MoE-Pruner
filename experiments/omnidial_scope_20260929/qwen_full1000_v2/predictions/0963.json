@@ -1,0 +1,55 @@
+{
+  "sample_index": 963,
+  "video": "videos/video_613.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55788
+  },
+  "input_sha256": "66d74649b140239605c171f652ef2f23bd8f58ab5f6c787a64704e30ce240d48",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Red wine",
+      "generation_s": 22.640341978054494,
+      "option_logp": {
+        "A": -1.0705817937850952,
+        "B": -4.695581912994385,
+        "C": -0.4455818235874176,
+        "D": -5.320581912994385
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.46780694811605,
+      "option_logp": {
+        "A": -3.0716347694396973,
+        "B": -4.571634769439697,
+        "C": -0.07163470983505249,
+        "D": -5.321634769439697
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.39557778299786,
+      "option_logp": {
+        "A": -3.9033091068267822,
+        "B": -5.403309345245361,
+        "C": -0.028309190645813942,
+        "D": -6.278309345245361
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

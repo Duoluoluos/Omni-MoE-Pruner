@@ -1,0 +1,55 @@
+{
+  "sample_index": 371,
+  "video": "videos/video_211.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55750
+  },
+  "input_sha256": "806a334bbd77e595322c873d40d5e3164507012be9d326821df8de13b6b0cd28",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D. Forest",
+      "generation_s": 22.125068448018283,
+      "option_logp": {
+        "A": -4.332191467285156,
+        "B": -1.9571915864944458,
+        "C": -3.4571917057037354,
+        "D": -0.20719163119792938
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Forest",
+      "generation_s": 22.144986846018583,
+      "option_logp": {
+        "A": -5.256183624267578,
+        "B": -1.6311838626861572,
+        "C": -3.7561838626861572,
+        "D": -0.25618380308151245
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. shrine",
+      "generation_s": 22.75455772993155,
+      "option_logp": {
+        "A": -3.834372043609619,
+        "B": -0.8343720436096191,
+        "C": -1.8343720436096191,
+        "D": -0.9593720436096191
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

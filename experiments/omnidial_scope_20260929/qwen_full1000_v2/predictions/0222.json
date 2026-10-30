@@ -1,0 +1,55 @@
+{
+  "sample_index": 222,
+  "video": "videos/video_89.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55760
+  },
+  "input_sha256": "9dfcbd9bd06d9b9b8216f17f023a8118d91460d5dd1d6fbb28cbe5d89c4d408a",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.868272016989067,
+      "option_logp": {
+        "A": -0.7077605724334717,
+        "B": -3.7077605724334717,
+        "C": -1.7077605724334717,
+        "D": -1.2077605724334717
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Attending",
+      "generation_s": 22.73296825005673,
+      "option_logp": {
+        "A": -0.6062754392623901,
+        "B": -3.2312755584716797,
+        "C": -2.1062755584716797,
+        "D": -1.2312754392623901
+      }
+    },
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D. Recording a",
+      "generation_s": 22.16518613998778,
+      "option_logp": {
+        "A": -3.4521327018737793,
+        "B": -5.202132701873779,
+        "C": -3.3271327018737793,
+        "D": -0.07713259756565094
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 399,
+  "video": "videos/video_236.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55755
+  },
+  "input_sha256": "dfa89925cb8003ab12cdfb4437889c2b6da18a124fe52dd9ace3e6a16dbe737f",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A. Low on",
+      "generation_s": 22.16057218797505,
+      "option_logp": {
+        "A": -0.31468552350997925,
+        "B": -2.189685583114624,
+        "C": -1.939685583114624,
+        "D": -4.314685344696045
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 22.32593318982981,
+      "option_logp": {
+        "A": -0.26666876673698425,
+        "B": -1.7666687965393066,
+        "C": -2.8916687965393066,
+        "D": -5.016668796539307
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. Air raid",
+      "generation_s": 22.261468213051558,
+      "option_logp": {
+        "A": -1.4977554082870483,
+        "B": -2.497755289077759,
+        "C": -0.37275537848472595,
+        "D": -5.747755527496338
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

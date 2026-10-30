@@ -1,0 +1,49 @@
+{
+  "sample_index": 641,
+  "video": "videos/video_425.mp4",
+  "correct_option": "B",
+  "arm_order": [
+    "stack",
+    "omnizip"
+  ],
+  "arms": {
+    "stack": {
+      "answer": "A",
+      "output_text": "A. The speaker",
+      "latency_s": 1.061698343604803,
+      "option_logp": {
+        "A": -0.7464075088500977,
+        "B": -0.9964075088500977,
+        "C": -2.9964075088500977,
+        "D": -2.4964075088500977
+      },
+      "retained_tokens": 2672,
+      "input_tokens": 6251,
+      "expert_rows": 760942,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 60.305755615234375,
+      "gold_logp": -0.9964075088500977,
+      "correct": false,
+      "gold_delta_minus_omnizip": -0.894994892179966
+    },
+    "omnizip": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 0.836438175290823,
+      "option_logp": {
+        "A": -2.476412534713745,
+        "B": -0.10141261667013168,
+        "C": -5.976412773132324,
+        "D": -4.726412773132324
+      },
+      "retained_tokens": 2672,
+      "input_tokens": 6251,
+      "expert_rows": 1026432,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 60.305755615234375,
+      "gold_logp": -0.10141261667013168,
+      "correct": true
+    }
+  },
+  "complete": true
+}

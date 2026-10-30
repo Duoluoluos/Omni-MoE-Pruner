@@ -1,0 +1,109 @@
+{
+  "thresholds": {
+    "tau_reduce": 0.08694529702904027
+  },
+  "calibration_scope": [
+    12,
+    32
+  ],
+  "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+  "input_proofs": [
+    {
+      "sample_index": 48,
+      "video": "videos/video_24.mp4",
+      "input_sha256": "42ef1720059cecdeae82453d307fd478e959be6e1d0d3c64fb67ca7120c9b73b",
+      "pool_sha256": "ee727108f8f383c2274ed612d84eb7afc04dd997253fc8b128f400bb7a91baf7",
+      "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+      "counts": {
+        "audio": 390,
+        "video": 10080,
+        "total": 10531
+      }
+    },
+    {
+      "sample_index": 901,
+      "video": "videos/video_588.mp4",
+      "input_sha256": "9ab3bdceb46a4ee47c36f4443f4ac53f4bd0fe7e7db64763c76671949d67c3f5",
+      "pool_sha256": "48ec1f5fdd9fcb072e3c03fc2519602c18ceb69ae724ba476030c6d27435895d",
+      "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+      "counts": {
+        "audio": 390,
+        "video": 15120,
+        "total": 15575
+      }
+    },
+    {
+      "sample_index": 292,
+      "video": "videos/video_140.mp4",
+      "input_sha256": "f6e2e4b317b4855d19e9892dfff9f86a8ff516904a1d1c58eec853f3e8d56d28",
+      "pool_sha256": "62505753574b7438a9abc5ce906eabcddd87c7b7d04e26d6f48a4e3e4d3b7709",
+      "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+      "counts": {
+        "audio": 390,
+        "video": 27936,
+        "total": 28412
+      }
+    },
+    {
+      "sample_index": 41,
+      "video": "videos/video_20.mp4",
+      "input_sha256": "582a559c5cbf527af261f1a268df2af1e85eb783938f11ba4e1ad3653aa0eb28",
+      "pool_sha256": "9d43372a858395e2f4812cc9b1d58df076b00bfc5f8f710600d704e81ac10f60",
+      "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+      "counts": {
+        "audio": 390,
+        "video": 38736,
+        "total": 39189
+      }
+    },
+    {
+      "sample_index": 932,
+      "video": "videos/video_601.mp4",
+      "input_sha256": "4e15e271f1a34994e4a8009d2cc75b92a4fb5ff161119d733423a8522c77d7f5",
+      "pool_sha256": "76cf457c9f9db871d21856047daac51c727e72cf4bad0dbc23161b6d6875d16f",
+      "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+      "counts": {
+        "audio": 390,
+        "video": 44496,
+        "total": 44963
+      }
+    },
+    {
+      "sample_index": 777,
+      "video": "videos/video_526.mp4",
+      "input_sha256": "378d7c35fa4712d6d098a8990c8ddfb44c88b3c0129dfda1ffd57c5fbad337c2",
+      "pool_sha256": "a22ee96d5a71b43935e64cb7a79c690a13b3bfa12a503f3f2b56df28a2f14f44",
+      "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+      "counts": {
+        "audio": 390,
+        "video": 55296,
+        "total": 55801
+      }
+    },
+    {
+      "sample_index": 427,
+      "video": "videos/video_254.mp4",
+      "input_sha256": "b50601d6ba763009cd230c93fd9ca541a31e980b001598a6851225b10d5ad770",
+      "pool_sha256": "29f408b454508256f5b942885fe8af2b6b639718a1bded715845f0e4aee34dea",
+      "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+      "counts": {
+        "audio": 390,
+        "video": 55296,
+        "total": 55759
+      }
+    },
+    {
+      "sample_index": 458,
+      "video": "videos/video_285.mp4",
+      "input_sha256": "8226b211ef62e6187a89fb9b198173d34599234fda240054a50326c71195fe68",
+      "pool_sha256": "3e5b5a42c17ef434697f4506c163a127464afda09d6f837f31d50856c4e00b6a",
+      "manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+      "counts": {
+        "audio": 390,
+        "video": 55296,
+        "total": 55809
+      }
+    }
+  ],
+  "rule": "Fresh deterministic input-only calibration before measured output; never tune on answers or across scopes. gates.json is immutable after calibration."
+}

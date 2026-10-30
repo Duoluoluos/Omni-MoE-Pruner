@@ -1,0 +1,55 @@
+{
+  "sample_index": 377,
+  "video": "videos/video_217.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 49024,
+    "total": 49486
+  },
+  "input_sha256": "9e6232b43ae14f67f78c2c64d1850bf55b89f245d0fc56a83414fff9eb62a7f5",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 17.89633688889444,
+      "option_logp": {
+        "A": -3.997448205947876,
+        "B": -2.622448205947876,
+        "C": -3.872448205947876,
+        "D": -0.12244831770658493
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D. Repairing",
+      "generation_s": 18.53108586417511,
+      "option_logp": {
+        "A": -3.9947609901428223,
+        "B": -1.3697609901428223,
+        "C": -3.4947609901428223,
+        "D": -0.3697609305381775
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 18.101944473106414,
+      "option_logp": {
+        "A": -4.658891677856445,
+        "B": -0.15889154374599457,
+        "C": -6.658891677856445,
+        "D": -2.033891439437866
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

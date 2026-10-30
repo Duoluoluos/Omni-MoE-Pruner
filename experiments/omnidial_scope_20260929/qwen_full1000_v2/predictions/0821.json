@@ -1,0 +1,55 @@
+{
+  "sample_index": 821,
+  "video": "videos/video_555.mp4",
+  "counts": {
+    "audio": 193,
+    "video": 2016,
+    "total": 2275
+  },
+  "input_sha256": "1e0022b5dd3cd441c0f2db872010c1dd13c40c67b7fbe2c41cfc8b2bc6e467e4",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Two red",
+      "generation_s": 3.223210187861696,
+      "option_logp": {
+        "A": -4.586050987243652,
+        "B": -3.9610512256622314,
+        "C": -0.46105122566223145,
+        "D": -1.0860512256622314
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 1.6815265810582787,
+      "option_logp": {
+        "A": -5.102651119232178,
+        "B": -4.227651119232178,
+        "C": -0.10265129804611206,
+        "D": -2.602651357650757
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 1.67974469717592,
+      "option_logp": {
+        "A": -5.670478820800781,
+        "B": -4.045478820800781,
+        "C": -0.5454790592193604,
+        "D": -0.9204790592193604
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

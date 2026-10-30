@@ -1,0 +1,34 @@
+{
+  "checked_at": "2026-09-30T05:57:48.003342+00:00",
+  "result_status": "verified",
+  "models": {
+    "qwen": {
+      "completed": 1000,
+      "diagnostic_n": 32,
+      "completed_at": "2026-09-30T04:19:46.224747+08:00",
+      "raw_sha256": "4dc9fd2b526c3f84ad739af4417dd19c11e7d5230693721323a2baeb6171c03d",
+      "protocol_sha256": "0ac5b3d1219c0dab7e38169d36ae65a808345397e56250f53e20d27cb0a65c2d"
+    },
+    "unimoe": {
+      "completed": 1000,
+      "diagnostic_n": 32,
+      "completed_at": "2026-09-29T17:29:33.193964+08:00",
+      "raw_sha256": "b2735748668d40309f7687881b2ce3c80d914c4e77ef2674927ad79635b20780",
+      "protocol_sha256": "d8ea3b55f4d969e23210bcf1aee306cd2ac2f8f1aed462dd857e8e7db0a7061f"
+    }
+  },
+  "checks": [
+    "Frozen protocol, inputs, reused-reference and source hashes match",
+    "Gates match all complete question records",
+    "1000 distinct complete prediction files per model match JSONL exactly",
+    "Per-session preflight passed",
+    "Accuracy and 995-question mean generation time independently recomputed"
+  ],
+  "worker": {
+    "host": "g340-cd51-5100-b698-202f-fe01-948c",
+    "old_pids_present": false,
+    "gpu_utilization": null,
+    "note": "SSH works; nvidia-smi exits 12 with missing libnvidia-ml.so message. GPU utilization was not established."
+  },
+  "manuscript_metrics_changed": false
+}

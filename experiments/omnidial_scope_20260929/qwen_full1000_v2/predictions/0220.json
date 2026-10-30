@@ -1,0 +1,55 @@
+{
+  "sample_index": 220,
+  "video": "videos/video_88.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55750
+  },
+  "input_sha256": "906c8431d1fe9baede1e1385da49d2a1efd5a97afa4dfb477bbb90b77ea47798",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.880654480075464,
+      "option_logp": {
+        "A": -0.1335252821445465,
+        "B": -6.883525371551514,
+        "C": -6.258525371551514,
+        "D": -2.1335253715515137
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Slippers",
+      "generation_s": 22.738993970910087,
+      "option_logp": {
+        "A": -0.43531233072280884,
+        "B": -6.310312271118164,
+        "C": -5.685312271118164,
+        "D": -1.060312271118164
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 21.457281945971772,
+      "option_logp": {
+        "A": -0.09457571059465408,
+        "B": -6.219575881958008,
+        "C": -6.594575881958008,
+        "D": -2.4695756435394287
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_all",
+    "cg_early"
+  ],
+  "complete": true
+}

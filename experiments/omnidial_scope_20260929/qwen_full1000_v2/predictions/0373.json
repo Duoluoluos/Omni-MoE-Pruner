@@ -1,0 +1,55 @@
+{
+  "sample_index": 373,
+  "video": "videos/video_213.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 54288,
+    "total": 54755
+  },
+  "input_sha256": "5f493a658aa09b9ce35bd515d796fa52c1ece5d036294097ea3204f0aa47604d",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 21.011320560937747,
+      "option_logp": {
+        "A": -0.43830403685569763,
+        "B": -2.5633039474487305,
+        "C": -1.31330406665802,
+        "D": -4.9383039474487305
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 20.888776774983853,
+      "option_logp": {
+        "A": -1.606949806213379,
+        "B": -5.356949806213379,
+        "C": -0.2319498062133789,
+        "D": -6.856949806213379
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. walking in",
+      "generation_s": 22.219298823038116,
+      "option_logp": {
+        "A": -1.2989022731781006,
+        "B": -1.9239022731781006,
+        "C": -0.5489022731781006,
+        "D": -6.04890251159668
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

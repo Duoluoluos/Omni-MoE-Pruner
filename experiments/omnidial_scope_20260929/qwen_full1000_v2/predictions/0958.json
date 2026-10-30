@@ -1,0 +1,55 @@
+{
+  "sample_index": 958,
+  "video": "videos/video_611.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55771
+  },
+  "input_sha256": "fc5043792809aa13aaf7e84863c0fc2e9751b59cfd1f0fd5387ee9bfb1c1054f",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. His teammate",
+      "generation_s": 22.684944635955617,
+      "option_logp": {
+        "A": -5.892974853515625,
+        "B": -4.392974853515625,
+        "C": -0.017974698916077614,
+        "D": -6.767974853515625
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. His teammate",
+      "generation_s": 22.10702861007303,
+      "option_logp": {
+        "A": -4.124645709991455,
+        "B": -2.249645709991455,
+        "C": -0.24964576959609985,
+        "D": -2.374645709991455
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 21.405194074148312,
+      "option_logp": {
+        "A": -5.68011474609375,
+        "B": -3.18011474609375,
+        "C": -0.055114734917879105,
+        "D": -4.93011474609375
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

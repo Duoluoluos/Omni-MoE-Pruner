@@ -1,0 +1,49 @@
+{
+  "sample_index": 295,
+  "video": "videos/video_143.mp4",
+  "correct_option": "A",
+  "arm_order": [
+    "stack",
+    "omnizip"
+  ],
+  "arms": {
+    "stack": {
+      "answer": "A",
+      "output_text": "A. Regret",
+      "latency_s": 3.4011707194149494,
+      "option_logp": {
+        "A": -0.6366366147994995,
+        "B": -1.6366366147994995,
+        "C": -1.3866366147994995,
+        "D": -4.011636734008789
+      },
+      "retained_tokens": 11880,
+      "input_tokens": 29549,
+      "expert_rows": 3395788,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 64.50627613067627,
+      "gold_logp": -0.6366366147994995,
+      "correct": true,
+      "gold_delta_minus_omnizip": 6.989424347877502
+    },
+    "omnizip": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 3.3050585091114044,
+      "option_logp": {
+        "A": -7.626060962677002,
+        "B": -0.0010608765296638012,
+        "C": -8.501060485839844,
+        "D": -9.626060485839844
+      },
+      "retained_tokens": 11880,
+      "input_tokens": 29549,
+      "expert_rows": 4562304,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 64.50627613067627,
+      "gold_logp": -7.626060962677002,
+      "correct": false
+    }
+  },
+  "complete": true
+}

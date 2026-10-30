@@ -1,0 +1,49 @@
+{
+  "sample_index": 211,
+  "video": "videos/video_84.mp4",
+  "correct_option": "C",
+  "arm_order": [
+    "stack",
+    "omnizip"
+  ],
+  "arms": {
+    "stack": {
+      "answer": "D",
+      "output_text": "D. Meiko",
+      "latency_s": 6.894713316112757,
+      "option_logp": {
+        "A": -1.9596202373504639,
+        "B": -1.4596202373504639,
+        "C": -1.7096202373504639,
+        "D": -0.8346202373504639
+      },
+      "retained_tokens": 22252,
+      "input_tokens": 55756,
+      "expert_rows": 6172056,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 69.35301494598389,
+      "gold_logp": -1.7096202373504639,
+      "correct": false,
+      "gold_delta_minus_omnizip": -0.5671684741973877
+    },
+    "omnizip": {
+      "answer": "B",
+      "output_text": "B.",
+      "latency_s": 7.049130108207464,
+      "option_logp": {
+        "A": -2.017451763153076,
+        "B": -0.8924517631530762,
+        "C": -1.1424517631530762,
+        "D": -2.142451763153076
+      },
+      "retained_tokens": 22252,
+      "input_tokens": 55756,
+      "expert_rows": 8545536,
+      "expert_rows_source": "runtime_real_row_counter",
+      "peak_allocated_gib": 69.35301494598389,
+      "gold_logp": -1.1424517631530762,
+      "correct": false
+    }
+  },
+  "complete": true
+}

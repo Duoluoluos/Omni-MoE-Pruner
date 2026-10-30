@@ -1,0 +1,37 @@
+{
+  "passed": true,
+  "session": "20260929T122251_g340-cd51-5100-b698-202f-fe01-948c_4187",
+  "gates_sha256": "c430e4e0f843dbba0060b45cae47716100224fafed11e282a5bc3e08e800d99a",
+  "checks": [
+    {
+      "sample_index": 567,
+      "counts": {
+        "audio": 200,
+        "video": 1152,
+        "total": 1420
+      },
+      "embedding_audit": {
+        "audio": 200,
+        "video": 1152
+      },
+      "identity": true,
+      "noop": true,
+      "instrumentation_identity": true
+    },
+    {
+      "sample_index": 962,
+      "counts": {
+        "audio": 4000,
+        "video": 4608,
+        "total": 8779
+      },
+      "embedding_audit": {
+        "audio": 4000,
+        "video": 4608
+      },
+      "identity": true,
+      "noop": true,
+      "instrumentation_identity": true
+    }
+  ]
+}

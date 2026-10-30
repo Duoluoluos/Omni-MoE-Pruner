@@ -1,0 +1,55 @@
+{
+  "sample_index": 318,
+  "video": "videos/video_166.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 20304,
+    "total": 20756
+  },
+  "input_sha256": "4a78853a333d625548ee416702c8e43e053f9823ec5c335f4e3fa43eb638ec1d",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Playing basketball",
+      "generation_s": 7.148945281980559,
+      "option_logp": {
+        "A": -1.4496856927871704,
+        "B": -0.8246856927871704,
+        "C": -1.8246856927871704,
+        "D": -1.8246856927871704
+      }
+    },
+    "cg_late": {
+      "answer": "D",
+      "output_text": "D",
+      "generation_s": 5.766374159837142,
+      "option_logp": {
+        "A": -2.2006921768188477,
+        "B": -1.3256921768188477,
+        "C": -1.7006921768188477,
+        "D": -0.8256921172142029
+      }
+    },
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 5.744203906971961,
+      "option_logp": {
+        "A": -0.9875357151031494,
+        "B": -0.6125357151031494,
+        "C": -3.2375357151031494,
+        "D": -3.1125357151031494
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

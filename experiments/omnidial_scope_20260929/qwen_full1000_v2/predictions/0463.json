@@ -1,0 +1,55 @@
+{
+  "sample_index": 463,
+  "video": "videos/video_290.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55745
+  },
+  "input_sha256": "e71475fdb80cb2a5defcf70931c5b2220282b24fd56e22d152d9dc97af8aa0b6",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.80655322992243,
+      "option_logp": {
+        "A": -0.05709552764892578,
+        "B": -3.057095527648926,
+        "C": -5.682095527648926,
+        "D": -5.682095527648926
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 21.69377135997638,
+      "option_logp": {
+        "A": -0.039851829409599304,
+        "B": -4.289851665496826,
+        "C": -4.289851665496826,
+        "D": -5.039851665496826
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Wang",
+      "generation_s": 22.660971611971036,
+      "option_logp": {
+        "A": -0.11706709861755371,
+        "B": -2.4920670986175537,
+        "C": -4.367067337036133,
+        "D": -5.117067337036133
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

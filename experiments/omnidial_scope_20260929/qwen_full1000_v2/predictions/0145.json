@@ -1,0 +1,55 @@
+{
+  "sample_index": 145,
+  "video": "videos/video_61.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55774
+  },
+  "input_sha256": "60f17790d3ad56aefd861dcd620864fc853bcd780a8fb9e560b0c8a30e95f45e",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. The boy",
+      "generation_s": 22.96891559800133,
+      "option_logp": {
+        "A": -0.009605145081877708,
+        "B": -5.8846049308776855,
+        "C": -6.0096049308776855,
+        "D": -5.6346049308776855
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A.",
+      "generation_s": 22.092748451977968,
+      "option_logp": {
+        "A": -0.021344011649489403,
+        "B": -6.021344184875488,
+        "C": -6.021344184875488,
+        "D": -4.146344184875488
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 21.67555193998851,
+      "option_logp": {
+        "A": -0.11798138171434402,
+        "B": -5.242981433868408,
+        "C": -4.492981433868408,
+        "D": -2.367981433868408
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_all",
+    "cg_late",
+    "cg_early"
+  ],
+  "complete": true
+}

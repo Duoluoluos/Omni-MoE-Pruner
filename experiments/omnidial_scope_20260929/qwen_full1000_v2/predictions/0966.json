@@ -1,0 +1,55 @@
+{
+  "sample_index": 966,
+  "video": "videos/video_614.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55759
+  },
+  "input_sha256": "a9f829aa405e3d1e1e53ea8cee3a9776f0084a48e5408f3ed2ade5bce8849ab2",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "D",
+      "output_text": "D. The Hollywood",
+      "generation_s": 22.031697676051408,
+      "option_logp": {
+        "A": -3.3889167308807373,
+        "B": -2.2639167308807373,
+        "C": -2.3889167308807373,
+        "D": -0.2639167904853821
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 21.78089540801011,
+      "option_logp": {
+        "A": -3.1110401153564453,
+        "B": -0.7360401749610901,
+        "C": -1.9860401153564453,
+        "D": -1.1110401153564453
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. The Statue",
+      "generation_s": 22.65753465006128,
+      "option_logp": {
+        "A": -2.524028778076172,
+        "B": -0.8990287184715271,
+        "C": -2.274028778076172,
+        "D": -0.8990287184715271
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

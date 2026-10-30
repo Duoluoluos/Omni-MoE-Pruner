@@ -1,0 +1,55 @@
+{
+  "sample_index": 985,
+  "video": "videos/video_621.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 7056,
+    "total": 7580
+  },
+  "input_sha256": "55ba47fb78f4ab2a815299713cf5d2949da4f09103b80e769a10ca2253bf3193",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.551687777042389,
+      "option_logp": {
+        "A": -1.7103668451309204,
+        "B": -0.2103668749332428,
+        "C": -4.835366725921631,
+        "D": -7.960366725921631
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. The Dire",
+      "generation_s": 4.0199021401349455,
+      "option_logp": {
+        "A": -2.580913543701172,
+        "B": -0.08091365545988083,
+        "C": -6.955913543701172,
+        "D": -8.580913543701172
+      }
+    },
+    "cg_late": {
+      "answer": "A",
+      "output_text": "A. The Dire",
+      "generation_s": 3.1394359942059964,
+      "option_logp": {
+        "A": -0.6948233842849731,
+        "B": -0.6948233842849731,
+        "C": -8.444823265075684,
+        "D": -8.819823265075684
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_all",
+    "cg_late"
+  ],
+  "complete": true
+}

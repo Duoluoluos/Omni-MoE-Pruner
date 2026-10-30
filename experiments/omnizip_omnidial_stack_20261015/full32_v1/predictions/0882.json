@@ -1,0 +1,78 @@
+{
+  "sample_index": 882,
+  "video": "videos/video_582.mp4",
+  "correct_option": "A",
+  "arm_order": [
+    "omnidial",
+    "native",
+    "stack",
+    "omnizip"
+  ],
+  "arms": {
+    "omnidial": {
+      "answer": "D",
+      "output_text": "D",
+      "latency_s": 1.7636800901964307,
+      "option_logp": {
+        "A": -2.5100789070129395,
+        "B": -1.260079026222229,
+        "C": -3.3850789070129395,
+        "D": -0.510079026222229
+      },
+      "retained_tokens": 9104,
+      "input_tokens": 9104,
+      "expert_rows": 3013800,
+      "peak_allocated_gib": 62.83582258224487,
+      "js_to_native": 0.11746632013746985
+    },
+    "native": {
+      "answer": "D",
+      "output_text": "D",
+      "latency_s": 1.8155431943014264,
+      "option_logp": {
+        "A": -4.909440517425537,
+        "B": -4.284440517425537,
+        "C": -4.409440517425537,
+        "D": -0.034440670162439346
+      },
+      "retained_tokens": 9104,
+      "input_tokens": 9104,
+      "expert_rows": 3496320,
+      "peak_allocated_gib": 62.83582258224487,
+      "js_to_native": -2.681569466902453e-17
+    },
+    "stack": {
+      "answer": "B",
+      "output_text": "B",
+      "latency_s": 1.0249436795711517,
+      "option_logp": {
+        "A": -1.1498613357543945,
+        "B": -0.6498613953590393,
+        "C": -3.1498613357543945,
+        "D": -2.1498613357543945
+      },
+      "retained_tokens": 3789,
+      "input_tokens": 9104,
+      "expert_rows": 1236224,
+      "peak_allocated_gib": 60.81141233444214,
+      "js_to_native": 0.44356484122258344
+    },
+    "omnizip": {
+      "answer": "D",
+      "output_text": "D",
+      "latency_s": 1.049953737296164,
+      "option_logp": {
+        "A": -1.633800745010376,
+        "B": -1.758800745010376,
+        "C": -3.508800745010376,
+        "D": -0.5088008046150208
+      },
+      "retained_tokens": 3789,
+      "input_tokens": 9104,
+      "expert_rows": 1455360,
+      "peak_allocated_gib": 60.81141233444214,
+      "js_to_native": 0.11776969600436135
+    }
+  },
+  "complete": true
+}

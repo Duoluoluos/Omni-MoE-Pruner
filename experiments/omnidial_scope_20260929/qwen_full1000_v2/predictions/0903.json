@@ -1,0 +1,55 @@
+{
+  "sample_index": 903,
+  "video": "videos/video_589.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 51552,
+    "total": 52026
+  },
+  "input_sha256": "2e55a05ab05ec0b8757e2678e86bbaac4e7fb74fb1060b4e4d3ec3c70a122a95",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 19.291269440902397,
+      "option_logp": {
+        "A": -2.199632167816162,
+        "B": -0.3246321976184845,
+        "C": -2.199632167816162,
+        "D": -2.949632167816162
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B. Eye correct",
+      "generation_s": 20.063963105902076,
+      "option_logp": {
+        "A": -2.101097583770752,
+        "B": -0.47609764337539673,
+        "C": -3.101097583770752,
+        "D": -1.601097583770752
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. Eye correct",
+      "generation_s": 20.730496936943382,
+      "option_logp": {
+        "A": -2.22341251373291,
+        "B": -0.7234126329421997,
+        "C": -0.9734126329421997,
+        "D": -3.59841251373291
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

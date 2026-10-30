@@ -1,0 +1,55 @@
+{
+  "sample_index": 631,
+  "video": "videos/video_421.mp4",
+  "counts": {
+    "audio": 318,
+    "video": 3456,
+    "total": 3861
+  },
+  "input_sha256": "bc2da7e0f2e35cb9ed3e436c03f807b2c9dfd4ff5d49f1e4f6e725d776a11840",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 1.9580842568539083,
+      "option_logp": {
+        "A": -2.959822416305542,
+        "B": -4.209822654724121,
+        "C": -0.709822416305542,
+        "D": -0.834822416305542
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 1.9527478411328048,
+      "option_logp": {
+        "A": -3.394167423248291,
+        "B": -3.394167423248291,
+        "C": -0.14416751265525818,
+        "D": -2.769167423248291
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. Instagram",
+      "generation_s": 3.4375970161054283,
+      "option_logp": {
+        "A": -2.3903942108154297,
+        "B": -2.5153942108154297,
+        "C": -0.2653941512107849,
+        "D": -2.8903942108154297
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

@@ -1,0 +1,11 @@
+$ python /tmp/moe_train_smoke.py   # PYTHONPATH=$R/.tmp/qwen_runtime_mcore_20260924/python ; R=/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner
+[native_top8] rows=32 loss=-32.190 finite=True grad_gate=True grad_w1=True grad_x=True
+[omnidial_budget2] rows=8 loss=-32.191 finite=True grad_gate=True grad_w1=True grad_x=True
+SMOKE_OK
+
+# notes
+# - synthetic tensors only (E=8,H=16,I=32,T=4). NO 30B model loaded.
+# - 1 optimizer.step per arm (native_top8, omnidial_budget2). No further steps.
+# - grouped_gemm gmm autograd: plain bf16 mm grad nonzero; direct gmm xgrad=121.5 w1=222.0 w2=22.75
+# - constraints discovered: gmm requires bf16 + CPU int64 counts; weights must be explicitly initialized
+#   (perform_initialization=False garbage memory -> backward reads 0; fixed with copy_(randn*0.1)).

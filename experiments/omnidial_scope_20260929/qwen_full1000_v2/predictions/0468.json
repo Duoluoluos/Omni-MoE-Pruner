@@ -1,0 +1,55 @@
+{
+  "sample_index": 468,
+  "video": "videos/video_295.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55769
+  },
+  "input_sha256": "a11786801773e21d8ff945de091f1d06f9e802f49ad718bddb8013c580ca3a0a",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 21.57377754501067,
+      "option_logp": {
+        "A": -3.191204309463501,
+        "B": -0.06620439887046814,
+        "C": -3.941204309463501,
+        "D": -6.19120454788208
+      }
+    },
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. pull the",
+      "generation_s": 22.39391674590297,
+      "option_logp": {
+        "A": -1.6706136465072632,
+        "B": -1.0456136465072632,
+        "C": -0.7956136465072632,
+        "D": -5.295613765716553
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. the Jungle",
+      "generation_s": 23.062547667883337,
+      "option_logp": {
+        "A": -1.399274468421936,
+        "B": -0.39927443861961365,
+        "C": -2.6492743492126465,
+        "D": -4.7742743492126465
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

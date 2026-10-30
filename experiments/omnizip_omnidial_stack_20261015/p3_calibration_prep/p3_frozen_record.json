@@ -1,0 +1,68 @@
+{
+  "frozen_record": "p3-zip-aware-input-only-calibration-frozen-v1",
+  "frozen_at_unix": 1792124131.1704724,
+  "frozen_at_cst": "2026-10-16 ~12:15 Asia/Shanghai",
+  "node": {
+    "host": "g340-cd60-0-2a56-8f94-79da-ff5a",
+    "ssh": "ff31d166e82f5d6c.worker_0.job.wangqi-2248@merlin-ssh-proxy-cn.byted.org:22222",
+    "gpus": "2x NVIDIA H20, 95 GiB each",
+    "torch": "2.6.0+cu124",
+    "cuda": "12.4",
+    "python": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.venv/bin/python"
+  },
+  "mcore_recovery": {
+    "mechanism": "reversible PYTHONPATH prefix; no venv mutation / no pip install",
+    "PYTHONPATH_prepend": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/.tmp/qwen_runtime_mcore_20260924/python",
+    "also_on_syspath": ["source/", "ROOT/", "ROOT/qwen-omni-utils/src", "ROOT/scripts"],
+    "megatron_core_version": "0.12.3",
+    "grouped_gemm_version": "1.1.4",
+    "megatron_origin_python": "/mnt/bn/.../.tmp/qwen_runtime_mcore_20260924/python/megatron/core/__init__.py",
+    "experts_py_sha256": "929fa5fab3f48fe445b208a2f0ec2a79f803a0e5ad114a884e732eb9907fd6f8",
+    "note": "matches P0 full32_p0_v1/environment.json mcore=0.12.3 exactly"
+  },
+  "frozen_selected": {
+    "candidate": "p3_balanced",
+    "top2_fraction": 0.65,
+    "top4_fraction": 0.25,
+    "top8_fraction": 0.10,
+    "tau2": 0.048523245017537825,
+    "tau4": 0.07061227278622294,
+    "achieved_budget_fractions": {"2": 0.6499968735588908, "4": 0.25000517713014075, "8": 0.09999794931096849},
+    "mean_budget_in_scope": 3.0999980501260924,
+    "predicted_stack_expert_row_ratio": 0.30359653213877025,
+    "distance_to_target_0.30": 0.0035965321387702587
+  },
+  "selection_evidence": {
+    "candidate_distances_to_0.30": {
+      "p3_conservative": 0.014211181685902685,
+      "p3_balanced": 0.0035965321387702587,
+      "p3_aggressive": 0.007018676788560496
+    },
+    "rule": "min distance -> p3_balanced"
+  },
+  "input_subset": {
+    "calibration_indices": [321, 333, 32, 41, 71, 88, 94, 200],
+    "subset_of_fixed32": true,
+    "stratification": {"Q1_1420_5549": [321, 333], "Q2_5595_6682": [32, 41], "Q3_6682_8667": [71, 88], "Q4_8667_8779": [94, 200]},
+    "captured_rows": 159840,
+    "weighted_rows": 2499160.0,
+    "scope": [12, 32]
+  },
+  "success_gate": {
+    "answer_fields_read": false,
+    "selected_in_predetermined_candidates": true,
+    "no_failure_json": true,
+    "all_8_inputs_completed": true,
+    "process_exited_cleanly": true
+  },
+  "hashes": {
+    "calibrate_p3_py_sha256": "438900942b33312fef2c6e34f714efd573810a8dde00a2bea3316cbe52ffca8f",
+    "run_dir": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnizip_omnidial_stack_20261015/p3_calibration_prep/run_v2",
+    "gates_json_sha256": "05ccd6934cb96d38a61cacc8d73b19ad9eced51acfabb75b949670f5a06ad49c",
+    "complete_json_sha256": "12bbdd08ee016e2d19e80eff4d07563b602a94e7adf181fb324c9e1665461432",
+    "protocol_json_sha256": "852dcd6b208886c846b97138659a08a8371a711e0f95e29772bccc6383323cc8",
+    "progress_json_sha256": "f9b929e342353d46f23686d82ca868509ffeb982ce1f8570c1b54cda44f85d96",
+    "run_v2_log_sha256": "776b336667f9cb1cd8687930420b19db07a6e2c2a777cabfd20148fc737d4dbc"
+  },
+  "note_to_downstream": "Consume run_v2/gates.json via --gates. run_v1 is the failed (megatron ModuleNotFoundError) attempt and MUST NOT be used. No formal 32-sample run started."
+}

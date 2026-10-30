@@ -1,0 +1,84 @@
+{
+  "schema": "p3-zip-aware-gates-v1",
+  "selected": "p3_balanced",
+  "selected_policy": {
+    "top2_fraction": 0.65,
+    "top4_fraction": 0.25,
+    "top8_fraction": 0.1,
+    "tau2": 0.048523245017537825,
+    "tau4": 0.07061227278622294,
+    "achieved_budget_fractions": {
+      "2": 0.6499968735588908,
+      "4": 0.25000517713014075,
+      "8": 0.09999794931096849
+    },
+    "mean_budget_in_scope": 3.0999980501260924,
+    "predicted_stack_expert_row_ratio": 0.30359653213877025,
+    "distance_to_target": 0.0035965321387702587
+  },
+  "candidates": {
+    "p3_conservative": {
+      "top2_fraction": 0.5,
+      "top4_fraction": 0.35,
+      "top8_fraction": 0.15,
+      "tau2": 0.05677546904181403,
+      "tau4": 0.07372786411458498,
+      "achieved_budget_fractions": {
+        "2": 0.5000036234831153,
+        "4": 0.3500022972562531,
+        "8": 0.14999407926063157
+      },
+      "mean_budget_in_scope": 3.5999690700762956,
+      "predicted_stack_expert_row_ratio": 0.3142111816859027,
+      "distance_to_target": 0.014211181685902685
+    },
+    "p3_balanced": {
+      "top2_fraction": 0.65,
+      "top4_fraction": 0.25,
+      "top8_fraction": 0.1,
+      "tau2": 0.048523245017537825,
+      "tau4": 0.07061227278622294,
+      "achieved_budget_fractions": {
+        "2": 0.6499968735588908,
+        "4": 0.25000517713014075,
+        "8": 0.09999794931096849
+      },
+      "mean_budget_in_scope": 3.0999980501260924,
+      "predicted_stack_expert_row_ratio": 0.30359653213877025,
+      "distance_to_target": 0.0035965321387702587
+    },
+    "p3_aggressive": {
+      "top2_fraction": 0.8,
+      "top4_fraction": 0.15,
+      "top8_fraction": 0.05,
+      "tau2": 0.04191956316148794,
+      "tau4": 0.06681664897220384,
+      "achieved_budget_fractions": {
+        "2": 0.7999984397101176,
+        "4": 0.15000216986970122,
+        "8": 0.04999939042018118
+      },
+      "mean_budget_in_scope": 2.6000006822604895,
+      "predicted_stack_expert_row_ratio": 0.2929813232114395,
+      "distance_to_target": 0.007018676788560496
+    }
+  },
+  "calibration_indices": [
+    321,
+    333,
+    32,
+    41,
+    71,
+    88,
+    94,
+    200
+  ],
+  "captured_rows": 159840,
+  "weighted_rows": 2499160.0,
+  "scope": [
+    12,
+    32
+  ],
+  "answer_fields_read": false,
+  "selection_rule": "closest predicted Stack/native expert-row ratio to frozen target 0.30"
+}

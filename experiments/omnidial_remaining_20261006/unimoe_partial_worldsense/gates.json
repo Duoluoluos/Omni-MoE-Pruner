@@ -1,0 +1,111 @@
+{
+  "thresholds": {
+    "tau_skip": 0.6786869187104074,
+    "tau_hard": 0.2749494430140445,
+    "tau_null": 0.4352393838167196
+  },
+  "calibration_scope": [
+    0,
+    28
+  ],
+  "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+  "input_proofs": [
+    {
+      "sample_index": 48,
+      "video": "videos/video_24.mp4",
+      "input_sha256": "ea43055ae6f393a7cf27a0bd15b239d5b2069cbb6849a708ab7d8a6e7770f3c5",
+      "pool_sha256": "d195b883b60b71dd5d0960b6cbe5dce226230333add5c24095541de17df2ef91",
+      "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+      "counts": {
+        "audio": 600,
+        "video": 4608,
+        "total": 5271
+      }
+    },
+    {
+      "sample_index": 901,
+      "video": "videos/video_588.mp4",
+      "input_sha256": "8f01f90389c9cba6c655fb10c5228f018067a3dae80840b714d967d8ae5153ee",
+      "pool_sha256": "ca363f48724f0fccda474eac318f5b34916becf718b406778fe7b8babb3af37e",
+      "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+      "counts": {
+        "audio": 800,
+        "video": 4608,
+        "total": 5475
+      }
+    },
+    {
+      "sample_index": 292,
+      "video": "videos/video_140.mp4",
+      "input_sha256": "04c3af9f364f5c62b017998d81d56aedfffde44848219b86a07b74e6fa054e6e",
+      "pool_sha256": "9705bac373ce006ab0ff7f26554f397bbda55d527a93fc2841ec4fcfa244bddf",
+      "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+      "counts": {
+        "audio": 1400,
+        "video": 4608,
+        "total": 6096
+      }
+    },
+    {
+      "sample_index": 41,
+      "video": "videos/video_20.mp4",
+      "input_sha256": "1c25fb51d2a802aa4e99af7e078d2e2ca10c066dc1685505367de5d4554c7385",
+      "pool_sha256": "939effbe22ecc5b22778a757c7f97107234597c1e848d6f5f4f895500144f389",
+      "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+      "counts": {
+        "audio": 1800,
+        "video": 4608,
+        "total": 6473
+      }
+    },
+    {
+      "sample_index": 932,
+      "video": "videos/video_601.mp4",
+      "input_sha256": "95a335f1ea4b20aefafccab916f89f1da07009543386c8673812b30f8d2fa1ff",
+      "pool_sha256": "f2eaab3298f8531a15d7a4a4e6818d3a6c872d73a333e9ef02ad96d31188f099",
+      "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+      "counts": {
+        "audio": 2200,
+        "video": 4608,
+        "total": 6887
+      }
+    },
+    {
+      "sample_index": 777,
+      "video": "videos/video_526.mp4",
+      "input_sha256": "ecad21f9e57fdce9fb033bd56026de89015dacbb0fc557cf288a39d408f42cd0",
+      "pool_sha256": "8a0d7c6eede95439f413754a937751a57c6ec1da51f98eb3c784c79adb676655",
+      "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+      "counts": {
+        "audio": 3200,
+        "video": 4608,
+        "total": 7925
+      }
+    },
+    {
+      "sample_index": 427,
+      "video": "videos/video_254.mp4",
+      "input_sha256": "0c0894bd2d473290d4f77239da125118b95537f37bbd5ea3f38b826e88d57b28",
+      "pool_sha256": "cae379848a89ad55d63b45d71043638db7ae50d603a36fdafecaa6ca36239fb2",
+      "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+      "counts": {
+        "audio": 4000,
+        "video": 4608,
+        "total": 8683
+      }
+    },
+    {
+      "sample_index": 458,
+      "video": "videos/video_285.mp4",
+      "input_sha256": "2dbef016ab83f3006b355dafed921e0995249d99d811c405233a4cb071933d9c",
+      "pool_sha256": "b3cbd6a48bd1051b29d324697e602038dac3b0ac2eb977666242911d20fd9ed5",
+      "manifest_sha256": "a793c204ab1869f944fac156c922b1e0d28bed90ef0450b026682e08b141769f",
+      "counts": {
+        "audio": 4000,
+        "video": 4608,
+        "total": 8733
+      }
+    }
+  ],
+  "rule": "Fresh deterministic input-only calibration before measured output; never tune on answers or across scopes. gates.json is immutable after calibration."
+}

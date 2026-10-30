@@ -1,0 +1,209 @@
+{
+  "model": "qwen",
+  "root": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner",
+  "dataset": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/eval_data/OmniVideoBench/data.json",
+  "dataset_sha256": "f6e503652b0061858a1c6cae19f28e870b753c2b8215b3fdcefb5c7f72f8e6ac",
+  "seed": 20260928,
+  "model_seed": 20260909,
+  "batch_size": 1,
+  "dtype": "bfloat16",
+  "greedy": true,
+  "max_new_tokens": 4,
+  "schema": "layer-followup-20260930-v1",
+  "result_status": "planned",
+  "expected": 32,
+  "evaluation_indices": [
+    32,
+    41,
+    71,
+    88,
+    94,
+    121,
+    200,
+    208,
+    211,
+    288,
+    295,
+    297,
+    315,
+    321,
+    333,
+    344,
+    389,
+    424,
+    515,
+    539,
+    546,
+    585,
+    641,
+    672,
+    678,
+    699,
+    769,
+    859,
+    870,
+    874,
+    882,
+    916
+  ],
+  "identity_indices": [
+    321,
+    539
+  ],
+  "diagnostic_strata": [
+    {
+      "quartile": 1,
+      "indices": [
+        321,
+        333,
+        585,
+        641,
+        672,
+        678,
+        859,
+        882
+      ],
+      "calibration_indices": [
+        48,
+        901
+      ],
+      "min_length": 1420,
+      "max_length": 5549
+    },
+    {
+      "quartile": 2,
+      "indices": [
+        32,
+        41,
+        288,
+        295,
+        315,
+        515,
+        699,
+        874
+      ],
+      "calibration_indices": [
+        292,
+        41
+      ],
+      "min_length": 5595,
+      "max_length": 6682
+    },
+    {
+      "quartile": 3,
+      "indices": [
+        71,
+        88,
+        121,
+        297,
+        344,
+        769,
+        870,
+        916
+      ],
+      "calibration_indices": [
+        932,
+        777
+      ],
+      "min_length": 6682,
+      "max_length": 8667
+    },
+    {
+      "quartile": 4,
+      "indices": [
+        94,
+        200,
+        208,
+        211,
+        389,
+        424,
+        539,
+        546
+      ],
+      "calibration_indices": [
+        427,
+        458
+      ],
+      "min_length": 8667,
+      "max_length": 8779
+    }
+  ],
+  "native_logp_tolerance": 1e-05,
+  "all_scope": [
+    0,
+    48
+  ],
+  "probes": {
+    "routed_zero_early": {
+      "branch": "routed",
+      "scope": [
+        0,
+        20
+      ]
+    },
+    "routed_zero_middle": {
+      "branch": "routed",
+      "scope": [
+        12,
+        32
+      ]
+    },
+    "routed_zero_late": {
+      "branch": "routed",
+      "scope": [
+        28,
+        48
+      ]
+    }
+  },
+  "arms": {},
+  "parent_run": "/mnt/bn/isp-traindata-lf-1/wq/Omni-MoE-Pruner/experiments/omnidial_scope_20260929/qwen_full1000_v2",
+  "parent_manifest_sha256": "f791c0bb6c5ad636170493137377f9c239878716ffa279eab7a1c8e9a15f9570",
+  "parent_raw_prediction_sha256": {
+    "32": "07f1cecd2efcd36a363b7702865b3aa6e55a1a59bec624b0cf22dc29d7714c8c",
+    "41": "473a44fa7128b0859628eac33788588cd00a16b8a6a6af16c4c63522fe1226d5",
+    "71": "96614e09bce30bd891aca3a7285e17ee1159ecfdf5c2849226fe007bdc396bb5",
+    "88": "d568ad04821964c4941d5a6bcb1ec5669fb06e5fda061f22b3395c090acc7c37",
+    "94": "3a1ddaa3cac6da80935c015aa6a1f328ed671acfde8f73cdd45ea6fe33bed066",
+    "121": "c85370de06975032e2466a18d34f78f3a8871caffaac0da446f1ad507059ddda",
+    "200": "ad1ae76e2423838a7f2f103356e617a5f68dda0943489bed02c4dfada37d2602",
+    "208": "2d7431ff143c0f7eddae2b6143db27bb7e9d5c8afc9f05f329f6dc12430a75e2",
+    "211": "0176421600c057167ce07a8db25548be6d37bcc2314036e1c5946887d4892b53",
+    "288": "5ef9c1e91a98120615b81f2aa70825eb9f3b121f771cbe95627f57d7a2fe84bb",
+    "295": "83c6a8f755b17514342670c75becfa5c3a874085e0d3614b092cebdfa898d9f4",
+    "297": "642622729194106012f95c9e93e996b536a97b6ca06edc3b27068d20d3fdfaae",
+    "315": "49f93bf621d100bbbcdf3a883dc958e48ad0ae007ac47d9c989497f9908d8559",
+    "321": "7fd5743b20e6545dff37e3ab1215d295ed9c3077229b03c9d2faa357f08c4852",
+    "333": "46427c122fb86a36ba7d4d5489ca74261e2f3d088f5077f9660913611ddc4610",
+    "344": "4c92d9afe50635166fac076d53b111de498ac6267d80cab64ce0ff64a54ac7ef",
+    "389": "16c2a6c54d8805e747ac7688acb66e891435458eda8660b85117e082c05f32ff",
+    "424": "8a65d602a24f40a9e022b5ad0dc69f7330404e9d90259a040b0590f61046d826",
+    "515": "c2a3f3b0f816fc53269de9072c66aab20c2c2fdaeeee31086a5996fbfdb8b207",
+    "539": "e76555bbcf572a218da22dc9300a7b6765d36b1191381efba29e1fd81918be5d",
+    "546": "c328536822759689a97958160c07c27abb88d042ee0ce45f08c6c23c57b8d5bd",
+    "585": "0eba2c01fc108fe300a21cdf0430cc780ebc8d3c71304babc5c8c7534ca76f5e",
+    "641": "a89930489cf31cf83833cac4ce8c2418d0d9a3ff03ddee1736defcb59d8689ef",
+    "672": "7a54484c331df7b31667b5d8acc92395329f61d983a17657ed57b43605c0855e",
+    "678": "a62a780a7293ee48a6772a0900a46236f5837137b0a97a11159a3963843b8cc1",
+    "699": "ba83e5572f2d743a2b1c1b37364c5c4a303624c001c771339dd2f2f1d7e1332d",
+    "769": "65b1aa5fab7c70ce8c8ac1a632459d95e818749d5d02fdd485995b26ef64142c",
+    "859": "ae03bb7abd49c246533dd8d593777e6b03705309f87d31d9248f7c2edbdbfc3e",
+    "870": "4599446a8d975137bb960e6fa04eee6c6321be9eec4c417cf2499b02d9310d0c",
+    "874": "35d17dfcbd161525649361353cda3a5be1a697fe5a0bf62bc5b3349a2d8cc64e",
+    "882": "d04f5af273d0e5d5792ceabc1ff3a298061cc17995a23d893b58177537717ecb",
+    "916": "0170f8d8acd2a94a32b24667f2f6fe3f55c286f136fa7e4aa4d51da523c8bcd5"
+  },
+  "parent_summary_sha256": "17ee151ce4d50df62606bf8d83560cefa9fcec2593678de044eb3231e59fc8bf",
+  "native_reuse": "Two length-extreme Native output and option-logp identity checks; all input digests and model/runtime metadata must match.",
+  "gates": "Exact prior gates.json, no calibration or tuning.",
+  "phase": "Probes zero prefill branch outputs at Native weights; policy applies prefill+decode.",
+  "timing": "Diagnostics only: raw policy wall times not a full benchmark operating point.",
+  "continuation": "Uni full-1000 extension remains planned; pilot policy outputs can be reused without rerunning 32.",
+  "limitations": [
+    "32 preselected unique videos; descriptive means, not a full-benchmark accuracy estimate.",
+    "Native-weight branch removal is not the renormalized OmniDial fallback.",
+    "Protection changes both layer coverage and realized work.",
+    "Archived references are from an earlier session; timing is not a paired same-session comparison.",
+    "One checkpoint per model, OmniVideoBench only."
+  ]
+}

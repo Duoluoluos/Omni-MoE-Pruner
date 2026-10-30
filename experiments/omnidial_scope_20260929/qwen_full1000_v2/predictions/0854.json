@@ -1,0 +1,55 @@
+{
+  "sample_index": 854,
+  "video": "videos/video_567.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 13968,
+    "total": 14465
+  },
+  "input_sha256": "79b50145e2296da1bf25373dd58a9a39a4a8698968bd5b98a873c1e920d84f92",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "C",
+      "output_text": "C. The opponent",
+      "generation_s": 4.643718238919973,
+      "option_logp": {
+        "A": -5.507094383239746,
+        "B": -6.382094383239746,
+        "C": -0.007094549015164375,
+        "D": -9.819594383239746
+      }
+    },
+    "cg_early": {
+      "answer": "C",
+      "output_text": "C",
+      "generation_s": 4.036604596069083,
+      "option_logp": {
+        "A": -4.390259742736816,
+        "B": -6.515259742736816,
+        "C": -0.015259780921041965,
+        "D": -9.952759742736816
+      }
+    },
+    "cg_all": {
+      "answer": "C",
+      "output_text": "C. The opponent",
+      "generation_s": 5.4672370969783515,
+      "option_logp": {
+        "A": -5.137552261352539,
+        "B": -5.387552261352539,
+        "C": -0.012552187778055668,
+        "D": -8.887552261352539
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}

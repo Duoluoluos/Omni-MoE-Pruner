@@ -1,0 +1,38 @@
+{
+  "source": "research_paper/acl_arr_oct2027/results/main_inference_display.csv",
+  "source_sha256": "393a7c7cb5217696dd4f7e3f68a1e9bf8205325e46bc919bf1cf8f560e6c6cfb",
+  "omnidial_scope": [
+    0,
+    28
+  ],
+  "rows": [
+    {
+      "backbone": "Uni-MoE-2.0-Omni",
+      "benchmark": "OmniVideoBench",
+      "method": "Native top-p",
+      "samples": "1000",
+      "accuracy_percent": "38.9",
+      "generation_seconds": "3.030",
+      "source": "paper/results/main_inference_matrix.csv"
+    },
+    {
+      "backbone": "Uni-MoE-2.0-Omni",
+      "benchmark": "OmniVideoBench",
+      "method": "OmniDial",
+      "samples": "1000",
+      "accuracy_percent": "38.2",
+      "generation_seconds": "2.693",
+      "source": "paper/results/main_inference_matrix.csv"
+    },
+    {
+      "backbone": "Uni-MoE-2.0-Omni",
+      "benchmark": "OmniVideoBench",
+      "method": "Uniform top-2",
+      "samples": "1000",
+      "accuracy_percent": "38.8",
+      "generation_seconds": "2.839",
+      "source": "paper/results/main_inference_matrix.csv"
+    }
+  ],
+  "use": "Historical aggregate references only. No synthetic paired deltas, transferred CIs or reruns."
+}

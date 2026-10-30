@@ -1,0 +1,55 @@
+{
+  "sample_index": 702,
+  "video": "videos/video_470.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 6336,
+    "total": 6837
+  },
+  "input_sha256": "148db79802d00e1810e9133188c397a5e6aeb87e3b096d721a869dcef3450ff5",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_early": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.4575484138913453,
+      "option_logp": {
+        "A": -8.379859924316406,
+        "B": -0.0048598977737128735,
+        "C": -5.504859924316406,
+        "D": -8.754859924316406
+      }
+    },
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B",
+      "generation_s": 2.42317903903313,
+      "option_logp": {
+        "A": -8.876834869384766,
+        "B": -0.0018353299237787724,
+        "C": -6.751835346221924,
+        "D": -10.439334869384766
+      }
+    },
+    "cg_all": {
+      "answer": "B",
+      "output_text": "B. To secure",
+      "generation_s": 3.9251092600170523,
+      "option_logp": {
+        "A": -8.377668380737305,
+        "B": -0.0026686314959079027,
+        "C": -6.252668857574463,
+        "D": -9.127668380737305
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_early",
+    "cg_late",
+    "cg_all"
+  ],
+  "complete": true
+}

@@ -1,0 +1,55 @@
+{
+  "sample_index": 169,
+  "video": "videos/video_70.mp4",
+  "counts": {
+    "audio": 390,
+    "video": 55296,
+    "total": 55753
+  },
+  "input_sha256": "186e0d4831b068c48994497858d654c5389febb3d63083adc7615bf45248f470",
+  "timed": true,
+  "execution_session": "20260929T121343_g340-cd51-5100-b698-202f-fe01-948c_1737",
+  "gates_sha256": "5f8b9380440784cee06af9c959d7e207ab33445688088724875d253e7f07b3c3",
+  "arms": {
+    "cg_late": {
+      "answer": "B",
+      "output_text": "B.",
+      "generation_s": 21.97901888890192,
+      "option_logp": {
+        "A": -1.148244857788086,
+        "B": -0.5232449173927307,
+        "C": -2.898244857788086,
+        "D": -3.398244857788086
+      }
+    },
+    "cg_early": {
+      "answer": "A",
+      "output_text": "A",
+      "generation_s": 21.515319903148338,
+      "option_logp": {
+        "A": -0.6783755421638489,
+        "B": -1.053375482559204,
+        "C": -2.178375482559204,
+        "D": -3.553375482559204
+      }
+    },
+    "cg_all": {
+      "answer": "A",
+      "output_text": "A. Marshmallow",
+      "generation_s": 22.81594298197888,
+      "option_logp": {
+        "A": -0.18377746641635895,
+        "B": -2.3087775707244873,
+        "C": -2.9337775707244873,
+        "D": -4.308777332305908
+      }
+    }
+  },
+  "probes": {},
+  "arm_order": [
+    "cg_late",
+    "cg_early",
+    "cg_all"
+  ],
+  "complete": true
+}
